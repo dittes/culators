@@ -13,3 +13,11 @@ These checks cover known answers, selected boundaries and default browser flows;
 The imprint retains the supplied six-digit postcode **101829** pending owner correction. The production domain **culators.com** has not been connected by this build. The Sites preview is owner-private.
 
 Reproduce with `npm run build`, `npm test`, `npm run verify`, then run `node tests/browser.mjs` with the local preview server running. Browser testing uses this Mac’s bundled Playwright and installed Chrome.
+
+## White, grey and orange redesign — 2026-10-10
+
+- Shared desktop sidebar, white panels and bold result typography applied to every calculator. Decorative navigation arrows and number-input spinners removed.
+- Every successful calculation animates the result number, even when the answer is unchanged. Reduced motion uses a 120 ms opacity fade. Calculation confirmation appears without shifting focus.
+- `node tests/result-motion.mjs`: repeated submissions, preserved answers, bold result weight, confirmation, reduced motion and mobile result scrolling passed.
+- `node tests/browser.mjs`: all 207 routes, 320/375/414/768/1440 px viewport checks and existing interactions passed with no console or page errors.
+- `npm test`: 41 passed. `npm run verify`: 207 definitions, all 204 reference topics, SEO metadata and generated links passed.

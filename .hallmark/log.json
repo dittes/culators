@@ -1,1 +1,19 @@
-[{"date":"2026-10-10","macrostructure":"Index-First / Workbench","theme":"Almanac","enrichment":"interactive percentage visual","nav":"N6","footer":"Ft1","brief":"culators — mobile-first visual calculator catalogue, system fonts"}]
+[
+  {
+    "date": "2026-10-10",
+    "macrostructure": "Sidebar Workbench",
+    "theme": "custom",
+    "theme_axes": "cool grey / system sans / orange",
+    "enrichment": "result feedback animation",
+    "brief": "User-requested white-grey-orange redesign with desktop sidebar and bold animated results"
+  },
+  {
+    "date": "2026-10-10",
+    "macrostructure": "Index-First / Workbench",
+    "theme": "Almanac",
+    "enrichment": "interactive percentage visual",
+    "nav": "N6",
+    "footer": "Ft1",
+    "brief": "culators — mobile-first visual calculator catalogue, system fonts"
+  }
+]
