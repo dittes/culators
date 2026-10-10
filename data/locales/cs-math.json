@@ -1,0 +1,1704 @@
+{
+  "scientific-calculator": {
+    "title": "Vědecká kalkulačka",
+    "description": "Vědecká kalkulačka počítá výrazy se závorkami, mocninami, odmocninami, logaritmy a goniometrickými funkcemi. Hodí se ke kontrole školních příkladů i technických výpočtů.",
+    "explanation": "Zadej výraz s běžnými operátory a podporovanými funkcemi jako sqrt(), sin(), cos(), log() nebo ln(). Goniometrické funkce používají radiány a mocnění má přednost před násobením.",
+    "example": "Pro výraz 2*(3+4)^2 nejprve sečti v závorce 3+4=7, umocni 7 na 49 a výsledek vynásob dvěma: 98.",
+    "formula": "Výraz se vyhodnocuje podle obvyklé priority operátorů; goniometrické funkce pracují v radiánech.",
+    "limitations": "Výpočet používá čísla s plovoucí desetinnou čárkou, takže některé desetinné výsledky jsou zaokrouhlené.",
+    "everyday": "Při domácím úkolu si můžeš ověřit delší výraz, například odmocninu součtu a následné umocnění.",
+    "faqs": [
+      {
+        "q": "Jaké jednotky úhlů se používají?",
+        "a": "Sinus, kosinus a tangens očekávají radiány."
+      },
+      {
+        "q": "Jsou desetinné výsledky vždy přesné?",
+        "a": "Ne. Čísla s plovoucí desetinnou čárkou mohou velmi malé, velké nebo periodické hodnoty zaokrouhlit."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Matematický výraz",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "fraction-calculator": {
+    "title": "Kalkulačka zlomků",
+    "description": "Sčítej, odčítej, násob a děl dva zlomky a zobraz výsledek v základním tvaru. Desetinné vyjádření pomáhá porovnat zlomek s měřením nebo jiným zápisem.",
+    "explanation": "Při sčítání a odčítání se použije společný jmenovatel. Násobení pracuje s čitateli a jmenovateli přímo; dělení násobí převrácenou hodnotou druhého zlomku.",
+    "example": "Pro 2/3 + 1/4 je společný jmenovatel 12: 8/12 + 3/12 = 11/12.",
+    "formula": "Výsledek zkrať největším společným dělitelem čitatele a jmenovatele.",
+    "limitations": "Jmenovatel nesmí být nula a při dělení nesmí být druhý zlomek roven nule.",
+    "everyday": "Při receptu můžeš rychle sečíst třeba 2/3 hrnku a 1/4 hrnku bez převodu na desetinná čísla.",
+    "faqs": [
+      {
+        "q": "Bude výsledek zkrácený?",
+        "a": "Ano, čitatel i jmenovatel se vydělí jejich největším společným dělitelem."
+      },
+      {
+        "q": "Lze dělit nulovým zlomkem?",
+        "a": "Ne, dělení nulou není definováno."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První čitatel",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "První jmenovatel",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Sčítání",
+          "-": "Odčítání",
+          "*": "Násobení",
+          "/": "Dělení"
+        }
+      },
+      "c": {
+        "label": "Druhý čitatel",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "d": {
+        "label": "Druhý jmenovatel",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "percent-calculator": {
+    "title": "Procentní kalkulačka",
+    "description": "Vyřeš tři běžné procentní úlohy: vypočítej procento z částky, zjisti, kolik procent tvoří jedna hodnota z druhé, nebo změnu mezi původní a novou hodnotou.",
+    "explanation": "Vyber známý vztah. Procento z čísla je základ×procento/100; podíl je část/základ×100; procentní změna je (nová−původní)/|původní|×100.",
+    "example": "Cena vzrostla z 80 na 92. Změna je (92−80)/80×100 = 15 %.",
+    "formula": "Procentní změna používá původní hodnotu jako základ a zachovává znaménko růstu či poklesu.",
+    "limitations": "Procentní změnu nelze určit, pokud je původní hodnota nula.",
+    "everyday": "Při srovnání slevy nebo zdražení si snadno ověříš, jak velkou část původní ceny změna představuje.",
+    "faqs": [
+      {
+        "q": "Co znamená záporná změna?",
+        "a": "Nová hodnota je nižší než původní; znaménko ukazuje směr změny."
+      },
+      {
+        "q": "Proč nelze počítat změnu od nuly?",
+        "a": "Nulová původní hodnota nemůže být základem ve jmenovateli."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Typ úlohy",
+        "help": "",
+        "unit": "",
+        "options": {
+          "of": "Procento z čísla",
+          "what-percent": "Kolik procent tvoří A z B?",
+          "change": "Procentní změna z původní na novou hodnotu"
+        }
+      },
+      "a": {
+        "label": "Procento nebo první hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Základ nebo druhá hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "triangle-calculator": {
+    "title": "Kalkulačka trojúhelníku",
+    "description": "Vypočítej obsah a třetí stranu trojúhelníku ze dvou stran a úhlu mezi nimi. Kontrola vstupů ověří, zda údaje mohou tvořit platný trojúhelník.",
+    "explanation": "Pro strany a, b a sevřený úhel C platí obsah=ab·sin(C)/2 a c=√(a²+b²−2ab·cos(C)). Úhel zadej ve stupních.",
+    "example": "Strany 5 a 7 se sevřeným úhlem 60° mají obsah přibližně 15,16 čtverečních jednotek a třetí stranu √39≈6,245.",
+    "formula": "Obsah=ab·sin(C)/2; třetí strana se určí kosinovou větou.",
+    "limitations": "Sevřený úhel musí být větší než 0° a menší než 180°; strany musí používat stejné jednotky.",
+    "everyday": "Při plánování výřezu nebo kontrole geometrického úkolu dopočítáš obsah trojúhelníkové plochy z běžných rozměrů.",
+    "faqs": [
+      {
+        "q": "Jaký musí být úhel?",
+        "a": "Musí ležet mezi 0° a 180°, jinak trojúhelník nevznikne."
+      },
+      {
+        "q": "Jakou jednotku má obsah?",
+        "a": "Je to druhá mocnina jednotky stran, například cm²."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Strana a",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Strana b",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "angle": {
+        "label": "Sevřený úhel",
+        "help": "",
+        "unit": "stupně",
+        "options": {}
+      }
+    }
+  },
+  "volume-calculator": {
+    "title": "Kalkulačka objemu",
+    "description": "Vypočítej objem krychle, kvádru, válce, koule, kužele nebo trojbokého hranolu. Vyber těleso a zadej jeho rozměry pro výsledek v kubických jednotkách.",
+    "explanation": "Použije se geometrický vzorec vybraného tělesa: například válec πr²h, koule 4πr³/3 a kužel πr²h/3.",
+    "example": "Válec s poloměrem 3 cm a výškou 8 cm má objem π·3²·8≈226,19 cm³.",
+    "formula": "Objem hranolu je obsah podstavy krát délka; objem kužele je třetina objemu válce se stejnou podstavou a výškou.",
+    "limitations": "U kruhových těles zadávej poloměr, ne průměr. Rozměry musí používat stejnou délkovou jednotku.",
+    "everyday": "Zjisti objem květináče, krabice nebo válcové nádrže před nákupem materiálu či plánováním kapacity.",
+    "faqs": [
+      {
+        "q": "Zadává se poloměr, nebo průměr?",
+        "a": "Zadej poloměr; z průměru ho získáš dělením dvěma."
+      },
+      {
+        "q": "Jaká je podstava trojbokého hranolu?",
+        "a": "Jde o trojúhelník s odvěsnami, které se v tomto modelu považují za kolmé."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Těleso",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Krychle",
+          "box": "Kvádr",
+          "cylinder": "Válec",
+          "sphere": "Koule",
+          "cone": "Kužel",
+          "tri-prism": "Trojboký hranol"
+        }
+      },
+      "a": {
+        "label": "Délka / poloměr / hrana",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Šířka / výška",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "c": {
+        "label": "Výška / třetí strana",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "standard-deviation-calculator": {
+    "title": "Kalkulačka směrodatné odchylky",
+    "description": "Změř rozptýlení číselných dat jako populační nebo výběrovou směrodatnou odchylku. Výsledek doplní průměr a rozptyl, takže uvidíš střed i variabilitu hodnot.",
+    "explanation": "Populační odchylka dělí součet čtverců odchylek od průměru počtem n. Výběrová odchylka používá n−1 jako Besselovu korekci pro odhad širší populace.",
+    "example": "Pro hodnoty 2, 4 a 6 je průměr 4; populační odchylka je přibližně 1,633 a výběrová 2.",
+    "formula": "Populace: √(Σ(x−μ)²/n); výběr: √(Σ(x−x̄)²/(n−1)).",
+    "limitations": "Výběrová odchylka vyžaduje nejméně dvě hodnoty; u jediného pozorování nelze výběrový rozptyl určit.",
+    "everyday": "Porovnej, zda jsou výsledky měření stabilní, nebo se jednotlivé pokusy výrazně liší.",
+    "faqs": [
+      {
+        "q": "Kdy zvolit výběrovou odchylku?",
+        "a": "Když zadané hodnoty představují vzorek větší populace."
+      },
+      {
+        "q": "Proč výběrový režim vyžaduje dvě hodnoty?",
+        "a": "Při jedné hodnotě by byl jmenovatel n−1 roven nule."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Hodnoty",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "kind": {
+        "label": "Směrodatná odchylka",
+        "help": "",
+        "unit": "",
+        "options": {
+          "sample": "Výběr",
+          "population": "Populace"
+        }
+      }
+    }
+  },
+  "random-number-generator": {
+    "title": "Generátor náhodných čísel",
+    "description": "Vygeneruj dávku náhodných čísel ve zvoleném rozsahu, jako celá čísla nebo desetinné hodnoty. Celá čísla jsou vybírána rovnoměrně pomocí kryptograficky bezpečného rejection samplingu.",
+    "explanation": "Celý režim zahrnuje obě krajní hodnoty a odmítnutím neúplných intervalů předchází modulo zkreslení. Desetinný režim zahrnuje minimum, ale maximum vylučuje.",
+    "example": "Při rozsahu 1 až 6 a počtu čtyř můžeš dostat například 2, 6, 1 a 4.",
+    "formula": "Celá čísla se vybírají rovnoměrně z uzavřeného intervalu; desetinná čísla leží v intervalu od minima včetně do maxima bez něj.",
+    "limitations": "Generátor vyžaduje podporu Web Crypto. Nepoužívej ho jako samostatný systém pro správu hesel nebo šifrovacích klíčů.",
+    "everyday": "Vylosuj čísla pro hru, náhodný výběr položek nebo jednoduché testovací scénáře.",
+    "faqs": [
+      {
+        "q": "Jsou v celočíselném režimu zahrnuty obě meze?",
+        "a": "Ano. V desetinném režimu je maximum vyloučeno."
+      },
+      {
+        "q": "Hodí se generátor na hesla nebo šifrovací klíče?",
+        "a": "Ne, jde o obecnou kalkulačku, ne o nástroj pro správu klíčů."
+      }
+    ],
+    "fields": {
+      "min": {
+        "label": "Dolní mez",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "max": {
+        "label": "Horní mez",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "count": {
+        "label": "Počet hodnot",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Typ čísel",
+        "help": "",
+        "unit": "",
+        "options": {
+          "integer": "Celá čísla",
+          "decimal": "Desetinná čísla"
+        }
+      }
+    }
+  },
+  "number-sequence-calculator": {
+    "title": "Kalkulačka číselných posloupností",
+    "description": "Prověř posloupnost na konstantní aritmetický rozdíl nebo geometrický poměr a vypočítej další člen. Zobrazí také rozpoznaný krok, takže můžeš zkontrolovat jednoduché pravidlo.",
+    "explanation": "U aritmetické posloupnosti je další člen poslední+d; u geometrické poslední×r.",
+    "example": "Posloupnost 3, 7, 11 má rozdíl 4, takže následuje 15.",
+    "formula": "Aritmetická: aₙ₊₁=aₙ+d. Geometrická: aₙ₊₁=aₙ·r.",
+    "limitations": "Konečný seznam lze pokračovat mnoha pravidly; kalkulačka testuje pouze aritmetický a geometrický vzor.",
+    "everyday": "Ověř si další člen posloupnosti v domácím úkolu nebo při hledání opakujícího se kroku v datech.",
+    "faqs": [
+      {
+        "q": "Lze každou posloupnost jednoznačně pokračovat?",
+        "a": "Ne, stejné hodnoty může popisovat mnoho různých pravidel."
+      },
+      {
+        "q": "Co když rozdíly ani poměry nejsou stejné?",
+        "a": "Výsledek oznámí, že žádný z podporovaných vzorů neodpovídá."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Členy posloupnosti",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "percent-error-calculator": {
+    "title": "Kalkulačka procentní chyby",
+    "description": "Porovnej naměřenou hodnotu s referenční hodnotou a zjisti absolutní procentní chybu. Znaménko podepsané chyby zároveň ukazuje, zda měření vyšlo vyšší, nebo nižší.",
+    "explanation": "Absolutní procentní chyba=|naměřená−referenční|/|referenční|×100. Podepsaná varianta vynechá absolutní hodnotu v čitateli.",
+    "example": "Měření 98 proti referenci 100 znamená absolutní chybu 2 %.",
+    "formula": "Absolutní chyba=|x−r|/|r|×100; podepsaná chyba=(x−r)/|r|×100.",
+    "limitations": "Referenční hodnota nesmí být nula, protože by se jí dělilo.",
+    "everyday": "Vyhodnoť přesnost laboratorního měření nebo rozdíl mezi odhadem a známou referencí.",
+    "faqs": [
+      {
+        "q": "Co znamená záporná podepsaná chyba?",
+        "a": "Naměřená hodnota je nižší než referenční."
+      },
+      {
+        "q": "Proč se chyba vztahuje k referenci?",
+        "a": "Referenční hodnota slouží jako základ pro relativní srovnání."
+      }
+    ],
+    "fields": {
+      "observed": {
+        "label": "Naměřená hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "reference": {
+        "label": "Referenční hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "exponent-calculator": {
+    "title": "Kalkulačka mocnin",
+    "description": "Umocni reálný základ na reálný exponent, včetně celých, záporných i přípustných zlomkových exponentů. Nedefinované případy v reálných číslech jsou odmítnuty.",
+    "explanation": "Pro celé exponenty jde o opakované násobení; záporný exponent znamená převrácenou hodnotu. Záporný základ lze umocnit na celočíselný exponent.",
+    "example": "2⁻³=1/2³=0,125; 9^(1/2)=3.",
+    "formula": "aᵇ; pro b<0 platí aᵇ=1/a⁻ᵇ.",
+    "limitations": "Nula umocněná na zápornou hodnotu není definována; záporný základ s libovolným desetinným exponentem nemusí mít reálný výsledek.",
+    "everyday": "Spočítej opakované násobení nebo ověř mocninu ve školním příkladu bez ručního rozepisování.",
+    "faqs": [
+      {
+        "q": "Co znamená záporný exponent?",
+        "a": "Výsledek je převrácená hodnota příslušné kladné mocniny."
+      },
+      {
+        "q": "Lze záporné číslo umocnit na libovolný desetinný exponent?",
+        "a": "Ne, výsledek nemusí být reálné číslo."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Základ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "exponent": {
+        "label": "Mocnitel",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "binary-calculator": {
+    "title": "Binární kalkulačka",
+    "description": "Sčítej, odčítej, násob a děl dvě binární čísla a zobraz výsledek v soustavě se základem 2. Desítkový zápis usnadní kontrolu výpočtu.",
+    "explanation": "Vstupy obsahují pouze číslice 0 a 1. Dělení vrací celočíselný podíl a zbytek.",
+    "example": "1010₂ + 110₂ = 10000₂, tedy 16₁₀.",
+    "formula": "Aritmetika se provádí nad celými hodnotami zapsanými v binární soustavě.",
+    "limitations": "Zápis musí obsahovat pouze 0 a 1; dělení vrací celočíselný podíl.",
+    "everyday": "Ověř si binární sčítání při výuce číselných soustav nebo kontrole bitových hodnot.",
+    "faqs": [
+      {
+        "q": "Jak se zobrazí výsledek dělení?",
+        "a": "Jako celočíselný podíl a zbytek, nikoli zaokrouhlené desetinné číslo."
+      },
+      {
+        "q": "Mohu zadat předponu 0b?",
+        "a": "Zadej samotné binární číslice."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Sčítání",
+          "-": "Odčítání",
+          "*": "Násobení",
+          "/": "Dělení"
+        }
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "hex-calculator": {
+    "title": "Hexadecimální kalkulačka",
+    "description": "Počítej se dvěma hexadecimálními čísly a získej výsledek v šestnáctkové i desítkové soustavě. Kalkulačka se hodí při práci s adresami, barvami nebo výukou číselných soustav.",
+    "explanation": "Zápis používá číslice 0–9 a písmena A–F. Při dělení se zobrazí celočíselný podíl a zbytek.",
+    "example": "A₁₆ + 10₁₆ = 1A₁₆, což je 26 v desítkové soustavě.",
+    "formula": "Operace se počítá nad celými čísly a výsledek se převede do základu 16.",
+    "limitations": "Vstupy musí být platná hexadecimální celá čísla; u dělení se nezobrazuje desetinný zbytek.",
+    "everyday": "Přepočítej barevnou složku nebo zkontroluj hexadecimální hodnotu adresy.",
+    "faqs": [
+      {
+        "q": "Jak se zobrazí výsledek dělení?",
+        "a": "Uvidíš celočíselný podíl a zbytek."
+      },
+      {
+        "q": "Rozlišují se malá a velká písmena?",
+        "a": "Ne, A–F lze zapsat oběma způsoby."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Sčítání",
+          "-": "Odčítání",
+          "*": "Násobení",
+          "/": "Dělení"
+        }
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "half-life-calculator": {
+    "title": "Kalkulačka poločasu rozpadu",
+    "description": "Odhadni množství látky, které zbude po zadané době podle poločasu rozpadu. Model ukáže zbývající množství i podíl v ideálním exponenciálním procesu.",
+    "explanation": "Zbývající množství=počáteční množství×(1/2)^(uplynulý čas/poločas). Model pracuje s libovolnou nezápornou dobou.",
+    "example": "Po třech poločasech zbude z 80 mg množství 80×(1/2)³=10 mg.",
+    "formula": "M(t)=M₀·(1/2)^(t/T½).",
+    "limitations": "Předpokládá se konstantní poločas a žádný přísun další látky; nejde o předpověď jednotlivých rozpadů.",
+    "everyday": "Uč se exponenciální pokles nebo odhadni zbytkové množství v ideálním modelu.",
+    "faqs": [
+      {
+        "q": "Znamená jeden poločas, že všechna látka zmizí?",
+        "a": "Ne, očekávané množství se zmenší na polovinu."
+      },
+      {
+        "q": "Zohledňuje výpočet prostředí?",
+        "a": "Ne, předpokládá stálý poločas a uzavřený systém."
+      }
+    ],
+    "fields": {
+      "initial": {
+        "label": "Počáteční množství",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "halfLife": {
+        "label": "Doba poločasu",
+        "help": "",
+        "unit": "čas",
+        "options": {}
+      },
+      "elapsed": {
+        "label": "Uplynulá doba",
+        "help": "",
+        "unit": "čas",
+        "options": {}
+      }
+    }
+  },
+  "quadratic-formula-calculator": {
+    "title": "Kalkulačka kvadratické rovnice",
+    "description": "Vyřeš rovnici ax²+bx+c=0 a zobraz diskriminant i reálné nebo komplexní kořeny. Výsledek rozliší dva kořeny, jeden dvojnásobný kořen nebo dvojici komplexních řešení.",
+    "explanation": "Diskriminant D=b²−4ac. Pro D≥0 platí x=(-b±√D)/(2a); pro D<0 jsou kořeny komplexní.",
+    "example": "Rovnice x²−5x+6=0 má kořeny 2 a 3, protože (x−2)(x−3)=0.",
+    "formula": "D=b²−4ac; x=(-b±√D)/(2a).",
+    "limitations": "Koeficient a nesmí být nula; při záporném diskriminantu jsou kořeny komplexní.",
+    "everyday": "Prověř kořeny kvadratické rovnice při domácím úkolu nebo při hledání průsečíků grafu s osou x.",
+    "faqs": [
+      {
+        "q": "Co znamená nulový diskriminant?",
+        "a": "Rovnice má jeden dvojnásobný reálný kořen."
+      },
+      {
+        "q": "Co když je diskriminant záporný?",
+        "a": "V reálných číslech řešení není; kalkulačka zobrazí komplexní dvojici."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Koeficient a",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Koeficient b",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "c": {
+        "label": "Koeficient c",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "slope-calculator": {
+    "title": "Kalkulačka směrnice",
+    "description": "Vypočítej směrnici a rovnici přímky procházející dvěma body. Svislá přímka je ošetřena zvlášť, protože její směrnice není definována.",
+    "explanation": "Směrnice m=(y₂−y₁)/(x₂−x₁). Při x₁=x₂ vznikne svislá přímka x=x₁.",
+    "example": "Body (1,2) a (3,6) určují směrnici 2 a rovnici y=2x.",
+    "formula": "m=Δy/Δx; tvar přímky y=mx+b.",
+    "limitations": "Body musí být různé; u svislé přímky se směrnice nedá vyjádřit konečným číslem.",
+    "everyday": "Najdi sklon trasy nebo rovnici přímky z dvojice známých souřadnic.",
+    "faqs": [
+      {
+        "q": "Jaká je směrnice svislé přímky?",
+        "a": "Není definována, protože Δx=0."
+      },
+      {
+        "q": "Musí být souřadnice ve stejných jednotkách?",
+        "a": "Ano, obě osy musí používat konzistentní měřítko."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "log-calculator": {
+    "title": "Logaritmická kalkulačka",
+    "description": "Vypočítej logaritmus kladného argumentu při libovolném platném základu. Kontrolní vztah ukáže, že základ umocněný na výsledek vrátí původní argument.",
+    "explanation": "Logaritmus x při základu b je exponent, kterým musíš umocnit b, abys získal x. Základ musí být kladný a nesmí být 1.",
+    "example": "log₂(32)=5, protože 2⁵=32.",
+    "formula": "log_b(x)=y právě tehdy, když bʸ=x.",
+    "limitations": "Argument i základ musí být kladné a základ nesmí být 1.",
+    "everyday": "Vyřeš logaritmickou část rovnice nebo ověř převod mezi logaritmickým a exponenciálním zápisem.",
+    "faqs": [
+      {
+        "q": "Může být argument nula nebo záporný?",
+        "a": "Ne, reálný logaritmus vyžaduje kladný argument."
+      },
+      {
+        "q": "Proč základ nesmí být 1?",
+        "a": "Mocniny jedničky jsou stále 1, takže neurčují různé argumenty."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Základ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "value": {
+        "label": "Kladný argument",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "area-calculator": {
+    "title": "Kalkulačka obsahu",
+    "description": "Vypočítej obsah obdélníku, trojúhelníku, kruhu nebo lichoběžníku z potřebných rozměrů. Zadej délky ve stejné jednotce.",
+    "explanation": "Obdélník: délka×šířka; trojúhelník: základna×výška/2; kruh: πr²; lichoběžník: (a+b)h/2.",
+    "example": "Obdélník 5×4 cm má obsah 20 cm².",
+    "formula": "Obsah závisí na tvaru; například kruh: S=πr².",
+    "limitations": "Pro kruh zadej poloměr, nikoli průměr. Všechny délky musí mít stejnou jednotku.",
+    "everyday": "Odhadni plochu podlahy, stěny nebo zahradního záhonu před výpočtem potřebného materiálu.",
+    "faqs": [
+      {
+        "q": "Zadává se poloměr, nebo průměr?",
+        "a": "Zadej poloměr."
+      },
+      {
+        "q": "Jakou jednotku bude mít výsledek?",
+        "a": "Druhou mocninu jednotky rozměrů, například m²."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Tvar",
+        "help": "",
+        "unit": "",
+        "options": {
+          "rectangle": "Obdélník",
+          "triangle": "Trojúhelník",
+          "circle": "Kruh",
+          "trapezoid": "Lichoběžník"
+        }
+      },
+      "a": {
+        "label": "Délka / poloměr / rovnoběžná strana a",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Šířka / výška / rovnoběžná strana b",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "c": {
+        "label": "Rovnoběžná strana c (lichoběžník)",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "sample-size-calculator": {
+    "title": "Kalkulačka velikosti vzorku",
+    "description": "Odhadni potřebný počet odpovědí pro průzkum podílu podle hladiny spolehlivosti, chyby, očekávaného podílu a případné velikosti populace. Výsledek se zaokrouhluje nahoru na celé respondenty.",
+    "explanation": "Základní odhad je z²p(1−p)/e². U konečné populace se použije korekce n/(1+(n−1)/N).",
+    "example": "Při 95% spolehlivosti, chybě 5 % a podílu 50 % vychází pro velkou populaci přibližně 385 odpovědí.",
+    "formula": "n₀=z²p(1−p)/e²; korekce konečné populace n=n₀/[1+(n₀−1)/N].",
+    "limitations": "Jde o statistický odhad pro jednoduchý výběr; nereprezentativní nebo samovýběrový průzkum může být zkreslený.",
+    "everyday": "Naplánuj přibližný počet odpovědí před rozesláním dotazníku nebo zákaznického průzkumu.",
+    "faqs": [
+      {
+        "q": "Proč se počet zaokrouhluje nahoru?",
+        "a": "Menší počet by nesplnil zadanou přesnost."
+      },
+      {
+        "q": "Co znamená očekávaný podíl 50 %?",
+        "a": "Je to konzervativní volba, která obvykle vede k největšímu vzorku."
+      }
+    ],
+    "fields": {
+      "confidence": {
+        "label": "Hladina spolehlivosti",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "margin": {
+        "label": "Mez chyby",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "proportion": {
+        "label": "Očekávaný podíl",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "population": {
+        "label": "Velikost populace (0 = velká populace)",
+        "help": "",
+        "unit": "osoby",
+        "options": {}
+      }
+    }
+  },
+  "probability-calculator": {
+    "title": "Kalkulačka pravděpodobnosti",
+    "description": "Vypočítej binomickou pravděpodobnost přesně k, nejvýše k nebo alespoň k úspěchů v n nezávislých pokusech se stejnou pravděpodobností. Zobrazí také očekávaný počet úspěchů.",
+    "explanation": "Pro X~Bin(n,p) platí P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ. Kumulativní režimy sečtou odpovídající výsledky od 0 do n.",
+    "example": "Při pěti hodech spravedlivou mincí má přesně dvojice hlav pravděpodobnost C(5,2)/2⁵=10/32=31,25 %.",
+    "formula": "P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ.",
+    "limitations": "Model předpokládá pevný počet nezávislých pokusů a stejnou pravděpodobnost úspěchu v každém z nich.",
+    "everyday": "Odhadni šanci na daný počet úspěchů, například správných odpovědí v kvízu nebo hlav při několika hodech.",
+    "faqs": [
+      {
+        "q": "Jaké předpoklady má binomický model?",
+        "a": "Pevný počet nezávislých pokusů a konstantní pravděpodobnost úspěchu."
+      },
+      {
+        "q": "Zahrnuje „alespoň k“ i samotné k?",
+        "a": "Ano, sčítá výsledky od k včetně."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Počet pokusů",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "k": {
+        "label": "Počet úspěchů nebo hranice",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "p": {
+        "label": "Pravděpodobnost úspěchu",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Událost",
+        "help": "",
+        "unit": "",
+        "options": {
+          "exact": "Přesně k",
+          "at-most": "Nejvýše k",
+          "at-least": "Alespoň k"
+        }
+      }
+    }
+  },
+  "statistics-calculator": {
+    "title": "Statistická kalkulačka",
+    "description": "Shrň seznam měření počtem, průměrem, mediánem, modem, rozpětím, výběrovou směrodatnou odchylkou a kvartily. Jde o rychlý popis dat před použitím specializovaného statistického testu.",
+    "explanation": "Průměr je součet/n; medián je střed seřazených hodnot; rozpětí=max−min. Kvartily používají mediány dolní a horní poloviny bez celkového mediánu u lichého počtu.",
+    "example": "Pro 1, 2, 2, 5 je průměr 2,5, medián 2, modus 2 a rozpětí 4.",
+    "formula": "Průměr=Σx/n; rozpětí=max−min; odchylka používá n−1.",
+    "limitations": "Popisné statistiky nezohledňují plán studie, váhy ani nejistotu výběru a samy o sobě nejsou inferenčním testem.",
+    "everyday": "Rychle shrň naměřené časy, ceny nebo výsledky pokusu a všimni si opakujících se hodnot.",
+    "faqs": [
+      {
+        "q": "Jak se zobrazí více modů?",
+        "a": "Zobrazí se všechny hodnoty se stejnou nejvyšší četností."
+      },
+      {
+        "q": "Provádí kalkulačka statistický test?",
+        "a": "Ne, pouze popisuje zadaný soubor hodnot."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Hodnoty",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "mean-median-mode-range-calculator": {
+    "title": "Kalkulačka průměru, mediánu, modu a rozpětí",
+    "description": "Získej čtyři známé charakteristiky seznamu: aritmetický průměr, medián, modus a rozpětí. Pomohou rychle popsat rozložení a všimnout si opakování či odlehlých hodnot.",
+    "explanation": "Průměr je součet dělený počtem hodnot; medián je prostřední seřazená hodnota; modus je nejčastější hodnota; rozpětí je maximum minus minimum.",
+    "example": "Pro 2, 3, 3 a 10 je průměr 4,5, medián 3, modus 3 a rozpětí 8.",
+    "formula": "Průměr=Σx/n; rozpětí=max−min.",
+    "limitations": "Průměr mohou výrazně ovlivnit odlehlé hodnoty; u dat bez opakování nemusí existovat modus.",
+    "everyday": "Porovnej typické hodnoty a rozpětí týdenních výdajů nebo naměřených výsledků.",
+    "faqs": [
+      {
+        "q": "Co když se nejčastější hodnoty opakují stejně často?",
+        "a": "Zobrazí se všechny módy."
+      },
+      {
+        "q": "Jak se počítá medián sudého počtu hodnot?",
+        "a": "Je to průměr dvou prostředních hodnot po seřazení."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Hodnoty",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "permutation-and-combination-calculator": {
+    "title": "Kalkulačka variací a kombinací",
+    "description": "Spočítej počet výběrů r prvků z n různých prvků a rozhodni, zda záleží na pořadí. Kombinace počítají skupiny, variace rozlišují jejich pořadí.",
+    "explanation": "Kombinace: n!/[r!(n−r)!]. Variace bez opakování: n!/(n−r)!.",
+    "example": "Z pěti položek lze vybrat dvojici v 10 kombinacích; pokud záleží na pořadí, existuje 20 variací.",
+    "formula": "C(n,r)=n!/(r!(n−r)!); P(n,r)=n!/(n−r)!.",
+    "limitations": "Model předpokládá výběr bez opakování z různých prvků.",
+    "everyday": "Spočítej možné dvojice v týmu nebo pořadí finalistů při soutěži.",
+    "faqs": [
+      {
+        "q": "Kdy záleží na pořadí?",
+        "a": "Když různé pozice nebo pořadí představují jiný výsledek."
+      },
+      {
+        "q": "Lze vybírat opakovaně?",
+        "a": "Tento výpočet předpokládá výběr bez opakování."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Počet dostupných prvků n",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "r": {
+        "label": "Počet vybraných prvků r",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Počítání",
+        "help": "",
+        "unit": "",
+        "options": {
+          "combination": "Kombinace (na pořadí nezáleží)",
+          "permutation": "Variace (na pořadí záleží)"
+        }
+      }
+    }
+  },
+  "z-score-calculator": {
+    "title": "Kalkulačka Z-skóre",
+    "description": "Porovnej pozorovanou hodnotu s průměrem a směrodatnou odchylkou. Z-skóre vyjadřuje, o kolik směrodatných odchylek se hodnota liší od průměru.",
+    "explanation": "Z-skóre=(x−μ)/σ. Kladná hodnota je nad průměrem, záporná pod ním.",
+    "example": "Při průměru 50 a odchylce 5 má hodnota 60 Z-skóre 2.",
+    "formula": "z=(x−μ)/σ.",
+    "limitations": "Interpretace předpokládá, že průměr a směrodatná odchylka dávají pro daný soubor smysl; samotné skóre neurčuje pravděpodobnost bez rozdělení.",
+    "everyday": "Porovnej výsledek testu s třídním průměrem nebo měření s obvyklou variabilitou.",
+    "faqs": [
+      {
+        "q": "Co znamená Z-skóre 2?",
+        "a": "Hodnota je dvě směrodatné odchylky nad průměrem."
+      },
+      {
+        "q": "Musí mít data normální rozdělení?",
+        "a": "Výpočet ne, ale pravděpodobnostní interpretace často předpokládá konkrétní rozdělení."
+      }
+    ],
+    "fields": {
+      "x": {
+        "label": "Pozorování x",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mean": {
+        "label": "Průměr μ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "sd": {
+        "label": "Směrodatná odchylka σ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "confidence-interval-calculator": {
+    "title": "Kalkulačka intervalu spolehlivosti",
+    "description": "Odhadni t-interval spolehlivosti pro průměr ze vzorkového průměru, směrodatné odchylky, velikosti vzorku a zvolené hladiny. Interval ukazuje nejistotu odhadu průměru.",
+    "explanation": "Interval=x̄±t·s/√n, kde kritická hodnota t závisí na hladině spolehlivosti a n−1 stupních volnosti.",
+    "example": "Průměr 50, odchylka 10, n=25 a 95% hladina dávají přibližný interval 45,9 až 54,1.",
+    "formula": "x̄±t₍1−α/2,n−1₎·s/√n.",
+    "limitations": "Jde o přibližný t-interval pro výběr; reprezentativnost a nezávislost pozorování jsou důležité.",
+    "everyday": "Odhadni rozmezí pro průměrnou dobu doručení nebo výsledek vzorku, místo samotného bodového průměru.",
+    "faqs": [
+      {
+        "q": "Znamená 95% interval 95% šanci, že konkrétní průměr leží uvnitř?",
+        "a": "Ne přesně; při opakovaných výběrech by takto vytvořené intervaly pokryly skutečný průměr asi v 95 % případů."
+      },
+      {
+        "q": "Proč se používá t-rozdělení?",
+        "a": "Zohledňuje odhad směrodatné odchylky ze vzorku."
+      }
+    ],
+    "fields": {
+      "mean": {
+        "label": "Průměr výběru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "sd": {
+        "label": "Směrodatná odchylka výběru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "n": {
+        "label": "Velikost výběru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "level": {
+        "label": "Hladina spolehlivosti",
+        "help": "",
+        "unit": "",
+        "options": {
+          "90": "90 %",
+          "95": "95 %",
+          "99": "99 %"
+        }
+      }
+    }
+  },
+  "ratio-calculator": {
+    "title": "Kalkulačka poměru",
+    "description": "Zkrať poměr na nejjednodušší tvar a případně rozděl celkové množství podle jeho částí. Výpočet zachová vztah mezi poměrem a odpovídajícími podíly.",
+    "explanation": "Poměr a:b se zkrátí největším společným dělitelem. Při rozdělení celku T připadne první části T·a/(a+b) a druhé T·b/(a+b).",
+    "example": "Poměr 2:3 rozděluje celek 20 na 8 a 12.",
+    "formula": "Zkrácení používá NSD(a,b); podíly jsou T·a/(a+b) a T·b/(a+b).",
+    "limitations": "Součet částí poměru nesmí být nula; záporné poměry nejsou pro běžné rozdělení množství vhodné.",
+    "everyday": "Rozděl ingredience nebo rozpočet podle poměru bez ručního převádění na podíly.",
+    "faqs": [
+      {
+        "q": "Jak se poměr zkrátí?",
+        "a": "Obě části se vydělí jejich největším společným dělitelem."
+      },
+      {
+        "q": "Musí se zadat celková částka?",
+        "a": "Ne, zkrácený poměr lze získat i bez rozdělení celku."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První část poměru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhá část poměru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "total": {
+        "label": "Celkem k rozdělení",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "distance-calculator": {
+    "title": "Kalkulačka vzdálenosti",
+    "description": "Vypočítej přímou vzdálenost mezi dvěma body ve dvou nebo třech rozměrech. Zobrazí také rozdíly souřadnic.",
+    "explanation": "Ve 2D: d=√((x₂−x₁)²+(y₂−y₁)²). Ve 3D se přičte také čtverec rozdílu souřadnic z.",
+    "example": "Body (1,2) a (4,8) jsou od sebe vzdálené √45≈6,71 jednotky.",
+    "formula": "d₂D=√(Δx²+Δy²); d₃D=√(Δx²+Δy²+Δz²).",
+    "limitations": "Výpočet je přímá eukleidovská vzdálenost, nikoli skutečná silniční nebo povrchová trasa.",
+    "everyday": "Porovnej přímou vzdálenost souřadnic nebo délku úsečky v geometrii.",
+    "faqs": [
+      {
+        "q": "Je to vzdálenost po silnici?",
+        "a": "Ne, jde o přímou vzdálenost mezi souřadnicemi."
+      },
+      {
+        "q": "Jaké jednotky se použijí?",
+        "a": "Výsledek má stejnou jednotku jako zadané souřadnice."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "circle-calculator": {
+    "title": "Kalkulačka kruhu",
+    "description": "Vypočítej poloměr, průměr, obvod a obsah kruhu, pokud znáš jednu z těchto hodnot. Ostatní rozměry vycházejí přímo z geometrie kruhu.",
+    "explanation": "d=2r, o=2πr a S=πr². Při známém obvodu nebo obsahu lze vztahy upravit pro poloměr.",
+    "example": "Kruh s poloměrem 5 má průměr 10, obvod přibližně 31,42 a obsah 78,54 čtverečních jednotek.",
+    "formula": "d=2r; o=2πr; S=πr².",
+    "limitations": "Všechny délky musí používat stejnou jednotku; obsah má její druhou mocninu.",
+    "everyday": "Změř kruhový stůl nebo záhon a odhadni jeho obvod či plochu.",
+    "faqs": [
+      {
+        "q": "Jakou jednotku má obsah?",
+        "a": "Druhou mocninu délkové jednotky."
+      },
+      {
+        "q": "Lze zadat průměr?",
+        "a": "Ano, kalkulačka z něj dopočítá poloměr."
+      }
+    ],
+    "fields": {
+      "given": {
+        "label": "Známý rozměr",
+        "help": "",
+        "unit": "",
+        "options": {
+          "radius": "Poloměr",
+          "diameter": "Průměr",
+          "circumference": "Obvod",
+          "area": "Obsah"
+        }
+      },
+      "value": {
+        "label": "Rozměr",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "surface-area-calculator": {
+    "title": "Kalkulačka povrchu těles",
+    "description": "Vypočítej povrch krychle, kvádru, koule, uzavřeného válce, kužele nebo čtyřbokého jehlanu. Použij rozměry ve stejné jednotce.",
+    "explanation": "Povrch je součet obsahů všech vnějších stěn; vzorec závisí na tvaru tělesa a zahrnuje také uzavřené podstavy.",
+    "example": "Krychle s hranou 3 má povrch 6·3²=54 čtverečních jednotek.",
+    "formula": "Povrch je součet obsahů jednotlivých stěn; například koule S=4πr².",
+    "limitations": "Válec je považován za uzavřený a rozměry musí mít stejnou délkovou jednotku.",
+    "everyday": "Odhadni plochu k nátěru nebo obalu pro krabici či nádobu.",
+    "faqs": [
+      {
+        "q": "Zahrnuje uzavřený válec obě podstavy?",
+        "a": "Ano, horní i dolní."
+      },
+      {
+        "q": "Jakou jednotku má povrch?",
+        "a": "Druhou mocninu jednotky rozměrů."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Těleso",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Krychle",
+          "box": "Kvádr",
+          "sphere": "Koule",
+          "cylinder": "Uzavřený válec",
+          "cone": "Kužel",
+          "pyramid": "Čtyřboký jehlan"
+        }
+      },
+      "a": {
+        "label": "Strana / délka / poloměr",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Šířka / výška",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "c": {
+        "label": "Výška / strana kužele",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "pythagorean-theorem-calculator": {
+    "title": "Kalkulačka Pythagorovy věty",
+    "description": "Dopočítej chybějící stranu pravoúhlého trojúhelníku ze dvou známých stran. Můžeš zadat obě odvěsny nebo přeponu a jednu odvěsnu.",
+    "explanation": "Pythagorova věta říká a²+b²=c², kde c je přepona. Chybějící odvěsnu vypočítej jako √(c²−a²).",
+    "example": "Odvěsny 3 a 4 dávají přeponu √(3²+4²)=5.",
+    "formula": "a²+b²=c².",
+    "limitations": "Přepona musí být delší než známá odvěsna; zadané délky musí tvořit pravoúhlý trojúhelník.",
+    "everyday": "Ověř délku žebříku, úhlopříčku místnosti nebo stranu pravoúhlého obrazce.",
+    "faqs": [
+      {
+        "q": "Jak poznám přeponu?",
+        "a": "Je to nejdelší strana naproti pravému úhlu."
+      },
+      {
+        "q": "Jakou jednotku má výsledek?",
+        "a": "Stejnou jako zadané délky."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Známé strany",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Obě odvěsny",
+          "hypotenuse-leg": "Přepona a jedna odvěsna"
+        }
+      },
+      "a": {
+        "label": "První strana",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhá strana",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "right-triangle-calculator": {
+    "title": "Kalkulačka pravoúhlého trojúhelníku",
+    "description": "Doplň pravoúhlý trojúhelník ze dvou odvěsen nebo z jedné odvěsny a protilehlého ostrého úhlu. Výsledek zahrnuje chybějící úhly i délky.",
+    "explanation": "Součet ostrých úhlů je 90°. Strany se dopočítají pomocí Pythagorovy věty a vztahů sinu, kosinu a tangens.",
+    "example": "Pro odvěsny 3 a 4 je přepona 5 a ostré úhly přibližně 36,87° a 53,13°.",
+    "formula": "a²+b²=c²; sin(α)=protilehlá/přepona.",
+    "limitations": "Zadaný úhel musí být mezi 0° a 90° a rozměry musí odpovídat pravoúhlému trojúhelníku.",
+    "everyday": "Dopočítej neznámý úhel nebo stranu při práci s rampou, střechou či školním příkladem.",
+    "faqs": [
+      {
+        "q": "Kolik je součet ostrých úhlů?",
+        "a": "Vždy 90°."
+      },
+      {
+        "q": "Zadávám úhel ve stupních?",
+        "a": "Ano, vstupní úhel je ve stupních."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Známé rozměry",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Obě odvěsny",
+          "leg-angle": "Jedna odvěsna a protilehlý úhel"
+        }
+      },
+      "a": {
+        "label": "Odvěsna a",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      },
+      "b": {
+        "label": "Odvěsna b nebo úhel",
+        "help": "",
+        "unit": "jednotky",
+        "options": {}
+      }
+    }
+  },
+  "root-calculator": {
+    "title": "Kalkulačka odmocnin",
+    "description": "Vypočítej reálnou n-tou odmocninu čísla. Záporný základ je přípustný pro lichý index; záporný základ pod sudou odmocninou nemá reálný výsledek.",
+    "explanation": "n-tá odmocnina z x je číslo y, pro které yⁿ=x. U záporného x musí být n liché.",
+    "example": "∛(−125)=−5.",
+    "formula": "ⁿ√x=y právě tehdy, když yⁿ=x.",
+    "limitations": "Index odmocniny musí být kladné celé číslo; sudá odmocnina záporného čísla není reálná.",
+    "everyday": "Ověř třetí odmocninu záporného čísla nebo odmocninu při úpravě vzorce.",
+    "faqs": [
+      {
+        "q": "Lze odmocnit záporné číslo?",
+        "a": "Ano, pokud je index lichý."
+      },
+      {
+        "q": "Co je hlavní odmocnina?",
+        "a": "Nezáporná hodnota pro sudý index."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Odmocněnec",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "index": {
+        "label": "Index odmocniny",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "lcm-calculator": {
+    "title": "Kalkulačka nejmenšího společného násobku",
+    "description": "Najdi nejmenší společný násobek dvou celých čísel. NSN je nejmenší nezáporné číslo dělitelné oběma vstupy.",
+    "explanation": "NSN(a,b)=|a·b|/NSD(a,b), přičemž NSN(0,b)=0.",
+    "example": "NSN(12,18)=36.",
+    "formula": "NSN(a,b)=|a·b|/NSD(a,b).",
+    "limitations": "Nula má zvláštní výsledek: NSN nuly a druhého čísla je nula.",
+    "everyday": "Najdi společný interval pro opakující se události nebo společný jmenovatel zlomků.",
+    "faqs": [
+      {
+        "q": "Jaký je NSN pro dvě čísla 12 a 18?",
+        "a": "36."
+      },
+      {
+        "q": "Co když je jedno číslo nula?",
+        "a": "Nejmenší společný násobek je nula."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "gcf-calculator": {
+    "title": "Kalkulačka největšího společného dělitele",
+    "description": "Vypočítej největší společný dělitel dvou celých čísel. Jde o největší kladné celé číslo, které dělí oba vstupy beze zbytku.",
+    "explanation": "Eukleidův algoritmus opakovaně nahrazuje dvojici (a,b) dvojicí (b,a mod b), dokud zbytek není nula.",
+    "example": "NSD(48,18)=6.",
+    "formula": "NSD(a,b)=NSD(b,a mod b).",
+    "limitations": "NSD(0,0) není definován; záporná čísla se vyhodnotí podle absolutní hodnoty.",
+    "everyday": "Zkrať zlomek nebo rozlož čísla při hledání společných faktorů.",
+    "faqs": [
+      {
+        "q": "Jaký je NSD čísel 48 a 18?",
+        "a": "Je to 6."
+      },
+      {
+        "q": "Lze zadat záporné číslo?",
+        "a": "Ano, znaménko nemění kladný společný dělitel."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "factor-calculator": {
+    "title": "Kalkulačka dělitelů",
+    "description": "Vypiš kladné dvojice dělitelů kladného celého čísla a zjisti, zda je prvočíslo, nebo složené. Každý uvedený faktor dělí vstup bez zbytku.",
+    "explanation": "Faktory se hledají v párech a kontrola končí u druhé odmocniny vstupního čísla. Prvočíslo má pouze dvojici 1 a samo sebe.",
+    "example": "Číslo 36 má páry 1×36, 2×18, 3×12, 4×9 a 6×6.",
+    "formula": "Dvojice faktorů (d,n/d) existují pro každého dělitele d čísla n.",
+    "limitations": "Vstup musí být kladné celé číslo; velmi velká čísla mohou výpis výrazně prodloužit.",
+    "everyday": "Prověř dělitele čísla při rozkladu na prvočinitele nebo při úpravě zlomku.",
+    "faqs": [
+      {
+        "q": "Co je prvočíslo?",
+        "a": "Kladné celé číslo větší než 1, které má jen dělitele 1 a samo sebe."
+      },
+      {
+        "q": "Proč se páry hledají jen do odmocniny?",
+        "a": "Druhý faktor je pak alespoň stejně velký jako první."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Kladné celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "rounding-calculator": {
+    "title": "Kalkulačka zaokrouhlování",
+    "description": "Zaokrouhli číslo na zvolený počet desetinných míst nebo na desítky, stovky či jiné mocniny deseti. Při přesné polovině se zaokrouhluje od nuly.",
+    "explanation": "Počet míst 2 zaokrouhluje na setiny; záporný počet míst zaokrouhluje vlevo od desetinné čárky.",
+    "example": "12,345 zaokrouhlené na dvě desetinná místa je 12,35.",
+    "formula": "Výsledek se zaokrouhlí na 10^m; poloviční případy se zaokrouhlují od nuly.",
+    "limitations": "Zaokrouhlení může změnit přesnost; původní hodnota se nepřepisuje.",
+    "everyday": "Zaokrouhli cenu, měření nebo výsledek na počet míst požadovaný v zadání.",
+    "faqs": [
+      {
+        "q": "Jak zaokrouhlím na desítky?",
+        "a": "Zadej −1 desetinné místo."
+      },
+      {
+        "q": "Jak se řeší přesná polovina?",
+        "a": "Od nuly, například 2,5 na 3 a −2,5 na −3."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "places": {
+        "label": "Počet desetinných míst (−12 až 12)",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "matrix-calculator": {
+    "title": "Kalkulačka matic",
+    "description": "Sčítej, odčítej nebo násob malé matice a zobraz přehledný výsledek. Kontrola rozměrů odmítne operace, které nejsou definované.",
+    "explanation": "Sčítání a odčítání vyžaduje stejné rozměry; při násobení musí počet sloupců první matice odpovídat počtu řádků druhé.",
+    "example": "Matice [[1,2],[3,4]] krát [[2,0],[1,2]] dává [[4,4],[10,8]].",
+    "formula": "Součet po složkách; součin Cᵢⱼ=ΣₖAᵢₖBₖⱼ.",
+    "limitations": "Podporované matice mají nejvýše 5 řádků a 5 sloupců; součin vyžaduje kompatibilní rozměry.",
+    "everyday": "Zkontroluj maticový součin z úlohy nebo malou transformaci souřadnic.",
+    "faqs": [
+      {
+        "q": "Jak oddělím řádky?",
+        "a": "Středníkem; hodnoty v řádku odděl čárkami nebo mezerami."
+      },
+      {
+        "q": "Musí mít matice stejnou velikost?",
+        "a": "Pro sčítání ano, pro násobení musí souhlasit vnitřní rozměry."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Matice A",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Matice B",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "add": "Sčítání",
+          "subtract": "Odčítání",
+          "multiply": "Násobení"
+        }
+      }
+    }
+  },
+  "scientific-notation-calculator": {
+    "title": "Kalkulačka vědeckého zápisu",
+    "description": "Převeď desetinné číslo do normalizovaného vědeckého zápisu nebo zpět. Koeficient a exponent desítky zpřehlední velmi velké i velmi malé hodnoty.",
+    "explanation": "Vědecký zápis má tvar a×10ⁿ, kde absolutní hodnota a leží od 1 do 10, kromě nuly.",
+    "example": "0,00072=7,2×10⁻⁴.",
+    "formula": "x=a×10ⁿ.",
+    "limitations": "Rozsah exponentu je omezen přesností čísel s plovoucí desetinnou čárkou.",
+    "everyday": "Zapiš velikost částice nebo vzdálenost v přehlednějším tvaru pro výpočty.",
+    "faqs": [
+      {
+        "q": "Musí být koeficient mezi 1 a 10?",
+        "a": "V normalizovaném zápisu ano."
+      },
+      {
+        "q": "Lze převést zápornou hodnotu?",
+        "a": "Ano, znaménko zůstane u koeficientu."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Převod",
+        "help": "",
+        "unit": "",
+        "options": {
+          "to-sci": "Z desetinného do vědeckého zápisu",
+          "from-sci": "Z vědeckého zápisu do desetinného"
+        }
+      },
+      "value": {
+        "label": "Desetinná hodnota",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "coefficient": {
+        "label": "Koeficient",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "exponent": {
+        "label": "Mocnina deseti",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "big-number-calculator": {
+    "title": "Kalkulačka velkých čísel",
+    "description": "Sčítej, odčítej, násob a děl velmi dlouhá celá čísla bez ztráty přesnosti při převodu na čísla s plovoucí čárkou. Výsledek zůstává přesný v desítkovém zápisu.",
+    "explanation": "Výpočet používá celočíselnou aritmetiku s libovolnou přesností. Při dělení se zobrazí celočíselný podíl.",
+    "example": "12345678901234567890 + 10 = 12345678901234567900.",
+    "formula": "Operace se provádějí přesně nad celými čísly, ne nad binárními plovoucími čísly.",
+    "limitations": "Každý operand je omezen na 200 číslic; dělení nulou není možné.",
+    "everyday": "Ověř dlouhý identifikátor, velký počet kusů nebo celočíselný součet bez zaokrouhlení.",
+    "faqs": [
+      {
+        "q": "Ztratí se přesnost u velmi dlouhých čísel?",
+        "a": "Ne, počítá se přesně jako celé číslo."
+      },
+      {
+        "q": "Je výsledek dělení desetinný?",
+        "a": "Zobrazí se celočíselný podíl."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Sčítání",
+          "-": "Odčítání",
+          "*": "Násobení",
+          "/": "Dělení"
+        }
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "prime-factorization-calculator": {
+    "title": "Kalkulačka rozkladu na prvočinitele",
+    "description": "Rozlož kladné celé číslo na prvočíselné mocniny a zobraz každý prvočinitel včetně násobnosti. Jednoznačný rozklad pomůže také při hledání dělitelů nebo krácení.",
+    "explanation": "Opakovaně se zkouší dělení prvočísly, dokud nezbude 1 nebo prvočinitel větší než odmocnina.",
+    "example": "36=2²×3², tedy prvočinitelé 2, 2, 3 a 3.",
+    "formula": "Každé celé n>1 má jednoznačný rozklad na součin prvočísel.",
+    "limitations": "Vstup musí být kladné celé číslo; rozklad velkého prvočísla může být výpočetně náročný.",
+    "everyday": "Zjisti prvočíselné faktory při hledání NSD, NSN nebo zjednodušování zlomku.",
+    "faqs": [
+      {
+        "q": "Je rozklad prvočísel jednoznačný?",
+        "a": "Ano, až na pořadí faktorů."
+      },
+      {
+        "q": "Co se stane při zadání 1?",
+        "a": "Číslo 1 nemá prvočíselné faktory."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Kladné celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "common-factor-calculator": {
+    "title": "Kalkulačka společných dělitelů",
+    "description": "Vypiš všechny kladné společné dělitele dvou celých čísel a zobraz jejich největší společný dělitel. Hodí se, když potřebuješ celý seznam, nejen největší faktor.",
+    "explanation": "Kalkulačka najde dělitele NSD obou absolutních hodnot. Dvojice nul nemá definovaný největší společný dělitel.",
+    "example": "Společnými děliteli 12 a 18 jsou 1, 2, 3 a 6; NSD je 6.",
+    "formula": "Společní dělitelé(a,b)=dělitelé(NSD(a,b)).",
+    "limitations": "Obě hodnoty nesmí být současně nula; seznam je omezen rozsahem vstupů.",
+    "everyday": "Najdi všechny možné stejné skupiny při dělení materiálu nebo položek do balíčků.",
+    "faqs": [
+      {
+        "q": "Jak se liší od kalkulačky NSD?",
+        "a": "Zobrazí všechny společné dělitele, nejen největší."
+      },
+      {
+        "q": "Lze zadat záporná čísla?",
+        "a": "Ano, při hledání dělitelů se použijí jejich absolutní hodnoty."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "basic-calculator": {
+    "title": "Základní kalkulačka",
+    "description": "Vypočítej aritmetický výraz se závorkami a běžným pořadím operací. Bezpečný parser přijímá pouze matematické znaky a nespouští zadaný kód.",
+    "explanation": "Mocnění a násobení mají přednost před sčítáním a odčítáním; závorky určují pořadí.",
+    "example": "Pro 2*(3+4)² dostaneš 98.",
+    "formula": "Výraz se vyhodnotí podle standardní priority operátorů a závorek.",
+    "limitations": "Jsou povoleny pouze podporované matematické operátory, závorky a čísla; dělení nulou se odmítá.",
+    "everyday": "Rychle zkontroluj výpočet s více kroky bez přepínání mezi jednotlivými operacemi.",
+    "faqs": [
+      {
+        "q": "Mohu používat závorky?",
+        "a": "Ano, i vnořené závorky."
+      },
+      {
+        "q": "Lze zadat funkce nebo proměnné?",
+        "a": "Základní kalkulačka přijímá jen povolené číselné výrazy."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Matematický výraz",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "long-division-calculator": {
+    "title": "Kalkulačka písemného dělení",
+    "description": "Vyděl dvě celá čísla a zobraz celočíselný podíl, zbytek i desetinný podíl. U záporných hodnot se zbytek řídí dělením se zaokrouhlením směrem k nule.",
+    "explanation": "Platí a=bq+r; podíl q se zkrátí směrem k nule a zbytek r nese znaménko děleného čísla.",
+    "example": "17÷5 dává podíl 3, zbytek 2 a desetinný výsledek 3,4.",
+    "formula": "a=b·q+r.",
+    "limitations": "Dělitel nesmí být nula; zbytek používá konvenci oříznutí směrem k nule.",
+    "everyday": "Rozepiš dělení při domácím úkolu nebo zkontroluj zbytek při rozdělování kusů.",
+    "faqs": [
+      {
+        "q": "Může být zbytek záporný?",
+        "a": "Ano, u záporného děleného čísla může mít stejné znaménko."
+      },
+      {
+        "q": "Jaký je desetinný podíl?",
+        "a": "Je to běžné dělení a/b."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "První celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druhé celé číslo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "average-calculator": {
+    "title": "Kalkulačka průměru",
+    "description": "Vypočítej aritmetický průměr seznamu a zobraz počet i součet hodnot. Průměr je vhodný, pokud mají všechna pozorování stejnou váhu.",
+    "explanation": "Průměr=x₁+x₂+…+xₙ děleno n.",
+    "example": "Průměr hodnot 4, 7 a 10 je 7.",
+    "formula": "x̄=Σx/n.",
+    "limitations": "Odlehlá hodnota může průměr výrazně posunout; pro zkreslená data zvaž medián.",
+    "everyday": "Zjisti průměrnou dobu, skóre nebo týdenní výdaj ze stejně důležitých pozorování.",
+    "faqs": [
+      {
+        "q": "Jak se průměr počítá?",
+        "a": "Sečti všechny hodnoty a vyděl jejich počtem."
+      },
+      {
+        "q": "Je průměr totéž co medián?",
+        "a": "Ne, medián je prostřední hodnota v seřazeném seznamu."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Hodnoty",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    }
+  },
+  "p-value-calculator": {
+    "title": "Kalkulačka p-hodnoty",
+    "description": "Převeď z-statistiku na levou, pravou nebo oboustrannou p-hodnotu standardního normálního rozdělení. P-hodnota má smysl pouze spolu s hypotézou, návrhem testu a předpoklady modelu.",
+    "explanation": "P-hodnota je plocha příslušného chvostu pod standardním normálním rozdělením; oboustranný test počítá oba chvosty za |z|.",
+    "example": "Pro z=1,96 je oboustranná p-hodnota přibližně 0,05.",
+    "formula": "p=P(Z≤z), p=P(Z≥z) nebo 2·P(Z≥|z|), kde Z~N(0,1).",
+    "limitations": "Jde o normální z-test; nepřizpůsobuje p-hodnotu jinému rozdělení, vícenásobnému testování ani výběrovému plánu.",
+    "everyday": "Zkontroluj p-hodnotu pro předem zvolený jednostranný či oboustranný z-test.",
+    "faqs": [
+      {
+        "q": "Znamená p=0,05 pětiprocentní pravděpodobnost, že nulová hypotéza platí?",
+        "a": "Ne, p-hodnota je pravděpodobnost dat alespoň tak extrémních za předpokladu nulové hypotézy."
+      },
+      {
+        "q": "Kdy zvolit oboustranný test?",
+        "a": "Když tě zajímá odchylka v obou směrech."
+      }
+    ],
+    "fields": {
+      "z": {
+        "label": "Z statistika",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "tail": {
+        "label": "Alternativní hypotéza",
+        "help": "",
+        "unit": "",
+        "options": {
+          "left": "Levostranná",
+          "right": "Pravostranná",
+          "two": "Oboustranná"
+        }
+      }
+    }
+  }
+}

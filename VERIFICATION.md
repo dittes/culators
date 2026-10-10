@@ -34,3 +34,14 @@ Reproduce with `npm run build`, `npm test`, `npm run verify`, then run `node tes
 - `node tests/result-motion.mjs`: repeated calculations, unchanged answers, growing/fading result, reduced motion and mobile visibility passed.
 - `npm run verify:locales`: all German translation fields, select options, FAQ shapes, reciprocal language links and visible breakdowns passed.
 - During QA, the Python preview server dropped several sockets under repeated page loads. Replaced it with a dependency-free Node static preview server; the full browser audit then passed. This is development infrastructure only; deployment remains static.
+
+## Czech and result-character update — 2026-10-10
+
+- Added 207 Czech calculators under `/cs/`, including interface, calculator inputs/options, explanations, practical scenarios, FAQs and runtime feedback. Three-language menu links to the corresponding calculator, with reciprocal EN/DE/CS hreflang and sitemap entries.
+- German amount labels default to EUR; Czech labels default to CZK. Explicit shared currency choices override defaults. Currency labels do not convert amounts or change jurisdiction-specific formulas.
+- Primary orange buttons use white, bold 19.2 px text. The hero accent uses the same orange; scenario comparison stays neutral. Each result grapheme fades and grows separately, preserving exact answer text. Reduced motion retains a short opacity-only confirmation.
+- Reproduce the additional design/currency/language checks with `node tests/language-design.mjs`.
+- `node tests/browser.mjs`: all **621 calculator routes** passed default load/submission checks; all three languages passed representative **320/375/414/768/1440 px** viewport checks. No route failures, overflow, interaction failures, console errors or page errors.
+- `npm test`: **45 passed**. `npm run verify:locales`: **414 DE/CS translations** passed field/option/FAQ and language-link checks. Static local links and assets passed.
+- `node tests/result-motion.mjs`, `node tests/settings-browser.mjs` and `node tests/language-design.mjs`: passed character staggering/repeated submissions, exact answer preservation, reduced motion, mobile result scrolling, measurement conversions, shared settings, EUR/CZK defaults, explicit USD override, white primary labels, matching hero orange, neutral scenario action, language counterparts and Czech search.
+- Visually inspected the Czech ROI desktop page and German BMI page at 320 px.

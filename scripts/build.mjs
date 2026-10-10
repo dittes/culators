@@ -51,5 +51,6 @@ await writeFile(new URL('robots.txt',dist),`User-agent: *\nAllow: /\nSitemap: ${
 await writeFile(new URL('_headers',dist),`/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'\n`);
 await writeFile(new URL('.nojekyll',dist),'');
 await writeFile(new URL('_redirects',dist),'/ /en/ 302\n');
-const {buildGerman}=await import('./build-german.mjs');await buildGerman({tools,dist,site});
-console.log(`Built ${tools.length} calculators and ${paths.length} indexable pages into dist/`);
+const {buildGerman}=await import('./build-german.mjs');await buildGerman({tools,dist,site});await buildGerman({tools,dist,site,language:'cs'});
+const {linkLanguages}=await import('./language-links.mjs');await linkLanguages({dist,site});
+console.log(`Built ${tools.length} calculators and ${paths.length+(paths.length-1)*2} indexable pages into dist/`);

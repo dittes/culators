@@ -8,8 +8,9 @@ try {
  const initial=await page.locator('[data-result-value]').textContent();
  for(let i=0;i<2;i++){
   await page.locator('button[type=submit]').click();
-  const motion=await page.locator('[data-result-value]').evaluate(el=>({animations:el.getAnimations().length,weight:getComputedStyle(el).fontWeight,frames:el.getAnimations()[0]?.effect.getKeyframes()}));
-  assert.equal(motion.animations,1,'Every Calculate click starts one result-number animation');
+  const motion=await page.locator('[data-result-value]').evaluate(el=>({animations:el.getAnimations({subtree:true}).length,characters:el.children.length,delays:[...el.children].map(c=>c.getAnimations()[0]?.effect.getTiming().delay),weight:getComputedStyle(el).fontWeight,frames:el.children[0]?.getAnimations()[0]?.effect.getKeyframes()}));
+  assert.equal(motion.animations,motion.characters,'Every character animates on each Calculate click');
+  assert.ok(motion.characters>1);assert.ok(motion.delays.every((d,i)=>i===0||d>motion.delays[i-1]),'Characters have staggered delays');
   assert.ok(Number(motion.weight)>=700,'Result is bold');
   assert.ok(motion.frames[0].transform.includes('translateY'),'Normal motion animates the number');
   assert.equal(await page.locator('[data-result-value]').textContent(),initial,'Animation preserves exact answer');

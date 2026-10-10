@@ -1,0 +1,2069 @@
+{
+  "age-calculator": {
+    "title": "Kalkulačka věku",
+    "description": "Zjisti dokončený věk mezi datem narození a zvoleným datem.",
+    "explanation": "Počítají se dosažená kalendářní výročí; výsledek ukáže také uplynulé dny a příští narozeniny. Data se porovnávají v UTC, takže změna letního času výpočet neovlivní. Narození 29. února se v běžném roce považuje za 1. březen.",
+    "example": "Každému narozenému 10. května 2000 bude 9. května 2025 24 let a o den později 25 let.",
+    "formula": "Dokončené roky = roční rozdíl, upravený podle toho, zda již bylo dosaženo narozenin.",
+    "everyday": "Věk lze určit k libovolnému datu pro formuláře, výročí nebo plánování narozenin.",
+    "faqs": [
+      {
+        "q": "Jak se počítají narozeniny 29. února v běžném roce?",
+        "a": "Kalkulačka používá 1. březen. Právní pravidla se mohou lišit."
+      },
+      {
+        "q": "Započítává se den narození?",
+        "a": "Počítají se dokončené roky od posledních narozenin, nikoli počet dnů včetně dne narození."
+      }
+    ],
+    "fields": {
+      "birthDate": {
+        "label": "Datum narození",
+        "help": "",
+        "unit": ""
+      },
+      "asOf": {
+        "label": "Věk k datu",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "date-calculator": {
+    "title": "Kalkulačka data",
+    "description": "Přičti nebo odečti kalendářní dny od zvoleného data.",
+    "explanation": "Výpočet posune kalendářní datum o celé dny a zachová správný den přes konec měsíce, roku i změnu letního času.",
+    "example": "30 dní po 15. lednu 2024 je 14. února 2024.",
+    "formula": "Výsledné datum = počáteční datum + podepsaný počet kalendářních dnů.",
+    "everyday": "Při plánování dodání, cesty nebo následného termínu si snadno spočítáš datum po zadaném počtu dnů.",
+    "faqs": [
+      {
+        "q": "Počítá se počáteční i koncový den?",
+        "a": "Ne. Přičtení jednoho dne vrátí následující kalendářní datum."
+      },
+      {
+        "q": "Co znamená záporný počet dnů?",
+        "a": "Záporná hodnota posune datum o stejný počet dnů zpět."
+      }
+    ],
+    "fields": {
+      "date": {
+        "label": "Datum",
+        "help": "",
+        "unit": ""
+      },
+      "days": {
+        "label": "Počet dnů",
+        "help": "",
+        "unit": "dny"
+      }
+    }
+  },
+  "time-calculator": {
+    "title": "Kalkulačka času",
+    "description": "Přičti nebo odečti hodiny a minuty od zadaného času.",
+    "explanation": "Čas se po půlnoci přetočí a výsledek zvlášť uvádí počet překročených dnů. Hodiny představují délku a mohou přesáhnout 24.",
+    "example": "23:30 plus 2 hodiny a 45 minut se rovná 2:15 následujícího dne.",
+    "formula": "Výsledný čas = čas začátku ± trvání; samostatně se počítají celé překročené dny.",
+    "everyday": "Rychle zkontroluj, kdy směna, schůzka nebo čekací doba po určité době končí.",
+    "faqs": [
+      {
+        "q": "Mohou hodiny přesahovat 24?",
+        "a": "Ano. Jde o uplynulou dobu, nikoli běžný čas na hodinách."
+      },
+      {
+        "q": "Zohledňuje kalkulačka časová pásma?",
+        "a": "Ne. Pro převod mezi místy použij kalkulačku časových pásem."
+      }
+    ],
+    "fields": {
+      "time": {
+        "label": "Čas",
+        "help": "",
+        "unit": ""
+      },
+      "hours": {
+        "label": "Hodiny",
+        "help": "",
+        "unit": "h"
+      },
+      "minutes": {
+        "label": "Minuty",
+        "help": "",
+        "unit": "min"
+      },
+      "direction": {
+        "label": "Operace",
+        "help": "",
+        "unit": "",
+        "options": {
+          "add": "Přičíst",
+          "subtract": "Odečíst"
+        }
+      }
+    }
+  },
+  "hours-calculator": {
+    "title": "Převod hodin",
+    "description": "Převeď hodiny a minuty na desetinné hodiny a zpět.",
+    "explanation": "Hodina má 60 minut. Desetinné zobrazení je vhodné pro účtování, zatímco dělení hodina minuta zachovává obvyklý časový zápis.",
+    "example": "7 hodin a 30 minut se rovná 7,5 desetinným hodinám.",
+    "formula": "Desetinné hodiny = hodiny + minuty ÷ 60.",
+    "everyday": "Správně převeď pracovní dobu na desetinné hodiny pro časové rozvrhy a tabulky.",
+    "faqs": [
+      {
+        "q": "Jsou minuty setiny hodiny?",
+        "a": "Ne. 30 minut je půl hodiny, ne 0,30 hodiny."
+      },
+      {
+        "q": "Může být čas negativní?",
+        "a": "Ano. Záporné znaménko může představovat korekci nebo časovou rovnováhu."
+      }
+    ],
+    "fields": {
+      "hours": {
+        "label": "Hodiny",
+        "help": "",
+        "unit": "h"
+      },
+      "minutes": {
+        "label": "Minuty",
+        "help": "",
+        "unit": "min"
+      }
+    }
+  },
+  "gpa-calculator": {
+    "title": "Kalkulačka studijního průměru",
+    "description": "Vypočítej průměr známek vážený kredity kurzu.",
+    "explanation": "Každá známka je vážena příslušnými kredity. Součet bodů kvality se vydělí celkovým počtem kreditů; klasifikační stupnice není vyžadována.",
+    "example": "Se 3 kredity s 4,0 a 1 kreditem s 3,0 to znamená (12+3)/4 = 3,75.",
+    "formula": "GPA = Σ (body hodnocení × kredity) ÷ Σ kredity.",
+    "everyday": "Porovnej studijní výsledky, když mají předměty různý počet kreditů.",
+    "faqs": [
+      {
+        "q": "Berou se v úvahu kredity?",
+        "a": "Ano. Kurzy s více kredity mají odpovídajícím způsobem větší dopad."
+      },
+      {
+        "q": "Mohu zadat procentuální hodnocení?",
+        "a": "Pouze pokud tvoje univerzita definuje tyto hodnoty jako známky; jinak jej nejprve převeď do příslušného měřítka."
+      }
+    ],
+    "fields": {
+      "grade1": {
+        "label": "Body za známku – předmět 1",
+        "help": "",
+        "unit": "body"
+      },
+      "credits1": {
+        "label": "Kredity – předmět 1",
+        "help": "",
+        "unit": "kredity"
+      },
+      "grade2": {
+        "label": "Body za známku – předmět 2",
+        "help": "",
+        "unit": "body"
+      },
+      "credits2": {
+        "label": "Kredity – předmět 2",
+        "help": "",
+        "unit": "kredity"
+      },
+      "grade3": {
+        "label": "Body za známku – předmět 3",
+        "help": "",
+        "unit": "body"
+      },
+      "credits3": {
+        "label": "Kredity – předmět 3",
+        "help": "",
+        "unit": "kredity"
+      }
+    }
+  },
+  "grade-calculator": {
+    "title": "Kalkulačka známek",
+    "description": "Vypočítej vážený průměr kurzu a hodnotu potřebnou pro cílovou známku.",
+    "explanation": "Skóre a váhy se posuzují samostatně. Aktuální průměr je normalizován pomocí zadaných vah; cílový výpočet ukazuje, jaká hodnota by byla nutná se zbývající váhou.",
+    "example": "85 % při 40 % hmotnosti a 90 % při 60 % hmotnosti se rovná 88 %.",
+    "formula": "Vážený průměr = Σ(skóre × váha) ÷ Σ váhy.",
+    "everyday": "Zjisti průběžnou známku nebo potřebné skóre u zbývající zkoušky.",
+    "faqs": [
+      {
+        "q": "Může být požadovaná známka vyšší než 100 %?",
+        "a": "Ano. Pak nelze cíle matematicky dosáhnout se zadanými váhami."
+      },
+      {
+        "q": "Musí se váhy sčítat až do 100 %?",
+        "a": "Pro úplný rozvrh kurzu ano; aktuální řez je normalizován pomocí zaznamenaných vah."
+      }
+    ],
+    "fields": {
+      "score1": {
+        "label": "Skóre hodnocení 1",
+        "help": "",
+        "unit": "%"
+      },
+      "weight1": {
+        "label": "Váha hodnocení 1",
+        "help": "",
+        "unit": "%"
+      },
+      "score2": {
+        "label": "Skóre hodnocení 2",
+        "help": "",
+        "unit": "%"
+      },
+      "weight2": {
+        "label": "Váha hodnocení 2",
+        "help": "",
+        "unit": "%"
+      },
+      "target": {
+        "label": "Cílová známka",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "height-calculator": {
+    "title": "Převodník výšky",
+    "description": "Převeď výšku mezi centimetry, metry, stopami a palci.",
+    "explanation": "Převod používá pevné poměry jednotek. Desetinné stopy nelze zaměňovat se zápisem stop a palců.",
+    "example": "170 cm odpovídá 1,70 m nebo přibližně 5 stop a 6,93 palců.",
+    "formula": "1 palec = 2,54 cm; všechny hodnoty jsou převedeny pomocí těchto pevných poměrů jednotek.",
+    "everyday": "Převeď výšku do jednotek požadovaných ve formuláři nebo v zahraniční tabulce.",
+    "faqs": [
+      {
+        "q": "Kolik centimetrů je v palci?",
+        "a": "Jeden palec je přesně 2,54 cm."
+      },
+      {
+        "q": "Jsou desetinné stopy stejné jako stopy a palce?",
+        "a": "Č. 5,5 desetinných stop se rovná 5 stopám a 6 palcům."
+      }
+    ],
+    "fields": {
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm"
+      },
+      "unit": {
+        "label": "Jednotka",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cm": "cm",
+          "m": "m",
+          "in": "palce",
+          "ft": "ft"
+        }
+      }
+    }
+  },
+  "concrete-calculator": {
+    "title": "Kalkulačka betonu",
+    "description": "Odhadni objem betonu pro obdélníkovou desku včetně rezervy na ztráty.",
+    "explanation": "Délka, šířka a tloušťka určují čistý objem; procentní přirážka přidá rezervu pro ukládání a případné ztráty. Nezohledňuje nepravidelné okraje ani výztuž.",
+    "example": "Deska 4 m × 3 m o tloušťce 10 cm vyžaduje zpočátku 1,2 m³ betonu.",
+    "formula": "Objem = délka × šířka × tloušťka × (1 + přirážka).",
+    "everyday": "Z naměřených rozměrů urči počáteční objednací množství pro základ, terasu nebo podlahovou desku.",
+    "faqs": [
+      {
+        "q": "Jakou rezervu si mám naplánovat?",
+        "a": "To závisí na tvaru, přístupu a instalaci. přirážka je nastavitelný plánovací předpoklad."
+      },
+      {
+        "q": "Počítá se počet sáčků?",
+        "a": "Ne. Výtěžnost závisí na produktu; použij k tomu informace výrobce."
+      }
+    ],
+    "fields": {
+      "length": {
+        "label": "Délka",
+        "help": "",
+        "unit": "m"
+      },
+      "width": {
+        "label": "Šířka",
+        "help": "",
+        "unit": "m"
+      },
+      "thickness": {
+        "label": "Tloušťka",
+        "help": "",
+        "unit": "m"
+      },
+      "waste": {
+        "label": "Přirážka na prořez",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "ip-subnet-calculator": {
+    "title": "Kalkulačka podsítě IPv4",
+    "description": "Zjisti síťovou adresu, masku, broadcast adresu a rozsah hostitelů pro síť IPv4 s prefixem CIDR.",
+    "explanation": "Adresa IPv4 se bitově zkombinuje s maskou CIDR. Sítě /31 a /32 jsou zvláštní případy, protože se u nich nepoužívá běžné odečítání síťové a broadcast adresy z počtu hostitelů.",
+    "example": "192.168.1.10/24 je v síti 192.168.1.0/24 s broadcast adresou 192.168.1.255.",
+    "formula": "Síťová adresa = IPv4 adresa AND maska CIDR.",
+    "everyday": "Ověř rozsah IP adres nebo počet použitelných adres ve své síti IPv4.",
+    "faqs": [
+      {
+        "q": "Podporuje nástroj IPv6?",
+        "a": "Ne, ověřuje pouze IPv4 adresy v tečkovém desítkovém zápisu."
+      },
+      {
+        "q": "Čím jsou prefixy /31 a /32 zvláštní?",
+        "a": "/31 se často používá pro spojení bod-bod a /32 označuje jedinou adresu."
+      }
+    ],
+    "fields": {
+      "ip": {
+        "label": "IPv4 adresa",
+        "help": "",
+        "unit": ""
+      },
+      "prefix": {
+        "label": "Prefix CIDR",
+        "help": "",
+        "unit": "/"
+      }
+    }
+  },
+  "bra-size-calculator": {
+    "title": "Kalkulačka velikosti podprsenky",
+    "description": "Odhadni velikost podprsenky podle míry podprsí a poprsí v palcích.",
+    "explanation": "Jednoduché pravidlo rozdílu poskytuje první aproximaci orientovanou na USA/Spojené království. Střih, značka, preference střihu a způsob měření ovlivňují vhodnou velikost.",
+    "example": "34 palců podprsí a 37 palců poprsí se rovná přibližně 34 C pomocí jednoduchého rozdílového pravidla.",
+    "formula": "Obvodová velikost vychází z měření pod prsy; velikost košíčku se odhaduje z rozdílu obvodů.",
+    "everyday": "Použij naměřené obvody jako první odhad a ověř je v tabulce velikostí konkrétní značky.",
+    "faqs": [
+      {
+        "q": "Je výsledek zaručeně fit?",
+        "a": "Ne. Je to jen odhad měření; kontrolní pásek, pohár a pohodlí."
+      },
+      {
+        "q": "Jaká velikostní stupnice platí?",
+        "a": "Přiblížení je založeno na společném celním pravidle USA/Spojeného království a nepřevádí se do štítků EU."
+      }
+    ],
+    "fields": {
+      "underbust": {
+        "label": "Obvod pod prsy",
+        "help": "",
+        "unit": "palce"
+      },
+      "bust": {
+        "label": "Obvod přes prsa",
+        "help": "",
+        "unit": "palce"
+      }
+    },
+    "limitations": "Konvence velikosti se liší; použij průvodce přizpůsobením dané značky."
+  },
+  "password-generator": {
+    "title": "Generátor hesel",
+    "description": "Vygeneruj heslo z vybraných skupin znaků pomocí kryptograficky bezpečné náhody.",
+    "explanation": "Každá zapnutá skupina znaků se objeví alespoň jednou. Odmítací vzorkování brání zkreslení při výběru znaků. Heslo se nikam neposílá.",
+    "example": "Heslo o 20 znacích složené z malých a velkých písmen, číslic a symbolů nabízí více prostoru pro vyhledávání než krátké slovo ze slovníku.",
+    "formula": "Znaky se vybírají kryptograficky bezpečně; každá zapnutá skupina se použije alespoň jednou.",
+    "everyday": "Vytvoř nové heslo k účtu a ulož ho do správce hesel.",
+    "faqs": [
+      {
+        "q": "Je generování bezpečné i offline?",
+        "a": "Použije se bezpečný generátor platformy, pokud je dostupný; modul výsledek nikam neposílá."
+      },
+      {
+        "q": "Mohu vynechat podobné znaky?",
+        "a": "Ano. Usnadní to ruční přepis, ale zmenší se množina možných znaků."
+      }
+    ],
+    "fields": {
+      "length": {
+        "label": "Délka",
+        "help": "",
+        "unit": "znaků"
+      },
+      "lower": {
+        "label": "Malá písmena",
+        "help": "",
+        "unit": "",
+        "options": {
+          "true": "Zahrnout",
+          "false": "Vyloučit"
+        }
+      },
+      "upper": {
+        "label": "Velká písmena",
+        "help": "",
+        "unit": "",
+        "options": {
+          "true": "Zahrnout",
+          "false": "Vyloučit"
+        }
+      },
+      "digits": {
+        "label": "Číslice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "true": "Zahrnout",
+          "false": "Vyloučit"
+        }
+      },
+      "symbols": {
+        "label": "Symboly",
+        "help": "",
+        "unit": "",
+        "options": {
+          "true": "Zahrnout",
+          "false": "Vyloučit"
+        }
+      }
+    },
+    "limitations": "Toto heslo bezpečně zkopírujte a uložte."
+  },
+  "dice-roller": {
+    "title": "Hod kostkami",
+    "description": "Simuluj hod jednou či více spravedlivými kostkami s nastavitelným počtem stěn.",
+    "explanation": "Každé číslo od 1 do zvoleného počtu stěn má stejnou pravděpodobnost. Výsledek ukáže jednotlivé hody i jejich součet.",
+    "example": "Dvě šestistěnné kostky dávají dohromady číslo od 2 do 12.",
+    "formula": "Každý hod je rovnoměrný výběr celého čísla od 1 do počtu stěn.",
+    "everyday": "Vytvoř hod kostkou pro hru, cvičení nebo náhodný výběr.",
+    "faqs": [
+      {
+        "q": "Jsou hody předvídatelné?",
+        "a": "Použije se bezpečný generátor platformy, pokud je dostupný; nejde o ověřený systém pro hazardní hry."
+      },
+      {
+        "q": "Lze nastavit neobvyklou kostku?",
+        "a": "Ano. Zadej celé číslo stěn v povoleném rozsahu."
+      }
+    ],
+    "fields": {
+      "count": {
+        "label": "Počet kostek",
+        "help": "",
+        "unit": "kostky"
+      },
+      "sides": {
+        "label": "Počet stěn",
+        "help": "",
+        "unit": "stěny"
+      }
+    }
+  },
+  "conversion-calculator": {
+    "title": "Převodník jednotek",
+    "description": "Převáděj délku, hmotnost, objem, teplotu, plochu, rychlost a energii.",
+    "explanation": "Převody používají pevné faktory. U teplot se navíc započítá posun nulového bodu, protože jednotlivé stupnice nezačínají na stejné hodnotě.",
+    "example": "10 mil je 16,09344 kilometrů; 32°F odpovídá 0°C.",
+    "formula": "Převod používá odpovídající faktor; u teplot také posun nulového bodu.",
+    "everyday": "Převeď měření z receptu, cestovní vzdálenost nebo technický údaj na jinou jednotku.",
+    "faqs": [
+      {
+        "q": "Proč mají převody teplot posun?",
+        "a": "Celsia a Fahrenheita používají různé nulové body; Kromě faktoru je tedy nutný offset."
+      },
+      {
+        "q": "Jsou tekuté unce a unce zaměnitelné?",
+        "a": "Č. Tekuté unce měří objem, unce měří hmotnost. Vyber jednotky stejné dimenze."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Hodnota",
+        "help": "",
+        "unit": ""
+      },
+      "from": {
+        "label": "Převést z",
+        "help": "",
+        "unit": "",
+        "options": {
+          "m": "m",
+          "km": "km",
+          "mi": "mi",
+          "ft": "ft",
+          "in": "palce",
+          "kg": "kg",
+          "g": "g",
+          "lb": "lb",
+          "L": "L",
+          "gal-US": "gal-US",
+          "C": "C",
+          "F": "F",
+          "K": "K",
+          "m/s": "m/s",
+          "km/h": "km/h",
+          "mph": "mph"
+        }
+      },
+      "to": {
+        "label": "Převést na",
+        "help": "",
+        "unit": "",
+        "options": {
+          "m": "m",
+          "km": "km",
+          "mi": "mi",
+          "ft": "ft",
+          "in": "palce",
+          "kg": "kg",
+          "g": "g",
+          "lb": "lb",
+          "L": "L",
+          "gal-US": "gal-US",
+          "C": "C",
+          "F": "F",
+          "K": "K",
+          "m/s": "m/s",
+          "km/h": "km/h",
+          "mph": "mph"
+        }
+      }
+    }
+  },
+  "fuel-cost-calculator": {
+    "title": "Kalkulačka nákladů na palivo",
+    "description": "Odhadni náklady na palivo na cestě ze spotřeby a ceny za litr.",
+    "explanation": "Spotřebu lze udávat v litrech na 100 km nebo jako vzdálenost na objem. Kalkulačka určí poptávku a vynásobí ji cenou.",
+    "example": "500 km při 8 l/100 km a 1,80 € za litr stojí kolem 72 €.",
+    "formula": "Náklady = vzdálenost × spotřeba na jednotku vzdálenosti × cena paliva za jednotku.",
+    "everyday": "Spočítej cenu paliva na dojíždění, dovolenou nebo plánovanou cestu.",
+    "faqs": [
+      {
+        "q": "Jsou zahrnuty poplatky a parkování?",
+        "a": "Ne. Účtují se pouze náklady na palivo."
+      },
+      {
+        "q": "Jaká definice mpg se používá?",
+        "a": "Vstupní pole rozlišuje US a Imperial mpg, protože galony jsou různé velikosti."
+      }
+    ],
+    "fields": {
+      "distance": {
+        "label": "Vzdálenost",
+        "help": "",
+        "unit": "km"
+      },
+      "economy": {
+        "label": "Spotřeba paliva",
+        "help": "",
+        "unit": "l/100 km"
+      },
+      "price": {
+        "label": "Cena za litr",
+        "help": "",
+        "unit": "měna/l"
+      }
+    }
+  },
+  "voltage-drop-calculator": {
+    "title": "Kalkulačka úbytku napětí",
+    "description": "Odhadni úbytek stejnosměrného napětí ve dvouvodičovém kabelu.",
+    "explanation": "Výpočet zahrnuje délku tam i zpět. Úbytek roste s délkou a proudem a klesá s větším průřezem vodiče. Zjednodušený model nezahrnuje konektory, zahřívání, střídavou reaktanci ani požadavky norem.",
+    "example": "10 m dlouhá měděná cesta s 5 A a průřezem vodiče 1,5 mm² ztrácí při 20 °C přibližně 1,17 V.",
+    "formula": "ΔV = 2 × délka kabelu jedním směrem × proud × rezistivita ÷ průřez vodiče.",
+    "everyday": "Porovnej průřezy kabelu při návrhu stejnosměrného vedení podle délky a proudu.",
+    "faqs": [
+      {
+        "q": "Potvrzuje výsledek správnou velikost kabelu?",
+        "a": "Ne. Dále zkontroluj normy, proudovou zatížitelnost, izolaci, typ instalace a teplotu."
+      },
+      {
+        "q": "Proč je délka kabelu dvojnásobná?",
+        "a": "Ve dvoupólovém stejnosměrném obvodu proud teče přes dopředný a zpětný vodič."
+      }
+    ],
+    "fields": {
+      "length": {
+        "label": "Délka",
+        "help": "",
+        "unit": "m"
+      },
+      "current": {
+        "label": "Proud",
+        "help": "",
+        "unit": "A"
+      },
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "mm²"
+      },
+      "resistivity": {
+        "label": "Rezistivita vodiče",
+        "help": "",
+        "unit": "Ω·mm²/m"
+      }
+    },
+    "limitations": "DC dvouvodičová odhad při zadaném měrném odporu."
+  },
+  "btu-calculator": {
+    "title": "Kalkulačka výkonu klimatizace",
+    "description": "Odhadni požadovaný výkon vytápění nebo chlazení na základě plochy místnosti a faktoru zatížení.",
+    "explanation": "Pravidlo oblasti je pouze hrubým vodítkem. Skutečnou zátěž ovlivňuje izolace, okna, výška místnosti, klima, obsazenost a účinnost zařízení.",
+    "example": "400 stop² s 25 BTU/h na stopu² dává odhad 10 000 BTU/h.",
+    "formula": "Odhad výkonu = plocha místnosti × faktor zatížení.",
+    "everyday": "Získej počáteční řádovou hodnotu kapacity vytápění nebo chlazení místnosti.",
+    "faqs": [
+      {
+        "q": "Je dostatek místa pro návrh HVAC?",
+        "a": "Ne. Spolehlivý výpočet zatížení budovy bere v úvahu konstrukci, klima, okna a další faktory."
+      },
+      {
+        "q": "Co znamená BTU/h?",
+        "a": "BTU je jednotka tepla; BTU za hodinu popisuje rychlost přenosu tepla."
+      }
+    ],
+    "fields": {
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "ft²"
+      },
+      "factor": {
+        "label": "Faktor tepelné zátěže",
+        "help": "",
+        "unit": "BTU/h na ft²"
+      }
+    },
+    "limitations": "Pouze orientační odhad; přesný výpočet tepelné zátěže budovy je spolehlivější."
+  },
+  "square-footage-calculator": {
+    "title": "Kalkulačka plochy",
+    "description": "Vypočítej plochu obdélníkové místnosti nebo povrchu a počet stejných ploch.",
+    "explanation": "Plocha obdélníku je délka krát šířka. Nepravidelný půdorys rozděl na obdélníky a jejich plochy sečti. Výsledek se uvádí ve ft² i m².",
+    "example": "Místnost 12×15 stop má 180 čtverečních stop.",
+    "formula": "Plocha = délka × šířka × počet stejných obdélníků.",
+    "everyday": "Změř podlahu před nákupem krytiny nebo rozděl nepravidelný půdorys na obdélníky.",
+    "faqs": [
+      {
+        "q": "Mám zahrnout výklenky?",
+        "a": "Zaznamenejte skutečnou plochu, kterou chcete zakrýt, a v případě potřeby odstraňte větší otvory."
+      },
+      {
+        "q": "Je zahrnut odpad?",
+        "a": "Ne. Za čistou plochu přičti vlastní materiálový přirážka."
+      }
+    ],
+    "fields": {
+      "length": {
+        "label": "Délka",
+        "help": "",
+        "unit": "ft"
+      },
+      "width": {
+        "label": "Šířka",
+        "help": "",
+        "unit": "ft"
+      },
+      "count": {
+        "label": "Počet kostek",
+        "help": "",
+        "unit": "plochy"
+      },
+      "unit": {
+        "label": "Jednotka",
+        "help": "",
+        "unit": "",
+        "options": {
+          "ft": "ft",
+          "m": "m"
+        }
+      }
+    }
+  },
+  "time-card-calculator": {
+    "title": "Kalkulačka pracovní doby",
+    "description": "Spočítej placenou dobu směny včetně odečtení neplacené přestávky.",
+    "explanation": "Zadej časy ve 24hodinovém formátu. Je-li konec dříve než začátek, jde o směnu končící následující den; přestávka se odečte.",
+    "example": "od 8:30 do 17:00 s 30 minutami neplacené přestávky se rovná 8 placeným hodinám.",
+    "formula": "Placený čas = koncový čas − počáteční čas − přestávka; při přechodu přes půlnoc se přičte jeden den.",
+    "everyday": "Ověř délku směny nebo převeď její čas do pracovního výkazu.",
+    "faqs": [
+      {
+        "q": "Jsou zahrnuta pravidla pro přesčasy?",
+        "a": "Ne. Výsledkem je uplynulý čas; Místní příplatky a pravidla přestávek musí být uplatněny samostatně."
+      },
+      {
+        "q": "Může směna trvat déle než půlnoc?",
+        "a": "Ano. Dřívější koncový čas je interpretován jako čas následujícího dne."
+      }
+    ],
+    "fields": {
+      "start": {
+        "label": "Začátek",
+        "help": "",
+        "unit": ""
+      },
+      "end": {
+        "label": "Konec",
+        "help": "",
+        "unit": ""
+      },
+      "break": {
+        "label": "Neplacená přestávka",
+        "help": "",
+        "unit": "min"
+      }
+    }
+  },
+  "time-zone-calculator": {
+    "title": "Převodník časových pásem",
+    "description": "Převeď místní datum a čas mezi pojmenovanými časovými pásmy IANA.",
+    "explanation": "Pro zvolené datum se použijí platná pravidla letního času a UTC posuny obou pásem. Neplatná pásma nebo neexistující místní časy se označí místo tichého odhadu.",
+    "example": "09:00 v New Yorku odpovídá podle data různým časům UTC, protože se během roku mění časový posun.",
+    "formula": "Cílový místní čas se odvodí převodem podle UTC posunů platných pro zadané datum.",
+    "everyday": "Naplánuj hovor nebo schůzku s někým v jiném časovém pásmu.",
+    "faqs": [
+      {
+        "q": "Proč se převod během roku mění?",
+        "a": "Mnoho oblastí sezónně mění UTC posun; rozhoduje zadané datum."
+      },
+      {
+        "q": "Jaké názvy pásem fungují?",
+        "a": "Použij identifikátory IANA, například Europe/Prague nebo America/New_York."
+      }
+    ],
+    "fields": {
+      "date": {
+        "label": "Datum",
+        "help": "",
+        "unit": ""
+      },
+      "time": {
+        "label": "Čas",
+        "help": "",
+        "unit": ""
+      },
+      "fromZone": {
+        "label": "Výchozí časové pásmo",
+        "help": "",
+        "unit": ""
+      },
+      "toZone": {
+        "label": "Cílové časové pásmo",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "love-calculator": {
+    "title": "Kalkulačka lásky",
+    "description": "Vytvoř hravé skóre kompatibility ze dvou jmen.",
+    "explanation": "Hodnota je založena na opakovatelném výpočtu postav a je zábavou. Jména nemohou měřit kvalitu vztahu, shodu a komunikaci.",
+    "example": "Stejná kombinace názvů má za následek stejnou hodnotu při opakovaném zadávání.",
+    "formula": "Opakovatelný výpočet znaků obou jmen; nejde o vědecké měření vztahu.",
+    "everyday": "Použij výsledek jako odlehčené téma k rozhovoru nebo zábavu na Valentýna.",
+    "faqs": [
+      {
+        "q": "Je hodnota vědecky prokázána?",
+        "a": "Ne. Je to hravá číselná hodnota a ne psychologický nebo partnerský proces."
+      },
+      {
+        "q": "Proč na pořadí nezáleží?",
+        "a": "Názvy jsou před výpočtem normalizovány tak, aby stejný pár získal stejnou hodnotu."
+      }
+    ],
+    "fields": {
+      "name1": {
+        "label": "První jméno",
+        "help": "",
+        "unit": ""
+      },
+      "name2": {
+        "label": "Druhé jméno",
+        "help": "",
+        "unit": ""
+      }
+    },
+    "limitations": "Pouze zábava; jména neměří kompatibilitu vztahů."
+  },
+  "gdp-calculator": {
+    "title": "Kalkulačka HDP",
+    "description": "Vypočítej hrubý domácí produkt výdajovou metodou.",
+    "explanation": "Spotřeba, investice, vládní výdaje a export se sčítají; Dovoz se odečítá. Pro všechny položky použij stejnou měnu a období.",
+    "example": "C=500, I=120, G=200, X=80 a M=100 vedou k HDP 800 v zadaných jednotkách.",
+    "formula": "HDP = spotřeba + investice + vládní výdaje + vývoz − dovoz.",
+    "everyday": "Ověř výdajovou identitu HDP v ekonomickém příkladu nebo při studiu ekonomie.",
+    "faqs": [
+      {
+        "q": "Proč se odečítají dovozy?",
+        "a": "Dovoz může být zahrnut do spotřeby nebo investic, ale nebyl vyroben na domácím trhu."
+      },
+      {
+        "q": "Je to skutečný HDP?",
+        "a": "Ne. U reálného HDP musí být změny cen upraveny pomocí cenového indexu."
+      }
+    ],
+    "fields": {
+      "consumption": {
+        "label": "Spotřeba",
+        "help": "",
+        "unit": "měnové jednotky"
+      },
+      "investment": {
+        "label": "Investice",
+        "help": "",
+        "unit": "měnové jednotky"
+      },
+      "government": {
+        "label": "Vládní nákupy",
+        "help": "",
+        "unit": "měnové jednotky"
+      },
+      "exports": {
+        "label": "Vývoz",
+        "help": "",
+        "unit": "měnové jednotky"
+      },
+      "imports": {
+        "label": "Dovoz",
+        "help": "",
+        "unit": "měnové jednotky"
+      }
+    }
+  },
+  "gas-mileage-calculator": {
+    "title": "Kalkulačka spotřeby paliva",
+    "description": "Vypočítej spotřebu paliva na základě ujeté vzdálenosti a spotřebovaného množství.",
+    "explanation": "Hodnoty musí pokrývat stejný interval doplňování paliva. V závislosti na zadání výsledek ukazuje vhodné srovnávací jednotky jako mpg nebo litry na 100 km.",
+    "example": "300 mil na 10 amerických galonů se rovná 30 mpg.",
+    "formula": "Spotřeba = ujetá vzdálenost ÷ množství paliva; převod na l/100 km používá odpovídající jednotky.",
+    "everyday": "Porovnej spotřebu auta podle údajů mezi tankováním nebo z více jízd.",
+    "faqs": [
+      {
+        "q": "Je lepší vyšší hodnota v l/100 km?",
+        "a": "Ne. Nižší hodnota znamená méně paliva na 100 km."
+      },
+      {
+        "q": "Proč bych měl tankovat?",
+        "a": "Stejné hladiny náplně ve více procesech doplňování paliva snižují chyby v odhadu palivoměru."
+      }
+    ],
+    "fields": {
+      "distance": {
+        "label": "Vzdálenost",
+        "help": "",
+        "unit": "míle"
+      },
+      "fuel": {
+        "label": "Spotřebované palivo",
+        "help": "",
+        "unit": "US gal"
+      }
+    }
+  },
+  "horsepower-calculator": {
+    "title": "Kalkulačka výkonu (hp)",
+    "description": "Odhadni mechanický výkon z točivého momentu a otáček motoru.",
+    "explanation": "Pro moment v lb-ft se používá běžný vztah hp = moment × ot/min ÷ 5252. Výsledek odpovídá výkonu v místě měření a nezahrnuje ztráty pohonu.",
+    "example": "Moment 300 lb-ft při 4 000 ot/min odpovídá přibližně 228 hp.",
+    "formula": "hp = točivý moment (lb-ft) × ot./min ÷ 5252.",
+    "everyday": "Převeď údaje o momentu a otáčkách z technického listu na výkon.",
+    "faqs": [
+      {
+        "q": "Stačí samotný točivý moment?",
+        "a": "Ne. Výkon závisí také na otáčkách."
+      },
+      {
+        "q": "Jde o výkon na kolech?",
+        "a": "Jen pokud byl zadaný moment změřen na kolech; ztráty pohonu se nepočítají."
+      }
+    ],
+    "fields": {
+      "torque": {
+        "label": "Točivý moment",
+        "help": "",
+        "unit": "lb-ft"
+      },
+      "rpm": {
+        "label": "Otáčky motoru",
+        "help": "",
+        "unit": "ot/min"
+      }
+    }
+  },
+  "engine-horsepower-calculator": {
+    "title": "Kalkulačka výkonu motoru",
+    "description": "Vypočítej výkon motoru s točivým momentem v lb-ft nebo Newton metrech.",
+    "explanation": "Točivý moment a otáčky musí odpovídat stejnému provoznímu bodu. Nejvyšší moment a nejvyšší otáčky z různých bodů nelze kombinovat jako špičkový výkon.",
+    "example": "300 lb-ft při 4000 otáčkách za minutu odpovídá přibližně 228 hp.",
+    "formula": "hp = točivý moment (lb-ft) × ot./min ÷ 5252; 1 hp ≈ 0,7457 kW.",
+    "everyday": "Sjednoť údaje o výkonu, když jsou hodnoty momentu uvedeny v různých jednotkách.",
+    "faqs": [
+      {
+        "q": "Proč může být maximální výkon při vyšších otáčkách než maximální moment?",
+        "a": "Výkon je součinem momentu a otáček, takže růst otáček může vyvážit pokles momentu."
+      },
+      {
+        "q": "Zahrnuje výsledek ztráty pohonu?",
+        "a": "Ne. Odhaduje výkon v místě měření zadaného momentu."
+      }
+    ],
+    "fields": {
+      "torque": {
+        "label": "Točivý moment",
+        "help": "",
+        "unit": "lb-ft"
+      },
+      "rpm": {
+        "label": "Otáčky motoru",
+        "help": "",
+        "unit": "ot/min"
+      },
+      "torqueUnit": {
+        "label": "Jednotka momentu",
+        "help": "",
+        "unit": "",
+        "options": {
+          "lb-ft": "lb-ft",
+          "Nm": "N·m"
+        }
+      }
+    }
+  },
+  "stair-calculator": {
+    "title": "Kalkulačka schodiště",
+    "description": "Naplánuj přímé schodiště podle výšky mezi podlažími a dostupné vodorovné délky.",
+    "explanation": "Počet výšek schodů musí být celé číslo. Z něj se vypočítá skutečná výška, přibližná hloubka nášlapu a sklon. Před stavbou ověř průchozí výšku a místní předpisy.",
+    "example": "108 palců výškového rozdílu s 15 svahy má za následek 7,2 palce výšky svahu každého.",
+    "formula": "Výška schodu = výška mezi podlažími ÷ celý počet výšek schodů.",
+    "everyday": "Než začneš s podrobným návrhem, ověř, zda se schodiště vejde do půdorysu.",
+    "faqs": [
+      {
+        "q": "Zaručuje výsledek soulad se stavebními předpisy?",
+        "a": "Ne. Rozměry, podesty, průchozí výška, zábradlí i tolerance se liší podle místa."
+      },
+      {
+        "q": "Proč se počet výšek zaokrouhluje na celé číslo?",
+        "a": "Schodiště potřebuje celý počet stejně vysokých výšek; potom se přepočítá jejich skutečná výška."
+      }
+    ],
+    "fields": {
+      "rise": {
+        "label": "Výška mezi podlažími",
+        "help": "",
+        "unit": "palce"
+      },
+      "run": {
+        "label": "Dostupná vodorovná délka",
+        "help": "",
+        "unit": "palce"
+      }
+    }
+  },
+  "resistor-calculator": {
+    "title": "Kalkulačka rezistoru",
+    "description": "Přečti barevné proužky rezistoru nebo vypočítej předřadný rezistor pro LED.",
+    "explanation": "Barevný kód udává jmenovitý odpor a toleranci. Výpočet rezistoru LED vychází z napájecího a propustného napětí a cílového proudu; ověř také ztrátový výkon.",
+    "example": "Červeno-fialovo-hnědo-zlatá představuje 270 Ω ±5 %.",
+    "formula": "Sériový rezistor LED = (napájecí napětí − propustné napětí LED) ÷ proud LED.",
+    "everyday": "Přečti hodnotu rezistoru podle barevných proužků nebo navrhni předřadný odpor LED.",
+    "faqs": [
+      {
+        "q": "Udává barevný kód přesný naměřený odpor?",
+        "a": "Ne. Udává jmenovitou hodnotu a toleranci, v jejímž rozmezí se může skutečný odpor pohybovat."
+      },
+      {
+        "q": "Proč ověřit výkonovou zatížitelnost?",
+        "a": "Rezistor mění elektrickou energii na teplo a musí mít dostatečnou výkonovou rezervu."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Režim",
+        "help": "",
+        "unit": "",
+        "options": {
+          "color": "Číst barevné proužky",
+          "led": "Vypočítat předřadný rezistor LED"
+        }
+      },
+      "band1": {
+        "label": "Barevný proužek 1",
+        "help": "",
+        "unit": "",
+        "options": {
+          "black": "černá",
+          "brown": "hnědá",
+          "red": "červená",
+          "orange": "oranžová",
+          "yellow": "žlutá",
+          "green": "zelená",
+          "blue": "modrá",
+          "violet": "fialová",
+          "grey": "šedá",
+          "white": "bílá"
+        }
+      },
+      "band2": {
+        "label": "Barevný proužek 2",
+        "help": "",
+        "unit": "",
+        "options": {
+          "black": "černá",
+          "brown": "hnědá",
+          "red": "červená",
+          "orange": "oranžová",
+          "yellow": "žlutá",
+          "green": "zelená",
+          "blue": "modrá",
+          "violet": "fialová",
+          "grey": "šedá",
+          "white": "bílá"
+        }
+      },
+      "multiplier": {
+        "label": "Násobicí proužek",
+        "help": "",
+        "unit": "",
+        "options": {
+          "black": "černá",
+          "brown": "hnědá",
+          "red": "červená",
+          "orange": "oranžová",
+          "yellow": "žlutá",
+          "green": "zelená",
+          "blue": "modrá",
+          "violet": "fialová",
+          "gold": "zlatá",
+          "silver": "stříbrná"
+        }
+      },
+      "tolerance": {
+        "label": "Proužek tolerance",
+        "help": "",
+        "unit": "",
+        "options": {
+          "brown": "±1 %",
+          "red": "±2 %",
+          "gold": "±5 %",
+          "silver": "±10 %"
+        }
+      },
+      "supply": {
+        "label": "Napájecí napětí",
+        "help": "",
+        "unit": "V"
+      },
+      "forward": {
+        "label": "Propustné napětí LED",
+        "help": "",
+        "unit": "V"
+      },
+      "ledCurrent": {
+        "label": "Proud LED",
+        "help": "",
+        "unit": "mA"
+      }
+    }
+  },
+  "ohms-law-calculator": {
+    "title": "Kalkulačka Ohmova zákona",
+    "description": "Dopočítej neznámou veličinu ze dvou hodnot: napětí, proudu a odporu. Výsledek zahrnuje také elektrický výkon.",
+    "explanation": "Kalkulačka používá Ohmův zákon a také vydává výkon. Všechny položky musí popisovat stejný provozní stav.",
+    "example": "12V do 6Ω dává 2A a 24W.",
+    "formula": "V = I × R; P = V × I.",
+    "everyday": "Ověř jednoduchý výpočet elektrického obvodu z napětí, proudu a odporu.",
+    "faqs": [
+      {
+        "q": "Co když zadám všechny tři hodnoty?",
+        "a": "Kalkulačka zkontroluje, zda jsou hodnoty v souladu, a při odchylce upozorní."
+      },
+      {
+        "q": "Platí Ohmův zákon pro každou součástku?",
+        "a": "Jen pro součástky, které se v daném rozsahu chovají ohmicky."
+      }
+    ],
+    "fields": {
+      "voltage": {
+        "label": "Napětí",
+        "help": "",
+        "unit": "V"
+      },
+      "current": {
+        "label": "Proud",
+        "help": "",
+        "unit": "A"
+      },
+      "resistance": {
+        "label": "Odpor",
+        "help": "",
+        "unit": "Ω"
+      }
+    }
+  },
+  "electricity-calculator": {
+    "title": "Kalkulačka nákladů na elektřinu",
+    "description": "Odhadni spotřebu elektřiny a cenu podle příkonu, doby provozu a ceny za kWh.",
+    "explanation": "Energie v kWh je příkon v kW vynásobený dobou provozu v hodinách. U proměnlivé zátěže použij průměrný příkon. Fixní poplatky, daně a různé tarify nejsou zahrnuté.",
+    "example": "100W lampa spotřebuje 0,5 kWh za pět hodin.",
+    "formula": "Energie (kWh) = výkon (kW) × hodiny; Náklady = energie × cena za kWh.",
+    "everyday": "Spočítej provozní náklady domácího spotřebiče nebo osvětlení.",
+    "faqs": [
+      {
+        "q": "Jak se převádějí watty na kilowatthodiny?",
+        "a": "Vynásobte kilowatty hodinami; 1 000 W po dobu jedné hodiny odpovídá 1 kWh."
+      },
+      {
+        "q": "Je to stejné jako účet za elektřinu?",
+        "a": "Odhadují se pouze náklady na energii závislé na spotřebě; Chybí základní ceny a další poplatky."
+      }
+    ],
+    "fields": {
+      "power": {
+        "label": "Příkon",
+        "help": "",
+        "unit": "W"
+      },
+      "hours": {
+        "label": "Hodiny",
+        "help": "",
+        "unit": "h"
+      },
+      "price": {
+        "label": "Cena za litr",
+        "help": "",
+        "unit": "měna/kWh"
+      }
+    }
+  },
+  "shoe-size-conversion": {
+    "title": "Převodník velikostí obuvi",
+    "description": "Převeď přibližnou velikost obuvi mezi stupnicemi US pro muže a ženy, UK a EU.",
+    "explanation": "Zadání je přibližné z velikostních tabulek. Výrobci a tvary bot se liší, proto je třeba před nákupem porovnat délku chodidla s tabulkou značky.",
+    "example": "US pánská velikost 9 odpovídá přibližně UK 8 a EU 42, ale výrobci se liší.",
+    "formula": "Přepočet velikosti pomocí přibližné tabulky pro měřítka USA, Spojeného království a EU.",
+    "everyday": "Odhadni ekvivalent známé velikosti obuvi v jiném systému.",
+    "faqs": [
+      {
+        "q": "Jsou převody velikostí přesné?",
+        "a": "Ne. Jde o orientační převody a padnutí závisí na výrobci i tvaru boty."
+      },
+      {
+        "q": "Mám si změřit chodidlo?",
+        "a": "Ano. Změř obě chodidla ve stoje a porovnej delší s tabulkou výrobce."
+      }
+    ],
+    "fields": {
+      "size": {
+        "label": "Velikost souboru",
+        "help": "",
+        "unit": "velikost"
+      },
+      "system": {
+        "label": "Vstupní systém",
+        "help": "",
+        "unit": "",
+        "options": {
+          "US men": "US muži",
+          "US women": "US ženy",
+          "UK": "UK",
+          "EU": "EU"
+        }
+      }
+    },
+    "limitations": "Pro výběr správné velikosti použij tabulku výrobce."
+  },
+  "tip-calculator": {
+    "title": "Kalkulačka spropitného",
+    "description": "Vypočítej spropitné, celkový počet a podíl na osobu.",
+    "explanation": "Můžete si vybrat, zda se procento použije před zdaněním nebo po něm. Jednotlivé částky jsou zaokrouhleny na měnu.",
+    "example": "20% spropitné na 80 EUR je 16 EUR; Pro čtyři osoby bude prominuto každé 24 EUR včetně spropitného.",
+    "formula": "Spropitné = zvolený základ × sazba; částka na osobu = celková útrata ÷ počet osob.",
+    "everyday": "Rozděl účet v restauraci včetně spropitného mezi několik lidí.",
+    "faqs": [
+      {
+        "q": "Mělo by se spropitné připočítat k dani?",
+        "a": "To závisí na místních zvyklostech; zvolit vhodný základ pro výpočet."
+      },
+      {
+        "q": "Proč může být při sdílení rozdíl v haléře?",
+        "a": "Zaokrouhlením na měnové částky může vzniknout zbytek několika centů."
+      }
+    ],
+    "fields": {
+      "bill": {
+        "label": "Částka faktury",
+        "help": "",
+        "unit": "měna"
+      },
+      "tip": {
+        "label": "Procento spropitného",
+        "help": "",
+        "unit": "%"
+      },
+      "people": {
+        "label": "Počet osob",
+        "help": "",
+        "unit": "osoby"
+      },
+      "includeTax": {
+        "label": "Počítat spropitné z daně?",
+        "help": "",
+        "unit": "",
+        "options": {
+          "yes": "Ano",
+          "no": "Ne"
+        }
+      },
+      "tax": {
+        "label": "Sazba daně",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "mileage-calculator": {
+    "title": "Kalkulačka ujeté vzdálenosti",
+    "description": "Vypočítej ujetou vzdálenost ze dvou stavů počítadla kilometrů.",
+    "explanation": "Rozdíl mezi konečnou a výchozí pozicí je ujetá vzdálenost. Obě hodnoty musí používat stejnou jednotku; trasa není určena.",
+    "example": "12 340 až 12 615 mil se rovná vzdálenosti 275 mil.",
+    "formula": "Ujetá vzdálenost = koncový stav − počáteční stav.",
+    "everyday": "Zjisti ujetou vzdálenost mezi tankováními nebo pro knihu jízd.",
+    "faqs": [
+      {
+        "q": "Co se stane, když metr přeteče?",
+        "a": "Rozděl cestu na přetečení nebo vezměte v úvahu maximální stav měřiče samostatně."
+      },
+      {
+        "q": "Je vypočítána trasa?",
+        "a": "Ne. Kalkulačka používá pouze zadané hodnoty měřiče."
+      }
+    ],
+    "fields": {
+      "start": {
+        "label": "Začátek",
+        "help": "",
+        "unit": "mi"
+      },
+      "end": {
+        "label": "Konec",
+        "help": "",
+        "unit": "mi"
+      }
+    }
+  },
+  "density-calculator": {
+    "title": "Kalkulačka hustoty",
+    "description": "Hustotu vypočítej z hmotnosti a objemu.",
+    "explanation": "Hustota je hmotnost dělená objemem. Hmotnost a objem musí používat odpovídající jednotky; výsledek je uveden v g/cm³.",
+    "example": "100 g na 50 cm³ dává hustotu 2 g/cm³.",
+    "formula": "Hustota = hmotnost ÷ objem.",
+    "everyday": "Porovnej hustotu materiálů nebo vyřeš příklad z fyziky a techniky.",
+    "faqs": [
+      {
+        "q": "Jaká je jednotka hustoty?",
+        "a": "Záleží na použitých hmotnostních a objemových jednotkách; Zde je výstup g/cm³."
+      },
+      {
+        "q": "Může být hlasitost nulová?",
+        "a": "Ne. Nelze dělit nulou."
+      }
+    ],
+    "fields": {
+      "mass": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "g"
+      },
+      "volume": {
+        "label": "Objem",
+        "help": "",
+        "unit": "cm³"
+      }
+    }
+  },
+  "mass-calculator": {
+    "title": "Kalkulačka hmotnosti",
+    "description": "Vypočítej hmotnost z hustoty a objemu.",
+    "explanation": "Hmotnost je součin hustoty a objemu. Používejte jednotky, které se k sobě hodí.",
+    "example": "Při 2,7 g/cm³ a 10 cm³ je hmotnost 27 g.",
+    "formula": "Hmotnost = hustota × objem.",
+    "everyday": "Odhadni hmotnost materiálu, když znáš jeho objem a hustotu.",
+    "faqs": [
+      {
+        "q": "Které jednotky se k sobě hodí?",
+        "a": "Například g/cm³ s cm³ nebo kg/m³ s m³."
+      },
+      {
+        "q": "Co se stane, když je hlasitost záporná?",
+        "a": "Fyzický objem musí být kladný; Nezákonné hodnoty jsou odmítnuty."
+      }
+    ],
+    "fields": {
+      "density": {
+        "label": "Hustota",
+        "help": "",
+        "unit": "kg/l"
+      },
+      "volume": {
+        "label": "Objem",
+        "help": "",
+        "unit": "l"
+      }
+    }
+  },
+  "weight-calculator": {
+    "title": "Kalkulačka tíhové síly",
+    "description": "Vypočítej tíhovou sílu z hmotnosti a tíhového zrychlení.",
+    "explanation": "Hmotnost je hmotnost krát místní gravitační zrychlení. Jejich jednotkou je Newton; je třeba ji odlišit od davu.",
+    "example": "Hmota 10 kg zažije hmotnost kolem 98,1 N při 9,80665 m/s².",
+    "formula": "Tíhová síla F = hmotnost m × gravitační zrychlení g.",
+    "everyday": "Porovnej tíhovou sílu předmětu při různých hodnotách gravitačního zrychlení.",
+    "faqs": [
+      {
+        "q": "Je hmotnost stejná jako hmotnost?",
+        "a": "Ne. Hmotnost je uvedena v kilogramech, hmotnost jako síla v Newtonech."
+      },
+      {
+        "q": "Jaká hodnota g je obvyklá?",
+        "a": "Na Zemi se běžně používá přibližně 9,81 m/s²."
+      }
+    ],
+    "fields": {
+      "mass": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg"
+      },
+      "gravity": {
+        "label": "Gravitační zrychlení",
+        "help": "",
+        "unit": "m/s²"
+      }
+    }
+  },
+  "speed-calculator": {
+    "title": "Kalkulačka rychlosti",
+    "description": "Vypočítej průměrnou rychlost ze vzdálenosti a času.",
+    "explanation": "Průměrná rychlost je ujetá vzdálenost dělená uplynulým časem. Jednotky vstupu určují výstupní jednotku.",
+    "example": "150 km za 2,5 hodiny odpovídá průměru 60 km/h.",
+    "formula": "Průměrná rychlost = vzdálenost ÷ čas.",
+    "everyday": "Zkontroluj průměrnou rychlost cesty, běhu nebo jízdy ze vzdálenosti a času.",
+    "faqs": [
+      {
+        "q": "Je to nejvyšší rychlost?",
+        "a": "Ne. Je to průměr za celou vzdálenost a čas."
+      },
+      {
+        "q": "Jakou časovou jednotku mám použít?",
+        "a": "Použij časovou jednotku, která odpovídá požadované jednotce otáčkách."
+      }
+    ],
+    "fields": {
+      "distance": {
+        "label": "Vzdálenost",
+        "help": "",
+        "unit": "km"
+      },
+      "hours": {
+        "label": "Hodiny",
+        "help": "",
+        "unit": "h"
+      }
+    }
+  },
+  "molarity-calculator": {
+    "title": "Kalkulačka molarity",
+    "description": "Z látkového množství a objemu roztoku vypočítej látkovou koncentraci.",
+    "explanation": "Molarita udává moly rozpuštěné látky na litr hotového roztoku. Použij konečný objem roztoku v litrech, nejen přidané rozpouštědlo.",
+    "example": "0,5 mol ve 2 1 roztoku dává 0,25 mol/l.",
+    "formula": "Molarita M = látkové množství (mol) ÷ konečný objem roztoku (l).",
+    "everyday": "Vypočítej koncentraci při chemickém příkladu nebo přípravě roztoku.",
+    "faqs": [
+      {
+        "q": "Mám použít objem rozpouštědla?",
+        "a": "Ne. Tím je myšlen konečný objem celého roztoku."
+      },
+      {
+        "q": "Jaká jednotka je molarita?",
+        "a": "Mol na litr, také nazývaný mol / l nebo M."
+      }
+    ],
+    "fields": {
+      "moles": {
+        "label": "Látkové množství",
+        "help": "",
+        "unit": "mol"
+      },
+      "volume": {
+        "label": "Objem",
+        "help": "",
+        "unit": "l"
+      }
+    }
+  },
+  "molecular-weight-calculator": {
+    "title": "Kalkulačka molární hmotnosti",
+    "description": "Odhadni molární hmotnost z chemického molekulárního vzorce.",
+    "explanation": "Nástroj počítá podporované symboly prvků a čísla indexů a sečte jejich standardní atomové hmotnosti. Nenahrazuje kontrolu složitých závorek nebo načítání pravopisu.",
+    "example": "H2O má přibližně 18,015 g/mol: dva atomy vodíku a jeden atom kyslíku.",
+    "formula": "Molární hmotnost = Σ(počet atomů × příslušná atomová hmotnost).",
+    "everyday": "Ověř molární hmotnost jednoduché chemické formule pro laboratorní cvičení.",
+    "faqs": [
+      {
+        "q": "Které prvky jsou podporovány?",
+        "a": "Podporovány jsou H, C, N, O, S, halogeny a některé běžné kovy."
+      },
+      {
+        "q": "Vyhodnocují se závorky ve vzorcích?",
+        "a": "Vstup by měl odpovídat podporované formě jednoduchého součtu; Složité skupiny rozděl samostatně."
+      }
+    ],
+    "fields": {
+      "formula": {
+        "label": "Chemický vzorec",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "roman-numeral-converter": {
+    "title": "Převodník římských číslic",
+    "description": "Převeď celá čísla a kanonická římská čísla.",
+    "explanation": "Jsou povolena celá čísla od 1 do 3 999 a obvyklý způsob odčítání. Nekanonické sekvence písmen jsou odmítnuty.",
+    "example": "2024 se píše jako MMXXIV; XL odpovídá 40.",
+    "formula": "Římské číslo = kanonická aditivní a subtraktivní reprezentace od 1 do 3 999.",
+    "everyday": "Převeď letopočet, číslo kapitoly nebo římskou číslici v klasickém zápisu.",
+    "faqs": [
+      {
+        "q": "Jaká čísla jsou povolena?",
+        "a": "Kalkulačka podporuje 1 až 3 999."
+      },
+      {
+        "q": "Bude přijata nějaká sekvence písmen?",
+        "a": "Ne. Vstup musí být platná kanonická římská číslice."
+      }
+    ],
+    "fields": {
+      "input": {
+        "label": "Celé číslo nebo římské číslo",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Režim",
+        "help": "",
+        "unit": "",
+        "options": {
+          "integer": "Převést číslo na římské",
+          "roman": "Převést římské číslo na celé"
+        }
+      }
+    }
+  },
+  "golf-handicap-calculator": {
+    "title": "Kalkulačka golfového handicapu",
+    "description": "Odhadni index handicapu z rozdílů skóre pomocí pravidla výběru WHS.",
+    "explanation": "Podle počtu zadaných kol se vyberou nejlepší diferenciály a použije příslušná korekce WHS. Kalkulačka nezohledňuje limity indexu ani úpravy za mimořádné výsledky.",
+    "example": "Při třech diferenciálech se použije nejnižší hodnota a odečte korekce WHS 2.",
+    "formula": "Index handicapu = zaokrouhlený průměr nejlepších diferenciálů plus korekce WHS podle počtu výsledků.",
+    "everyday": "Získej orientační odhad handicapového indexu z aktuálních diferenciálů skóre.",
+    "faqs": [
+      {
+        "q": "Je to oficiální index handicapu?",
+        "a": "Ne. Kalkulačka nezohledňuje limity ani zvláštní úpravy; rozhodující je oficiální postup WHS."
+      },
+      {
+        "q": "Kolik diferenciálů mohu zadat?",
+        "a": "Zadej tři až dvacet hodnot; Výběr a přirážka závisí na počtu."
+      }
+    ],
+    "fields": {
+      "differentials": {
+        "label": "Diferenciály skóre (oddělené čárkou)",
+        "help": "",
+        "unit": ""
+      }
+    },
+    "limitations": "Používá tabulku skóre WHS; vynechává čepice a úpravy výjimečného skóre/výboru."
+  },
+  "sleep-calculator": {
+    "title": "Kalkulačka spánku",
+    "description": "Naplánuj si přibližný čas ulehnutí nebo vstávání na základě spánkových cyklů.",
+    "explanation": "Kalkulačka používá cykly po 90 minutách a odhadovanou dobu pro usnutí. Skutečné spánkové cykly a potřeby spánku se u každého člověka liší.",
+    "example": "Při pěti cyklech a 15 minutách na usnutí počítej přibližně se 7 hodinami a 45 minutami.",
+    "formula": "Plánovaná délka = počet cyklů × 90 minut + doba usínání.",
+    "everyday": "Naplánuj čas ulehnutí podle požadovaného času vstávání nebo naopak.",
+    "faqs": [
+      {
+        "q": "Jsou spánkové cykly vždy dlouhé 90 minut?",
+        "a": "Ne. 90 minut je pouze hodnota zjednodušeného plánování; Cykly se liší."
+      },
+      {
+        "q": "Kolik spánku potřebuji?",
+        "a": "Kalkulačka nenahrazuje individuální rady ohledně spánku ani lékařské posouzení."
+      }
+    ],
+    "fields": {
+      "time": {
+        "label": "Čas",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Režim",
+        "help": "",
+        "unit": "",
+        "options": {
+          "wake": "Vstávat v tento čas",
+          "sleep": "Jít spát v tento čas"
+        }
+      },
+      "latency": {
+        "label": "Doba usínání",
+        "help": "",
+        "unit": "min"
+      },
+      "cycles": {
+        "label": "Počet spánkových cyklů",
+        "help": "",
+        "unit": "cykly"
+      }
+    },
+    "limitations": "Přibližné plánování cyklu; individuální potřeby spánku se liší."
+  },
+  "tire-size-calculator": {
+    "title": "Kalkulačka rozměru pneumatiky",
+    "description": "Vypočítej vnější průměr a obvod označení pneumatiky.",
+    "explanation": "Jmenovitá výška bočnice a vnější průměr se odhadují ze šířky pneumatiky, poměru stran a průměru ráfku.",
+    "example": "205/55 R16 poskytuje přibližně 632 mm vnější průměr.",
+    "formula": "Průměr = 2 × šířka pneumatiky × poměr stran + průměr ráfku.",
+    "everyday": "Porovnej nominální průměr pneumatik, například při změně rozměru.",
+    "faqs": [
+      {
+        "q": "Je to skutečný průměr měření?",
+        "a": "Ne. Zatížení, výrobce a hloubka dezénu mění skutečný vnější průměr."
+      },
+      {
+        "q": "Co znamená průměr ráfku ve značení?",
+        "a": "Velikost ráfku se obvykle udává v palcích."
+      }
+    ],
+    "fields": {
+      "width": {
+        "label": "Šířka",
+        "help": "",
+        "unit": "mm"
+      },
+      "aspect": {
+        "label": "Profil pneumatiky",
+        "help": "",
+        "unit": "%"
+      },
+      "rim": {
+        "label": "Průměr kola",
+        "help": "",
+        "unit": "palce"
+      }
+    }
+  },
+  "roofing-calculator": {
+    "title": "Kalkulačka plochy střechy",
+    "description": "Odhadni plochu šikmé střechy ze základní plochy, sklonu střechy a odpadu.",
+    "explanation": "Plocha základny se převede na svažitou plochu pomocí faktoru sklonu. Poté lze přičíst přirážka za odřezky.",
+    "example": "S podlahovou plochou 1 000 ft² a sklonem 6:12 je šikmá plocha před přidáním přibližně 1 118 ft².",
+    "formula": "Plocha střechy = půdorysná plocha × √(1 + (stoupání/běh)²) × (1 + přirážka).",
+    "everyday": "Odhadni množství střešní krytiny z půdorysné plochy a sklonu střechy.",
+    "faqs": [
+      {
+        "q": "Zohledňuje kalkulačka vikýře a složité střechy?",
+        "a": "Ne. Rozděl složité tvary střech na jednoduché oblasti a sečtěte je."
+      },
+      {
+        "q": "Je zahrnut odpad?",
+        "a": "K čisté šikmé ploše se připočítává volně volitelný přirážka."
+      }
+    ],
+    "fields": {
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "ft²"
+      },
+      "rise": {
+        "label": "Výška mezi podlažími",
+        "help": "",
+        "unit": "palce na 12palcový běh"
+      },
+      "waste": {
+        "label": "Přirážka na prořez",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "tile-calculator": {
+    "title": "Kalkulačka dlaždic",
+    "description": "Urči počet dlaždic potřebných pro oblast včetně odpadu.",
+    "explanation": "Celková plocha se vydělí plochou jedné dlaždice a zaokrouhlí se nahoru na celé dlaždice. Další přirážka může pokrývat rozbití a řezání.",
+    "example": "Na 100 čtverečních stop dlaždic o rozměrech 12 x 12 palců budete potřebovat 100 dlaždic bez příplatku.",
+    "formula": "Počet dlaždic = zaokrouhli nahoru(plochu ÷ plochu dlaždice × (1 + přirážka)).",
+    "everyday": "Spočítej potřebné množství podlahových nebo obkladových dlaždic před nákupem.",
+    "faqs": [
+      {
+        "q": "Proč se zaokrouhluje na celé dlaždice?",
+        "a": "Dílčí dlaždice nelze objednat jako celou prodejní jednotku."
+      },
+      {
+        "q": "Kolik odpadu je rozumné?",
+        "a": "To závisí na vzoru, hranách a řezání; přizpůsob přirážka tvojemu projektu."
+      }
+    ],
+    "fields": {
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "ft²"
+      },
+      "tileLength": {
+        "label": "Délka dlaždice",
+        "help": "",
+        "unit": "palce"
+      },
+      "tileWidth": {
+        "label": "Šířka dlaždice",
+        "help": "",
+        "unit": "palce"
+      },
+      "waste": {
+        "label": "Přirážka na prořez",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "mulch-calculator": {
+    "title": "Kalkulačka mulče",
+    "description": "Vypočítej objem mulče z plochy lože a hloubky vrstvy.",
+    "explanation": "Plocha se vynásobí požadovanou hloubkou a objem se uvede v krychlových yardech. Záznamy se provádějí ve stopách a palcích.",
+    "example": "Postel o velikosti 100 stop² s 3 palci mulče vyžaduje přibližně 0,93 yd³.",
+    "formula": "Objem (ft³) = plocha (ft²) × hloubka (in) ÷ 12; yd³ = ft³ ÷ 27.",
+    "everyday": "Odhadni množství mulče pro záhon nebo osázenou plochu.",
+    "faqs": [
+      {
+        "q": "Jakou hloubku mám zvolit?",
+        "a": "To závisí na rostlinách a materiálu; použij pro svůj účel zahradnické doporučení."
+      },
+      {
+        "q": "Bylo zohledněno vypořádání?",
+        "a": "Ne. V případě potřeby naplánuj rezervu pro usazení a nerovnosti terénu."
+      }
+    ],
+    "fields": {
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "ft²"
+      },
+      "depth": {
+        "label": "Hloubka vrstvy",
+        "help": "",
+        "unit": "palce"
+      }
+    }
+  },
+  "gravel-calculator": {
+    "title": "Kalkulačka štěrku",
+    "description": "Odhadni objem a hmotnost štěrkové vrstvy z plochy, hloubky a objemové hmotnosti.",
+    "explanation": "Vrstva je aproximována jako rovnoměrně silná vrstva. Objem se objevuje v krychlových yardech; hmotnost závisí přímo na zadané objemové hmotnosti.",
+    "example": "Plocha 100 čtverečních stop s hloubkou vrstvy 3 palce obsahuje přibližně 0,93 yd³ štěrku.",
+    "formula": "Objem = plocha × hloubka vrstvy; Hmotnost ≈ objem × objemová hmotnost.",
+    "everyday": "Spočítej orientační množství štěrku pro příjezdovou cestu, chodník či drenážní vrstvu.",
+    "faqs": [
+      {
+        "q": "Jak přesný je odhad hmotnosti?",
+        "a": "Sypná hmotnost se mění podle velikosti zrna, vlhkosti a zhutnění."
+      },
+      {
+        "q": "Je zahrnuta komprese?",
+        "a": "Ne. Odhad předpokládá rovnoměrnou nezhutněnou vrstvu."
+      }
+    ],
+    "fields": {
+      "area": {
+        "label": "Plocha",
+        "help": "",
+        "unit": "ft²"
+      },
+      "depth": {
+        "label": "Hloubka vrstvy",
+        "help": "",
+        "unit": "palce"
+      },
+      "density": {
+        "label": "Hustota",
+        "help": "",
+        "unit": "lb/ft³"
+      }
+    }
+  },
+  "wind-chill-calculator": {
+    "title": "Kalkulačka pocitové teploty při větru",
+    "description": "Odhadni vnímaný chlad při nízkých teplotách a větru.",
+    "explanation": "Vzorec NWS platí pro teploty vzduchu do 50 °F a otáčkách větru nad 3 mph. Předpoklady odstínu a čisté pleti jsou zjednodušeny.",
+    "example": "Při 30°F a 10 mph větru dává vzorec přibližně 21°F chlad větru.",
+    "formula": "WC = 35,74 + 0,6215T − 35,75V^0,16 + 0,4275T V^0,16.",
+    "everyday": "Ověř zimní pocitovou teplotu podle amerického vzorce NWS.",
+    "faqs": [
+      {
+        "q": "Kdy vzorec platí?",
+        "a": "Pro teploty do 50°F a vítr nad 3 mph."
+      },
+      {
+        "q": "Měří vítr skutečnou teplotu vzduchu?",
+        "a": "Ne. Popisuje teplo uvolněné exponovanou kůží pod větrem, nikoli naměřenou teplotu."
+      }
+    ],
+    "fields": {
+      "temperature": {
+        "label": "Teplota vzduchu",
+        "help": "",
+        "unit": "°F"
+      },
+      "wind": {
+        "label": "Rychlost větru",
+        "help": "",
+        "unit": "mph"
+      }
+    },
+    "limitations": "vzorec NWS; platí předpoklady pro odstín a exponovanou pokožku."
+  },
+  "heat-index-calculator": {
+    "title": "Kalkulačka tepelného indexu",
+    "description": "Odhadni vnímané teplo z teploty vzduchu a relativní vlhkosti.",
+    "explanation": "Aproximace NWS kombinuje předběžný test a Rothfuszovu regresi s úpravami vlhkosti. Hodnota platí pro podmínky stínu.",
+    "example": "Při 90°F a 70% vlhkosti je tepelný index přibližně 105°F.",
+    "formula": "Předběžný test NWS a Rothfuszova regrese s korekcemi vlhkosti.",
+    "everyday": "Odhadni, jak horký působí vlhký letní vzduch ve stínu.",
+    "faqs": [
+      {
+        "q": "Platí hodnota pro přímé slunce?",
+        "a": "Ne. Přímé sluneční světlo může výrazně zvýšit příjem tepla."
+      },
+      {
+        "q": "Je tepelný index měřením teploty?",
+        "a": "Ne. Je to vnímaná aproximace teploty a vlhkosti."
+      }
+    ],
+    "fields": {
+      "temperature": {
+        "label": "Teplota vzduchu",
+        "help": "",
+        "unit": "°F"
+      },
+      "humidity": {
+        "label": "Relativní vlhkost",
+        "help": "",
+        "unit": "%"
+      }
+    },
+    "limitations": "NWS odhad pro stín; použij místní pokyny pro tepelnou bezpečnost."
+  },
+  "dew-point-calculator": {
+    "title": "Kalkulačka rosného bodu",
+    "description": "Odhadni rosný bod z teploty a relativní vlhkosti.",
+    "explanation": "Magnusova odhad spojuje teplotu vzduchu a relativní vlhkost. Čím blíže je rosný bod teplotě vzduchu, tím je vzduch vlhčí.",
+    "example": "Při 20 °C a 50% relativní vlhkosti vzduchu je rosný bod kolem 9,3 °C.",
+    "formula": "Magnusova odhad: γ = ln(RH/100) + aT/(b+T); rosný bod = bγ/(a−γ).",
+    "everyday": "Odhadni vlhkost vzduchu a možnost kondenzace z teploty a relativní vlhkosti.",
+    "faqs": [
+      {
+        "q": "Co znamená vysoký rosný bod?",
+        "a": "Znamená to více vodní páry ve vzduchu a často dusno."
+      },
+      {
+        "q": "Je rosný bod relativní vlhkost?",
+        "a": "Ne. Rosný bod je teplota; relativní vlhkost je procenta."
+      }
+    ],
+    "fields": {
+      "temperature": {
+        "label": "Teplota vzduchu",
+        "help": "",
+        "unit": "°C"
+      },
+      "humidity": {
+        "label": "Relativní vlhkost",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "bandwidth-calculator": {
+    "title": "Kalkulačka doby přenosu",
+    "description": "Odhadni dobu přenosu souboru při zadané rychlosti přenosu dat.",
+    "explanation": "Velikost souboru se převede na bity a vydělí se efektivní datovou rychlostí. Faktor účinnosti bere v úvahu, že plná nominální sazba je zřídka použitelná.",
+    "example": "Soubor o velikosti 1 GB trvá přibližně 89 sekund při otáčkách 100 Mb/s a 90% účinnosti.",
+    "formula": "Čas = velikost souboru v bitech ÷ efektivní datová rychlost v bitech/s.",
+    "everyday": "Odhadni, jak dlouho potrvá nahrání nebo stažení souboru při dané rychlosti připojení.",
+    "faqs": [
+      {
+        "q": "Proč převod trvá déle, než je ideální doba?",
+        "a": "Protokolová režie a kolísavý výkon sítě obvykle snižují použitelnou rychlost."
+      },
+      {
+        "q": "Jsou GB a GiB stejné?",
+        "a": "Ne. Odhad používá desetinné jednotky; Souborové systémy mohou zobrazovat binární jednotky."
+      }
+    ],
+    "fields": {
+      "size": {
+        "label": "Velikost souboru",
+        "help": "",
+        "unit": "GB"
+      },
+      "rate": {
+        "label": "Rychlost připojení",
+        "help": "",
+        "unit": "Mbit/s"
+      },
+      "efficiency": {
+        "label": "Efektivní propustnost",
+        "help": "",
+        "unit": "%"
+      }
+    }
+  },
+  "base64-encode-decode": {
+    "title": "Kodér a dekodér Base64",
+    "description": "Kóduj nebo dekóduj text UTF-8 pomocí Base64.",
+    "explanation": "Base64 představuje bajty tisknutelných znaků a nejedná se o šifrování. Výsledek je zpracován v prohlížeči.",
+    "example": "„Ahoj“ je v UTF-8 reprezentováno jako SGFsbG8=.",
+    "formula": "Base64 kóduje bajtové sekvence pomocí 64znakové abecedy; neposkytuje důvěrnost.",
+    "everyday": "Zkontroluj řetězec Base64 z konfigurace nebo lokálně zakóduj krátký text.",
+    "faqs": [
+      {
+        "q": "Chrání Base64 moje data?",
+        "a": "Ne. Každý může znovu dekódovat řetězec Base64."
+      },
+      {
+        "q": "Jaké kódování se používá?",
+        "a": "Text je interpretován jako UTF-8."
+      }
+    ],
+    "fields": {
+      "text": {
+        "label": "Text",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Režim",
+        "help": "",
+        "unit": "",
+        "options": {
+          "encode": "Kódovat",
+          "decode": "Dekódovat"
+        }
+      }
+    }
+  },
+  "url-encode-decode": {
+    "title": "Kodér a dekodér URL",
+    "description": "Zakóduj nebo dekóduj komponentu URL pomocí kódování procent.",
+    "explanation": "Speciální znaky jsou reprezentovány takovým způsobem, že se jistě objeví v komponentě URL. Zakóduj jednotlivé parametry nebo části cesty, nikoli úplnou adresu URL jako celek.",
+    "example": "\"Ahoj světe!\" se nazývá Hello%20World! kódované.",
+    "formula": "Komponenta URL = UTF-8 bajtů s procentuálním kódováním vyhrazených znaků.",
+    "everyday": "Připrav jeden parametr nebo část cesty pro vložení do URL.",
+    "faqs": [
+      {
+        "q": "Mám zakódovat celou adresu URL?",
+        "a": "Většinou ne. Zakóduj pouze hodnotu jednoho parametru nebo část cesty."
+      },
+      {
+        "q": "Co znamená neplatný znak procenta?",
+        "a": "Neúplnou nebo neplatnou escape sekvenci nelze dekódovat."
+      }
+    ],
+    "fields": {
+      "text": {
+        "label": "Text",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Režim",
+        "help": "",
+        "unit": "",
+        "options": {
+          "encode": "Kódovat",
+          "decode": "Dekódovat"
+        }
+      }
+    }
+  },
+  "time-duration-calculator": {
+    "title": "Kalkulačka časového intervalu",
+    "description": "Vypočítej dobu mezi dvěma časy, včetně půlnoci.",
+    "explanation": "Pokud je koncový čas dřívější než počáteční čas, považuje se za čas následujícího dne. Výsledek se zobrazí v hodinách, minutách a desetinných hodinách.",
+    "example": "Od 22:30 hod. do 2:00 následujícího dne uplynou 3 hodiny a 30 minut.",
+    "formula": "Trvání = koncový čas – počáteční čas; o půlnoci se přidá jeden den.",
+    "everyday": "Zjisti délku schůzky, směny nebo jiného časového úseku.",
+    "faqs": [
+      {
+        "q": "Mohu zadat dobu delší než 24 hodin?",
+        "a": "Ne. Nástroj porovnává denní doby a interpretuje dřívější konec jako následující den."
+      },
+      {
+        "q": "Odečítají se přestávky?",
+        "a": "Ne. Vypočítané časové rozpětí zahrnuje celý čas mezi časy."
+      }
+    ],
+    "fields": {
+      "start": {
+        "label": "Začátek",
+        "help": "",
+        "unit": ""
+      },
+      "end": {
+        "label": "Konec",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "day-counter": {
+    "title": "Počítadlo dnů",
+    "description": "Spočítej kalendářní dny mezi dvěma daty a rozhodni, zda započítat oba krajní dny.",
+    "explanation": "Výchozí hodnota udává rozdíl uplynulého dne. Pokud je počítání včetně, jsou do počítání zahrnuty také oba koncové body.",
+    "example": "Od 1. června do 10. června uplynulo 9 dní; včetně obou datumů je 10.",
+    "formula": "Uplynulé dny = |koncové datum − počáteční datum|; při započítání obou krajních dnů přičti 1.",
+    "everyday": "Spočítej dny do události, délku cesty nebo období mezi dvěma daty.",
+    "faqs": [
+      {
+        "q": "Co znamená inkluzivní počítání?",
+        "a": "Počítají se data zahájení a ukončení."
+      },
+      {
+        "q": "Ovlivňuje letní čas počet dní?",
+        "a": "Ne. Porovnávají se kalendářní data, nikoli počet místních hodin."
+      }
+    ],
+    "fields": {
+      "start": {
+        "label": "Začátek",
+        "help": "",
+        "unit": ""
+      },
+      "end": {
+        "label": "Konec",
+        "help": "",
+        "unit": ""
+      },
+      "inclusive": {
+        "label": "Počítejte obě koncová data",
+        "help": "",
+        "unit": "",
+        "options": {
+          "no": "Ne",
+          "yes": "Ano"
+        }
+      }
+    }
+  },
+  "day-of-the-week-calculator": {
+    "title": "Kalkulačka dne v týdnu",
+    "description": "Najdi den v týdnu pro kalendářní datum.",
+    "explanation": "Datum se vyhodnotí jako kalendářní a zobrazí se s názvem dne v týdnu a číslem dne v týdnu ISO.",
+    "example": "1. ledna 2000 byla sobota.",
+    "formula": "Den v týdnu = kalendářní datum podle gregoriánského kalendáře.",
+    "everyday": "Ověř den v týdnu pro narozeniny, svátek nebo historické datum.",
+    "faqs": [
+      {
+        "q": "Bere se v úvahu posun místního časového pásma?",
+        "a": "Ne. Čisté kalendářní datum nemá žádnou složku času ani časového pásma."
+      },
+      {
+        "q": "Co je ISO číslo dne v týdnu?",
+        "a": "Pondělí je 1 a neděle je 7."
+      }
+    ],
+    "fields": {
+      "date": {
+        "label": "Datum",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "unit-price-calculator": {
+    "title": "Kalkulačka jednotkové ceny",
+    "description": "Porovnej dvě velikosti balení za stejnou jednotkovou cenu.",
+    "explanation": "Obě ceny jsou normalizovány na 100 běžných jednotek. Množství musí používat stejnou jednotku a ceny musí používat stejnou měnu.",
+    "example": "500 g za 4,50 EUR stojí 0,90 EUR za 100 g; 850 g za 7 EUR stojí přibližně 0,82 EUR za 100 g.",
+    "formula": "Základní cena = cena balení ÷ množství balení; Srovnání na 100 jednotek.",
+    "everyday": "Porovnej jednotkovou cenu dvou balení v obchodě, i když mají rozdílnou velikost.",
+    "faqs": [
+      {
+        "q": "Mohu porovnat litry a mililitry?",
+        "a": "Nejprve převeď obě veličiny na stejnou jednotku."
+      },
+      {
+        "q": "Musí být obě ceny ve stejné měně?",
+        "a": "Ano. Pro různé měny si ceny předem převeď."
+      }
+    ],
+    "fields": {
+      "costA": {
+        "label": "Cena varianty A",
+        "help": "",
+        "unit": "měna"
+      },
+      "sizeA": {
+        "label": "Množství varianty A",
+        "help": "",
+        "unit": "jednotky"
+      },
+      "costB": {
+        "label": "Cena varianty B",
+        "help": "",
+        "unit": "měna"
+      },
+      "sizeB": {
+        "label": "Množství varianty B",
+        "help": "",
+        "unit": "jednotky"
+      }
+    }
+  },
+  "reading-time-calculator": {
+    "title": "Kalkulačka doby čtení",
+    "description": "Odhadni dobu čtení textu na základě počtu slov a otáčkách čtení.",
+    "explanation": "Slova se počítají jako skupiny oddělené mezerami. Nastav tempo podle cílových čtenářů a náročnosti; odborný obsah a obrázky mohou čtení prodloužit.",
+    "example": "Text o 900 slovech trvá asi čtyři minuty rychlostí 225 slov za minutu.",
+    "formula": "Doba čtení v minutách = počet slov ÷ slov za minutu.",
+    "everyday": "Přidej článku, newsletteru nebo delšímu textu orientační dobu čtení.",
+    "faqs": [
+      {
+        "q": "Předpovídá to mé osobní tempo čtení?",
+        "a": "Ne. Aplikuje zadané tempo na jednoduchý počet slov."
+      },
+      {
+        "q": "Bude text nahrán?",
+        "a": "Ne. Počítání probíhá lokálně v prohlížeči; Nesdílejte citlivý text prostřednictvím adresy URL."
+      }
+    ],
+    "fields": {
+      "text": {
+        "label": "Text",
+        "help": "",
+        "unit": ""
+      },
+      "speed": {
+        "label": "Rychlost čtení",
+        "help": "",
+        "unit": "slov/min"
+      }
+    },
+    "limitations": "Toto je odhad slov založený na mezerách. Technické materiály, obrázky a neznámý jazyk mohou trvat déle."
+  }
+}

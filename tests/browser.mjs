@@ -16,6 +16,7 @@ async function walk(dir) {
 }
 await walk(path.join(root, 'dist', 'en'));
 await walk(path.join(root, 'dist', 'de'));
+await walk(path.join(root, 'dist', 'cs'));
 const routes = [];
 for (const file of routeFiles) {
   const html = await readFile(file, 'utf8');
@@ -72,7 +73,7 @@ try {
   ];
   for (const width of [320, 375, 414, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const [route, label] of viewportCases.flatMap(([route,label])=>[[route,label],[route.replace('/en/','/de/'),label+' German']])) {
+    for (const [route, label] of viewportCases.flatMap(([route,label])=>[[route,label],[route.replace('/en/','/de/'),label+' German'],[route.replace('/en/','/cs/'),label+' Czech']])) {
       currentRoute = `${route} @ ${width}px`;
       try {
         await page.goto(new URL(route, baseURL).href, { waitUntil: 'networkidle', timeout: 20000 });

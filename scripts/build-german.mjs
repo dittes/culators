@@ -1,9 +1,10 @@
 import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
-import {german,setGermanStrings,localizeResult} from '../assets/i18n.mjs';
+import {german,setLocaleStrings,localizeResult} from '../assets/i18n.mjs';
 import {escape,resultMarkup} from '../assets/render.mjs';
 import {enrichResult} from '../assets/visuals.mjs';
-const common={
+import {labelCurrency} from '../assets/settings.mjs';
+const germanCommon={
  'Consumer Financial Protection Bureau: mortgage payment basics':'Consumer Financial Protection Bureau: Grundlagen der Hypothekenrate',
  'Consumer Financial Protection Bureau: fixed-rate payment method':'Consumer Financial Protection Bureau: Berechnung fester Kreditraten',
  'IRS: federal income tax rates and brackets':'IRS: US-Einkommensteuersätze und Tarifstufen',
@@ -56,42 +57,45 @@ const common={
  'Page Not Found | culators':'Seite nicht gefunden | culators','That number is missing.':'Diese Seite fehlt.','This page could not be found. There are plenty of other ways to work it out.':'Diese Seite wurde nicht gefunden. Entdecke stattdessen einen unserer anderen Rechner.','Browse calculators':'Rechner entdecken',
 };
 const escapeRegex=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-export async function buildGerman({tools,dist,site}){
+export async function buildGerman({tools,dist,site,language='de'}){
+ const common=language==='de'?germanCommon:JSON.parse(await readFile(new URL('../data/locales/cs-interface.json',import.meta.url),'utf8'));
+ const ui=language==='de'?{password:'Passwort generieren',passwordLabel:'Ein neues Passwort wird auf deinem Gerät erstellt',passwordNote:'Aktiviere JavaScript, um ein Passwort zu erstellen.',method:'Rechenweg und Formel',everyday:'Aus dem Alltag',enter:'Trage',more:' und die weiteren Angaben',ending:' ein.',step2:'Klicke auf Berechnen, um das Ergebnis und seine Aufschlüsselung zu sehen.',step3:'Merke dir eine Variante, ändere eine Angabe und vergleiche die Ergebnisse.'}:{password:'Vygenerovat heslo',passwordLabel:'Nové heslo se vytváří na tvém zařízení',passwordNote:'Pro vygenerování hesla zapni JavaScript.',method:'Postup výpočtu a vzorec',everyday:common['A familiar situation'],enter:'Zadej',more:' a další údaje',ending:'.',step2:'Klikni na Vypočítat a zobrazí se výsledek i jeho rozpis.',step3:'Ulož si variantu, změň údaj a porovnej výsledky.'};
  const translations={},runtime={...common};
- for(const category of ['finance','health','math','everyday']){const file=new URL(`../data/locales/de-${category}.json`,import.meta.url);if(!existsSync(file))throw Error('Missing German translations: '+category);const parsed=JSON.parse(await readFile(file,'utf8'));Object.assign(translations,parsed.calculators||parsed);const extra=new URL(`../data/locales/de-${category}-runtime.json`,import.meta.url);if(existsSync(extra)){const parsedRuntime=JSON.parse(await readFile(extra,'utf8'));Object.assign(runtime,parsedRuntime.translations||parsedRuntime.strings||parsedRuntime,parsedRuntime.errors||{},parsedRuntime.fieldLabels||{});if(parsedRuntime.patterns)runtime.__patterns=[...(runtime.__patterns||[]),...parsedRuntime.patterns];}}
+ for(const category of ['finance','health','math','everyday']){const file=new URL(`../data/locales/${language}-${category}.json`,import.meta.url);if(!existsSync(file))throw Error('Missing translations: '+category);const parsed=JSON.parse(await readFile(file,'utf8'));Object.assign(translations,parsed.calculators||parsed);const extra=new URL(`../data/locales/${language}-${category}-runtime.json`,import.meta.url);if(existsSync(extra)){const parsedRuntime=JSON.parse(await readFile(extra,'utf8'));Object.assign(runtime,parsedRuntime.translations||parsedRuntime.strings||parsedRuntime,parsedRuntime.errors||{},parsedRuntime.fieldLabels||{});if(parsedRuntime.patterns)runtime.__patterns=[...(runtime.__patterns||[]),...parsedRuntime.patterns];}}
  Object.assign(runtime,common);
- for(const tool of tools){const t=translations[tool.slug];if(!t?.title||!t.description||!t.explanation||!t.example||!t.everyday||!t.faqs?.length)throw Error('Incomplete German calculator '+tool.slug);runtime[tool.title]=t.title;runtime[tool.title.replace(/ Calculator$/,'')]=t.title.replace(/[- ]?Rechner$/i,'');for(const f of tool.fields){const tr=t.fields?.[f.key];if(!tr?.label)throw Error(`Missing German field ${tool.slug}/${f.key}`);if(tr.help&&f.help)runtime[f.help]=tr.help;runtime[f.label]=tr.label;if(f.options)for(const o of f.options){const value=typeof o==='object'?o.value:o,label=typeof o==='object'?o.label:o;if(tr.options?.[value])runtime[label]=tr.options[value];}}}
- await writeFile(new URL('assets/de-tools.json',dist),JSON.stringify(translations));await writeFile(new URL('assets/de-strings.json',dist),JSON.stringify(runtime));
- await writeFile(new URL('assets/search-de.json',dist),JSON.stringify(tools.map(t=>({slug:t.slug,category:t.category,title:translations[t.slug].title,description:translations[t.slug].description}))));
- for(const [en,de]of Object.entries({'finance':'Finanz','health & fitness':'Gesundheits- und Fitness','math':'Mathematik','everyday':'Alltags'})){runtime[`All ${en} calculators`]=`Alle ${de}rechner`;runtime[`All ${en} tools`]=`Alle ${de}rechner`;runtime[`Explore ${en}`]=`${de}rechner entdecken`;}
- await writeFile(new URL('assets/de-strings.json',dist),JSON.stringify(runtime));
+ for(const tool of tools){const t=translations[tool.slug];if(!t?.title||!t.description||!t.explanation||!t.example||!t.everyday||!t.faqs?.length)throw Error('Incomplete translated calculator '+tool.slug);runtime[tool.title]=t.title;runtime[tool.title.replace(/ Calculator$/,'')]=t.title.replace(/[- ]?Rechner$/i,'');for(const f of tool.fields){const tr=t.fields?.[f.key];if(!tr?.label)throw Error(`Missing translated field ${tool.slug}/${f.key}`);if(tr.help&&f.help)runtime[f.help]=tr.help;runtime[f.label]=tr.label;if(f.options)for(const o of f.options){const value=typeof o==='object'?o.value:o,label=typeof o==='object'?o.label:o;if(tr.options?.[value])runtime[label]=tr.options[value];}}}
+ Object.assign(runtime,common);
+ await writeFile(new URL(`assets/${language}-tools.json`,dist),JSON.stringify(translations));await writeFile(new URL(`assets/${language}-strings.json`,dist),JSON.stringify(runtime));
+ await writeFile(new URL(`assets/search-${language}.json`,dist),JSON.stringify(tools.map(t=>({slug:t.slug,category:t.category,title:translations[t.slug].title,description:translations[t.slug].description}))));
+ if(language==='de')for(const [en,de]of Object.entries({'finance':'Finanz','health & fitness':'Gesundheits- und Fitness','math':'Mathematik','everyday':'Alltags'})){runtime[`All ${en} calculators`]=`Alle ${de}rechner`;runtime[`All ${en} tools`]=`Alle ${de}rechner`;runtime[`Explore ${en}`]=`${de}rechner entdecken`;}
+ await writeFile(new URL(`assets/${language}-strings.json`,dist),JSON.stringify(runtime));
  const files=[];async function walk(dir){for(const f of await readdir(dir,{withFileTypes:true})){const full=new URL(f.name+(f.isDirectory()?'/':''),dir);if(f.isDirectory())await walk(full);else if(f.name==='index.html')files.push(full);}}await walk(new URL('en/',dist));
- for(const file of files){let en=await readFile(file,'utf8');const path=en.match(/<body data-page="([^"]+)"/)?.[1];const tool=tools.find(t=>path===`/en/${t.slug}/`),t=tool&&translations[tool.slug];const dePath=path.replace('/en/','/de/');
- const reciprocal=`<link rel="alternate" hreflang="de" href="${site.origin+dePath}">`;
+ for(const file of files){let en=await readFile(file,'utf8');const path=en.match(/<body data-page="([^"]+)"/)?.[1];const tool=tools.find(t=>path===`/en/${t.slug}/`),t=tool&&translations[tool.slug];const dePath=path.replace('/en/',`/${language}/`);
+ const reciprocal=`<link rel="alternate" hreflang="${language}" href="${site.origin+dePath}">`;
  en=en.replace('<meta property="og:type"',reciprocal+'<meta property="og:type"').replace('href="/de/" lang="de"',`href="${dePath}" lang="de"`);await writeFile(file,en);
  const specific={...runtime};if(tool){for(const key of ['title','description','explanation','example','formula','limitations'])if(tool[key]&&t[key])specific[tool[key]]=t[key];for(let i=0;i<tool.faqs.length;i++){if(t.faqs[i]){specific[tool.faqs[i].q]=t.faqs[i].q;specific[tool.faqs[i].a]=t.faqs[i].a;}}for(const f of tool.fields)specific[f.label]=t.fields[f.key].label;}
- setGermanStrings(specific);
- let de=en.replace('<html lang="en">','<html lang="de">').replaceAll('/en/','/de/');
+ setLocaleStrings(language,specific);
+ let de=en.replace('<html lang="en">',`<html lang="${language}">`).replaceAll('/en/',`/${language}/`);
  // Keep every input name/value, URL slug and data attribute stable; translate content and accessible labels.
- const scripts=[];de=de.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,script=>{if(script.includes('application/ld+json')){const value=JSON.parse(script.match(/>([\s\S]*)<\/script>/)[1]);const translate=x=>typeof x==='string'?german(x):Array.isArray(x)?x.map(translate):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).map(([k,v])=>[k,k==='inLanguage'?'de':translate(v)])):x;script=script.replace(/>[\s\S]*<\/script>/,'>'+JSON.stringify(translate(value)).replace(/</g,'\\u003c')+'</script>');}scripts.push(script);return`<!--I18N_SCRIPT_${scripts.length-1}-->`;});
+ const scripts=[];de=de.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,script=>{if(script.includes('application/ld+json')){const value=JSON.parse(script.match(/>([\s\S]*)<\/script>/)[1]);const translate=x=>typeof x==='string'?german(x):Array.isArray(x)?x.map(translate):x&&typeof x==='object'?Object.fromEntries(Object.entries(x).map(([k,v])=>[k,k==='inLanguage'?language:k==='priceCurrency'?(language==='de'?'EUR':'CZK'):translate(v)])):x;script=script.replace(/>[\s\S]*<\/script>/,'>'+JSON.stringify(translate(value)).replace(/</g,'\\u003c')+'</script>');}scripts.push(script);return`<!--I18N_SCRIPT_${scripts.length-1}-->`;});
  de=de.split(/(<[^>]+>)/g).map(fragment=>fragment.startsWith('<')?fragment.replace(/\b(content|aria-label|placeholder|title|alt)="([^"]*)"/g,(_,key,value)=>`${key}="${escape(german(value.replace(/&amp;/g,'&').replace(/&quot;/g,'"')))}"`):escape(german(fragment.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')))).join('');
  de=de.replace(/<!--I18N_SCRIPT_(\d+)-->/g,(_,i)=>scripts[Number(i)]);
  de=de.replace(/<link rel="alternate" hreflang="en" href="[^"]+">/,`<link rel="alternate" hreflang="en" href="${site.origin+path}">`).replace(/<link rel="alternate" hreflang="x-default" href="[^"]+">/,`<link rel="alternate" hreflang="x-default" href="${site.origin+path}">`);
  de=de.replace(/<a class="language"[^>]+>DE<\/a>/,`<a class="language" href="${path}" lang="en" hreflang="en" aria-label="Switch to English">EN</a>`);
- if(tool){const values=Object.fromEntries(tool.fields.map(f=>[f.key,String(f.value??'')]));const result=tool.slug==='password-generator'?{value:'Passwort generieren',label:'Ein neues Passwort wird auf deinem Gerät erstellt',details:[],note:'Aktiviere JavaScript, um ein Passwort zu erstellen.'}:localizeResult(enrichResult(tool,values,tool.calculate(values)),tool.slug);
- de=de.replace(/(<div id="result-output"[^>]*>)[\s\S]*?(<\/div><div class="result-tools">)/,(_,start,end)=>start+resultMarkup(result,'de')+end);
- de=de.replace(/(<h2>)How [\s\S]*? is calculated(<\/h2>)/,'$1Rechenweg und Formel$2');
- de=de.replace(/(<h2>Aus dem Alltag<\/h2><p>)[\s\S]*?(<\/p>)/,(_,start,end)=>start+escape(t.everyday)+end);
- de=de.replace(/<ol>[\s\S]*?<\/ol>/,`<ol><li>Trage ${escape(tool.fields.slice(0,3).map(f=>t.fields[f.key].label).join(', '))}${tool.fields.length>3?' und die weiteren Angaben':''} ein.</li><li>Klicke auf Berechnen, um das Ergebnis und seine Aufschlüsselung zu sehen.</li><li>Merke dir eine Variante, ändere eine Angabe und vergleiche die Ergebnisse.</li></ol>`);
+ if(tool){const values=Object.fromEntries(tool.fields.map(f=>[f.key,String(f.value??'')]));const raw=enrichResult(tool,values,tool.calculate(values));const money=tool.fields.some(f=>/USD|GBP|CAD|currency/.test(f.unit||''));const currency=language==='de'?'EUR':'CZK';const result=tool.slug==='password-generator'?{value:ui.password,label:ui.passwordLabel,details:[],note:ui.passwordNote}:localizeResult(money?labelCurrency(raw,tool.slug==='currency-calculator'?(language==='cs'?'CZK':'USD'):currency):raw,tool.slug);
+ de=de.replace(/(<div id="result-output"[^>]*>)[\s\S]*?(<\/div><div class="result-tools">)/,(_,start,end)=>start+resultMarkup(result,language)+end);
+ de=de.replace(/(<h2>)How [\s\S]*? is calculated(<\/h2>)/,`$1${ui.method}$2`);
+ de=de.replace(new RegExp(`(<h2>${escapeRegex(ui.everyday)}</h2><p>)[\\s\\S]*?(</p>)`),(_,start,end)=>start+escape(t.everyday)+end);
+ de=de.replace(/<ol>[\s\S]*?<\/ol>/,`<ol><li>${ui.enter} ${escape(tool.fields.slice(0,3).map(f=>t.fields[f.key].label).join(', '))}${tool.fields.length>3?ui.more:''}${ui.ending}</li><li>${ui.step2}</li><li>${ui.step3}</li></ol>`);
  // Help remains concise: show translated source help only, rather than inventing repetitive instructions.
- for(const f of tool.fields){const help=t.fields[f.key].help||'';de=de.replace(new RegExp(`(<p class="field-help" id="field-${escapeRegex(f.key)}-help">)[\\s\\S]*?(</p>)`),(_,a,b)=>a+escape(help)+b);}
+ for(const f of tool.fields){if(money&&tool.slug!=='currency-calculator'&&f.unit){const value=german(f.unit.replace(/USD|GBP|CAD|currency/g,currency));de=de.replace(new RegExp(`(<div class="field" data-field="${escapeRegex(f.key)}"[\\s\\S]*?<span class="unit">)[^<]*(</span>)`),(_,a,b)=>a+escape(value)+b);}const help=t.fields[f.key].help||'';de=de.replace(new RegExp(`(<p class="field-help" id="field-${escapeRegex(f.key)}-help">)[\\s\\S]*?(</p>)`),(_,a,b)=>a+escape(help)+b);}
  }
  de=de.replace(/(<a\b[^>]*data-slug="([^"]+)"[^>]*data-search=")[^"]*(")/g,(_,start,slug,end)=>start+escape((translations[slug]?.title+' '+translations[slug]?.description).toLowerCase())+end);
  de=de.replaceAll('</svg>Gesundheit &amp; Fitness<span class="expand-mark"','</svg>Gesundheit<span class="expand-mark"');
- de=de.replace(/All ([^<]+) calculators/g,'Alle $1-Rechner').replace(/All ([^<]+) tools/g,'Alle $1-Rechner').replace(/Explore ([^<]+)/g,'$1 entdecken').replace(/(\d+) calculators/g,'$1 Rechner').replace(/(\d+) tools/g,'$1 Rechner');
+ if(language==='de')de=de.replace(/All ([^<]+) calculators/g,'Alle $1-Rechner').replace(/All ([^<]+) tools/g,'Alle $1-Rechner').replace(/Explore ([^<]+)/g,'$1 entdecken').replace(/(\d+) calculators/g,'$1 Rechner').replace(/(\d+) tools/g,'$1 Rechner');
  const target=new URL('.'+dePath,dist);await mkdir(target,{recursive:true});await writeFile(new URL('index.html',target),de);
  }
- setGermanStrings(runtime);
- const sitemapFile=new URL('sitemap.xml',dist);let sitemap=await readFile(sitemapFile,'utf8');sitemap=sitemap.replace('</urlset>',files.map(f=>'<url><loc>'+site.origin+f.pathname.replace(new URL('en/',dist).pathname,'/de/').replace(/index.html$/,'')+'</loc></url>').join('')+'</urlset>');await writeFile(sitemapFile,sitemap);
- console.log(`Generated German translations for ${tools.length} calculators and ${files.length} pages with reciprocal language links.`);
+ setLocaleStrings(language,runtime);
+ const sitemapFile=new URL('sitemap.xml',dist);let sitemap=await readFile(sitemapFile,'utf8');sitemap=sitemap.replace('</urlset>',files.map(f=>'<url><loc>'+site.origin+f.pathname.replace(new URL('en/',dist).pathname,`/${language}/`).replace(/index.html$/,'')+'</loc></url>').join('')+'</urlset>');await writeFile(sitemapFile,sitemap);
+ console.log(`Generated ${language} translations for ${tools.length} calculators and ${files.length} pages with reciprocal language links.`);
 }
