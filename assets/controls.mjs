@@ -24,5 +24,6 @@ export function fieldPresentation(tool,v){
  }
  if(tool.slug==='scientific-notation-calculator'){result.value.visible=v.mode==='to-sci';result.coefficient.visible=result.exponent.visible=v.mode==='from-sci';}
  if(tool.slug==='weight-watchers-points-calculator'){for(const key of ['calories','fat','fiber'])result[key].visible=v.mode==='legacy-food';for(const key of ['allowance','used'])result[key].visible=v.mode==='budget';}
+ if(tool.slug==='irr-calculator'&&result.rate)result.rate.visible=false;
  return result;
 }

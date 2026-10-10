@@ -4,7 +4,7 @@ A framework-free, mobile-first HTML/JS calculator website. 207 working tools: al
 
 ## Run
 
-Node 20+ and Python 3 are enough. No install step or runtime CDN is required.
+Node 20+ is enough. No install step or runtime CDN is required.
 
 ```sh
 npm run build
@@ -25,13 +25,15 @@ Optional browser audit: start the local server, then run `node tests/browser.mjs
 - `scripts/build.mjs`: creates real HTML for calculator/category/legal pages, sitemap, metadata and structured data.
 - `assets/app.mjs`: search, favourites, share links, comparisons and CSV export.
 - `tokens.css` / `assets/site.css`: system-font design and reduced-motion support.
-- `tests/*.test.mjs`: known-answer and boundary tests.
+- `tests/*.test.mjs`: known-answer, boundary and presentation regression tests.
+- `data/editorial/*.json`: practical everyday scenarios woven into calculator articles.
+- `assets/settings.mjs`: currency labels, entered currency pairs and compatible measurement conversions.
 
 ## SEO and languages
 
-Every calculator has a distinct `/en/<slug>/index.html`, title, description, canonical, English hreflang, breadcrumb and WebApplication/FAQ structured data. Content, default results and internal links are rendered at build time. `sitemap.xml` and `robots.txt` use the origin in `data/site.json`. SEO markup helps crawlability; it does not guarantee search ranking or rich results.
+Every calculator has distinct `/en/<slug>/index.html` and `/de/<slug>/index.html` pages, translated titles and descriptions, language-specific canonicals, reciprocal English/German hreflang, breadcrumb and WebApplication/FAQ structured data. Content, default results and internal links are rendered at build time. `sitemap.xml` and `robots.txt` use the origin in `data/site.json`. SEO markup helps crawlability; it does not guarantee search ranking or rich results.
 
-For another language, introduce localized tool/article and interface copy, generate it under that language’s folder, and add reciprocal hreflang links for actual translations. Do not publish empty language folders. Current generator supports English; adding a language requires extending it, rather than only changing a setting.
+For another language, introduce localized tool/article and interface copy, generate it under that language’s folder, and add reciprocal hreflang links for actual translations. Do not publish empty language folders. English and German are included. German page content and runtime phrases live in `data/locales/`, while the German generator is `scripts/build-german.mjs`. Additional languages require their own translated catalogue and interface copy.
 
 ## Privacy and assumptions
 
@@ -46,3 +48,9 @@ The imprint uses the supplied address verbatim. **The six-digit postcode `101829
 `.openai/hosting.json` identifies the private Sites preview. Canonicals intentionally target the requested production domain `culators.com`; they should be changed if a different public domain is used. A private preview does not connect or launch that custom domain.
 
 Cloudflare Pages honors `dist/_headers`. Other hosts need equivalent security headers configured separately. The expression calculator uses a bounded parser and works without `unsafe-eval`.
+
+## Workspace interaction checks
+
+With `npm run dev` running, use `node tests/settings-browser.mjs` and `node tests/result-motion.mjs` to verify currency/unit settings, shared settings, language search, result animations and reduced-motion feedback. `npm run verify:locales` checks German content coverage and language links. The main browser audit covers 414 calculator routes across both languages.
+
+The sidebar uses expandable topic groups. Currency settings relabel amounts rather than fetch or apply exchange rates; the Currency Calculator still requires the rate entered by the user. Compatible physical inputs convert between metric and imperial units without changing the formula. Tools with their own unit selector use that selector directly. Formula examples and breakdowns retain their explicitly stated units.

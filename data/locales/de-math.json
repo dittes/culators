@@ -1,0 +1,1563 @@
+{
+  "scientific-calculator": {
+    "title": "Wissenschaftlicher Taschenrechner",
+    "description": "Rechne Ausdrücke mit Klammern, Potenzen, Wurzeln, Trigonometrie und Logarithmen aus. Der Rechner eignet sich für Hausaufgaben und technische Überschläge, solange die Eingaben innerhalb der Genauigkeit von JavaScript-Zahlen bleiben.",
+    "explanation": "Gib einen Ausdruck mit +, −, *, /, ^, Klammern, sqrt(), sin(), cos(), tan(), log(), ln(), abs(), pi oder e ein. Trigonometrische Funktionen verwenden Bogenmaß; Potenzen werden vor Multiplikation berechnet.",
+    "example": "Bei 2*(3+4)^2 ergibt die Klammer 7, das Quadrat 49 und die Multiplikation anschließend 98.",
+    "formula": "Auswertung mit üblicher Operatorrangfolge; trigonometrische Funktionen erwarten Bogenmaß.",
+    "everyday": "Ein Ausdruck wie „sqrt(144)+3^2“ hilft beim schnellen Prüfen eines Rechenschritts in einer Aufgabe.",
+    "faqs": [
+      {
+        "q": "Welches Winkelmaß gilt?",
+        "a": "Sinus, Kosinus und Tangens verwenden Bogenmaß."
+      },
+      {
+        "q": "Sind alle Dezimalzahlen exakt?",
+        "a": "Nein. Sehr große, sehr kleine und periodische Ergebnisse können durch Gleitkommaarithmetik gerundet sein."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Arithmetischer Ausdruck",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "fraction-calculator": {
+    "title": "Bruchrechner",
+    "description": "Addiere, subtrahiere, multipliziere und dividiere zwei Brüche und erhalte das vollständig gekürzte Ergebnis. Der Dezimalwert erleichtert den Vergleich mit Messwerten oder einer zweiten Darstellung.",
+    "explanation": "Bei Addition und Subtraktion werden die Nenner angeglichen; beim Multiplizieren werden Zähler und Nenner miteinander multipliziert. Division erfolgt durch Multiplikation mit dem Kehrwert. Anschließend kürzt der größte gemeinsame Teiler den Bruch.",
+    "example": "2/3 + 1/4 = 8/12 + 3/12 = 11/12.",
+    "formula": "Addition: a/b ± c/d=(ad±bc)/bd; Multiplikation: ac/bd; Division: ad/bc; anschließend Kürzen mit dem ggT.",
+    "everyday": "Beim Teilen eines Rezepts durch zwei lassen sich etwa 3/4 Tasse Zutaten in einen passenden neuen Bruch umrechnen.",
+    "faqs": [
+      {
+        "q": "Wird das Ergebnis gekürzt?",
+        "a": "Ja. Zähler und Nenner werden durch ihren größten gemeinsamen Teiler geteilt."
+      },
+      {
+        "q": "Kann ich durch den Bruch null teilen?",
+        "a": "Nein. Ein Bruch mit Zähler null als Divisor ist nicht zulässig."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erster Zähler",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Erster Nenner",
+        "help": "",
+        "unit": ""
+      },
+      "op": {
+        "label": "Rechenoperation",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Addieren",
+          "-": "Subtrahieren",
+          "*": "Multiplizieren",
+          "/": "Dividieren"
+        }
+      },
+      "c": {
+        "label": "Zweiter Zähler",
+        "help": "",
+        "unit": ""
+      },
+      "d": {
+        "label": "Zweiter Nenner",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "percent-calculator": {
+    "title": "Prozentrechner",
+    "description": "Löse die drei häufigsten Prozentfragen: Prozentanteil eines Grundwerts, prozentualer Anteil eines Teils oder prozentuale Veränderung zwischen zwei Werten. Die gewählte Frage legt eindeutig fest, welcher Wert als Basis dient.",
+    "explanation": "P Prozent von X sind X·P/100. Der Anteil A an B beträgt A/B·100. Die Veränderung von alt zu neu ist (neu−alt)/|alt|·100; eine Null als alter Wert ist dafür ungeeignet.",
+    "example": "Ein Preis steigt von 80 auf 92 Euro: (92−80)/80·100 = 15 %.",
+    "formula": "Prozentanteil=P·Grundwert/100; Anteil in %=Teil/Basis·100; Änderung in %=(neu−alt)/|alt|·100.",
+    "everyday": "Für einen Rabatt von 15 % auf 80 Euro ist der Preisnachlass 12 Euro.",
+    "faqs": [
+      {
+        "q": "Was bedeutet ein negatives Ergebnis?",
+        "a": "Der neue Wert liegt unter dem Ausgangswert; das Vorzeichen zeigt die Richtung."
+      },
+      {
+        "q": "Warum darf der Startwert nicht null sein?",
+        "a": "Die prozentuale Änderung teilt durch den Ausgangswert, und Division durch null ist nicht definiert."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Fragestellung",
+        "help": "",
+        "unit": "",
+        "options": {
+          "of": "Prozentwert berechnen",
+          "what-percent": "Wie viel Prozent ist A von B?",
+          "change": "Prozentänderung von alt zu neu"
+        }
+      },
+      "a": {
+        "label": "Prozent oder erster Wert",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Grundwert oder zweiter Wert",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "triangle-calculator": {
+    "title": "Dreiecksrechner",
+    "description": "Berechne Fläche und dritte Seite eines Dreiecks aus zwei Seiten und dem eingeschlossenen Winkel. Die Eingabeprüfung stellt sicher, dass der Winkel ein gültiges Dreieck bilden kann.",
+    "explanation": "Die Fläche ist ab·sin(C)/2. Die dritte Seite folgt aus dem Kosinussatz c=√(a²+b²−2ab·cos(C)); der Winkel wird in Grad eingegeben.",
+    "example": "Seiten 5 und 7 mit eingeschlossenem Winkel 60° ergeben etwa 15,16 Flächeneinheiten und eine dritte Seite von √39 ≈ 6,245.",
+    "formula": "Fläche=ab·sin(C)/2; c=√(a²+b²−2ab·cos(C)); C wird in Grad eingesetzt.",
+    "everyday": "Bei einem dreieckigen Beet helfen zwei Seitenlängen und der Winkel dazwischen, Fläche und fehlende Randlänge abzuschätzen.",
+    "faqs": [
+      {
+        "q": "Muss der Winkel zwischen 0° und 180° liegen?",
+        "a": "Die Fläche hat die quadrierte Einheit der Seiten, zum Beispiel cm² bei Seiten in Zentimetern."
+      },
+      {
+        "q": "Welche Einheit hat die Fläche?",
+        "a": "Die Fläche hat die quadrierte Einheit der Seiten, zum Beispiel cm² bei Seiten in Zentimetern."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Seite a",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Seite b",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "angle": {
+        "label": "Eingeschlossener Winkel",
+        "help": "",
+        "unit": "Grad"
+      }
+    }
+  },
+  "volume-calculator": {
+    "title": "Volumenrechner",
+    "description": "Berechne das Volumen eines Würfels, Quaders, Zylinders, einer Kugel, eines Kegels oder eines Dreiecksprismas. Wähle die Körperform und trage deren Maße ein, um ein Ergebnis in Kubikeinheiten zu erhalten.",
+    "explanation": "Der Rechner nutzt die passende Standardformel: zum Beispiel πr²h für einen Zylinder, 4πr³/3 für eine Kugel oder Grundfläche mal Länge für ein Prisma. Bei runden Körpern ist a der Radius.",
+    "example": "Ein Zylinder mit Radius 3 cm und Höhe 8 cm fasst π·3²·8 ≈ 226,19 cm³.",
+    "formula": "Würfel a³; Quader l·b·h; Zylinder πr²h; Kugel 4πr³/3; Kegel πr²h/3; Dreiecksprisma (g·h/2)L.",
+    "everyday": "Für einen Pflanzkübel können Radius und Höhe in das Zylindermodell eingesetzt werden, um das ungefähre Fassungsvermögen zu berechnen.",
+    "faqs": [
+      {
+        "q": "Soll ich Durchmesser oder Radius eingeben?",
+        "a": "Bei runden Formen wird der Radius verlangt; halbiere den Durchmesser vorher."
+      },
+      {
+        "q": "Welche Annahme gilt beim Dreiecksprisma?",
+        "a": "Die Dreiecksgrundfläche wird mit den beiden eingegebenen senkrechten Katheten beschrieben."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Körper",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Würfel",
+          "box": "Quader",
+          "cylinder": "Zylinder",
+          "sphere": "Kugel",
+          "cone": "Kegel",
+          "tri-prism": "Dreiecksprisma"
+        }
+      },
+      "a": {
+        "label": "Länge / Radius / Seitenlänge",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Breite / Höhe",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "c": {
+        "label": "Höhe / dritte Seite",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "standard-deviation-calculator": {
+    "title": "Standardabweichungsrechner",
+    "description": "Miss die Streuung einer Zahlenliste als Populations- oder Stichprobenstandardabweichung. Der Rechner zeigt außerdem Mittelwert und Varianz, damit die Streuung im Verhältnis zur Datenmitte sichtbar wird.",
+    "explanation": "Bei einer Grundgesamtheit wird die Summe der quadrierten Abweichungen durch n geteilt. Bei einer Stichprobe wird durch n−1 geteilt, um die Stichprobenkorrektur anzuwenden.",
+    "example": "Für 2, 4, 6 ist der Mittelwert 4; die Populations-SD ist √(8/3)≈1,633 und die Stichproben-SD ist 2.",
+    "formula": "σ=√[Σ(x−μ)²/n]; s=√[Σ(x−x̄)²/(n−1)].",
+    "everyday": "Beim Vergleich wiederholter Messungen zeigt die Stichprobenstandardabweichung, wie weit einzelne Werte typischerweise vom Mittelwert abweichen.",
+    "faqs": [
+      {
+        "q": "Wann wähle ich Stichprobe?",
+        "a": "Wenn deine Werte eine größere Grundgesamtheit abbilden sollen, wähle Stichprobe."
+      },
+      {
+        "q": "Warum braucht die Stichprobe mindestens zwei Werte?",
+        "a": "Bei einem Wert wäre der Nenner n−1 gleich null; die Stichprobenvarianz lässt sich dann nicht bestimmen."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Werte",
+        "help": "",
+        "unit": ""
+      },
+      "kind": {
+        "label": "Standardabweichung",
+        "help": "",
+        "unit": "",
+        "options": {
+          "sample": "Stichprobe",
+          "population": "Grundgesamtheit"
+        }
+      }
+    }
+  },
+  "random-number-generator": {
+    "title": "Zufallszahlengenerator",
+    "description": "Erzeuge mehrere Zufallszahlen innerhalb eines selbst gewählten Bereichs und wähle zwischen ganzen Zahlen und Dezimalzahlen. Ganze Zahlen werden mit kryptografisch sicherem Rejection Sampling gleichverteilt gezogen und eignen sich für allgemeine Auswahl- und Testzwecke.",
+    "explanation": "Im Ganzzahlmodus sind beide Grenzen eingeschlossen; Rejection Sampling vermeidet Verzerrungen durch Modulo. Der Dezimalmodus erzeugt Werte von der Untergrenze bis knapp unter die Obergrenze. Dafür muss Web Crypto verfügbar sein.",
+    "example": "Bei Ganzzahlmodus, Bereich 1 bis 6 und vier Ziehungen könnte die Liste etwa 2, 6, 1, 4 lauten.",
+    "formula": "Ganzzahl: gleichverteilte kryptografische Ziehung aus [min,max]; Dezimal: sichere 53-Bit-Ziehung aus [min,max).",
+    "everyday": "Bei der Auslosung einer Reihenfolge für eine kleine Aufgabenliste können mehrere ganze Zahlen in einem frei gewählten Bereich erzeugt werden.",
+    "faqs": [
+      {
+        "q": "Sind die Ganzzahlgrenzen eingeschlossen?",
+        "a": "Ja. Im Ganzzahlmodus zählen Minimum und Maximum mit; im Dezimalmodus ist das Maximum ausgeschlossen."
+      },
+      {
+        "q": "Eignet sich das für Passwörter oder Verschlüsselungsschlüssel?",
+        "a": "Nein. Die Zufallsquelle ist sicher, aber ein allgemeiner Rechner ist kein Verfahren zur Schlüsselverwaltung."
+      }
+    ],
+    "fields": {
+      "min": {
+        "label": "Untergrenze",
+        "help": "",
+        "unit": ""
+      },
+      "max": {
+        "label": "Obergrenze",
+        "help": "",
+        "unit": ""
+      },
+      "count": {
+        "label": "Anzahl der Werte",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Zahlentyp",
+        "help": "",
+        "unit": "",
+        "options": {
+          "integer": "Ganze Zahlen",
+          "decimal": "Dezimalzahlen"
+        }
+      }
+    }
+  },
+  "number-sequence-calculator": {
+    "title": "Folgenrechner",
+    "description": "Prüfe eine Zahlenfolge auf eine konstante arithmetische Differenz oder einen konstanten geometrischen Quotienten und lass den nächsten Wert berechnen. Der Rechner macht das erkannte einfache Muster sichtbar, statt eine beliebige Fortsetzung zu erraten.",
+    "explanation": "Bei einer arithmetischen Folge wird die Differenz d zum letzten Wert addiert. Bei einer geometrischen Folge wird der letzte Wert mit dem gemeinsamen Quotienten r multipliziert. Andere Muster werden nicht extrapoliert.",
+    "example": "3, 7, 11 hat jeweils die Differenz 4; der nächste Wert ist 15.",
+    "formula": "Arithmetisch: nächster Wert=letzter Wert+d; geometrisch: nächster Wert=letzter Wert·r.",
+    "everyday": "Eine Folge wie 5, 8, 11 lässt sich beim Üben schnell fortsetzen, weil jeder Schritt denselben Zuwachs hat.",
+    "faqs": [
+      {
+        "q": "Lässt sich jede Folge eindeutig fortsetzen?",
+        "a": "Nein. Viele Regeln passen zu denselben wenigen Werten; dieses Werkzeug prüft nur arithmetische und geometrische Muster."
+      },
+      {
+        "q": "Was passiert bei wechselnden Abständen?",
+        "a": "Der Rechner meldet, dass keines der beiden unterstützten Muster passt."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Folgenwerte",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "percent-error-calculator": {
+    "title": "Prozentfehlerrechner",
+    "description": "Vergleiche einen Messwert mit einem Referenzwert und gib die absolute Abweichung als Prozent des Referenzwerts an. Der vorzeichenbehaftete Fehler bleibt als Detail sichtbar und zeigt, ob die Messung zu hoch oder zu niedrig ist.",
+    "explanation": "Vorzeichenfehler=(Messwert−Referenz)/Referenz·100. Der absolute Prozentfehler ist der Betrag dieses Ergebnisses. Der Referenzwert muss ungleich null sein.",
+    "example": "Ein Messwert 9,8 gegenüber einem Referenzwert 10 ergibt −2 % vorzeichenbehaftet und 2 % absolut.",
+    "formula": "Vorzeichenfehler=(beobachtet−Referenz)/Referenz·100; absoluter Fehler=|Vorzeichenfehler|.",
+    "everyday": "Bei einer Laborübung kann der Prozentfehler eine gemessene Länge relativ zum angegebenen Sollwert einordnen.",
+    "faqs": [
+      {
+        "q": "Was bedeutet ein negativer vorzeichenbehafteter Fehler?",
+        "a": "Der Messwert liegt unter dem Referenzwert; der Betrag beschreibt die Größe der Abweichung."
+      },
+      {
+        "q": "Warum darf der Referenzwert nicht null sein?",
+        "a": "Er ist der Nenner der relativen Abweichung; Prozentfehler gegenüber null ist nicht definiert."
+      }
+    ],
+    "fields": {
+      "observed": {
+        "label": "Beobachteter Wert",
+        "help": "",
+        "unit": ""
+      },
+      "reference": {
+        "label": "Referenzwert",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "exponent-calculator": {
+    "title": "Potenzrechner",
+    "description": "Berechne eine reelle Basis hoch einem reellen Exponenten, einschließlich ganzzahliger, negativer und geeigneter gebrochener Exponenten. Der Rechner weist Fälle zurück, die im reellen Zahlenbereich nicht definiert sind.",
+    "explanation": "Für eine von null verschiedene Basis bedeutet ein negativer Exponent den Kehrwert der positiven Potenz: a^(−n)=1/a^n. Bei negativer Basis sind nur Exponenten zulässig, die ein reelles Ergebnis liefern.",
+    "example": "2^(−3)=1/2³=1/8=0,125.",
+    "formula": "a^(−n)=1/aⁿ; reelle Ergebnisse hängen von Basis und Exponent ab.",
+    "everyday": "Beim Umrechnen von Flächen kann eine Länge mit Exponent 2 quadriert oder mit Exponent −1 invertiert werden.",
+    "faqs": [
+      {
+        "q": "Warum ist eine negative Basis mit Dezimalexponent manchmal ungültig?",
+        "a": "Ein solcher Wert kann komplex sein; dieser Rechner gibt nur reelle Ergebnisse aus."
+      },
+      {
+        "q": "Was ergibt null hoch −1?",
+        "a": "Das ist nicht definiert, weil dabei durch null geteilt würde."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Basis",
+        "help": "",
+        "unit": ""
+      },
+      "exponent": {
+        "label": "Hochzahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "binary-calculator": {
+    "title": "Binärrechner",
+    "description": "Addiere, subtrahiere, multipliziere oder dividiere zwei Binärzahlen und sieh das Ergebnis in Basis 2. Die Dezimaldarstellung erleichtert die Kontrolle von Beispielen aus Informatik und Zahlensystemen.",
+    "explanation": "Jede Eingabe wird als Ganzzahl zur Basis 2 interpretiert. Division liefert ganzzahligen Quotienten und Rest; erlaubt sind ausschließlich die Ziffern 0 und 1.",
+    "example": "1011₂ ist 11₁₀; plus 101₂ (5) ergibt 10000₂ (16).",
+    "formula": "Binärzahlen werden zur Basis 2 verrechnet und zurück in Basis 2 umgewandelt.",
+    "everyday": "Beim Prüfen eines Bitmusters kann die Addition zweier kurzer Binärwerte mit ihrer Dezimaldarstellung gegengeprüft werden.",
+    "faqs": [
+      {
+        "q": "Darf ich Ziffern von 2 bis 9 eingeben?",
+        "a": "Nein. Eine Binärzahl enthält nur 0 und 1."
+      },
+      {
+        "q": "Wie wird eine Division mit Rest angezeigt?",
+        "a": "Der Rechner zeigt ganzzahligen Quotienten und Rest getrennt an."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "op": {
+        "label": "Rechenoperation",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Addieren",
+          "-": "Subtrahieren",
+          "*": "Multiplizieren",
+          "/": "Dividieren"
+        }
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "hex-calculator": {
+    "title": "Hexadezimalrechner",
+    "description": "Rechne mit zwei Hexadezimalzahlen und erhalte das Resultat in Basis 16 sowie als Dezimalzahl. Das ist nützlich für Adressen, Farbwerte und Übungen zu Zahlensystemen.",
+    "explanation": "Die Eingaben werden zur Basis 16 gelesen; zulässig sind 0–9 und A–F. Division gibt ganzzahligen Quotienten und Rest aus, und Buchstaben dürfen groß oder klein geschrieben sein.",
+    "example": "0x2A+0x10=0x3A, denn 42+16=58 im Dezimalsystem.",
+    "formula": "Hexadezimale Ganzzahlen werden verrechnet und wieder zur Basis 16 ausgegeben.",
+    "everyday": "Beim Addieren von Speicheradressen kann die Dezimalausgabe zeigen, ob ein Hexadezimalresultat plausibel ist.",
+    "faqs": [
+      {
+        "q": "Sind Kleinbuchstaben zulässig?",
+        "a": "Bei Division erhältst du ganzzahligen Quotienten und Rest statt eines gerundeten Dezimalwerts."
+      },
+      {
+        "q": "Was zeigt eine Division mit Rest?",
+        "a": "du erhältst den ganzzahligen Quotienten und den Rest statt eines gerundeten Dezimalwerts."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "op": {
+        "label": "Rechenoperation",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Addieren",
+          "-": "Subtrahieren",
+          "*": "Multiplizieren",
+          "/": "Dividieren"
+        }
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "half-life-calculator": {
+    "title": "Halbwertszeitrechner",
+    "description": "Schätze, welche Menge einer Substanz nach einer bestimmten verstrichenen Zeit verbleibt. Gib Ausgangsmenge, Halbwertszeit und Zeitdauer ein; die Rechnung folgt einem idealen exponentiellen Zerfallsmodell.",
+    "explanation": "Restmenge=Ausgangsmenge·(1/2)^(Zeit/Halbwertszeit). Das Modell erlaubt beliebige nichtnegative Zeitspannen und beschreibt den Erwartungswert, nicht einzelne Zerfallsereignisse.",
+    "example": "Nach drei Halbwertszeiten bleiben von 80 mg noch 80·(1/2)³=10 mg.",
+    "formula": "Restmenge=Ausgangsmenge·(1/2)^(verstrichene Zeit/Halbwertszeit).",
+    "everyday": "Für eine theoretische Aufgabenstellung lässt sich der verbleibende Anteil nach mehreren Halbwertszeiten berechnen.",
+    "faqs": [
+      {
+        "q": "Verschwindet nach einer Halbwertszeit alles?",
+        "a": "Nein. Das Modell setzt eine konstante Halbwertszeit voraus und berücksichtigt keine Nachlieferung der Substanz."
+      },
+      {
+        "q": "Berücksichtigt die Rechnung Umgebungsbedingungen?",
+        "a": "Nein. Das Modell setzt eine konstante Halbwertszeit voraus und berücksichtigt keine Nachlieferung der Substanz."
+      }
+    ],
+    "fields": {
+      "initial": {
+        "label": "Anfangsmenge",
+        "help": "",
+        "unit": ""
+      },
+      "halfLife": {
+        "label": "Halbwertszeit",
+        "help": "",
+        "unit": "Zeiteinheiten"
+      },
+      "elapsed": {
+        "label": "Verstrichene Zeit",
+        "help": "",
+        "unit": "Zeiteinheiten"
+      }
+    }
+  },
+  "quadratic-formula-calculator": {
+    "title": "Mitternachtsformel-Rechner",
+    "description": "Löse eine quadratische Gleichung ax²+bx+c=0 und lass Diskriminante sowie reelle oder komplexe Lösungen anzeigen. So ist direkt erkennbar, ob es zwei, eine doppelte oder keine reelle Nullstelle gibt.",
+    "explanation": "Die Diskriminante D=b²−4ac bestimmt die Art der Lösungen; die Wurzeln sind (−b±√D)/(2a). Der Koeffizient a darf nicht null sein.",
+    "example": "x²−5x+6=0 hat D=1 und die Nullstellen 2 und 3.",
+    "formula": "D=b²−4ac; x=(−b±√D)/(2a), bei D<0 mit imaginärem Anteil.",
+    "everyday": "Bei einer Parabelaufgabe zeigt die Diskriminante, ob der Graph die x-Achse zweimal, einmal oder gar nicht schneidet.",
+    "faqs": [
+      {
+        "q": "Darf a null sein?",
+        "a": "Nein. Dann wäre die Gleichung linear und keine quadratische Gleichung."
+      },
+      {
+        "q": "Was bedeutet eine negative Diskriminante?",
+        "a": "Es gibt keine reellen Nullstellen; das Ergebnis ist ein komplexes Zahlenpaar."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Koeffizient a",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Koeffizient b",
+        "help": "",
+        "unit": ""
+      },
+      "c": {
+        "label": "Koeffizient c",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "slope-calculator": {
+    "title": "Steigungsrechner",
+    "description": "Berechne Steigung und Geradengleichung durch zwei Koordinatenpunkte. Eine senkrechte Gerade wird ausdrücklich behandelt, da ihre Steigung nicht definiert ist.",
+    "explanation": "Für verschiedene x-Werte ist m=(y₂−y₁)/(x₂−x₁); daraus ergibt sich y=mx+b. Bei gleichem x ist die Gerade senkrecht und wird als x=x₁ ausgegeben.",
+    "example": "Die Punkte (1,2) und (4,8) ergeben m=2 und y=2x.",
+    "formula": "m=(y₂−y₁)/(x₂−x₁); Geradengleichung y=mx+b; senkrecht: x=x₁.",
+    "everyday": "Aus zwei Messpunkten lässt sich eine lineare Änderungsrate bestimmen, zum Beispiel der Höhenanstieg zwischen zwei Wegmarken.",
+    "faqs": [
+      {
+        "q": "Müssen die Punkte verschieden sein?",
+        "a": "Ja. Identische Punkte bestimmen keine eindeutige Gerade."
+      },
+      {
+        "q": "Was geschieht bei einer senkrechten Geraden?",
+        "a": "Die Steigung wird als undefiniert angegeben; zusätzlich erscheint x=x₁."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": ""
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": ""
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": ""
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "log-calculator": {
+    "title": "Logarithmusrechner",
+    "description": "Berechne den Logarithmus eines positiven Arguments zu einer frei wählbaren Basis. Die Rückprüfung zeigt, dass die Basis hoch dem Ergebnis wieder das ursprüngliche Argument ergibt.",
+    "explanation": "Mit dem Basiswechsel gilt log_b(x)=ln(x)/ln(b). Das Argument muss positiv, die Basis positiv und ungleich 1 sein.",
+    "example": "log₂(32)=5, denn 2⁵=32.",
+    "formula": "log_b(x)=ln(x)/ln(b), x>0, b>0 und b≠1.",
+    "everyday": "Bei einer Exponentialgleichung wie 2^x=32 liefert der Logarithmus direkt x=5.",
+    "faqs": [
+      {
+        "q": "Darf die Basis 1 sein?",
+        "a": "Nein. Potenzen von 1 bleiben immer 1 und liefern keine eindeutige Umkehrung."
+      },
+      {
+        "q": "Warum muss das Argument positiv sein?",
+        "a": "Der reelle Logarithmus ist für null und negative Argumente nicht definiert."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Basis",
+        "help": "",
+        "unit": ""
+      },
+      "value": {
+        "label": "Positives Argument",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "area-calculator": {
+    "title": "Flächenrechner",
+    "description": "Berechne die Fläche eines Rechtecks, Dreiecks, Kreises oder Trapezes aus den passenden Abmessungen. Die Maße müssen in derselben Längeneinheit eingegeben werden.",
+    "explanation": "Der Rechner verwendet je nach Form Länge mal Breite, Grundseite mal Höhe halbiert, πr² oder die mittlere parallele Seite mal Höhe. Beim Kreis wird a als Radius verstanden.",
+    "example": "Ein Rechteck von 4 m mal 6 m hat 24 m² Fläche.",
+    "formula": "Rechteck ab; Dreieck ab/2; Kreis πa²; Trapez (a+c)b/2.",
+    "everyday": "Für ein rechteckiges Zimmer ergibt Länge mal Breite eine schnelle Schätzung der Bodenfläche vor dem Kauf von Belag.",
+    "faqs": [
+      {
+        "q": "Welche Maße brauche ich für einen Kreis?",
+        "a": "Gib den Radius ein, nicht den Durchmesser."
+      },
+      {
+        "q": "Welche Einheit hat das Ergebnis?",
+        "a": "Die Flächeneinheit ist die quadrierte Eingabeeinheit, etwa m² bei Metern."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Form",
+        "help": "",
+        "unit": "",
+        "options": {
+          "rectangle": "Rechteck",
+          "triangle": "Dreieck",
+          "circle": "Kreis",
+          "trapezoid": "Trapez"
+        }
+      },
+      "a": {
+        "label": "Länge / Radius / parallele Seite a",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Breite / Höhe / parallele Seite b",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "c": {
+        "label": "Parallele Seite c (Trapez)",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "sample-size-calculator": {
+    "title": "Stichprobenrechner",
+    "description": "Schätze die erforderliche Anzahl an Antworten für eine Anteilsumfrage anhand von Konfidenzniveau, Fehlerspanne, erwartetem Anteil und optionaler Populationsgröße. Das Ergebnis wird auf ganze Teilnehmende aufgerundet.",
+    "explanation": "Für eine große Grundgesamtheit gilt n₀=z²p(1−p)/e². Bei endlicher Größe N wird n₀ mit n=n₀/[1+(n₀−1)/N] korrigiert. Angenommen werden eine einfache Zufallsstichprobe und ein Anteilsmerkmal.",
+    "example": "Bei 95 % Konfidenz, 5 % Fehlerspanne und p=0,5 werden für eine große Population etwa 385 Antworten benötigt.",
+    "formula": "n₀=z²p(1−p)/e²; endliche Population: n=n₀/[1+(n₀−1)/N].",
+    "everyday": "Vor einer kurzen Kundenumfrage kann die benötigte Antwortzahl anhand der gewünschten Fehlerspanne grob geplant werden.",
+    "faqs": [
+      {
+        "q": "Warum ist 50 % der Standardwert?",
+        "a": "Dieser Anteil maximiert p(1−p) und ergibt bei unbekanntem tatsächlichem Anteil eine vorsichtige größte Stichprobe."
+      },
+      {
+        "q": "Garantiert die Größe eine repräsentative Umfrage?",
+        "a": "Nein. Ausfälle, Auswahlverfahren und Antwortverzerrungen werden durch die Formel nicht beseitigt."
+      }
+    ],
+    "fields": {
+      "confidence": {
+        "label": "Konfidenzniveau",
+        "help": "",
+        "unit": "%"
+      },
+      "margin": {
+        "label": "Fehlerspanne",
+        "help": "",
+        "unit": "%"
+      },
+      "proportion": {
+        "label": "Erwarteter Anteil",
+        "help": "",
+        "unit": "%"
+      },
+      "population": {
+        "label": "Populationsgröße (0 = sehr große Population)",
+        "help": "",
+        "unit": "Personen"
+      }
+    }
+  },
+  "probability-calculator": {
+    "title": "Binomial-Wahrscheinlichkeitsrechner",
+    "description": "Berechne die Wahrscheinlichkeit für genau, höchstens oder mindestens k Erfolge in n unabhängigen Versuchen mit gleicher Erfolgswahrscheinlichkeit. Zusätzlich wird die erwartete Erfolgszahl ausgegeben.",
+    "explanation": "Für X~Binomial(n,p) gilt P(X=k)=C(n,k)p^k(1−p)^(n−k). Kumulative Varianten summieren die passenden Ergebnisse. Das Modell setzt eine feste Versuchszahl, Unabhängigkeit und konstantes p voraus.",
+    "example": "Bei fünf fairen Münzwürfen beträgt die Chance auf genau zwei Köpfe C(5,2)/2⁵=31,25 %.",
+    "formula": "P(X=k)=C(n,k)p^k(1−p)^(n−k); kumulative Ereignisse summieren die jeweiligen k-Werte.",
+    "everyday": "Bei mehreren unabhängigen Qualitätsprüfungen lässt sich abschätzen, wie wahrscheinlich eine bestimmte Anzahl fehlerhafter Teile ist.",
+    "faqs": [
+      {
+        "q": "Welche Annahmen braucht das Binomialmodell?",
+        "a": "Die Zahl der Versuche ist fest, die Versuche sind unabhängig und p bleibt gleich."
+      },
+      {
+        "q": "Zählt „mindestens k“ den Wert k mit?",
+        "a": "Ja. Die Summe beginnt bei k und reicht bis n."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Versuchszahl",
+        "help": "",
+        "unit": ""
+      },
+      "k": {
+        "label": "Erfolgszahl oder Grenze",
+        "help": "",
+        "unit": ""
+      },
+      "p": {
+        "label": "Erfolgswahrscheinlichkeit",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Ereignis",
+        "help": "",
+        "unit": "",
+        "options": {
+          "exact": "Genau k",
+          "at-most": "Höchstens k",
+          "at-least": "Mindestens k"
+        }
+      }
+    }
+  },
+  "statistics-calculator": {
+    "title": "Statistikrechner",
+    "description": "Fasse eine Zahlenliste mit Lage- und Streuungsmaßen zusammen. Mittelwert, Median, Modus, Spannweite, Quartile und Stichprobenstandardabweichung helfen, Form und Streuung der Daten gemeinsam zu betrachten.",
+    "explanation": "Der Median ist der mittlere sortierte Wert; Quartile teilen die sortierte Liste in Abschnitte. Die Quartile werden als Median der unteren und oberen Hälfte berechnet. Bei einem Einzelwert werden beide Quartile auf diesen Wert gesetzt.",
+    "example": "Für 1, 2, 2, 7 sind Mittelwert 3, Median 2, Modus 2 und Spannweite 6.",
+    "formula": "Mittelwert=Σx/n; Spannweite=max−min; Quartile aus den sortierten unteren und oberen Hälften.",
+    "everyday": "Bei einer Liste von Lieferzeiten zeigt der Median einen typischen Fall, während Spannweite und Quartile die Variabilität zeigen.",
+    "faqs": [
+      {
+        "q": "Kann eine Liste mehrere Modi haben?",
+        "a": "Ja. Mehrere gleich häufige Werte werden gemeinsam als Modi angezeigt; bei lauter Einzelwerten gibt es keinen Modus."
+      },
+      {
+        "q": "Welche Quartilsmethode wird verwendet?",
+        "a": "Der Rechner nimmt den Median der unteren und oberen Datenhälfte."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Werte",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "mean-median-mode-range-calculator": {
+    "title": "Mittelwert-Median-Modus-Spannweiten-Rechner",
+    "description": "Erhalte die vier vertrauten Kennzahlen einer Zahlenliste: arithmetischen Mittelwert, Median, Modus und Spannweite. Damit lässt sich eine Verteilung schnell beschreiben und auf Ausreißer prüfen.",
+    "explanation": "Der Mittelwert teilt die Summe durch die Anzahl. Der Median ist die Mitte der sortierten Werte, der Modus ist der häufigste Wert und die Spannweite die Differenz zwischen größtem und kleinstem Wert.",
+    "example": "Für 2, 3, 3, 8 sind Mittelwert 4, Median 3, Modus 3 und Spannweite 6.",
+    "formula": "Mittelwert=Σx/n; Median=mittlerer sortierter Wert; Modus=häufigster Wert; Spannweite=max−min.",
+    "everyday": "Bei Testergebnissen macht der Vergleich von Median und Mittelwert sichtbar, ob wenige sehr hohe Werte den Durchschnitt verschieben.",
+    "faqs": [
+      {
+        "q": "Was, wenn kein Wert häufiger vorkommt?",
+        "a": "Dann gibt es keinen Modus; alle Werte treten gleich selten auf."
+      },
+      {
+        "q": "Wie werden gerade Listen behandelt?",
+        "a": "Der Median ist der Durchschnitt der beiden mittleren sortierten Werte."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Werte",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "permutation-and-combination-calculator": {
+    "title": "Kombinations- und Permutationsrechner",
+    "description": "Zähle Auswahlen aus n verschiedenen Elementen und wähle, ob die Reihenfolge wichtig ist. Kombinationen zählen Gruppen; Permutationen zählen unterschiedliche Reihenfolgen derselben Auswahl getrennt.",
+    "explanation": "Permutation P(n,r)=n!/(n−r)!; Kombination C(n,r)=n!/[r!(n−r)!]. Die Berechnung verwendet exakte Ganzzahlarithmetik.",
+    "example": "Aus fünf Personen lassen sich für Vorsitz und Stellvertretung P(5,2)=20 Zuordnungen bilden; zwei Ausschussplätze ergeben C(5,2)=10 Gruppen.",
+    "formula": "P(n,r)=n!/(n−r)!; C(n,r)=n!/[r!(n−r)!].",
+    "everyday": "Für ein dreiköpfiges Team zählt die Kombination die Gruppe; für erste, zweite und dritte Platzierung zählt die Permutation.",
+    "faqs": [
+      {
+        "q": "Wann ist die Reihenfolge wichtig?",
+        "a": "Wenn unterschiedliche Plätze oder Abläufe verschiedene Ergebnisse darstellen, wähle Permutation."
+      },
+      {
+        "q": "Darf r größer als n sein?",
+        "a": "Nein. Es können nicht mehr verschiedene Elemente ausgewählt werden, als vorhanden sind."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Verfügbare Elemente n",
+        "help": "",
+        "unit": ""
+      },
+      "r": {
+        "label": "Ausgewählte Elemente r",
+        "help": "",
+        "unit": ""
+      },
+      "mode": {
+        "label": "Zählweise",
+        "help": "",
+        "unit": "",
+        "options": {
+          "combination": "Kombination (Reihenfolge egal)",
+          "permutation": "Permutation (Reihenfolge zählt)"
+        }
+      }
+    }
+  },
+  "z-score-calculator": {
+    "title": "Z-Wert-Rechner",
+    "description": "Standardisiere eine Beobachtung relativ zu Mittelwert und Standardabweichung. Der Z-Wert gibt an, wie viele Standardabweichungen der Messwert vom Mittelwert entfernt liegt.",
+    "explanation": "z=(x−μ)/σ. Positive Werte liegen oberhalb, negative unterhalb des Mittelwerts. Die Standardabweichung muss positiv sein.",
+    "example": "Ein Wert 70 bei Mittelwert 60 und Standardabweichung 5 hat z=2.",
+    "formula": "z=(Beobachtung−Mittelwert)/Standardabweichung.",
+    "everyday": "Ein Testwert lässt sich mit dem Z-Wert relativ zur Vergleichsgruppe einordnen, sofern deren Mittelwert und Streuung bekannt sind.",
+    "faqs": [
+      {
+        "q": "Was bedeutet ein Z-Wert von null?",
+        "a": "Der Messwert entspricht genau dem Mittelwert."
+      },
+      {
+        "q": "Kann die Standardabweichung null sein?",
+        "a": "Nein. Ohne Streuung wäre die Standardisierung nicht definiert."
+      }
+    ],
+    "fields": {
+      "x": {
+        "label": "Beobachtung x",
+        "help": "",
+        "unit": ""
+      },
+      "mean": {
+        "label": "Mittelwert μ",
+        "help": "",
+        "unit": ""
+      },
+      "sd": {
+        "label": "Standardabweichung σ",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "confidence-interval-calculator": {
+    "title": "Konfidenzintervall-Rechner",
+    "description": "Schätze ein t-basiertes Konfidenzintervall für einen Mittelwert aus Stichprobenmittelwert, Standardabweichung, Stichprobengröße und Konfidenzniveau. Das Intervall macht die Unsicherheit der Stichprobenschätzung sichtbar.",
+    "explanation": "Die Rechnung verwendet x̄ ± t·s/√n mit n−1 Freiheitsgraden. Der t-Wert wird näherungsweise bestimmt; die Methode setzt eine geeignete Stichprobe und ein Mittelwertproblem voraus.",
+    "example": "Bei Mittelwert 50, Standardabweichung 10, n=25 und 95 % liegt das Intervall ungefähr zwischen 45,9 und 54,1.",
+    "formula": "Konfidenzintervall=x̄±t*·s/√n; Freiheitsgrade=n−1.",
+    "everyday": "Bei einer kleinen Stichprobe von Messwerten kann das Intervall zeigen, wie genau der geschätzte Mittelwert ist.",
+    "faqs": [
+      {
+        "q": "Bedeutet 95 % Konfidenz, dass der wahre Wert mit 95 % Wahrscheinlichkeit im berechneten Intervall liegt?",
+        "a": "Im frequentistischen Sinn beschreibt 95 % die langfristige Abdeckung des Verfahrens bei wiederholten Stichproben."
+      },
+      {
+        "q": "Ist das Intervall exakt?",
+        "a": "Der kritische t-Wert wird angenähert; bei wichtigen Analysen sollte geeignete Statistiksoftware verwendet werden."
+      }
+    ],
+    "fields": {
+      "mean": {
+        "label": "Stichprobenmittelwert",
+        "help": "",
+        "unit": ""
+      },
+      "sd": {
+        "label": "Stichprobenstandardabweichung",
+        "help": "",
+        "unit": ""
+      },
+      "n": {
+        "label": "Stichprobengröße",
+        "help": "",
+        "unit": ""
+      },
+      "level": {
+        "label": "Konfidenzniveau",
+        "help": "",
+        "unit": "",
+        "options": {
+          "90": "90 %",
+          "95": "95 %",
+          "99": "99 %"
+        }
+      }
+    }
+  },
+  "ratio-calculator": {
+    "title": "Verhältnisrechner",
+    "description": "Kürze ein Verhältnis auf seine einfachste Form und teile optional eine Gesamtmenge proportional auf beide Anteile auf. So bleiben die Relation und die daraus abgeleiteten Mengen nachvollziehbar.",
+    "explanation": "a:b wird durch den größten gemeinsamen Teiler gekürzt. Für Gesamtsumme T entfallen Ta/(a+b) auf den ersten und Tb/(a+b) auf den zweiten Anteil. Beide Teile dürfen nicht zugleich null sein.",
+    "example": "Das Verhältnis 2:3 teilt eine Gesamtmenge von 100 in 40 und 60 Einheiten.",
+    "formula": "Kürzung: a:b durch ggT(a,b); Anteil 1=Ta/(a+b), Anteil 2=Tb/(a+b).",
+    "everyday": "Für ein Getränkerezept mit Mischungsverhältnis 2 zu 3 lässt sich eine gewünschte Gesamtmenge auf die beiden Flüssigkeiten aufteilen.",
+    "faqs": [
+      {
+        "q": "Kann ein Verhältnisanteil null sein?",
+        "a": "Ja, aber mindestens einer der beiden Anteile muss größer als null sein."
+      },
+      {
+        "q": "Müssen die Werte ganze Zahlen sein?",
+        "a": "Nein. Dezimalwerte sind möglich; die vereinfachte Schreibweise wird entsprechend berechnet."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erster Verhältnisanteil",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Zweiter Verhältnisanteil",
+        "help": "",
+        "unit": ""
+      },
+      "total": {
+        "label": "Aufzuteilende Gesamtmenge",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "distance-calculator": {
+    "title": "Abstandsrechner",
+    "description": "Berechne den geradlinigen Abstand zwischen zwei Punkten in zwei oder drei Dimensionen. Die Koordinatendifferenzen und die Distanz werden zusammen angezeigt.",
+    "explanation": "In zwei Dimensionen gilt d=√[(x₂−x₁)²+(y₂−y₁)²]; in drei Dimensionen kommt (z₂−z₁)² hinzu. Die Koordinaten müssen dieselbe Einheit verwenden.",
+    "example": "Zwischen (1,2) und (4,6) liegen √(3²+4²)=5 Einheiten.",
+    "formula": "d=√[Σ(koordinatendifferenz)²].",
+    "everyday": "In einem Koordinatengitter kann die Luftlinie zwischen zwei markierten Punkten statt der Weglänge berechnet werden.",
+    "faqs": [
+      {
+        "q": "Berücksichtigt das den tatsächlichen Weg?",
+        "a": "Nein. Berechnet wird die gerade Distanz, nicht eine Strecke entlang von Straßen oder Hindernissen."
+      },
+      {
+        "q": "Welche Einheit hat das Ergebnis?",
+        "a": "Es übernimmt die Einheit der Koordinaten, sofern alle gleich angegeben sind."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": ""
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": ""
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": ""
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "circle-calculator": {
+    "title": "Kreisrechner",
+    "description": "Berechne Radius, Durchmesser, Umfang und Fläche eines Kreises, wenn eine dieser Größen bekannt ist. Die übrigen Maße folgen direkt aus der Kreisgeometrie.",
+    "explanation": "Der Durchmesser ist 2r, der Umfang 2πr und die Fläche πr². Bei Umfang oder Fläche wird zunächst der Radius zurückgerechnet.",
+    "example": "Ein Kreis mit Durchmesser 10 hat Radius 5, Umfang 10π und Fläche 25π.",
+    "formula": "d=2r; U=2πr; A=πr².",
+    "everyday": "Aus dem Durchmesser eines runden Tisches lassen sich Umfang und Tischfläche für eine Abdeckung planen.",
+    "faqs": [
+      {
+        "q": "Muss ich beim Eingabewert die Einheit angeben?",
+        "a": "Gib alle Maße in derselben Längeneinheit ein; die Fläche verwendet deren Quadrat."
+      },
+      {
+        "q": "Kann eine Fläche als bekannte Größe eingegeben werden?",
+        "a": "Ja. Der Radius wird dann aus r=√(A/π) ermittelt."
+      }
+    ],
+    "fields": {
+      "given": {
+        "label": "Bekanntes Maß",
+        "help": "",
+        "unit": "",
+        "options": {
+          "radius": "Radius",
+          "diameter": "Durchmesser",
+          "circumference": "Umfang",
+          "area": "Fläche"
+        }
+      },
+      "value": {
+        "label": "Maß",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "surface-area-calculator": {
+    "title": "Oberflächenrechner",
+    "description": "Berechne die äußere Fläche eines Würfels, Quaders, einer Kugel, eines geschlossenen Zylinders, Kegels oder einer quadratischen Pyramide. Die Maße müssen für ein konsistentes Ergebnis dieselbe Einheit nutzen.",
+    "explanation": "Für jede Körperform wird die passende Oberflächenformel verwendet. Bei Zylinder und Kegel wird die Mantelfläche zusammen mit den jeweiligen Grundflächen berücksichtigt.",
+    "example": "Ein Würfel mit Seitenlänge 2 hat 6·2²=24 Flächeneinheiten.",
+    "formula": "Würfel 6a²; Quader 2(ab+ac+bc); Kugel 4πr²; geschlossener Zylinder 2πr²+2πrh.",
+    "everyday": "Für eine Dose kann die gesamte Materialfläche aus Mantel und Deckeln geschätzt werden, bevor ein Etikett zugeschnitten wird.",
+    "faqs": [
+      {
+        "q": "Ist beim Zylinder die Ober- und Unterseite enthalten?",
+        "a": "Ja. Der Rechner verwendet die Oberfläche eines geschlossenen Zylinders."
+      },
+      {
+        "q": "Welche Fläche hat ein Kegel?",
+        "a": "Die Mantellinie und die Kreisgrundfläche bestimmen die gesamte Kegeloberfläche."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Körper",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Würfel",
+          "box": "Quader",
+          "sphere": "Kugel",
+          "cylinder": "Geschlossener Zylinder",
+          "cone": "Kegel",
+          "pyramid": "Quadratische Pyramide"
+        }
+      },
+      "a": {
+        "label": "Seite / Länge / Radius",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Breite / Höhe",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "c": {
+        "label": "Höhe / Mantellinie",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "pythagorean-theorem-calculator": {
+    "title": "Satz-des-Pythagoras-Rechner",
+    "description": "Bestimme die fehlende Seite eines rechtwinkligen Dreiecks aus zwei bekannten Seiten. Wahlweise gib beide Katheten oder die Hypotenuse und eine Kathete ein.",
+    "explanation": "Für Katheten gilt c=√(a²+b²). Ist die Hypotenuse c und eine Kathete bekannt, folgt die andere aus √(c²−a²); die Hypotenuse muss länger sein als die Kathete.",
+    "example": "Katheten 3 und 4 ergeben die Hypotenuse 5.",
+    "formula": "a²+b²=c²; fehlende Kathete=√(c²−andere Kathete²).",
+    "everyday": "Die Diagonale eines rechteckigen Raums lässt sich aus Länge und Breite mit dem Satz des Pythagoras abschätzen.",
+    "faqs": [
+      {
+        "q": "Kann die bekannte Kathete so lang wie die Hypotenuse sein?",
+        "a": "Das Ergebnis hat dieselbe Einheit wie die beiden Eingabeseiten."
+      },
+      {
+        "q": "Welche Einheit hat die gesuchte Seite?",
+        "a": "Das Ergebnis hat dieselbe Einheit wie die beiden Eingabeseiten."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Bekannte Seiten",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Zwei Katheten",
+          "hypotenuse-leg": "Hypotenuse und eine Kathete"
+        }
+      },
+      "a": {
+        "label": "Erste Seite",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Zweite Seite",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "right-triangle-calculator": {
+    "title": "Rechtwinkliger-Dreieck-Rechner",
+    "description": "Vervollständige ein rechtwinkliges Dreieck aus zwei Katheten oder aus einer Kathete und einem gegenüberliegenden spitzen Winkel. Der Rechner liefert die fehlenden Winkel und Seiten.",
+    "explanation": "Die Seiten folgen aus a²+b²=c²; mit dem Sinus werden Seite und Winkel verknüpft. Die beiden spitzen Winkel eines rechtwinkligen Dreiecks ergeben zusammen 90°.",
+    "example": "Katheten 3 und 4 ergeben Hypotenuse 5 und spitze Winkel von etwa 36,9° und 53,1°.",
+    "formula": "a²+b²=c²; sin(θ)=Gegenkathete/Hypotenuse; die spitzen Winkel summieren sich zu 90°.",
+    "everyday": "Bei einer Rampe lassen sich Höhe, waagerechte Länge und Neigung als rechtwinkliges Dreieck miteinander verknüpfen.",
+    "faqs": [
+      {
+        "q": "Muss der eingegebene spitze Winkel unter 90° liegen?",
+        "a": "Ja. Ein spitzer Winkel ist größer als 0° und kleiner als 90°."
+      },
+      {
+        "q": "In welchem Winkelmaß ist die Eingabe?",
+        "a": "Winkel werden in Grad eingegeben und ausgegeben."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Bekannte Maße",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Zwei Katheten",
+          "leg-angle": "Eine Kathete und gegenüberliegender Winkel"
+        }
+      },
+      "a": {
+        "label": "Kathete a",
+        "help": "",
+        "unit": "Einheiten"
+      },
+      "b": {
+        "label": "Kathete b oder Winkel",
+        "help": "",
+        "unit": "Einheiten"
+      }
+    }
+  },
+  "root-calculator": {
+    "title": "Wurzelrechner",
+    "description": "Berechne die reelle n-te Wurzel einer Zahl. Negative Radikanden sind bei ungeradem Wurzelindex erlaubt; gerade Wurzeln aus negativen Zahlen werden zurückgewiesen.",
+    "explanation": "Gesucht ist r mit rⁿ=x. Bei negativem x ist ein reelles Ergebnis nur möglich, wenn n ungerade ist. Der Hauptwert wird ausgegeben.",
+    "example": "Die dritte Wurzel aus −125 ist −5.",
+    "formula": "rⁿ=x; für negatives x muss n ungerade sein.",
+    "everyday": "Eine Kubikwurzel kann eine negative Zahl zurückführen, etwa wenn ein negatives Volumenmodell algebraisch rückwärts gelöst wird.",
+    "faqs": [
+      {
+        "q": "Warum ist eine gerade Wurzel aus einer negativen Zahl nicht möglich?",
+        "a": "Das Quadrat jeder reellen Zahl ist nicht negativ; daher gibt es keine reelle gerade Wurzel aus einer negativen Zahl."
+      },
+      {
+        "q": "Was bedeutet Hauptwurzel?",
+        "a": "Ausgegeben wird der festgelegte reelle Hauptwert, nicht eine Liste komplexer Lösungen."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Radikand",
+        "help": "",
+        "unit": ""
+      },
+      "index": {
+        "label": "Wurzelindex",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "lcm-calculator": {
+    "title": "KGV-Rechner",
+    "description": "Finde das kleinste gemeinsame Vielfache zweier ganzer Zahlen. Das KGV ist die kleinste positive Zahl, die durch beide Eingaben teilbar ist, mit Sonderbehandlung für Null.",
+    "explanation": "Das KGV wird exakt aus |a·b|/ggT(a,b) berechnet. Große Ergebnisse außerhalb der sicheren Ganzzahlgrenze werden als Dezimalzeichenfolge ausgegeben, damit keine Genauigkeit verloren geht.",
+    "example": "Das KGV von 12 und 18 ist 36.",
+    "formula": "kgV(a,b)=|a·b|/ggT(a,b).",
+    "everyday": "Beim Zusammenlegen zweier wiederkehrender Zeitpläne hilft das KGV, den nächsten gemeinsamen Terminabstand zu finden.",
+    "faqs": [
+      {
+        "q": "Kann eine Eingabe negativ sein?",
+        "a": "Ja. Für das KGV wird der Betrag der Eingaben verwendet."
+      },
+      {
+        "q": "Was ist das KGV mit null?",
+        "a": "Ist eine Zahl null, ist das kleinste gemeinsame Vielfache null."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "gcf-calculator": {
+    "title": "ggT-Rechner",
+    "description": "Berechne den größten gemeinsamen Teiler zweier ganzer Zahlen. Das Ergebnis ist die größte positive ganze Zahl, die beide Werte ohne Rest teilt.",
+    "explanation": "Der Euklidische Algorithmus ersetzt ein Zahlenpaar wiederholt durch Divisor und Rest, bis der Rest null ist. Vorzeichen beeinflussen den positiven ggT nicht.",
+    "example": "Der ggT von 24 und 36 ist 12.",
+    "formula": "ggT(a,b)=ggT(b,a mod b), bis der Rest null ist.",
+    "everyday": "Beim Kürzen eines Bruchs liefert der ggT den größten Faktor, durch den Zähler und Nenner gemeinsam teilbar sind.",
+    "faqs": [
+      {
+        "q": "Darf ein Wert negativ sein?",
+        "a": "Ja. Der ggT wird aus den Beträgen bestimmt."
+      },
+      {
+        "q": "Warum sind nicht beide Werte null zulässig?",
+        "a": "Für (0,0) wäre kein eindeutiger größter gemeinsamer Teiler definiert."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "factor-calculator": {
+    "title": "Teilerrechner",
+    "description": "Liste die positiven Faktorpaare einer positiven ganzen Zahl auf und sieh, ob sie prim oder zusammengesetzt ist. Jeder angezeigte Faktor teilt die Eingabe ohne Rest.",
+    "explanation": "Es werden mögliche Teiler bis zur Quadratwurzel der Zahl geprüft; passende Gegenfaktoren bilden ein Paar. Die Eingabe ist auf 100 Millionen begrenzt, damit die Suche zügig bleibt.",
+    "example": "Die Zahl 36 hat die Faktorpaare 1×36, 2×18, 3×12 und 4×9 sowie 6×6.",
+    "formula": "d ist Faktor von n, wenn n mod d=0.",
+    "everyday": "Beim Finden passender Seitenlängen für eine rechteckige Anordnung können Teilerpaare einer Stückzahl helfen.",
+    "faqs": [
+      {
+        "q": "Ist 1 eine Primzahl?",
+        "a": "Nein. 1 ist weder prim noch zusammengesetzt."
+      },
+      {
+        "q": "Wie groß darf die Zahl sein?",
+        "a": "Die Obergrenze beträgt 100.000.000, damit die Faktorsuche im Browser reaktionsfähig bleibt."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Positive ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "rounding-calculator": {
+    "title": "Rundungsrechner",
+    "description": "Runde eine Zahl auf eine gewählte Anzahl von Dezimalstellen oder Zehnerpotenzen. Bei genau halben Fällen wird vom Nullpunkt weg gerundet.",
+    "explanation": "Für d Dezimalstellen wird |x| mit 10^d skaliert, auf eine ganze Zahl gerundet und anschließend zurückskaliert. Negative Stellen runden auf Zehner, Hunderter und weitere Zehnerpotenzen.",
+    "example": "12,345 auf zwei Dezimalstellen gerundet ergibt 12,35.",
+    "formula": "Rundung=sign(x)·round(|x|·10^d)/10^d.",
+    "everyday": "Für eine Kostenschätzung können Messwerte einheitlich auf Zentimeter oder einen passenden Geldbetrag gerundet werden.",
+    "faqs": [
+      {
+        "q": "Was bedeutet eine negative Stellenzahl?",
+        "a": "Zum Runden links vom Dezimalkomma wählst du Zehner oder Hunderter."
+      },
+      {
+        "q": "Wie werden exakte Halbwerte gerundet?",
+        "a": "Halbe Werte werden vom Nullpunkt weg gerundet, also etwa 2,5 auf 3 und −2,5 auf −3."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Wert",
+        "help": "",
+        "unit": ""
+      },
+      "places": {
+        "label": "Dezimalstellen (−12 bis 12)",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "matrix-calculator": {
+    "title": "Matrixrechner",
+    "description": "Addiere, subtrahiere oder multipliziere kleine Matrizen und gib die Ergebnis-Matrix kompakt aus. Dimensionsprüfungen fangen unzulässige Operationen ab.",
+    "explanation": "Addition und Subtraktion erfolgen elementweise und benötigen gleiche Dimensionen. Für AB muss die Spaltenzahl von A der Zeilenzahl von B entsprechen; bis zu 5×5 Einträge werden unterstützt.",
+    "example": "[1,2;3,4] mal [2,0;1,2] ergibt [4,4;10,8].",
+    "formula": "Addition/Subtraktion elementweise; (AB)ᵢⱼ=ΣₖAᵢₖBₖⱼ.",
+    "everyday": "Eine kleine Koeffizientenmatrix lässt sich multiplizieren, um eine lineare Transformation in einer Rechenaufgabe zu prüfen.",
+    "faqs": [
+      {
+        "q": "Müssen beide Matrizen gleich groß sein?",
+        "a": "Bei Addition und Subtraktion ja; bei Multiplikation müssen die inneren Dimensionen übereinstimmen."
+      },
+      {
+        "q": "Wie gebe ich Zeilen ein?",
+        "a": "Trenne Werte mit Kommas oder Leerzeichen und die Zeilen mit Semikolons."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Matrix A",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Matrix B",
+        "help": "",
+        "unit": ""
+      },
+      "op": {
+        "label": "Rechenoperation",
+        "help": "",
+        "unit": "",
+        "options": {
+          "add": "Addieren",
+          "subtract": "Subtrahieren",
+          "multiply": "Multiplizieren"
+        }
+      }
+    }
+  },
+  "scientific-notation-calculator": {
+    "title": "Wissenschaftliche-Schreibweise-Rechner",
+    "description": "Wandle eine Dezimalzahl in normalisierte wissenschaftliche Schreibweise um oder zurück. Koeffizient und Zehnerexponent machen sehr große und kleine Größen übersichtlicher.",
+    "explanation": "Normalisiert gilt x=m·10^e mit 1≤|m|<10, außer bei null. Im Rückweg wird der Koeffizient mit 10 hoch dem eingegebenen Exponenten multipliziert.",
+    "example": "0,00072 wird als 7,2·10⁻⁴ geschrieben.",
+    "formula": "x=m·10^e; normalisiert ist 1≤|m|<10, außer x=0.",
+    "everyday": "Bei sehr kleinen Messwerten wie Mikrometern erleichtert die Zehnerpotenz den Größenvergleich.",
+    "faqs": [
+      {
+        "q": "Warum liegt der Koeffizient zwischen 1 und 10?",
+        "a": "Diese Konvention macht den Exponenten eindeutig und Werte verschiedener Größen leichter vergleichbar."
+      },
+      {
+        "q": "Was passiert bei null?",
+        "a": "Null bleibt null und benötigt keine normalisierte Zehnerpotenz."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Umwandlung",
+        "help": "",
+        "unit": "",
+        "options": {
+          "to-sci": "Dezimalzahl in wissenschaftliche Schreibweise",
+          "from-sci": "Wissenschaftliche Schreibweise in Dezimalzahl"
+        }
+      },
+      "value": {
+        "label": "Dezimalwert",
+        "help": "",
+        "unit": ""
+      },
+      "coefficient": {
+        "label": "Koeffizient",
+        "help": "",
+        "unit": ""
+      },
+      "exponent": {
+        "label": "Zehnerexponent",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "big-number-calculator": {
+    "title": "Großzahlrechner",
+    "description": "Addiere, subtrahiere, multipliziere oder dividiere sehr lange Ganzzahlen ohne Genauigkeitsverlust durch Gleitkommazahlen. Das Ergebnis wird exakt als Dezimalzahl ausgegeben.",
+    "explanation": "Alle Eingaben werden als beliebig genaue Ganzzahlen verarbeitet. Bei Division erscheinen ganzzahliger Quotient und Rest, da eine Division nicht immer glatt aufgeht.",
+    "example": "12345678901234567890+10=12345678901234567900.",
+    "formula": "Ganzzahloperationen mit beliebiger Genauigkeit; Division liefert Quotient und Rest.",
+    "everyday": "Für eine lange Identifikationsnummer oder große Stückzahl können Rechenschritte exakt geprüft werden.",
+    "faqs": [
+      {
+        "q": "Darf ich Dezimalstellen eingeben?",
+        "a": "Nein. Dieses Werkzeug akzeptiert ganze Zahlen."
+      },
+      {
+        "q": "Warum gibt es eine Längenbegrenzung?",
+        "a": "Die Begrenzung auf 200 Ziffern schützt den Browser und reicht für sehr große praktische Ganzzahlen."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "op": {
+        "label": "Rechenoperation",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Addieren",
+          "-": "Subtrahieren",
+          "*": "Multiplizieren",
+          "/": "Dividieren"
+        }
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "prime-factorization-calculator": {
+    "title": "Primfaktorzerlegungsrechner",
+    "description": "Zerlege eine positive ganze Zahl in Primzahlpotenzen und sieh alle Primfaktoren mit Vielfachheit. Die eindeutige Zerlegung kann auch beim Kürzen und Bestimmen von Teilern helfen.",
+    "explanation": "Der Rechner teilt wiederholt durch den kleinsten passenden Primteiler, bis der Rest selbst prim ist. Für 1 gibt es keine Primfaktoren.",
+    "example": "360=2³·3²·5.",
+    "formula": "n=∏pᵢ^eᵢ, wobei jedes pᵢ prim ist.",
+    "everyday": "Beim Vereinfachen eines Bruchs können Primfaktoren von Zähler und Nenner gemeinsam gestrichen werden.",
+    "faqs": [
+      {
+        "q": "Welche Primfaktorzerlegung hat 1?",
+        "a": "Die Zahl 1 hat keine Primfaktoren; sie ist die multiplikative Eins."
+      },
+      {
+        "q": "Wie groß darf die Eingabe sein?",
+        "a": "Die Suche ist auf 100 Millionen begrenzt, damit die Primfaktorzerlegung schnell bleibt."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Positive ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "common-factor-calculator": {
+    "title": "Gemeinsame-Teiler-Rechner",
+    "description": "Liste alle positiven gemeinsamen Teiler zweier ganzer Zahlen auf und sieh den größten gemeinsamen Teiler. Die vollständige Liste hilft, wenn neben dem größten Wert auch kleinere gemeinsame Teiler gebraucht werden.",
+    "explanation": "Gemeinsame Teiler sind genau die positiven Teiler von ggT(|a|,|b|). Der Euklidische Algorithmus findet zuerst den ggT; anschließend werden dessen Teilerpaare aufgelistet.",
+    "example": "18 und 24 haben die gemeinsamen Teiler 1, 2, 3 und 6; der größte ist 6.",
+    "formula": "Gemeinsame Teiler von a und b sind die positiven Teiler von ggT(|a|,|b|).",
+    "everyday": "Für mögliche Rastermaße einer rechteckigen Anordnung lassen sich gemeinsame Teiler zweier Stückzahlen prüfen.",
+    "faqs": [
+      {
+        "q": "Dürfen die Zahlen negativ sein?",
+        "a": "Ja. Teilbarkeit wird anhand der Beträge bestimmt."
+      },
+      {
+        "q": "Warum dürfen nicht beide Eingaben null sein?",
+        "a": "Dann gäbe es unendlich viele gemeinsame Teiler und keinen größten positiven Wert."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "basic-calculator": {
+    "title": "Einfacher Rechner",
+    "description": "Rechne einen arithmetischen Ausdruck mit Klammern und üblicher Vorrangregel für Punkt- vor Strichrechnung aus. Der Parser akzeptiert nur sichere mathematische Zeichen und führt keinen eingegebenen Code aus.",
+    "explanation": "Multiplikation und Division werden vor Addition und Subtraktion berechnet; Klammern ändern die Reihenfolge. Vorzeichen und Dezimalzahlen sind zulässig.",
+    "example": "(18+6)/3−2 ergibt 6.",
+    "formula": "Klammern; Multiplikation/Division vor Addition/Subtraktion; Vorzeichen sind erlaubt.",
+    "everyday": "Für einen schnellen Überschlag wie „18 plus 6, geteilt durch 3, minus 2“ kann der Ausdruck direkt eingegeben werden.",
+    "faqs": [
+      {
+        "q": "Kann ich Potenzen oder Funktionen nutzen?",
+        "a": "Nein. Der einfache Modus unterstützt Zahlen, Klammern und Grundrechenarten."
+      },
+      {
+        "q": "Wird die Eingabe als Programm ausgeführt?",
+        "a": "Nein. Ein eingeschränkter Parser liest nur Rechentokens und Operatoren."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Arithmetischer Ausdruck",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "long-division-calculator": {
+    "title": "Schriftlicher-Division-Rechner",
+    "description": "Teile zwei ganze Zahlen und sieh ganzzahligen Quotienten, Rest und Dezimalquotienten. Bei negativen Zahlen folgt der Rest der Vorzeichenkonvention mit Abschneiden gegen null.",
+    "explanation": "Es gilt a=bq+r mit q=trunc(a/b) und r=a−bq. Diese Quotientenkonvention ist bei negativen Zahlen wichtig, weil manche schulischen Verfahren einen nichtnegativen Rest verwenden.",
+    "example": "17 geteilt durch 5 ergibt Quotient 3, Rest 2 und Dezimalwert 3,4.",
+    "formula": "q=trunc(a/b); r=a−bq; daher a=bq+r.",
+    "everyday": "Bei einer Verpackungsaufgabe zeigt der Rest, wie viele Stücke nach dem Befüllen vollständiger Kartons übrig bleiben.",
+    "faqs": [
+      {
+        "q": "Darf der Divisor null sein?",
+        "a": "Nein. Division durch null ist nicht definiert."
+      },
+      {
+        "q": "Warum kann der Rest negativ sein?",
+        "a": "Bei negativem Dividend wird der Quotient gegen null abgeschnitten, damit a=bq+r weiterhin gilt."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Erste ganze Zahl",
+        "help": "",
+        "unit": ""
+      },
+      "b": {
+        "label": "Zweite ganze Zahl",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "average-calculator": {
+    "title": "Durchschnittsrechner",
+    "description": "Berechne den arithmetischen Mittelwert einer Zahlenliste und sieh Anzahl sowie Summe der Werte. Der Mittelwert eignet sich, wenn jede Beobachtung gleich gewichtet werden soll.",
+    "explanation": "Der arithmetische Mittelwert ist die Summe aller Werte geteilt durch ihre Anzahl. Ausreißer können ihn stark verschieben; bei schiefen Daten lohnt zusätzlich ein Blick auf den Median.",
+    "example": "Für 4, 7 und 10 ist die Summe 21 und der Durchschnitt 7.",
+    "formula": "Mittelwert=(x₁+…+xₙ)/n.",
+    "everyday": "Mehrere Rechnungsbeträge oder Laufzeiten lassen sich auf einen vergleichbaren Durchschnitt bringen.",
+    "faqs": [
+      {
+        "q": "Ist der Durchschnitt immer repräsentativ?",
+        "a": "Nein. Einzelne Ausreißer können den Mittelwert deutlich vom typischen Wert wegziehen."
+      },
+      {
+        "q": "Wie viele Werte sind möglich?",
+        "a": "Es werden eine bis 500 endliche Zahlen unterstützt, getrennt durch Komma oder Leerzeichen."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Werte",
+        "help": "",
+        "unit": ""
+      }
+    }
+  },
+  "p-value-calculator": {
+    "title": "p-Wert-Rechner",
+    "description": "Wandle eine z-Statistik in einen linksseitigen, rechtsseitigen oder zweiseitigen p-Wert der Standardnormalverteilung um. Der p-Wert ist nur zusammen mit Hypothese, Testdesign und Modellannahmen sinnvoll.",
+    "explanation": "Für Z~N(0,1) ist linksseitig Φ(z), rechtsseitig 1−Φ(z) und zweiseitig 2[1−Φ(|z|)]. Der Wert ist keine Wahrscheinlichkeit dafür, dass die Nullhypothese wahr ist.",
+    "example": "z=1,96 ergibt zweiseitig einen p-Wert von ungefähr 0,05.",
+    "formula": "Links Φ(z); rechts 1−Φ(z); zweiseitig 2[1−Φ(|z|)].",
+    "everyday": "Bei einer vorab festgelegten z-Test-Auswertung lässt sich die passende Randwahrscheinlichkeit einordnen.",
+    "faqs": [
+      {
+        "q": "Beweist ein kleiner p-Wert die Forschungshypothese?",
+        "a": "Nein. Er beschreibt, wie ungewöhnlich die Statistik unter einem bestimmten Nullmodell wäre."
+      },
+      {
+        "q": "Kann er einen t-Test ersetzen?",
+        "a": "Nein. Das Werkzeug wandelt ausschließlich eine z-Statistik mit Standardnormalverteilung um."
+      }
+    ],
+    "fields": {
+      "z": {
+        "label": "z-Statistik",
+        "help": "",
+        "unit": ""
+      },
+      "tail": {
+        "label": "Alternativhypothese",
+        "help": "",
+        "unit": "",
+        "options": {
+          "left": "Linksseitig",
+          "right": "Rechtsseitig",
+          "two": "Zweiseitig"
+        }
+      }
+    }
+  }
+}

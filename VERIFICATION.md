@@ -21,3 +21,16 @@ Reproduce with `npm run build`, `npm test`, `npm run verify`, then run `node tes
 - `node tests/result-motion.mjs`: repeated submissions, preserved answers, bold result weight, confirmation, reduced motion and mobile result scrolling passed.
 - `node tests/browser.mjs`: all 207 routes, 320/375/414/768/1440 px viewport checks and existing interactions passed with no console or page errors.
 - `npm test`: 41 passed. `npm run verify`: 207 definitions, all 204 reference topics, SEO metadata and generated links passed.
+
+## German language and calculator workspace — 2026-10-10
+
+- All 207 calculators have German content under `/de/`, with translated fields, formulas, practical scenarios, FAQ content, runtime feedback and search. 214 German pages have reciprocal hreflang links, language-specific canonicals and sitemap entries.
+- Footer changed to “Made with ♡ in Berlin”; the sidebar ends with “Use at your own discretion”. Consistent SVG icons and expandable topic groups replace the favourites list and category counts.
+- Results grow from 72% size and fade in on every successful calculation; reduced motion uses a brief fade. Native disclosure controls expose currency labels, entered currency pairs and compatible metric/imperial input conversions. Tools that already have unit selectors retain those selectors.
+- Fixed finance breakdown rows that were blank due to an array/object data mismatch. ROI now compares starting/ending amounts, with no 100% ring. Removed unrelated pace/duration clocks and ungrounded solid diagrams. IRR now uses percentage units and percentage scaling.
+- `npm test`: 45 passed, including regression checks for ROI rows, IRR units, measurement conversion and preservation of passwords/IPv4 data during localization.
+- `node tests/browser.mjs`: 414 calculator routes, both language variants at 320/375/414/768/1440 px, existing interactions, no overflow or console/page errors.
+- `node tests/settings-browser.mjs`: BMI unit conversion, sharing/reset, currency controls, ROI chart/rows, native pace unit selection, German search/runtime, language counterparts and sidebar expansion passed.
+- `node tests/result-motion.mjs`: repeated calculations, unchanged answers, growing/fading result, reduced motion and mobile visibility passed.
+- `npm run verify:locales`: all German translation fields, select options, FAQ shapes, reciprocal language links and visible breakdowns passed.
+- During QA, the Python preview server dropped several sockets under repeated page loads. Replaced it with a dependency-free Node static preview server; the full browser audit then passed. This is development infrastructure only; deployment remains static.

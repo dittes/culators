@@ -261,7 +261,7 @@ const defs = configs.map(([slug,family,title,description,example,formula]) => {
       else if(slug==='present-value-calculator'){ x=initial/pow(1+rate,y); details=[['Future amount',initial],['Discount rate',rate*100],['Years',y]]; }
       else if(slug==='irr-calculator'){
         if(y<1||annual<=0) throw new Error('IRR requires a positive annual cash flow and at least one year.');
-        let lo=-0.9999,hi=10; for(let i=0;i<160;i++){let mid=(lo+hi)/2, npv=-initial;for(let t=1;t<=Math.ceil(y);t++)npv+=annual/pow(1+mid,Math.min(t,y));if(npv>0)lo=mid;else hi=mid;} x=(lo+hi)/2; details=[['Initial investment',initial],['Annual cash flow',annual],['Estimated IRR',x*100]];
+        let lo=-0.9999,hi=10; for(let i=0;i<160;i++){let mid=(lo+hi)/2, npv=-initial;for(let t=1;t<=Math.ceil(y);t++)npv+=annual/pow(1+mid,Math.min(t,y));if(npv>0)lo=mid;else hi=mid;} x=(lo+hi)/2*100; details=[['Initial investment',initial],['Annual cash flow',annual],['Estimated IRR',x]];
       } else {let pv=0;for(let t=1;t<=Math.ceil(y);t++)pv+=annual/pow(1+rate,Math.min(t,y));x=pv-initial;details=[['Present value of benefits',pv],['Initial investment',initial],['Net present value',x]];}
       break;
     }
@@ -314,7 +314,7 @@ const defs = configs.map(([slug,family,title,description,example,formula]) => {
    }
    if(typeof x==='number'&&!Number.isFinite(x)) throw new Error('Inputs produce a result outside the supported numeric range.');
    const unit = slug==='mortgage-calculator-uk'?'GBP':slug==='canadian-mortgage-calculator'?'CAD': ['tax-calculator','estate-tax-calculator','sales-tax-calculator','vat-calculator','salary-calculator','take-home-pay-calculator'].includes(slug)?'USD':
-    ['roi-calculator','margin-calculator','debt-ratio-calculator','average-return-calculator','interest-rate-calculator','apr-calculator','down-payment-calculator'].includes(slug)?'%':
+    ['irr-calculator','roi-calculator','margin-calculator','debt-ratio-calculator','average-return-calculator','interest-rate-calculator','apr-calculator','down-payment-calculator'].includes(slug)?'%':
     ['payback-period-calculator'].includes(slug)?'years':
     ['credit-card-calculator','credit-card-payoff-calculator','debt-payoff-calculator'].includes(slug)?'months':
     ['mortgage-payoff-calculator','mortgage-amortization-calculator'].includes(slug)?'months':'USD';

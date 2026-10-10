@@ -15,11 +15,12 @@ async function walk(dir) {
   }
 }
 await walk(path.join(root, 'dist', 'en'));
+await walk(path.join(root, 'dist', 'de'));
 const routes = [];
 for (const file of routeFiles) {
   const html = await readFile(file, 'utf8');
   const m = html.match(/<main\b[^>]*\bdata-calculator="([^"]+)"[^>]*>/);
-  if (m) routes.push({ slug: m[1], path: `/en/${m[1]}/` });
+  if (m) routes.push({ slug: m[1], path: '/'+path.relative(path.join(root,'dist'),path.dirname(file)).split(path.sep).join('/')+'/' });
 }
 routes.sort((a,b) => a.slug.localeCompare(b.slug));
 
@@ -71,7 +72,7 @@ try {
   ];
   for (const width of [320, 375, 414, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const [route, label] of viewportCases) {
+    for (const [route, label] of viewportCases.flatMap(([route,label])=>[[route,label],[route.replace('/en/','/de/'),label+' German']])) {
       currentRoute = `${route} @ ${width}px`;
       try {
         await page.goto(new URL(route, baseURL).href, { waitUntil: 'networkidle', timeout: 20000 });
@@ -148,7 +149,7 @@ try {
   // FAQ disclosure and reset to the generated defaults.
   try {
     await loadCalculator({ slug: 'age-calculator', path: '/en/age-calculator/' });
-    const faq = page.locator('details').first();
+    const faq = page.locator('.article details').first();
     if (!(await faq.count())) throw new Error('no FAQ details were rendered');
     await faq.locator('summary').click();
     if (!(await faq.evaluate(el => el.open))) throw new Error('FAQ did not expand');
