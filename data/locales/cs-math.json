@@ -24,7 +24,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-vedecka"
   },
   "fraction-calculator": {
     "title": "Kalkulačka zlomků",
@@ -80,7 +81,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-zlomku"
   },
   "percent-calculator": {
     "title": "Procentní kalkulačka",
@@ -123,7 +125,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-procentni"
   },
   "triangle-calculator": {
     "title": "Kalkulačka trojúhelníku",
@@ -162,7 +165,8 @@
         "unit": "stupně",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-trojuhelniku"
   },
   "volume-calculator": {
     "title": "Kalkulačka objemu",
@@ -214,7 +218,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-objemu"
   },
   "standard-deviation-calculator": {
     "title": "Kalkulačka směrodatné odchylky",
@@ -250,7 +255,8 @@
           "population": "Populace"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-smerodatne-odchylky"
   },
   "random-number-generator": {
     "title": "Generátor náhodných čísel",
@@ -298,7 +304,8 @@
           "decimal": "Desetinná čísla"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-generator-nahodnych-cisel"
   },
   "number-sequence-calculator": {
     "title": "Kalkulačka číselných posloupností",
@@ -325,7 +332,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-ciselnych-posloupnosti"
   },
   "percent-error-calculator": {
     "title": "Kalkulačka procentní chyby",
@@ -358,7 +366,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-procentni-chyby"
   },
   "exponent-calculator": {
     "title": "Kalkulačka mocnin",
@@ -391,7 +400,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-mocnin"
   },
   "binary-calculator": {
     "title": "Binární kalkulačka",
@@ -435,7 +445,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-binarni"
   },
   "hex-calculator": {
     "title": "Hexadecimální kalkulačka",
@@ -479,7 +490,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-hexadecimalni"
   },
   "half-life-calculator": {
     "title": "Kalkulačka poločasu rozpadu",
@@ -518,7 +530,8 @@
         "unit": "čas",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-polocasu-rozpadu"
   },
   "quadratic-formula-calculator": {
     "title": "Kalkulačka kvadratické rovnice",
@@ -557,7 +570,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-kvadraticke-rovnice"
   },
   "slope-calculator": {
     "title": "Kalkulačka směrnice",
@@ -602,7 +616,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-smernice"
   },
   "log-calculator": {
     "title": "Logaritmická kalkulačka",
@@ -635,7 +650,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-logaritmicka"
   },
   "area-calculator": {
     "title": "Kalkulačka obsahu",
@@ -685,7 +701,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-obsahu"
   },
   "sample-size-calculator": {
     "title": "Kalkulačka velikosti vzorku",
@@ -730,7 +747,8 @@
         "unit": "osoby",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-velikosti-vzorku"
   },
   "probability-calculator": {
     "title": "Kalkulačka pravděpodobnosti",
@@ -779,7 +797,8 @@
           "at-least": "Alespoň k"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-pravdepodobnosti"
   },
   "statistics-calculator": {
     "title": "Statistická kalkulačka",
@@ -806,7 +825,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-statisticka"
   },
   "mean-median-mode-range-calculator": {
     "title": "Kalkulačka průměru, mediánu, modu a rozpětí",
@@ -833,7 +853,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-prumeru-medianu-modu-a-rozpeti"
   },
   "permutation-and-combination-calculator": {
     "title": "Kalkulačka variací a kombinací",
@@ -875,7 +896,8 @@
           "permutation": "Variace (na pořadí záleží)"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-variaci-a-kombinaci"
   },
   "z-score-calculator": {
     "title": "Kalkulačka Z-skóre",
@@ -914,7 +936,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-z-skore"
   },
   "confidence-interval-calculator": {
     "title": "Kalkulačka intervalu spolehlivosti",
@@ -963,7 +986,8 @@
           "99": "99 %"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-intervalu-spolehlivosti"
   },
   "ratio-calculator": {
     "title": "Kalkulačka poměru",
@@ -1002,7 +1026,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-pomeru"
   },
   "distance-calculator": {
     "title": "Kalkulačka vzdálenosti",
@@ -1047,7 +1072,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-vzdalenosti"
   },
   "circle-calculator": {
     "title": "Kalkulačka kruhu",
@@ -1085,7 +1111,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-kruhu"
   },
   "surface-area-calculator": {
     "title": "Kalkulačka povrchu těles",
@@ -1137,7 +1164,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-povrchu-teles"
   },
   "pythagorean-theorem-calculator": {
     "title": "Kalkulačka Pythagorovy věty",
@@ -1179,7 +1207,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-pythagorovy-vety"
   },
   "right-triangle-calculator": {
     "title": "Kalkulačka pravoúhlého trojúhelníku",
@@ -1221,7 +1250,8 @@
         "unit": "jednotky",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-pravouhleho-trojuhelniku"
   },
   "root-calculator": {
     "title": "Kalkulačka odmocnin",
@@ -1254,7 +1284,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-odmocnin"
   },
   "lcm-calculator": {
     "title": "Kalkulačka nejmenšího společného násobku",
@@ -1287,7 +1318,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-nejmensiho-spolecneho-nasobku"
   },
   "gcf-calculator": {
     "title": "Kalkulačka největšího společného dělitele",
@@ -1320,7 +1352,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-nejvetsiho-spolecneho-delitele"
   },
   "factor-calculator": {
     "title": "Kalkulačka dělitelů",
@@ -1347,7 +1380,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-delitelu"
   },
   "rounding-calculator": {
     "title": "Kalkulačka zaokrouhlování",
@@ -1380,7 +1414,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-zaokrouhlovani"
   },
   "matrix-calculator": {
     "title": "Kalkulačka matic",
@@ -1423,7 +1458,8 @@
           "multiply": "Násobení"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-matic"
   },
   "scientific-notation-calculator": {
     "title": "Kalkulačka vědeckého zápisu",
@@ -1471,7 +1507,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-vedeckeho-zapisu"
   },
   "big-number-calculator": {
     "title": "Kalkulačka velkých čísel",
@@ -1515,7 +1552,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-velkych-cisel"
   },
   "prime-factorization-calculator": {
     "title": "Kalkulačka rozkladu na prvočinitele",
@@ -1542,7 +1580,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-rozkladu-na-prvocinitele"
   },
   "common-factor-calculator": {
     "title": "Kalkulačka společných dělitelů",
@@ -1575,7 +1614,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-spolecnych-delitelu"
   },
   "basic-calculator": {
     "title": "Základní kalkulačka",
@@ -1602,7 +1642,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-zakladni"
   },
   "long-division-calculator": {
     "title": "Kalkulačka písemného dělení",
@@ -1635,7 +1676,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-pisemneho-deleni"
   },
   "average-calculator": {
     "title": "Kalkulačka průměru",
@@ -1662,7 +1704,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-prumeru"
   },
   "p-value-calculator": {
     "title": "Kalkulačka p-hodnoty",
@@ -1699,6 +1742,7 @@
           "two": "Oboustranná"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-p-hodnoty"
   }
 }

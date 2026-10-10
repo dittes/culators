@@ -22,7 +22,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "wissenschaftlicher-rechner"
   },
   "fraction-calculator": {
     "title": "Bruchrechner",
@@ -73,7 +74,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "bruch-rechner"
   },
   "percent-calculator": {
     "title": "Prozentrechner",
@@ -113,7 +115,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "prozent-rechner"
   },
   "triangle-calculator": {
     "title": "Dreiecksrechner",
@@ -148,7 +151,8 @@
         "help": "",
         "unit": "Grad"
       }
-    }
+    },
+    "slug": "dreiecks-rechner"
   },
   "volume-calculator": {
     "title": "Volumenrechner",
@@ -196,7 +200,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "volumen-rechner"
   },
   "standard-deviation-calculator": {
     "title": "Standardabweichungsrechner",
@@ -230,7 +235,8 @@
           "population": "Grundgesamtheit"
         }
       }
-    }
+    },
+    "slug": "standardabweichungs-rechner"
   },
   "random-number-generator": {
     "title": "Zufallszahlengenerator",
@@ -274,7 +280,8 @@
           "decimal": "Dezimalzahlen"
         }
       }
-    }
+    },
+    "slug": "zufallszahlengenerator-rechner"
   },
   "number-sequence-calculator": {
     "title": "Folgenrechner",
@@ -299,7 +306,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "folgen-rechner"
   },
   "percent-error-calculator": {
     "title": "Prozentfehlerrechner",
@@ -329,7 +337,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "prozentfehler-rechner"
   },
   "exponent-calculator": {
     "title": "Potenzrechner",
@@ -359,7 +368,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "potenz-rechner"
   },
   "binary-calculator": {
     "title": "Binärrechner",
@@ -400,7 +410,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "binaer-rechner"
   },
   "hex-calculator": {
     "title": "Hexadezimalrechner",
@@ -441,7 +452,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "hexadezimal-rechner"
   },
   "half-life-calculator": {
     "title": "Halbwertszeitrechner",
@@ -476,7 +488,8 @@
         "help": "",
         "unit": "Zeiteinheiten"
       }
-    }
+    },
+    "slug": "halbwertszeit-rechner"
   },
   "quadratic-formula-calculator": {
     "title": "Mitternachtsformel-Rechner",
@@ -511,7 +524,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "mitternachtsformel-rechner"
   },
   "slope-calculator": {
     "title": "Steigungsrechner",
@@ -551,7 +565,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "steigungs-rechner"
   },
   "log-calculator": {
     "title": "Logarithmusrechner",
@@ -581,7 +596,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "logarithmus-rechner"
   },
   "area-calculator": {
     "title": "Flächenrechner",
@@ -627,7 +643,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "flaechen-rechner"
   },
   "sample-size-calculator": {
     "title": "Stichprobenrechner",
@@ -667,7 +684,8 @@
         "help": "",
         "unit": "Personen"
       }
-    }
+    },
+    "slug": "stichproben-rechner"
   },
   "probability-calculator": {
     "title": "Binomial-Wahrscheinlichkeitsrechner",
@@ -712,7 +730,8 @@
           "at-least": "Mindestens k"
         }
       }
-    }
+    },
+    "slug": "binomial-wahrscheinlichkeits-rechner"
   },
   "statistics-calculator": {
     "title": "Statistikrechner",
@@ -737,7 +756,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "statistik-rechner"
   },
   "mean-median-mode-range-calculator": {
     "title": "Mittelwert-Median-Modus-Spannweiten-Rechner",
@@ -762,7 +782,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "mittelwert-median-modus-spannweiten-rechner"
   },
   "permutation-and-combination-calculator": {
     "title": "Kombinations- und Permutationsrechner",
@@ -801,7 +822,8 @@
           "permutation": "Permutation (Reihenfolge zählt)"
         }
       }
-    }
+    },
+    "slug": "kombinations-und-permutations-rechner"
   },
   "z-score-calculator": {
     "title": "Z-Wert-Rechner",
@@ -836,7 +858,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "z-wert-rechner"
   },
   "confidence-interval-calculator": {
     "title": "Konfidenzintervall-Rechner",
@@ -881,7 +904,8 @@
           "99": "99 %"
         }
       }
-    }
+    },
+    "slug": "konfidenzintervall-rechner"
   },
   "ratio-calculator": {
     "title": "Verhältnisrechner",
@@ -916,7 +940,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "verhaeltnis-rechner"
   },
   "distance-calculator": {
     "title": "Abstandsrechner",
@@ -956,7 +981,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "abstands-rechner"
   },
   "circle-calculator": {
     "title": "Kreisrechner",
@@ -992,7 +1018,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "kreis-rechner"
   },
   "surface-area-calculator": {
     "title": "Oberflächenrechner",
@@ -1040,7 +1067,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "oberflaechen-rechner"
   },
   "pythagorean-theorem-calculator": {
     "title": "Satz-des-Pythagoras-Rechner",
@@ -1079,7 +1107,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "satz-des-pythagoras-rechner"
   },
   "right-triangle-calculator": {
     "title": "Rechtwinkliger-Dreieck-Rechner",
@@ -1118,7 +1147,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "rechtwinkliger-dreieck-rechner"
   },
   "root-calculator": {
     "title": "Wurzelrechner",
@@ -1148,7 +1178,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "wurzel-rechner"
   },
   "lcm-calculator": {
     "title": "KGV-Rechner",
@@ -1178,7 +1209,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "kgv-rechner"
   },
   "gcf-calculator": {
     "title": "ggT-Rechner",
@@ -1208,7 +1240,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "ggt-rechner"
   },
   "factor-calculator": {
     "title": "Teilerrechner",
@@ -1233,7 +1266,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "teiler-rechner"
   },
   "rounding-calculator": {
     "title": "Rundungsrechner",
@@ -1263,7 +1297,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "rundungs-rechner"
   },
   "matrix-calculator": {
     "title": "Matrixrechner",
@@ -1303,7 +1338,8 @@
           "multiply": "Multiplizieren"
         }
       }
-    }
+    },
+    "slug": "matrix-rechner"
   },
   "scientific-notation-calculator": {
     "title": "Wissenschaftliche-Schreibweise-Rechner",
@@ -1347,7 +1383,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "wissenschaftliche-schreibweise-rechner"
   },
   "big-number-calculator": {
     "title": "Großzahlrechner",
@@ -1388,7 +1425,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "grosszahl-rechner"
   },
   "prime-factorization-calculator": {
     "title": "Primfaktorzerlegungsrechner",
@@ -1413,7 +1451,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "primfaktorzerlegungs-rechner"
   },
   "common-factor-calculator": {
     "title": "Gemeinsame-Teiler-Rechner",
@@ -1443,7 +1482,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "gemeinsame-teiler-rechner"
   },
   "basic-calculator": {
     "title": "Einfacher Rechner",
@@ -1468,7 +1508,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "einfacher-rechner"
   },
   "long-division-calculator": {
     "title": "Schriftlicher-Division-Rechner",
@@ -1498,7 +1539,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "schriftlicher-division-rechner"
   },
   "average-calculator": {
     "title": "Durchschnittsrechner",
@@ -1523,7 +1565,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "durchschnitts-rechner"
   },
   "p-value-calculator": {
     "title": "p-Wert-Rechner",
@@ -1558,6 +1601,7 @@
           "two": "Zweiseitig"
         }
       }
-    }
+    },
+    "slug": "p-wert-rechner"
   }
 }

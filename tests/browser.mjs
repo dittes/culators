@@ -16,7 +16,10 @@ async function walk(dir) {
 }
 await walk(path.join(root, 'dist', 'en'));
 await walk(path.join(root, 'dist', 'de'));
-await walk(path.join(root, 'dist', 'cs'));
+await walk(path.join(root, 'dist', 'cz'));
+await walk(path.join(root, 'dist', 'pl'));
+const localeRoutes=JSON.parse(await readFile(path.join(root,'dist/assets/routes.json'),'utf8'));
+const localized=(route,lang)=>localeRoutes[lang][route.replace(/^\/en\//,'').replace(/\/$/,'')];
 const routes = [];
 for (const file of routeFiles) {
   const html = await readFile(file, 'utf8');
@@ -73,11 +76,11 @@ try {
   ];
   for (const width of [320, 375, 414, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const [route, label] of viewportCases.flatMap(([route,label])=>[[route,label],[route.replace('/en/','/de/'),label+' German'],[route.replace('/en/','/cs/'),label+' Czech']])) {
+    for (const [route, label] of viewportCases.flatMap(([route,label])=>[[route,label],[localized(route,'de'),label+' German'],[localized(route,'cs'),label+' Czech'],[localized(route,'pl'),label+' Polish']])) {
       currentRoute = `${route} @ ${width}px`;
       try {
         await page.goto(new URL(route, baseURL).href, { waitUntil: 'networkidle', timeout: 20000 });
-        if (route.includes('calculator')) await page.waitForFunction(() => document.querySelector('#result-output [data-result-value]') || document.querySelector('#form-error')?.textContent.trim(), null, { timeout: 10000 });
+        if (await page.locator('[data-calculator]').count()) await page.waitForFunction(() => document.querySelector('#result-output [data-result-value]') || document.querySelector('#form-error')?.textContent.trim(), null, { timeout: 10000 });
         const dims = await page.evaluate(() => ({ viewport: innerWidth, document: document.documentElement.scrollWidth, body: document.body.scrollWidth }));
         if (dims.document > dims.viewport || dims.body > dims.viewport) report.viewportFailures.push({ route, label, width, ...dims });
       } catch (error) { report.viewportFailures.push({ route, label, width, message: error.message }); }

@@ -27,7 +27,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "altersrechner"
   },
   "date-calculator": {
     "title": "Datumsrechner",
@@ -57,7 +58,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "datumsrechner"
   },
   "time-calculator": {
     "title": "Zeitrechner",
@@ -101,7 +103,8 @@
           "subtract": "Subtrahieren"
         }
       }
-    }
+    },
+    "slug": "zeitrechner"
   },
   "hours-calculator": {
     "title": "Stundenrechner",
@@ -131,7 +134,8 @@
         "help": "",
         "unit": "Min."
       }
-    }
+    },
+    "slug": "stundenrechner"
   },
   "gpa-calculator": {
     "title": "Notendurchschnitt nach Credits",
@@ -181,7 +185,8 @@
         "help": "",
         "unit": "Credits"
       }
-    }
+    },
+    "slug": "notendurchschnitt-nach-credits"
   },
   "grade-calculator": {
     "title": "Notenrechner",
@@ -226,7 +231,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "notenrechner"
   },
   "height-calculator": {
     "title": "Größenumrechner",
@@ -262,7 +268,8 @@
           "ft": "Fuß"
         }
       }
-    }
+    },
+    "slug": "groessenumrechner"
   },
   "concrete-calculator": {
     "title": "Betonrechner",
@@ -302,7 +309,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "betonrechner"
   },
   "ip-subnet-calculator": {
     "title": "IPv4-Subnetzrechner",
@@ -332,7 +340,8 @@
         "help": "",
         "unit": "/"
       }
-    }
+    },
+    "slug": "ipv4-subnetzrechner"
   },
   "bra-size-calculator": {
     "title": "BH-Größenrechner",
@@ -362,7 +371,8 @@
         "help": "",
         "unit": "Zoll"
       }
-    }
+    },
+    "slug": "bh-groessenrechner"
   },
   "password-generator": {
     "title": "Passwortgenerator",
@@ -423,7 +433,8 @@
           "false": "Ausschließen"
         }
       }
-    }
+    },
+    "slug": "passwortgenerator"
   },
   "dice-roller": {
     "title": "Würfelgenerator",
@@ -453,7 +464,8 @@
         "help": "",
         "unit": "Seiten"
       }
-    }
+    },
+    "slug": "wuerfelgenerator"
   },
   "conversion-calculator": {
     "title": "Einheitenumrechner",
@@ -524,7 +536,8 @@
           "mph": "mph"
         }
       }
-    }
+    },
+    "slug": "einheitenumrechner"
   },
   "fuel-cost-calculator": {
     "title": "Kraftstoffkostenrechner",
@@ -559,7 +572,8 @@
         "help": "",
         "unit": "Währung/l"
       }
-    }
+    },
+    "slug": "kraftstoffkostenrechner"
   },
   "voltage-drop-calculator": {
     "title": "Spannungsfallrechner",
@@ -599,7 +613,8 @@
         "help": "",
         "unit": "Ω·mm²/m"
       }
-    }
+    },
+    "slug": "spannungsfallrechner"
   },
   "btu-calculator": {
     "title": "BTU-Rechner",
@@ -629,7 +644,8 @@
         "help": "",
         "unit": "BTU/h je ft²"
       }
-    }
+    },
+    "slug": "btu-rechner"
   },
   "square-footage-calculator": {
     "title": "Flächenrechner",
@@ -673,7 +689,8 @@
           "m": "Meter"
         }
       }
-    }
+    },
+    "slug": "flaechenrechner"
   },
   "time-card-calculator": {
     "title": "Stundenzettel-Rechner",
@@ -708,7 +725,8 @@
         "help": "",
         "unit": "Minuten"
       }
-    }
+    },
+    "slug": "stundenzettel-rechner"
   },
   "time-zone-calculator": {
     "title": "Zeitzonenrechner",
@@ -748,7 +766,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "zeitzonenrechner"
   },
   "love-calculator": {
     "title": "Liebesrechner",
@@ -778,7 +797,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "liebesrechner"
   },
   "gdp-calculator": {
     "title": "BIP-Rechner",
@@ -823,7 +843,8 @@
         "help": "",
         "unit": "Währungseinheiten"
       }
-    }
+    },
+    "slug": "bip-rechner"
   },
   "gas-mileage-calculator": {
     "title": "Kraftstoffverbrauchsrechner",
@@ -853,7 +874,8 @@
         "help": "",
         "unit": "US-Gallonen"
       }
-    }
+    },
+    "slug": "kraftstoffverbrauchsrechner"
   },
   "horsepower-calculator": {
     "title": "PS-Rechner",
@@ -883,7 +905,8 @@
         "help": "",
         "unit": "U/min"
       }
-    }
+    },
+    "slug": "ps-rechner"
   },
   "engine-horsepower-calculator": {
     "title": "Motorleistungsrechner",
@@ -922,7 +945,8 @@
           "Nm": "N·m"
         }
       }
-    }
+    },
+    "slug": "motorleistungsrechner"
   },
   "stair-calculator": {
     "title": "Treppenrechner",
@@ -952,7 +976,8 @@
         "help": "",
         "unit": "Zoll"
       }
-    }
+    },
+    "slug": "treppenrechner"
   },
   "resistor-calculator": {
     "title": "Widerstandsrechner",
@@ -1058,7 +1083,8 @@
         "help": "",
         "unit": "mA"
       }
-    }
+    },
+    "slug": "widerstandsrechner"
   },
   "ohms-law-calculator": {
     "title": "Ohmsches-Gesetz-Rechner",
@@ -1093,7 +1119,8 @@
         "help": "",
         "unit": "Ω"
       }
-    }
+    },
+    "slug": "ohmsches-gesetz-rechner"
   },
   "electricity-calculator": {
     "title": "Stromkostenrechner",
@@ -1128,7 +1155,8 @@
         "help": "",
         "unit": "Währung/kWh"
       }
-    }
+    },
+    "slug": "stromkostenrechner"
   },
   "shoe-size-conversion": {
     "title": "Schuhgrößen-Umrechner",
@@ -1164,7 +1192,8 @@
           "EU": "EU"
         }
       }
-    }
+    },
+    "slug": "schuhgroessen-umrechner"
   },
   "tip-calculator": {
     "title": "Trinkgeldrechner",
@@ -1213,7 +1242,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "trinkgeldrechner"
   },
   "mileage-calculator": {
     "title": "Kilometerzähler-Rechner",
@@ -1243,7 +1273,8 @@
         "help": "",
         "unit": "Meilen"
       }
-    }
+    },
+    "slug": "kilometerzaehler-rechner"
   },
   "density-calculator": {
     "title": "Dichte-Rechner",
@@ -1273,7 +1304,8 @@
         "help": "",
         "unit": "cm³"
       }
-    }
+    },
+    "slug": "dichte-rechner"
   },
   "mass-calculator": {
     "title": "Masse-Rechner",
@@ -1303,7 +1335,8 @@
         "help": "",
         "unit": "l"
       }
-    }
+    },
+    "slug": "masse-rechner"
   },
   "weight-calculator": {
     "title": "Gewichtskraft-Rechner",
@@ -1333,7 +1366,8 @@
         "help": "",
         "unit": "m/s²"
       }
-    }
+    },
+    "slug": "gewichtskraft-rechner"
   },
   "speed-calculator": {
     "title": "Geschwindigkeitsrechner",
@@ -1363,7 +1397,8 @@
         "help": "",
         "unit": "Stunden"
       }
-    }
+    },
+    "slug": "geschwindigkeitsrechner"
   },
   "molarity-calculator": {
     "title": "Molaritätsrechner",
@@ -1393,7 +1428,8 @@
         "help": "",
         "unit": "l"
       }
-    }
+    },
+    "slug": "molaritaetsrechner"
   },
   "molecular-weight-calculator": {
     "title": "Molekulargewichtsrechner",
@@ -1418,7 +1454,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "molekulargewichtsrechner"
   },
   "roman-numeral-converter": {
     "title": "Römische-Zahlen-Umrechner",
@@ -1452,7 +1489,8 @@
           "roman": "Römisch zu Ganzzahl"
         }
       }
-    }
+    },
+    "slug": "roemische-zahlen-umrechner"
   },
   "golf-handicap-calculator": {
     "title": "Golf-Handicap-Rechner",
@@ -1477,7 +1515,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "golf-handicap-rechner"
   },
   "sleep-calculator": {
     "title": "Schlafzeiten-Rechner",
@@ -1521,7 +1560,8 @@
         "help": "",
         "unit": "Zyklen"
       }
-    }
+    },
+    "slug": "schlafzeiten-rechner"
   },
   "tire-size-calculator": {
     "title": "Reifengrößen-Rechner",
@@ -1556,7 +1596,8 @@
         "help": "",
         "unit": "Zoll"
       }
-    }
+    },
+    "slug": "reifengroessen-rechner"
   },
   "roofing-calculator": {
     "title": "Dachflächen-Rechner",
@@ -1591,7 +1632,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "dachflaechen-rechner"
   },
   "tile-calculator": {
     "title": "Fliesenrechner",
@@ -1631,7 +1673,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "fliesenrechner"
   },
   "mulch-calculator": {
     "title": "Mulchrechner",
@@ -1661,7 +1704,8 @@
         "help": "",
         "unit": "Zoll"
       }
-    }
+    },
+    "slug": "mulchrechner"
   },
   "gravel-calculator": {
     "title": "Kiesrechner",
@@ -1696,7 +1740,8 @@
         "help": "",
         "unit": "lb/ft³"
       }
-    }
+    },
+    "slug": "kiesrechner"
   },
   "wind-chill-calculator": {
     "title": "Windchill-Rechner",
@@ -1726,7 +1771,8 @@
         "help": "",
         "unit": "mph"
       }
-    }
+    },
+    "slug": "windchill-rechner"
   },
   "heat-index-calculator": {
     "title": "Hitzeindex-Rechner",
@@ -1756,7 +1802,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "hitzeindex-rechner"
   },
   "dew-point-calculator": {
     "title": "Taupunktrechner",
@@ -1786,7 +1833,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "taupunktrechner"
   },
   "bandwidth-calculator": {
     "title": "Downloadzeit-Rechner",
@@ -1821,7 +1869,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "downloadzeit-rechner"
   },
   "base64-encode-decode": {
     "title": "Base64-Umwandler",
@@ -1855,7 +1904,8 @@
           "decode": "Dekodieren"
         }
       }
-    }
+    },
+    "slug": "base64-umwandler"
   },
   "url-encode-decode": {
     "title": "URL-Kodierer",
@@ -1889,7 +1939,8 @@
           "decode": "Bestandteil dekodieren"
         }
       }
-    }
+    },
+    "slug": "url-kodierer"
   },
   "time-duration-calculator": {
     "title": "Zeitspannenrechner",
@@ -1919,7 +1970,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "zeitspannenrechner"
   },
   "day-counter": {
     "title": "Tagezähler",
@@ -1958,7 +2010,8 @@
           "yes": "Ja"
         }
       }
-    }
+    },
+    "slug": "tagezaehler"
   },
   "day-of-the-week-calculator": {
     "title": "Wochentagsrechner",
@@ -1983,7 +2036,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "wochentagsrechner"
   },
   "unit-price-calculator": {
     "title": "Grundpreisrechner",
@@ -2023,7 +2077,8 @@
         "help": "",
         "unit": "Einheiten"
       }
-    }
+    },
+    "slug": "grundpreisrechner"
   },
   "reading-time-calculator": {
     "title": "Lesezeit-Rechner",
@@ -2053,6 +2108,7 @@
         "help": "",
         "unit": "Wörter/Min."
       }
-    }
+    },
+    "slug": "lesezeit-rechner"
   }
 }

@@ -45,3 +45,15 @@ Reproduce with `npm run build`, `npm test`, `npm run verify`, then run `node tes
 - `npm test`: **45 passed**. `npm run verify:locales`: **414 DE/CS translations** passed field/option/FAQ and language-link checks. Static local links and assets passed.
 - `node tests/result-motion.mjs`, `node tests/settings-browser.mjs` and `node tests/language-design.mjs`: passed character staggering/repeated submissions, exact answer preservation, reduced motion, mobile result scrolling, measurement conversions, shared settings, EUR/CZK defaults, explicit USD override, white primary labels, matching hero orange, neutral scenario action, language counterparts and Czech search.
 - Visually inspected the Czech ROI desktop page and German BMI page at 320 px.
+
+## Localized URLs and Polish — 2026-10-10
+
+- Canonical URLs now use language-specific calculator and category words, including `/de/bmi-rechner/`, `/cz/kalkulacka-bmi/` and `/pl/kalkulator-bmi/`. Czech shows CZ and uses `/cz/`; HTML language and hreflang correctly remain `cs`.
+- One generated route table drives translated search URLs, navigation, language counterparts, canonicals, Open Graph URLs, structured data and sitemap entries. Calculator IDs remain stable across languages so stored favourites and calculation modules keep working.
+- Previous `/cs/` links and English calculator/category slugs on localized pages redirect to the translated route. Redirect aliases are excluded from the sitemap and marked noindex. Static-host fallback redirects preserve query parameters and fragments; `_redirects` declares 301 rules, and the local server verifies those rules.
+- Added complete Polish calculator/interface content and PLN as the default Polish amount currency, with the same explicit-label assumptions as other currencies.
+- `npm test`: **45 tests passed**. `npm run verify:locales`: **621 DE/CS/PL translations** passed content, field/option/FAQ, reciprocal-language and visible-result checks. `npm run verify`: catalogue, SEO and all generated links/assets passed.
+- `node tests/routes-browser.mjs`: **1,064 legacy redirect mappings** passed status/location/query-retention checks. Browser checks passed old DE/CS link restoration, CZ display with correct `cs` HTML language, translated search, four-language counterparts and the JavaScript fallback preserving query/fragment.
+- Settings, repeated result animation, reduced motion, unchanged answers, neutral scenario button, white primary labels, identical hero orange and EUR/CZK/PLN defaults passed. Visually inspected Polish ROI on desktop and BMI at 375 px.
+- `node tests/browser.mjs`: **828 calculator routes** passed default load/submission checks. All four languages passed representative **320/375/414/768/1440 px** checks, with no overflow, route/interaction failures, console errors or page errors.
+- Final wording pass corrected Polish reset to “Przywróć”, added natural singular/plural search counts and completed the remaining variant-result translations.

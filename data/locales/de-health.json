@@ -27,7 +27,8 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "bmi-rechner"
   },
   "calorie-calculator": {
     "title": "Kalorienbedarfsrechner",
@@ -88,7 +89,8 @@
         "help": "",
         "unit": "kcal"
       }
-    }
+    },
+    "slug": "kalorienbedarfs-rechner"
   },
   "body-fat-calculator": {
     "title": "Körperfett-Rechner",
@@ -132,7 +134,8 @@
           "male": "Koeffizient für Männer"
         }
       }
-    }
+    },
+    "slug": "koerperfett-rechner"
   },
   "bmr-calculator": {
     "title": "Grundumsatz-Rechner",
@@ -176,7 +179,8 @@
           "male": "Koeffizient für Männer"
         }
       }
-    }
+    },
+    "slug": "grundumsatz-rechner"
   },
   "macro-calculator": {
     "title": "Makro-Rechner",
@@ -216,7 +220,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "makro-rechner"
   },
   "ideal-weight-calculator": {
     "title": "Idealgewichtsrechner",
@@ -250,7 +255,8 @@
           "male": "Koeffizienten für Männer"
         }
       }
-    }
+    },
+    "slug": "idealgewichts-rechner"
   },
   "pregnancy-calculator": {
     "title": "Schwangerschaftsrechner",
@@ -280,7 +286,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "schwangerschafts-rechner"
   },
   "pregnancy-weight-gain-calculator": {
     "title": "Rechner für Gewichtszunahme in der Schwangerschaft",
@@ -329,7 +336,8 @@
           "twins": "Zwillinge"
         }
       }
-    }
+    },
+    "slug": "rechner-fuer-gewichtszunahme-in-der-schwangerschaft-rechner"
   },
   "pregnancy-conception-calculator": {
     "title": "Empfängnisrechner für Schwangerschaft",
@@ -368,7 +376,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "empfaengnisrechner-fuer-schwangerschaft-rechner"
   },
   "due-date-calculator": {
     "title": "Geburtstermin-Rechner",
@@ -403,7 +412,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "geburtstermin-rechner"
   },
   "pace-calculator": {
     "title": "Lauf- und Gehpace-Rechner",
@@ -452,7 +462,8 @@
         "help": "",
         "unit": "Sek."
       }
-    }
+    },
+    "slug": "lauf-und-gehpace-rechner"
   },
   "army-body-fat-calculator": {
     "title": "Army-Körperzusammensetzungsrechner",
@@ -482,7 +493,8 @@
         "help": "",
         "unit": "Zoll"
       }
-    }
+    },
+    "slug": "army-koerperzusammensetzungs-rechner"
   },
   "carbohydrate-calculator": {
     "title": "Kohlenhydrat-Rechner",
@@ -512,7 +524,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kohlenhydrat-rechner"
   },
   "lean-body-mass-calculator": {
     "title": "Rechner für fettfreie Masse",
@@ -542,7 +555,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "rechner-fuer-fettfreie-masse-rechner"
   },
   "healthy-weight-calculator": {
     "title": "Gesundgewichtsbereich-Rechner",
@@ -572,7 +586,8 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "gesundgewichtsbereich-rechner"
   },
   "calories-burned-calculator": {
     "title": "Kalorienverbrauchsrechner für Bewegung",
@@ -615,7 +630,8 @@
         "help": "",
         "unit": "Minuten"
       }
-    }
+    },
+    "slug": "kalorienverbrauchsrechner-fuer-bewegung-rechner"
   },
   "one-rep-max-calculator": {
     "title": "1RM-Rechner",
@@ -654,7 +670,8 @@
           "brzycki": "Brzycki"
         }
       }
-    }
+    },
+    "slug": "1rm-rechner"
   },
   "target-heart-rate-calculator": {
     "title": "Zielpuls-Rechner",
@@ -688,7 +705,8 @@
           "vigorous": "Intensiv (70–85 %)"
         }
       }
-    }
+    },
+    "slug": "zielpuls-rechner"
   },
   "protein-calculator": {
     "title": "Proteinbedarfsrechner",
@@ -718,7 +736,8 @@
         "help": "",
         "unit": "g/kg/Tag"
       }
-    }
+    },
+    "slug": "proteinbedarfs-rechner"
   },
   "fat-intake-calculator": {
     "title": "Fettmengen-Rechner",
@@ -748,7 +767,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "fettmengen-rechner"
   },
   "tdee-calculator": {
     "title": "Tagesenergiebedarfsrechner",
@@ -804,7 +824,8 @@
           "extra": "Extrem aktiv (1,90)"
         }
       }
-    }
+    },
+    "slug": "tagesenergiebedarfs-rechner"
   },
   "ovulation-calculator": {
     "title": "Eisprungrechner",
@@ -834,7 +855,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "eisprung-rechner"
   },
   "conception-calculator": {
     "title": "Empfängniszeit-Rechner",
@@ -864,7 +886,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "empfaengniszeit-rechner"
   },
   "period-calculator": {
     "title": "Periodenrechner",
@@ -894,7 +917,8 @@
         "help": "",
         "unit": "Tage"
       }
-    }
+    },
+    "slug": "perioden-rechner"
   },
   "gfr-calculator": {
     "title": "eGFR-Rechner",
@@ -942,7 +966,8 @@
           "male": "Koeffizient für Männer"
         }
       }
-    }
+    },
+    "slug": "egfr-rechner"
   },
   "body-type-calculator": {
     "title": "Körperform-Rechner",
@@ -977,7 +1002,8 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "koerperform-rechner"
   },
   "body-surface-area-calculator": {
     "title": "Körperoberflächen-Rechner",
@@ -1007,7 +1033,8 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "koerperoberflaechen-rechner"
   },
   "bac-calculator": {
     "title": "Promille- und BAK-Schätzer",
@@ -1051,7 +1078,8 @@
           "male": "Typischer Koeffizient Mann (r=0,68)"
         }
       }
-    }
+    },
+    "slug": "promille-und-bak-schaetzer-rechner"
   },
   "anorexic-bmi-calculator": {
     "title": "BMI-Rechner bei sehr niedrigem Gewicht",
@@ -1081,7 +1109,8 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "bmi-rechner-bei-sehr-niedrigem-gewicht-rechner"
   },
   "weight-watchers-points-calculator": {
     "title": "Rechner für WeightWatchers-Punkte",
@@ -1135,7 +1164,8 @@
         "help": "",
         "unit": "Punkte"
       }
-    }
+    },
+    "slug": "rechner-fuer-weightwatchers-punkte-rechner"
   },
   "overweight-calculator": {
     "title": "BMI-25-Gewichtsvergleich",
@@ -1165,6 +1195,7 @@
         "help": "",
         "unit": "cm"
       }
-    }
+    },
+    "slug": "bmi-25-gewichtsvergleich-rechner"
   }
 }

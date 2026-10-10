@@ -30,7 +30,8 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-bmi"
   },
   "calorie-calculator": {
     "title": "Kalkulačka kalorií",
@@ -96,7 +97,8 @@
         "unit": "kcal",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-kalorii"
   },
   "body-fat-calculator": {
     "title": "Kalkulačka tělesného tuku",
@@ -144,7 +146,8 @@
           "male": "Mužský koeficient"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-telesneho-tuku"
   },
   "bmr-calculator": {
     "title": "Kalkulačka bazálního metabolismu",
@@ -192,7 +195,8 @@
           "male": "Mužský koeficient"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-bazalniho-metabolismu"
   },
   "macro-calculator": {
     "title": "Kalkulačka makroživin",
@@ -237,7 +241,8 @@
         "unit": "%",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-makrozivin"
   },
   "ideal-weight-calculator": {
     "title": "Kalkulačka ideální hmotnosti",
@@ -273,7 +278,8 @@
           "male": "Mužské koeficienty"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-idealni-hmotnosti"
   },
   "pregnancy-calculator": {
     "title": "Těhotenská kalkulačka",
@@ -306,7 +312,8 @@
         "unit": "dny",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-tehotenska"
   },
   "pregnancy-weight-gain-calculator": {
     "title": "Kalkulačka přírůstku hmotnosti v těhotenství",
@@ -360,7 +367,8 @@
           "twins": "Dvojčata"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-prirustku-hmotnosti-v-tehotenstvi"
   },
   "pregnancy-conception-calculator": {
     "title": "Kalkulačka početí v těhotenství",
@@ -402,7 +410,8 @@
         "unit": "dny",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-poceti-v-tehotenstvi"
   },
   "due-date-calculator": {
     "title": "Kalkulačka termínu porodu",
@@ -439,7 +448,8 @@
         "unit": "",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-terminu-porodu"
   },
   "pace-calculator": {
     "title": "Kalkulačka tempa běhu",
@@ -493,7 +503,8 @@
         "unit": "s",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-tempa-behu"
   },
   "army-body-fat-calculator": {
     "title": "Kalkulačka Army poměru pasu a výšky",
@@ -526,7 +537,8 @@
         "unit": "palce",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-army-pomeru-pasu-a-vysky"
   },
   "carbohydrate-calculator": {
     "title": "Kalkulačka sacharidů",
@@ -559,7 +571,8 @@
         "unit": "%",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-sacharidu"
   },
   "lean-body-mass-calculator": {
     "title": "Kalkulačka beztukové hmoty",
@@ -592,7 +605,8 @@
         "unit": "%",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-beztukove-hmoty"
   },
   "healthy-weight-calculator": {
     "title": "Kalkulačka rozmezí hmotnosti podle BMI",
@@ -625,7 +639,8 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-rozmezi-hmotnosti-podle-bmi"
   },
   "calories-burned-calculator": {
     "title": "Kalkulačka spálených kalorií",
@@ -671,7 +686,8 @@
         "unit": "minuty",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-spalenych-kalorii"
   },
   "one-rep-max-calculator": {
     "title": "Kalkulačka maxima na jedno opakování",
@@ -713,7 +729,8 @@
           "brzycki": "Brzycki"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-maxima-na-jedno-opakovani"
   },
   "target-heart-rate-calculator": {
     "title": "Kalkulačka cílové tepové frekvence",
@@ -749,7 +766,8 @@
           "vigorous": "Intenzivní (70–85 %)"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-cilove-tepove-frekvence"
   },
   "protein-calculator": {
     "title": "Kalkulačka bílkovin",
@@ -782,7 +800,8 @@
         "unit": "g/kg/den",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-bilkovin"
   },
   "fat-intake-calculator": {
     "title": "Kalkulačka příjmu tuků",
@@ -815,7 +834,8 @@
         "unit": "%",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-prijmu-tuku"
   },
   "tdee-calculator": {
     "title": "Kalkulačka celkového denního výdeje",
@@ -875,7 +895,8 @@
           "extra": "Mimořádně aktivní (1,90)"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-celkoveho-denniho-vydeje"
   },
   "ovulation-calculator": {
     "title": "Kalkulačka ovulace",
@@ -908,7 +929,8 @@
         "unit": "dny",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-ovulace"
   },
   "conception-calculator": {
     "title": "Kalkulačka početí",
@@ -941,7 +963,8 @@
         "unit": "dny",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-poceti"
   },
   "period-calculator": {
     "title": "Kalkulačka menstruačního cyklu",
@@ -974,7 +997,8 @@
         "unit": "dny",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-menstruacniho-cyklu"
   },
   "gfr-calculator": {
     "title": "Kalkulačka eGFR",
@@ -1025,7 +1049,8 @@
           "male": "Mužský koeficient"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-egfr"
   },
   "body-type-calculator": {
     "title": "Kalkulačka proporcí postavy",
@@ -1064,7 +1089,8 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-proporci-postavy"
   },
   "body-surface-area-calculator": {
     "title": "Kalkulačka povrchu těla",
@@ -1097,7 +1123,8 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-povrchu-tela"
   },
   "bac-calculator": {
     "title": "Kalkulačka alkoholu v krvi",
@@ -1145,7 +1172,8 @@
           "male": "Typický mužský odhad (r=0,68)"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-alkoholu-v-krvi"
   },
   "anorexic-bmi-calculator": {
     "title": "Kalkulačka BMI při nízké hmotnosti",
@@ -1178,7 +1206,8 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-bmi-pri-nizke-hmotnosti"
   },
   "weight-watchers-points-calculator": {
     "title": "Kalkulačka historických WW bodů",
@@ -1238,7 +1267,8 @@
         "unit": "body",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-historickych-ww-bodu"
   },
   "overweight-calculator": {
     "title": "Kalkulačka BMI a hranice 25",
@@ -1271,6 +1301,7 @@
         "unit": "cm",
         "options": {}
       }
-    }
+    },
+    "slug": "kalkulacka-bmi-a-hranice-25"
   }
 }

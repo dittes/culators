@@ -1,0 +1,2120 @@
+{
+  "language": "pl-PL",
+  "category": "everyday",
+  "calculators": {
+    "age-calculator": {
+      "slug": "kalkulator-wieku",
+      "title": "Kalkulator wieku",
+      "description": "Sprawdź, ile pełnych lat upłynęło od daty urodzenia do wybranego dnia.",
+      "explanation": "Kalkulator uwzględnia ukończone rocznice kalendarzowe, liczbę dni od ostatnich urodzin i datę kolejnych urodzin. Daty porównuje w UTC, więc zmiana czasu nie wpływa na wynik. W przypadku urodzin 29 lutego w zwykłym roku przyjmuje 1 marca.",
+      "example": "Osoba urodzona 10 maja 2000 r. ma 9 maja 2025 r. 24 lata, a dzień później kończy 25 lat.",
+      "formula": "Pełne lata = różnica lat kalendarzowych skorygowana o to, czy urodziny już minęły.",
+      "everyday": "Sprawdź wiek na dowolny dzień, na przykład do formularza, rocznicy lub planowania urodzin.",
+      "faqs": [
+        {
+          "q": "Jak kalkulator traktuje urodziny 29 lutego w zwykłym roku?",
+          "a": "Przyjmuje 1 marca. Zasady prawne mogą być inne."
+        },
+        {
+          "q": "Czy dzień urodzenia jest wliczany?",
+          "a": "Kalkulator liczy pełne lata od ostatnich urodzin, a nie liczbę dni wraz z dniem urodzenia."
+        }
+      ],
+      "fields": {
+        "birthDate": {
+          "label": "Data urodzenia",
+          "help": "",
+          "unit": ""
+        },
+        "asOf": {
+          "label": "Wiek na dzień",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "date-calculator": {
+      "slug": "kalkulator-daty",
+      "title": "Kalkulator daty",
+      "description": "Dodaj lub odejmij pełne dni kalendarzowe od wybranej daty.",
+      "explanation": "Kalkulator przesuwa datę o całkowitą liczbę dni i prawidłowo uwzględnia koniec miesiąca, roku oraz zmianę czasu.",
+      "example": "30 dni po 15 stycznia 2024 r. wypada 14 lutego 2024 r.",
+      "formula": "Data wynikowa = data początkowa + podpisana liczba dni kalendarzowych.",
+      "everyday": "Oblicz datę dostawy, podróży lub kolejnego terminu po określonej liczbie dni.",
+      "faqs": [
+        {
+          "q": "Czy wlicza się dzień początkowy i końcowy?",
+          "a": "Nie. Dodanie jednego dnia daje następny dzień kalendarzowy."
+        },
+        {
+          "q": "Co oznacza ujemna liczba dni?",
+          "a": "Przesuwa datę wstecz o wskazaną liczbę dni."
+        }
+      ],
+      "fields": {
+        "date": {
+          "label": "Data",
+          "help": "",
+          "unit": ""
+        },
+        "days": {
+          "label": "Liczba dni",
+          "help": "",
+          "unit": "dni"
+        }
+      }
+    },
+    "time-calculator": {
+      "slug": "kalkulator-czasu",
+      "title": "Kalkulator czasu",
+      "description": "Dodaj lub odejmij godziny i minuty od podanej godziny.",
+      "explanation": "Czas jest przeliczany na minuty, a wynik uwzględnia przejście przez północ.",
+      "example": "Dodanie 90 minut do 23:30 daje 01:00 następnego dnia.",
+      "formula": "Wynik = czas początkowy ± liczba minut.",
+      "everyday": "Sprawdź godzinę zakończenia zadania, podróży lub przerwy.",
+      "faqs": [
+        {
+          "q": "Czy kalkulator uwzględnia następny dzień?",
+          "a": "Tak. Wynik może przypaść po północy lub w poprzednim dniu."
+        },
+        {
+          "q": "Czy mogę odjąć czas?",
+          "a": "Tak. Wybierz odejmowanie, aby obliczyć wcześniejszą godzinę."
+        }
+      ],
+      "fields": {
+        "time": {
+          "label": "Godzina",
+          "help": "",
+          "unit": ""
+        },
+        "hours": {
+          "label": "Godziny",
+          "help": "",
+          "unit": "h"
+        },
+        "minutes": {
+          "label": "Minuty",
+          "help": "",
+          "unit": "min"
+        },
+        "direction": {
+          "label": "Działanie",
+          "help": "",
+          "unit": "",
+          "options": {
+            "add": "Dodaj",
+            "subtract": "Odejmij"
+          }
+        }
+      }
+    },
+    "hours-calculator": {
+      "slug": "przelicznik-godzin",
+      "title": "Przelicznik godzin",
+      "description": "Przelicz godziny i minuty na zapis dziesiętny lub odwrotnie.",
+      "explanation": "Część minutowa jest przeliczana jako ułamek godziny. Wynik dziesiętny ułatwia rozliczanie czasu pracy.",
+      "example": "2 godziny i 30 minut to 2,5 godziny.",
+      "formula": "Godziny dziesiętne = godziny + minuty ÷ 60.",
+      "everyday": "Przelicz czas zmiany na godziny dziesiętne do ewidencji lub rozliczenia.",
+      "faqs": [
+        {
+          "q": "Jak przeliczyć minuty na część godziny?",
+          "a": "Podziel liczbę minut przez 60; na przykład 15 minut to 0,25 godziny."
+        },
+        {
+          "q": "Czy wynik jest zaokrąglany?",
+          "a": "Wyświetlana wartość może być zaokrąglona; obliczenie korzysta z dokładnej wartości."
+        }
+      ],
+      "fields": {
+        "hours": {
+          "label": "Godziny",
+          "help": "",
+          "unit": "h"
+        },
+        "minutes": {
+          "label": "Minuty",
+          "help": "",
+          "unit": "min"
+        }
+      }
+    },
+    "gpa-calculator": {
+      "slug": "kalkulator-sredniej-ocen",
+      "title": "Kalkulator średniej ocen",
+      "description": "Oblicz średnią ocen ważoną liczbą punktów zaliczeniowych.",
+      "explanation": "Każda ocena jest mnożona przez liczbę punktów przypisaną do kursu. Następnie suma ważona jest dzielona przez łączną liczbę punktów.",
+      "example": "Ocena 4,0 z kursu za 3 punkty i 5,0 z kursu za 1 punkt daje średnią 4,25.",
+      "formula": "Średnia ważona = suma (ocena × punkty) ÷ suma punktów.",
+      "everyday": "Oszacuj średnią semestralną, uwzględniając różną wagę kursów.",
+      "faqs": [
+        {
+          "q": "Czy kursy mają jednakową wagę?",
+          "a": "Nie. Waga kursu wynika z wpisanej liczby punktów."
+        },
+        {
+          "q": "Czy to oficjalny GPA?",
+          "a": "Nie zawsze. Uczelnie mogą stosować inne skale i zasady przeliczania."
+        }
+      ],
+      "fields": {
+        "grade1": {
+          "label": "Ocena — kurs 1",
+          "help": "",
+          "unit": "punkty"
+        },
+        "credits1": {
+          "label": "Punkty — kurs 1",
+          "help": "",
+          "unit": "punkty"
+        },
+        "grade2": {
+          "label": "Ocena — kurs 2",
+          "help": "",
+          "unit": "punkty"
+        },
+        "credits2": {
+          "label": "Punkty — kurs 2",
+          "help": "",
+          "unit": "punkty"
+        },
+        "grade3": {
+          "label": "Ocena — kurs 3",
+          "help": "",
+          "unit": "punkty"
+        },
+        "credits3": {
+          "label": "Punkty — kurs 3",
+          "help": "",
+          "unit": "punkty"
+        }
+      }
+    },
+    "grade-calculator": {
+      "slug": "kalkulator-ocen",
+      "title": "Kalkulator ocen",
+      "description": "Oblicz średnią ważoną i sprawdź wynik potrzebny do uzyskania oceny docelowej.",
+      "explanation": "Wpisz wyniki i ich wagi, a kalkulator obliczy średnią oraz minimalny wynik wymagany w pozostałej części kursu.",
+      "example": "Jeśli połowa oceny jest już ustalona, kalkulator pokaże wynik potrzebny z pozostałych prac.",
+      "formula": "Średnia ważona = suma (wynik × waga) ÷ suma wag.",
+      "everyday": "Sprawdź, jaki wynik musisz uzyskać na egzaminie, aby osiągnąć założoną ocenę.",
+      "faqs": [
+        {
+          "q": "Co oznacza waga?",
+          "a": "Waga określa, jaką część końcowej oceny stanowi dana praca."
+        },
+        {
+          "q": "Co jeśli wymagany wynik przekracza maksimum?",
+          "a": "Osiągnięcie celu może być niemożliwe przy pozostałych ocenach i wagach."
+        }
+      ],
+      "fields": {
+        "score1": {
+          "label": "Wynik 1",
+          "help": "",
+          "unit": "%"
+        },
+        "weight1": {
+          "label": "Waga wyniku 1",
+          "help": "",
+          "unit": "%"
+        },
+        "score2": {
+          "label": "Wynik 2",
+          "help": "",
+          "unit": "%"
+        },
+        "weight2": {
+          "label": "Waga wyniku 2",
+          "help": "",
+          "unit": "%"
+        },
+        "target": {
+          "label": "Ocena docelowa",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "height-calculator": {
+      "slug": "przelicznik-wzrostu",
+      "title": "Przelicznik wzrostu",
+      "description": "Przelicz wzrost między centymetrami, metrami, stopami i calami.",
+      "explanation": "Przeliczenie korzysta ze stałych współczynników jednostek. Wynik jest orientacyjny, jeśli dane wejściowe zostały zaokrąglone.",
+      "example": "170 cm to około 5 stóp i 6,9 cala.",
+      "formula": "Wartość w calach = centymetry ÷ 2,54.",
+      "everyday": "Szybko porównaj wzrost zapisany w różnych jednostkach.",
+      "faqs": [
+        {
+          "q": "Czy wynik jest dokładny?",
+          "a": "Przeliczenie jednostek jest matematyczne; dokładność zależy od podanej wartości i zaokrąglenia."
+        },
+        {
+          "q": "Ile centymetrów ma stopa?",
+          "a": "Jedna stopa to 30,48 cm."
+        }
+      ],
+      "fields": {
+        "height": {
+          "label": "Wysokość",
+          "help": "",
+          "unit": "cm"
+        },
+        "unit": {
+          "label": "Jednostka",
+          "help": "",
+          "unit": "",
+          "options": {
+            "cm": "cm",
+            "m": "m",
+            "in": "cale",
+            "ft": "stopy"
+          }
+        }
+      }
+    },
+    "concrete-calculator": {
+      "slug": "kalkulator-betonu",
+      "title": "Kalkulator betonu",
+      "description": "Oszacuj ilość betonu na prostokątną płytę z uwzględnieniem zapasu.",
+      "explanation": "Objętość wynika z długości, szerokości i grubości płyty. Zapas pomaga uwzględnić straty i nierówności, ale nie zastępuje pomiaru na miejscu.",
+      "example": "Płyta 4 × 3 m o grubości 10 cm ma objętość 1,2 m³ przed doliczeniem zapasu.",
+      "formula": "Objętość = długość × szerokość × grubość × (1 + zapas).",
+      "everyday": "Oszacuj ilość mieszanki potrzebnej do wylania płyty lub podestu.",
+      "faqs": [
+        {
+          "q": "Czy wynik obejmuje zapas?",
+          "a": "Tak, jeśli wpiszesz procent zapasu. Domyślny zapas może nie pasować do każdego projektu."
+        },
+        {
+          "q": "Czy kalkulator uwzględnia nierówne podłoże?",
+          "a": "Nie. Przy nierównym podłożu zmierz je dokładnie i zwiększ zapas według potrzeb."
+        }
+      ],
+      "fields": {
+        "length": {
+          "label": "Długość",
+          "help": "",
+          "unit": "m"
+        },
+        "width": {
+          "label": "Szerokość",
+          "help": "",
+          "unit": "m"
+        },
+        "thickness": {
+          "label": "Grubość",
+          "help": "",
+          "unit": "m"
+        },
+        "waste": {
+          "label": "Zapas na odpady",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "ip-subnet-calculator": {
+      "slug": "kalkulator-podsieci-ipv4",
+      "title": "Kalkulator podsieci IPv4",
+      "description": "Sprawdź adres sieci, maskę, adres rozgłoszeniowy i zakres hostów dla prefiksu CIDR.",
+      "explanation": "Adres IPv4 i długość prefiksu wyznaczają maskę oraz granice podsieci. Narzędzie pokazuje adresy użyteczne zgodnie z typowymi zasadami IPv4.",
+      "example": "Adres 192.168.1.10/24 należy do sieci 192.168.1.0/24.",
+      "formula": "Adres sieci = adres IP AND maska podsieci.",
+      "everyday": "Zweryfikuj konfigurację podsieci przed ustawieniem urządzeń i reguł sieciowych.",
+      "faqs": [
+        {
+          "q": "Co oznacza /24?",
+          "a": "To długość prefiksu: 24 bity adresu IPv4 wskazują część sieci."
+        },
+        {
+          "q": "Czy wszystkie adresy z zakresu są adresami hostów?",
+          "a": "Nie. Zwykle pierwszy adres to adres sieci, a ostatni to adres rozgłoszeniowy."
+        }
+      ],
+      "fields": {
+        "ip": {
+          "label": "Adres IPv4",
+          "help": "",
+          "unit": ""
+        },
+        "prefix": {
+          "label": "Prefiks CIDR",
+          "help": "",
+          "unit": "/"
+        }
+      }
+    },
+    "bra-size-calculator": {
+      "slug": "kalkulator-rozmiaru-biustonosza",
+      "title": "Kalkulator rozmiaru biustonosza",
+      "description": "Oszacuj rozmiar biustonosza na podstawie obwodu pod biustem i w biuście.",
+      "explanation": "Kalkulator porównuje obwody i stosuje uproszczoną tabelę rozmiarów. Rozmiary i dopasowanie różnią się między markami oraz systemami.",
+      "example": "Wynik może wskazać rozmiar siostrzany, który warto przymierzyć obok rozmiaru bazowego.",
+      "formula": "Rozmiar miseczki wynika z różnicy obwodu biustu i obwodu pod biustem.",
+      "everyday": "Uzyskaj punkt wyjścia do wyboru rozmiaru, a następnie sprawdź dopasowanie w praktyce.",
+      "faqs": [
+        {
+          "q": "Czy wynik gwarantuje dobre dopasowanie?",
+          "a": "Nie. To orientacyjny rozmiar; krój i rozmiarówka marki mogą się różnić."
+        },
+        {
+          "q": "Jak najlepiej wykonać pomiar?",
+          "a": "Użyj miękkiej miarki i mierz ją poziomo, bez nadmiernego ściskania."
+        }
+      ],
+      "fields": {
+        "underbust": {
+          "label": "Obwód pod biustem",
+          "help": "",
+          "unit": "cale"
+        },
+        "bust": {
+          "label": "Obwód w biuście",
+          "help": "",
+          "unit": "cale"
+        }
+      }
+    },
+    "password-generator": {
+      "slug": "generator-hasel",
+      "title": "Generator haseł",
+      "description": "Utwórz hasło z wybranych grup znaków za pomocą bezpiecznego generatora losowego.",
+      "explanation": "Każda włączona grupa znaków pojawia się co najmniej raz. Hasło pozostaje na Twoim urządzeniu i nie jest wysyłane.",
+      "example": "Długie hasło z małych i wielkich liter, cyfr oraz symboli ma więcej możliwych kombinacji niż krótkie słowo.",
+      "formula": "Znaki są losowane kryptograficznie; każda włączona grupa jest używana przynajmniej raz.",
+      "everyday": "Wygeneruj nowe hasło i zapisz je w menedżerze haseł.",
+      "faqs": [
+        {
+          "q": "Czy generator działa offline?",
+          "a": "Tak, jeśli przeglądarka udostępnia bezpieczny generator losowy. Hasło nie jest przesyłane."
+        },
+        {
+          "q": "Czy mogę wykluczyć podobne znaki?",
+          "a": "Tak. Ułatwia to ręczne przepisywanie, ale zmniejsza liczbę możliwych znaków."
+        }
+      ],
+      "fields": {
+        "length": {
+          "label": "Długość",
+          "help": "",
+          "unit": "znaków"
+        },
+        "lower": {
+          "label": "Małe litery",
+          "help": "",
+          "unit": "",
+          "options": {
+            "true": "Uwzględnij",
+            "false": "Wyklucz"
+          }
+        },
+        "upper": {
+          "label": "Wielkie litery",
+          "help": "",
+          "unit": "",
+          "options": {
+            "true": "Uwzględnij",
+            "false": "Wyklucz"
+          }
+        },
+        "digits": {
+          "label": "Cyfry",
+          "help": "",
+          "unit": "",
+          "options": {
+            "true": "Uwzględnij",
+            "false": "Wyklucz"
+          }
+        },
+        "symbols": {
+          "label": "Symbole",
+          "help": "",
+          "unit": "",
+          "options": {
+            "true": "Uwzględnij",
+            "false": "Wyklucz"
+          }
+        }
+      },
+      "limitations": "Skopiuj hasło i zapisz je bezpiecznie w menedżerze haseł."
+    },
+    "dice-roller": {
+      "slug": "symulator-rzutu-kostkami",
+      "title": "Rzut kostkami",
+      "description": "Symuluj rzut jedną lub kilkoma uczciwymi kostkami o wybranej liczbie ścian.",
+      "explanation": "Każda ściana ma jednakowe prawdopodobieństwo. Suma jest dodawana dla wszystkich wyrzuconych kostek.",
+      "example": "Rzut dwiema sześciennymi kostkami daje sumę od 2 do 12.",
+      "formula": "Suma = suma wyników wszystkich kostek.",
+      "everyday": "Wylosuj wynik do gry planszowej lub prostego ćwiczenia z prawdopodobieństwa.",
+      "faqs": [
+        {
+          "q": "Czy rzut odzwierciedla fizyczne kostki?",
+          "a": "To symulacja losowa, a nie pomiar rzeczywistego rzutu."
+        },
+        {
+          "q": "Czy mogę zmienić liczbę ścian?",
+          "a": "Tak. Wybierz liczbę kostek i ścian przed rzutem."
+        }
+      ],
+      "fields": {
+        "count": {
+          "label": "Liczba kostek",
+          "help": "",
+          "unit": "razy"
+        },
+        "sides": {
+          "label": "Liczba ścian",
+          "help": "",
+          "unit": "ściany"
+        }
+      }
+    },
+    "conversion-calculator": {
+      "slug": "przelicznik-jednostek",
+      "title": "Przelicznik jednostek",
+      "description": "Przelicz długość, masę, objętość, temperaturę, powierzchnię, prędkość i energię.",
+      "explanation": "Wybierz wartość oraz jednostki źródłową i docelową. Temperatura używa osobnych wzorów, a pozostałe jednostki stałych współczynników.",
+      "example": "1 kilometr to 1000 metrów, a 0°C to 32°F.",
+      "formula": "Wynik = wartość wejściowa przeliczona przez współczynnik jednostek.",
+      "everyday": "Przelicz jednostki używane w przepisie, podróży, projekcie lub pomiarze.",
+      "faqs": [
+        {
+          "q": "Czy obsługiwane są wszystkie jednostki?",
+          "a": "Dostępne są jednostki pokazane na liście."
+        },
+        {
+          "q": "Czy temperaturę przelicza się tak samo jak długość?",
+          "a": "Nie. Konwersja temperatury uwzględnia przesunięcie skali, a nie tylko mnożnik."
+        }
+      ],
+      "fields": {
+        "value": {
+          "label": "Wartość",
+          "help": "",
+          "unit": ""
+        },
+        "from": {
+          "label": "Jednostka źródłowa",
+          "help": "",
+          "unit": "",
+          "options": {
+            "m": "m",
+            "km": "km",
+            "mi": "mile",
+            "ft": "stopy",
+            "in": "cale",
+            "kg": "kg",
+            "g": "g",
+            "lb": "lb",
+            "L": "l",
+            "gal-US": "gal (USA)",
+            "C": "°C",
+            "F": "°F",
+            "K": "K",
+            "m/s": "m/s",
+            "km/h": "km/h",
+            "mph": "mph"
+          }
+        },
+        "to": {
+          "label": "Jednostka docelowa",
+          "help": "",
+          "unit": "",
+          "options": {
+            "m": "m",
+            "km": "km",
+            "mi": "mile",
+            "ft": "stopy",
+            "in": "cale",
+            "kg": "kg",
+            "g": "g",
+            "lb": "lb",
+            "L": "l",
+            "gal-US": "gal (USA)",
+            "C": "°C",
+            "F": "°F",
+            "K": "K",
+            "m/s": "m/s",
+            "km/h": "km/h",
+            "mph": "mph"
+          }
+        }
+      }
+    },
+    "fuel-cost-calculator": {
+      "slug": "kalkulator-kosztu-paliwa",
+      "title": "Kalkulator kosztu paliwa",
+      "description": "Oszacuj koszt paliwa na trasie na podstawie spalania i ceny za litr.",
+      "explanation": "Koszt zależy od długości trasy, zużycia paliwa na 100 km i podanej ceny. Nie uwzględnia opłat drogowych ani zmian spalania.",
+      "example": "Trasa 200 km przy spalaniu 7 l/100 km wymaga około 14 litrów paliwa.",
+      "formula": "Koszt = odległość × spalanie ÷ 100 × cena za litr.",
+      "everyday": "Zaplanuj orientacyjny budżet paliwowy na podróż.",
+      "faqs": [
+        {
+          "q": "Czy wynik obejmuje opłaty drogowe?",
+          "a": "Nie. Uwzględnia wyłącznie koszt paliwa według podanych wartości."
+        },
+        {
+          "q": "Czy spalanie na trasie będzie stałe?",
+          "a": "Rzeczywiste zużycie zależy m.in. od ruchu, prędkości, obciążenia i pogody."
+        }
+      ],
+      "fields": {
+        "distance": {
+          "label": "Odległość",
+          "help": "",
+          "unit": "km"
+        },
+        "economy": {
+          "label": "Zużycie paliwa",
+          "help": "",
+          "unit": "l/100 km"
+        },
+        "price": {
+          "label": "Cena za litr",
+          "help": "",
+          "unit": "waluta/l"
+        }
+      }
+    },
+    "voltage-drop-calculator": {
+      "slug": "kalkulator-spadku-napiecia",
+      "title": "Kalkulator spadku napięcia",
+      "description": "Oszacuj spadek napięcia stałego w dwużyłowym przewodzie.",
+      "explanation": "Obliczenie uwzględnia długość trasy w obie strony, prąd, przekrój i rezystywność przewodu. To szacunek, który nie zastępuje projektu elektrycznego.",
+      "example": "Większy przekrój przewodu zwykle zmniejsza spadek napięcia przy tym samym prądzie.",
+      "formula": "Spadek napięcia = prąd × rezystancja przewodu w obie strony.",
+      "everyday": "Sprawdź orientacyjny spadek napięcia przy doborze przewodu niskonapięciowego.",
+      "faqs": [
+        {
+          "q": "Czy liczy się długość przewodu w obie strony?",
+          "a": "Tak, typowy obwód dwuprzewodowy uwzględnia drogę do odbiornika i z powrotem."
+        },
+        {
+          "q": "Czy wynik potwierdza bezpieczeństwo instalacji?",
+          "a": "Nie. Dobór przewodu i zabezpieczeń powinien uwzględniać przepisy oraz warunki instalacji."
+        }
+      ],
+      "fields": {
+        "length": {
+          "label": "Długość",
+          "help": "",
+          "unit": "m"
+        },
+        "current": {
+          "label": "Natężenie prądu",
+          "help": "",
+          "unit": "A"
+        },
+        "area": {
+          "label": "Przekrój przewodu",
+          "help": "",
+          "unit": "mm²"
+        },
+        "resistivity": {
+          "label": "Rezystywność przewodu",
+          "help": "",
+          "unit": "Ω·mm²/m"
+        }
+      }
+    },
+    "btu-calculator": {
+      "slug": "kalkulator-mocy-klimatyzacji",
+      "title": "Kalkulator mocy klimatyzacji",
+      "description": "Oszacuj potrzebną moc ogrzewania lub chłodzenia na podstawie powierzchni pomieszczenia i współczynnika obciążenia.",
+      "explanation": "Powierzchnia jest mnożona przez podany współczynnik. Wysokość sufitu, izolacja, nasłonecznienie i liczba osób mogą zmienić zapotrzebowanie.",
+      "example": "Większe, nasłonecznione pomieszczenie zwykle wymaga większej mocy chłodniczej.",
+      "formula": "Wymagana moc = powierzchnia × współczynnik obciążenia.",
+      "everyday": "Uzyskaj wstępny szacunek przed wyborem urządzenia do pomieszczenia.",
+      "faqs": [
+        {
+          "q": "Czy to dokładny dobór urządzenia?",
+          "a": "Nie. To szacunek; profesjonalny dobór uwzględnia więcej cech budynku i klimatu."
+        },
+        {
+          "q": "Co oznacza współczynnik obciążenia?",
+          "a": "To przyjęta moc na jednostkę powierzchni, którą możesz dostosować do warunków."
+        }
+      ],
+      "fields": {
+        "area": {
+          "label": "Powierzchnia",
+          "help": "",
+          "unit": "ft²"
+        },
+        "factor": {
+          "label": "Współczynnik obciążenia cieplnego",
+          "help": "",
+          "unit": "BTU/h na ft²"
+        }
+      }
+    },
+    "square-footage-calculator": {
+      "slug": "kalkulator-powierzchni",
+      "title": "Kalkulator powierzchni",
+      "description": "Oblicz powierzchnię prostokątnego pomieszczenia lub powierzchni oraz liczbę równych obszarów.",
+      "explanation": "Powierzchnia wynika z długości i szerokości. Liczba powtórzeń pozwala zsumować wiele identycznych obszarów.",
+      "example": "Pokój 4 × 3 m ma powierzchnię 12 m².",
+      "formula": "Powierzchnia = długość × szerokość × liczba obszarów.",
+      "everyday": "Oblicz metraż pokoju, ściany lub kilku jednakowych powierzchni.",
+      "faqs": [
+        {
+          "q": "Czy kalkulator obsługuje nieregularne kształty?",
+          "a": "Nie. Wpisz wymiary prostokątne albo podziel obszar na prostokąty."
+        },
+        {
+          "q": "Czy jednostki muszą być takie same?",
+          "a": "Tak. Użyj tej samej jednostki dla długości i szerokości."
+        }
+      ],
+      "fields": {
+        "length": {
+          "label": "Długość",
+          "help": "",
+          "unit": "ft"
+        },
+        "width": {
+          "label": "Szerokość",
+          "help": "",
+          "unit": "ft"
+        },
+        "count": {
+          "label": "Liczba powierzchni",
+          "help": "",
+          "unit": "powierzchnie"
+        },
+        "unit": {
+          "label": "Jednostka",
+          "help": "",
+          "unit": "",
+          "options": {
+            "ft": "stopy",
+            "m": "m"
+          }
+        }
+      }
+    },
+    "time-card-calculator": {
+      "slug": "kalkulator-czasu-pracy",
+      "title": "Kalkulator czasu pracy",
+      "description": "Oblicz płatny czas zmiany po odjęciu niepłatnej przerwy.",
+      "explanation": "Różnica między godziną rozpoczęcia i zakończenia jest korygowana o przerwę. Zmiana może przechodzić przez północ.",
+      "example": "Zmiana od 09:00 do 17:30 z 30-minutową przerwą trwa 8 płatnych godzin.",
+      "formula": "Czas płatny = czas między końcem a początkiem − niepłatna przerwa.",
+      "everyday": "Sprawdź liczbę godzin do karty czasu pracy lub rozliczenia zmiany.",
+      "faqs": [
+        {
+          "q": "Czy zmiana może kończyć się następnego dnia?",
+          "a": "Tak. Godzina zakończenia wcześniejsza niż rozpoczęcia jest traktowana jako następny dzień."
+        },
+        {
+          "q": "Czy wynik uwzględnia nadgodziny?",
+          "a": "Nie. Pokazuje czas, a zasady wynagrodzenia zależą od Twojego miejsca pracy."
+        }
+      ],
+      "fields": {
+        "start": {
+          "label": "Początek",
+          "help": "",
+          "unit": ""
+        },
+        "end": {
+          "label": "Koniec",
+          "help": "",
+          "unit": ""
+        },
+        "break": {
+          "label": "Niepłatna przerwa",
+          "help": "",
+          "unit": "min"
+        }
+      }
+    },
+    "time-zone-calculator": {
+      "slug": "przelicznik-stref-czasowych",
+      "title": "Przelicznik stref czasowych",
+      "description": "Przelicz lokalną datę i godzinę między nazwanymi strefami IANA.",
+      "explanation": "Konwersja uwzględnia reguły strefy i zmianę czasu obowiązujące w podanej dacie. Nie każda strefa ma stałe przesunięcie względem UTC.",
+      "example": "Godzina 09:00 w Warszawie może odpowiadać innej godzinie w Nowym Jorku zależnie od daty.",
+      "formula": "Czas docelowy = wskazany moment przeliczony według reguł wybranej strefy.",
+      "everyday": "Ustal dogodną godzinę spotkania dla osób w różnych krajach.",
+      "faqs": [
+        {
+          "q": "Czy zmiana czasu jest uwzględniana?",
+          "a": "Tak, jeśli reguły strefy dla podanej daty są dostępne w przeglądarce."
+        },
+        {
+          "q": "Dlaczego różnica czasu czasem się zmienia?",
+          "a": "Kraje mogą zmieniać czas letni w różnych terminach lub wcale."
+        }
+      ],
+      "fields": {
+        "date": {
+          "label": "Data",
+          "help": "",
+          "unit": ""
+        },
+        "time": {
+          "label": "Godzina",
+          "help": "",
+          "unit": ""
+        },
+        "fromZone": {
+          "label": "Początkowa strefa czasowa",
+          "help": "",
+          "unit": ""
+        },
+        "toZone": {
+          "label": "Docelowa strefa czasowa",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "love-calculator": {
+      "slug": "kalkulator-zgodnosci-imion",
+      "title": "Kalkulator miłości",
+      "description": "Utwórz zabawny wynik zgodności na podstawie dwóch imion.",
+      "explanation": "Wynik jest elementem rozrywki i nie mierzy rzeczywistej zgodności ani jakości relacji.",
+      "example": "Wpisz dwa imiona, aby zobaczyć losowy, zabawowy wynik.",
+      "formula": "Wynik zgodności jest rozrywkowym wskaźnikiem, a nie pomiarem.",
+      "everyday": "Uruchom lekki quiz dla zabawy ze znajomymi lub partnerem.",
+      "faqs": [
+        {
+          "q": "Czy wynik jest naukowy?",
+          "a": "Nie. To wyłącznie zabawa, bez podstaw naukowych."
+        },
+        {
+          "q": "Czy wynik ocenia relację?",
+          "a": "Nie. O jakości relacji decydują osoby, a nie ten kalkulator."
+        }
+      ],
+      "fields": {
+        "name1": {
+          "label": "Pierwsze imię",
+          "help": "",
+          "unit": ""
+        },
+        "name2": {
+          "label": "Drugie imię",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "gdp-calculator": {
+      "slug": "kalkulator-pkb",
+      "title": "Kalkulator PKB",
+      "description": "Oblicz produkt krajowy brutto metodą wydatkową.",
+      "explanation": "Metoda sumuje konsumpcję, inwestycje, wydatki rządowe oraz eksport netto. Wynik zależy od zgodności i zakresu danych wejściowych.",
+      "example": "Jeśli eksport wynosi 100, a import 80, eksport netto wynosi 20.",
+      "formula": "PKB = konsumpcja + inwestycje + wydatki rządowe + eksport − import.",
+      "everyday": "Zobacz, jak składniki wydatków składają się na podstawowy szacunek PKB.",
+      "faqs": [
+        {
+          "q": "Czy to oficjalny PKB kraju?",
+          "a": "Nie. To obliczenie na podstawie wpisanych wartości, bez weryfikacji źródeł."
+        },
+        {
+          "q": "Dlaczego odejmuje się import?",
+          "a": "Import nie jest produkcją krajową, dlatego odejmuje się go od eksportu."
+        }
+      ],
+      "fields": {
+        "consumption": {
+          "label": "Konsumpcja",
+          "help": "",
+          "unit": "jednostki waluty"
+        },
+        "investment": {
+          "label": "Inwestycje",
+          "help": "",
+          "unit": "jednostki waluty"
+        },
+        "government": {
+          "label": "Wydatki rządowe",
+          "help": "",
+          "unit": "jednostki waluty"
+        },
+        "exports": {
+          "label": "Eksport",
+          "help": "",
+          "unit": "jednostki waluty"
+        },
+        "imports": {
+          "label": "Import",
+          "help": "",
+          "unit": "jednostki waluty"
+        }
+      }
+    },
+    "gas-mileage-calculator": {
+      "slug": "kalkulator-spalania",
+      "title": "Kalkulator zużycia paliwa",
+      "description": "Oblicz zużycie paliwa na podstawie przebytej odległości i ilości paliwa.",
+      "explanation": "Wynik pokazuje ilość paliwa przypadającą na jednostkę odległości zgodnie z wybranym systemem miar.",
+      "example": "Zużycie 40 litrów na 600 km odpowiada około 6,7 l/100 km.",
+      "formula": "Zużycie = ilość paliwa ÷ odległość × współczynnik jednostek.",
+      "everyday": "Porównaj zużycie samochodu między tankowaniami lub trasami.",
+      "faqs": [
+        {
+          "q": "Czy większa wartość oznacza oszczędniejszy samochód?",
+          "a": "W l/100 km większa wartość oznacza większe zużycie; w km/l jest odwrotnie."
+        },
+        {
+          "q": "Czy wynik zależy od pełnego baku?",
+          "a": "Najlepsze porównanie uzyskasz, mierząc paliwo i odległość w spójnym okresie."
+        }
+      ],
+      "fields": {
+        "distance": {
+          "label": "Odległość",
+          "help": "",
+          "unit": "mile"
+        },
+        "fuel": {
+          "label": "Zużyte paliwo",
+          "help": "",
+          "unit": "US gal"
+        }
+      }
+    },
+    "horsepower-calculator": {
+      "slug": "kalkulator-mocy-hp",
+      "title": "Kalkulator mocy silnika",
+      "description": "Oszacuj moc mechaniczną z momentu obrotowego i prędkości obrotowej.",
+      "explanation": "Moc zależy od momentu obrotowego oraz liczby obrotów na minutę. Wynik zależy też od jednostek i definicji konia mechanicznego.",
+      "example": "Silnik o większym momencie przy tych samych obrotach ma większą moc.",
+      "formula": "Moc (hp) = moment obrotowy × obroty ÷ stała przeliczeniowa.",
+      "everyday": "Przelicz moment obrotowy i obroty na orientacyjną moc.",
+      "faqs": [
+        {
+          "q": "Czy to moc zmierzona na kołach?",
+          "a": "Nie. To obliczenie teoretyczne, które nie uwzględnia strat układu napędowego."
+        },
+        {
+          "q": "Jakie obroty należy wpisać?",
+          "a": "Użyj obrotów, przy których podano moment obrotowy."
+        }
+      ],
+      "fields": {
+        "torque": {
+          "label": "Moment obrotowy",
+          "help": "",
+          "unit": "lb-ft"
+        },
+        "rpm": {
+          "label": "Obroty silnika",
+          "help": "",
+          "unit": "ot/min"
+        }
+      }
+    },
+    "engine-horsepower-calculator": {
+      "slug": "kalkulator-mocy-silnika",
+      "title": "Kalkulator mocy silnika",
+      "description": "Oblicz moc silnika na podstawie momentu obrotowego w lb-ft lub N·m i obrotów.",
+      "explanation": "Wybór jednostki momentu określa przelicznik użyty do oszacowania mocy. Nie uwzględnia strat mechanicznych.",
+      "example": "Moment obrotowy 200 lb-ft przy 3000 obr./min daje około 114 hp.",
+      "formula": "Moc (hp) = moment obrotowy (lb-ft) × obr./min ÷ 5252.",
+      "everyday": "Porównaj szacowaną moc przy różnych wartościach momentu i obrotów.",
+      "faqs": [
+        {
+          "q": "Czy wynik uwzględnia straty w napędzie?",
+          "a": "Nie. Rzeczywista moc na kołach jest niższa wskutek strat."
+        },
+        {
+          "q": "Czy mogę wpisać moment w N·m?",
+          "a": "Tak. Wybierz odpowiednią jednostkę momentu."
+        }
+      ],
+      "fields": {
+        "torque": {
+          "label": "Moment obrotowy",
+          "help": "",
+          "unit": "lb-ft"
+        },
+        "rpm": {
+          "label": "Obroty silnika",
+          "help": "",
+          "unit": "ot/min"
+        },
+        "torqueUnit": {
+          "label": "Jednostka momentu obrotowego",
+          "help": "",
+          "unit": "",
+          "options": {
+            "lb-ft": "lb-ft",
+            "Nm": "N·m"
+          }
+        }
+      }
+    },
+    "stair-calculator": {
+      "slug": "kalkulator-schodow",
+      "title": "Kalkulator schodów",
+      "description": "Zaplanuj proste schody na podstawie wysokości kondygnacji i dostępnej długości poziomej.",
+      "explanation": "Kalkulator szacuje liczbę stopni i ich wymiary z podanych ograniczeń. Ostateczny projekt musi spełniać lokalne przepisy budowlane.",
+      "example": "Większa dostępna długość pozwala zwykle uzyskać łagodniejszy kąt schodów.",
+      "formula": "Wysokość stopnia = wysokość kondygnacji ÷ liczba podstopnic.",
+      "everyday": "Uzyskaj wstępny układ schodów do planowania przestrzeni.",
+      "faqs": [
+        {
+          "q": "Czy projekt spełnia przepisy?",
+          "a": "Nie. Sprawdź wymagania budowlane i skonsultuj projekt ze specjalistą."
+        },
+        {
+          "q": "Czy wynik obejmuje spocznik?",
+          "a": "Nie, kalkulator dotyczy prostego biegu schodów."
+        }
+      ],
+      "fields": {
+        "rise": {
+          "label": "Wysokość kondygnacji",
+          "help": "",
+          "unit": "cale"
+        },
+        "run": {
+          "label": "Dostępna długość pozioma",
+          "help": "",
+          "unit": "cale"
+        }
+      }
+    },
+    "resistor-calculator": {
+      "slug": "kalkulator-rezystora",
+      "title": "Kalkulator rezystora",
+      "description": "Odczytaj paski kolorów rezystora albo oblicz rezystor szeregowy dla diody LED.",
+      "explanation": "W trybie odczytu kolory określają rezystancję i tolerancję. W trybie LED rezystor ogranicza prąd przy podanym napięciu zasilania.",
+      "example": "Dla diody 2 V zasilanej napięciem 5 V przy 20 mA rezystor wynosi około 150 Ω.",
+      "formula": "Rezystor LED = (napięcie zasilania − napięcie LED) ÷ prąd LED.",
+      "everyday": "Rozpoznaj wartość rezystora albo dobierz rezystor ograniczający prąd diody.",
+      "faqs": [
+        {
+          "q": "Czy wynik uwzględnia moc rezystora?",
+          "a": "Sprawdź również moc wydzielaną na rezystorze i dobierz odpowiednią moc znamionową."
+        },
+        {
+          "q": "Czy kolory są standardowe?",
+          "a": "Kalkulator korzysta z typowego kodu paskowego rezystorów."
+        }
+      ],
+      "fields": {
+        "mode": {
+          "label": "Tryb",
+          "help": "",
+          "unit": "",
+          "options": {
+            "color": "Odczytaj paski kolorów",
+            "led": "Oblicz rezystor LED"
+          }
+        },
+        "band1": {
+          "label": "Pasek 1",
+          "help": "",
+          "unit": "",
+          "options": {
+            "black": "czarny",
+            "brown": "brązowy",
+            "red": "czerwony",
+            "orange": "pomarańczowy",
+            "yellow": "żółty",
+            "green": "zielony",
+            "blue": "niebieski",
+            "violet": "fioletowy",
+            "grey": "szary",
+            "white": "biały"
+          }
+        },
+        "band2": {
+          "label": "Pasek 2",
+          "help": "",
+          "unit": "",
+          "options": {
+            "black": "czarny",
+            "brown": "brązowy",
+            "red": "czerwony",
+            "orange": "pomarańczowy",
+            "yellow": "żółty",
+            "green": "zielony",
+            "blue": "niebieski",
+            "violet": "fioletowy",
+            "grey": "szary",
+            "white": "biały"
+          }
+        },
+        "multiplier": {
+          "label": "Pasek mnożnika",
+          "help": "",
+          "unit": "",
+          "options": {
+            "black": "czarny",
+            "brown": "brązowy",
+            "red": "czerwony",
+            "orange": "pomarańczowy",
+            "yellow": "żółty",
+            "green": "zielony",
+            "blue": "niebieski",
+            "violet": "fioletowy",
+            "gold": "złoty",
+            "silver": "srebrny"
+          }
+        },
+        "tolerance": {
+          "label": "Pasek tolerancji",
+          "help": "",
+          "unit": "",
+          "options": {
+            "brown": "brązowy",
+            "red": "czerwony",
+            "gold": "złoty",
+            "silver": "srebrny"
+          }
+        },
+        "supply": {
+          "label": "Napięcie zasilania",
+          "help": "",
+          "unit": "V"
+        },
+        "forward": {
+          "label": "Napięcie przewodzenia LED",
+          "help": "",
+          "unit": "V"
+        },
+        "ledCurrent": {
+          "label": "Prąd LED",
+          "help": "",
+          "unit": "mA"
+        }
+      }
+    },
+    "ohms-law-calculator": {
+      "slug": "kalkulator-prawa-ohma",
+      "title": "Kalkulator prawa Ohma",
+      "description": "Oblicz brakującą wartość spośród napięcia, natężenia i oporu; poznaj też moc.",
+      "explanation": "Podaj dwie wartości, a kalkulator wyznaczy trzecią z prawa Ohma. Moc jest obliczana na podstawie napięcia i natężenia.",
+      "example": "Prąd 2 A przez opór 6 Ω daje napięcie 12 V.",
+      "formula": "Napięcie = prąd × opór; moc = napięcie × prąd.",
+      "everyday": "Rozwiąż podstawowe obliczenia obwodu elektrycznego.",
+      "faqs": [
+        {
+          "q": "Czy mogę wpisać wszystkie trzy wartości?",
+          "a": "Wpisz dwie znane wielkości, aby obliczyć brakującą."
+        },
+        {
+          "q": "Czy dotyczy to prądu przemiennego?",
+          "a": "Model jest uproszczony i nie uwzględnia fazy ani impedancji."
+        }
+      ],
+      "fields": {
+        "voltage": {
+          "label": "Napięcie",
+          "help": "",
+          "unit": "V"
+        },
+        "current": {
+          "label": "Natężenie prądu",
+          "help": "",
+          "unit": "A"
+        },
+        "resistance": {
+          "label": "Rezystancja",
+          "help": "",
+          "unit": "Ω"
+        }
+      }
+    },
+    "electricity-calculator": {
+      "slug": "kalkulator-kosztu-pradu",
+      "title": "Kalkulator kosztu energii elektrycznej",
+      "description": "Oszacuj zużycie energii i koszt na podstawie mocy, czasu pracy i ceny za kWh.",
+      "explanation": "Moc urządzenia jest przeliczana na kilowaty, a następnie mnożona przez czas pracy i stawkę za energię.",
+      "example": "Urządzenie 1000 W działające przez 2 godziny zużywa 2 kWh.",
+      "formula": "Energia = moc (kW) × czas; koszt = energia × cena za kWh.",
+      "everyday": "Sprawdź orientacyjny koszt używania urządzenia przez wybrany czas.",
+      "faqs": [
+        {
+          "q": "Czy wynik obejmuje stałe opłaty za prąd?",
+          "a": "Nie. Uwzględnia tylko podaną cenę za energię."
+        },
+        {
+          "q": "Czy urządzenie zawsze pobiera pełną moc?",
+          "a": "Nie. Rzeczywiste zużycie zależy od trybu pracy i czasu działania."
+        }
+      ],
+      "fields": {
+        "power": {
+          "label": "Moc urządzenia",
+          "help": "",
+          "unit": "W"
+        },
+        "hours": {
+          "label": "Godziny",
+          "help": "",
+          "unit": "h"
+        },
+        "price": {
+          "label": "Cena za kWh",
+          "help": "",
+          "unit": "waluta/kWh"
+        }
+      }
+    },
+    "shoe-size-conversion": {
+      "slug": "przelicznik-rozmiarow-butow",
+      "title": "Przelicznik rozmiarów obuwia",
+      "description": "Przelicz przybliżony rozmiar między skalami US, UK i EU.",
+      "explanation": "Tabele rozmiarów różnią się między producentami. Wynik jest orientacyjnym dopasowaniem, a nie gwarancją rozmiaru.",
+      "example": "Rozmiar US może odpowiadać różnym wartościom EU w zależności od marki.",
+      "formula": "Rozmiar docelowy jest dobierany z tabeli konwersji dla wybranej skali.",
+      "everyday": "Porównaj rozmiary podane w różnych systemach przed zakupem obuwia.",
+      "faqs": [
+        {
+          "q": "Czy rozmiary są identyczne u wszystkich marek?",
+          "a": "Nie. Tabela producenta może różnić się od przybliżonego przeliczenia."
+        },
+        {
+          "q": "Czy skala US dla kobiet i mężczyzn jest taka sama?",
+          "a": "Nie. Wybierz właściwą skalę US przed przeliczeniem."
+        }
+      ],
+      "fields": {
+        "size": {
+          "label": "Rozmiar buta",
+          "help": "",
+          "unit": "velikost"
+        },
+        "system": {
+          "label": "System rozmiarów",
+          "help": "",
+          "unit": "",
+          "options": {
+            "US men": "US — męskie",
+            "US women": "US — damskie",
+            "UK": "UK",
+            "EU": "EU"
+          }
+        }
+      }
+    },
+    "tip-calculator": {
+      "slug": "kalkulator-napiwku",
+      "title": "Kalkulator napiwku",
+      "description": "Oblicz napiwek, łączny rachunek i kwotę na osobę.",
+      "explanation": "Napiwek jest liczony od rachunku, opcjonalnie z podatkiem. Łączna kwota jest dzielona przez liczbę osób.",
+      "example": "Rachunek 100 zł i napiwek 10% to 10 zł napiwku.",
+      "formula": "Napiwek = podstawa × stawka; kwota na osobę = suma ÷ liczba osób.",
+      "everyday": "Szybko podziel rachunek w restauracji i ustal napiwek.",
+      "faqs": [
+        {
+          "q": "Czy napiwek jest liczony od kwoty z podatkiem?",
+          "a": "Możesz wybrać, czy uwzględnić podatek w podstawie napiwku."
+        },
+        {
+          "q": "Czy rachunek jest dzielony równo?",
+          "a": "Tak. Łączna kwota jest dzielona równo między podaną liczbę osób."
+        }
+      ],
+      "fields": {
+        "bill": {
+          "label": "Kwota rachunku",
+          "help": "",
+          "unit": "waluta"
+        },
+        "tip": {
+          "label": "Procent napiwku",
+          "help": "",
+          "unit": "%"
+        },
+        "people": {
+          "label": "Liczba osób",
+          "help": "",
+          "unit": "osoby"
+        },
+        "includeTax": {
+          "label": "Liczyć napiwek od kwoty z podatkiem?",
+          "help": "",
+          "unit": "",
+          "options": {
+            "yes": "Tak",
+            "no": "Nie"
+          }
+        },
+        "tax": {
+          "label": "Stawka podatku",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "mileage-calculator": {
+      "slug": "kalkulator-przebiegu",
+      "title": "Kalkulator przebiegu",
+      "description": "Oblicz przebytą odległość na podstawie dwóch odczytów licznika.",
+      "explanation": "Różnica między końcowym i początkowym wskazaniem licznika daje dystans. Użyj tej samej jednostki dla obu wartości.",
+      "example": "Odczyt końcowy 12 450 km i początkowy 12 000 km oznacza 450 km.",
+      "formula": "Przebieg = odczyt końcowy − odczyt początkowy.",
+      "everyday": "Podsumuj przebieg podróży lub okresu rozliczeniowego.",
+      "faqs": [
+        {
+          "q": "Czy mogę użyć mil zamiast kilometrów?",
+          "a": "Tak, jeśli oba odczyty są podane w tej samej jednostce."
+        },
+        {
+          "q": "Co jeśli odczyt końcowy jest niższy?",
+          "a": "Sprawdź dane; kalkulator zakłada, że licznik wzrósł w tym okresie."
+        }
+      ],
+      "fields": {
+        "start": {
+          "label": "Początek",
+          "help": "",
+          "unit": "mi"
+        },
+        "end": {
+          "label": "Koniec",
+          "help": "",
+          "unit": "mi"
+        }
+      }
+    },
+    "density-calculator": {
+      "slug": "kalkulator-gestosci",
+      "title": "Kalkulator gęstości",
+      "description": "Oblicz gęstość z masy i objętości.",
+      "explanation": "Gęstość opisuje masę przypadającą na jednostkę objętości. Użyj zgodnych jednostek dla obu danych.",
+      "example": "100 g materiału o objętości 20 cm³ ma gęstość 5 g/cm³.",
+      "formula": "Gęstość = masa ÷ objętość.",
+      "everyday": "Porównaj gęstość materiałów lub sprawdź obliczenia laboratoryjne.",
+      "faqs": [
+        {
+          "q": "Jakie jednostki należy stosować?",
+          "a": "Wybierz jednostki masy i objętości, które dają czytelny wynik."
+        },
+        {
+          "q": "Czy objętość może wynosić zero?",
+          "a": "Nie. Do obliczenia gęstości potrzebna jest dodatnia objętość."
+        }
+      ],
+      "fields": {
+        "mass": {
+          "label": "Masa",
+          "help": "",
+          "unit": "g"
+        },
+        "volume": {
+          "label": "Objętość",
+          "help": "",
+          "unit": "cm³"
+        }
+      }
+    },
+    "mass-calculator": {
+      "slug": "kalkulator-masy",
+      "title": "Kalkulator masy",
+      "description": "Oblicz masę na podstawie gęstości i objętości.",
+      "explanation": "Masa jest iloczynem gęstości materiału i zajmowanej objętości. Upewnij się, że jednostki są zgodne.",
+      "example": "Materiał o gęstości 2 g/cm³ i objętości 10 cm³ ma masę 20 g.",
+      "formula": "Masa = gęstość × objętość.",
+      "everyday": "Oszacuj masę materiału o znanej gęstości i objętości.",
+      "faqs": [
+        {
+          "q": "Jak uzyskać poprawne jednostki?",
+          "a": "Dobierz jednostki gęstości i objętości tak, aby ich iloczyn dawał żądaną jednostkę masy."
+        },
+        {
+          "q": "Czy kalkulator uwzględnia pustą przestrzeń?",
+          "a": "Nie. Wprowadź objętość samego materiału."
+        }
+      ],
+      "fields": {
+        "density": {
+          "label": "Gęstość",
+          "help": "",
+          "unit": "kg/l"
+        },
+        "volume": {
+          "label": "Objętość",
+          "help": "",
+          "unit": "l"
+        }
+      }
+    },
+    "weight-calculator": {
+      "slug": "kalkulator-sily-ciezkosci",
+      "title": "Kalkulator siły ciężkości",
+      "description": "Oblicz siłę ciężkości z masy i przyspieszenia grawitacyjnego.",
+      "explanation": "Siła ciężkości zależy od masy oraz lokalnego przyspieszenia grawitacyjnego. Wynik jest podawany w niutonach.",
+      "example": "Masa 10 kg przy g = 9,81 m/s² odpowiada sile około 98,1 N.",
+      "formula": "Siła ciężkości = masa × przyspieszenie grawitacyjne.",
+      "everyday": "Porównaj ciężar tej samej masy w różnych warunkach grawitacyjnych.",
+      "faqs": [
+        {
+          "q": "Czy masa i ciężar oznaczają to samo?",
+          "a": "Nie. Masa mierzy ilość materii, a ciężar jest siłą działającą na tę masę."
+        },
+        {
+          "q": "Jakie g przyjąć na Ziemi?",
+          "a": "Typowe przybliżenie wynosi 9,81 m/s²."
+        }
+      ],
+      "fields": {
+        "mass": {
+          "label": "Masa",
+          "help": "",
+          "unit": "kg"
+        },
+        "gravity": {
+          "label": "Przyspieszenie grawitacyjne",
+          "help": "",
+          "unit": "m/s²"
+        }
+      }
+    },
+    "speed-calculator": {
+      "slug": "kalkulator-predkosci",
+      "title": "Kalkulator prędkości",
+      "description": "Oblicz średnią prędkość na podstawie odległości i czasu.",
+      "explanation": "Średnia prędkość jest ilorazem całkowitej odległości i czasu. Wynik zależy od zgodności jednostek.",
+      "example": "Przebycie 120 km w 2 godziny oznacza średnią prędkość 60 km/h.",
+      "formula": "Prędkość = odległość ÷ czas.",
+      "everyday": "Oblicz tempo podróży lub średnią prędkość na trasie.",
+      "faqs": [
+        {
+          "q": "Czy wynik pokazuje prędkość maksymalną?",
+          "a": "Nie. To średnia prędkość na podstawie całego podanego dystansu i czasu."
+        },
+        {
+          "q": "Czy mogę obliczyć tempo biegu?",
+          "a": "Kalkulator podaje prędkość; tempo można uzyskać jako czas na jednostkę odległości."
+        }
+      ],
+      "fields": {
+        "distance": {
+          "label": "Odległość",
+          "help": "",
+          "unit": "km"
+        },
+        "hours": {
+          "label": "Godziny",
+          "help": "",
+          "unit": "h"
+        }
+      }
+    },
+    "molarity-calculator": {
+      "slug": "kalkulator-molarnosci",
+      "title": "Kalkulator molarności",
+      "description": "Oblicz stężenie molowe z liczby moli i objętości roztworu.",
+      "explanation": "Molarność to liczba moli substancji rozpuszczonej przypadająca na litr roztworu. Użyj objętości końcowej roztworu.",
+      "example": "0,5 mola w 1 litrze roztworu daje stężenie 0,5 mol/l.",
+      "formula": "Molarność = liczba moli ÷ objętość roztworu w litrach.",
+      "everyday": "Przelicz stężenie roztworu do zadania lub przygotowania mieszaniny.",
+      "faqs": [
+        {
+          "q": "Czy objętość dotyczy rozpuszczalnika czy roztworu?",
+          "a": "Użyj końcowej objętości całego roztworu."
+        },
+        {
+          "q": "Czy kalkulator przelicza gramy na mole?",
+          "a": "Nie. Wprowadź liczbę moli; do przeliczenia masy potrzebna jest masa molowa."
+        }
+      ],
+      "fields": {
+        "moles": {
+          "label": "Liczba moli",
+          "help": "",
+          "unit": "mol"
+        },
+        "volume": {
+          "label": "Objętość",
+          "help": "",
+          "unit": "l"
+        }
+      }
+    },
+    "molecular-weight-calculator": {
+      "slug": "kalkulator-masy-molowej",
+      "title": "Kalkulator masy molowej",
+      "description": "Oszacuj masę molową na podstawie wzoru chemicznego.",
+      "explanation": "Kalkulator zlicza pierwiastki we wzorze i sumuje ich przybliżone masy atomowe. Nie obsługuje wszystkich zapisów chemicznych.",
+      "example": "H₂O ma masę molową około 18,015 g/mol.",
+      "formula": "Masa molowa = suma (liczba atomów pierwiastka × masa atomowa).",
+      "everyday": "Sprawdź przybliżoną masę molową prostego związku chemicznego.",
+      "faqs": [
+        {
+          "q": "Czy można wpisywać nawiasy we wzorze?",
+          "a": "Obsługa nawiasów zależy od formatu akceptowanego przez kalkulator; sprawdź wynik dla złożonego zapisu."
+        },
+        {
+          "q": "Czy wynik jest dokładny?",
+          "a": "To przybliżenie oparte na użytych masach atomowych."
+        }
+      ],
+      "fields": {
+        "formula": {
+          "label": "Wzór chemiczny",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "roman-numeral-converter": {
+      "slug": "konwerter-liczb-rzymskich",
+      "title": "Konwerter cyfr rzymskich",
+      "description": "Przelicz liczby całkowite na zapis rzymski i odwrotnie.",
+      "explanation": "Konwerter używa standardowego zapisu kanonicznego cyfr rzymskich. Niekanoniczne lub nieprawidłowe ciągi mogą zostać odrzucone.",
+      "example": "2024 zapisuje się jako MMXXIV.",
+      "formula": "Liczba jest rozkładana na standardowe symbole rzymskie i ich kombinacje odejmujące.",
+      "everyday": "Szybko sprawdź zapis roku, rozdziału lub liczby.",
+      "faqs": [
+        {
+          "q": "Czy obsługiwane są liczby ujemne?",
+          "a": "Standardowy zapis rzymski nie obejmuje liczb ujemnych."
+        },
+        {
+          "q": "Czy każdy ciąg symboli jest poprawny?",
+          "a": "Nie. Konwerter sprawdza kanoniczny zapis."
+        }
+      ],
+      "fields": {
+        "input": {
+          "label": "Liczba całkowita lub rzymska",
+          "help": "",
+          "unit": ""
+        },
+        "mode": {
+          "label": "Kierunek konwersji",
+          "help": "",
+          "unit": "",
+          "options": {
+            "integer": "Zamień liczbę na rzymską",
+            "roman": "Zamień rzymską na całkowitą"
+          }
+        }
+      }
+    },
+    "golf-handicap-calculator": {
+      "slug": "kalkulator-handicapu-golfowego",
+      "title": "Kalkulator handicapu golfowego",
+      "description": "Oszacuj indeks handicapu z różnic wyników według uproszczonej reguły WHS.",
+      "explanation": "Indeks jest wyznaczany z podanych różnic handicapowych i reguły wyboru. Oficjalne obliczenia wymagają zweryfikowanych wyników oraz danych pola.",
+      "example": "Wybór mniejszej liczby najlepszych różnic może obniżyć szacowany indeks.",
+      "formula": "Indeks handicapu = średnia wybranych różnic × współczynnik WHS.",
+      "everyday": "Uzyskaj orientacyjny indeks do porównania wyników golfowych.",
+      "faqs": [
+        {
+          "q": "Czy to oficjalny handicap?",
+          "a": "Nie. To szacunek; oficjalny indeks wymaga zweryfikowanych wyników i pełnych danych WHS."
+        },
+        {
+          "q": "Ile różnic należy wpisać?",
+          "a": "Wprowadź dostępne różnice zgodnie z instrukcją kalkulatora."
+        }
+      ],
+      "fields": {
+        "differentials": {
+          "label": "Różnice handicapowe (oddzielone przecinkami)",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "sleep-calculator": {
+      "slug": "kalkulator-snu",
+      "title": "Kalkulator snu",
+      "description": "Zaplanuj orientacyjną porę pójścia spać lub pobudki na podstawie cykli snu.",
+      "explanation": "Szacunek używa przyjętej długości cyklu i czasu zasypiania. Rzeczywiste cykle różnią się między osobami i nocami.",
+      "example": "Przy planowanej pobudce o 07:00 kalkulator wskazuje pory snu uwzględniające kilka cykli.",
+      "formula": "Szacowany czas snu = liczba cykli × przyjęta długość cyklu.",
+      "everyday": "Dobierz orientacyjną porę snu do planowanej pobudki.",
+      "faqs": [
+        {
+          "q": "Czy cykl snu zawsze trwa tyle samo?",
+          "a": "Nie. Długość cykli różni się; użyta wartość jest przybliżeniem."
+        },
+        {
+          "q": "Czy kalkulator zastępuje poradę medyczną?",
+          "a": "Nie. W przypadku problemów ze snem skonsultuj się ze specjalistą."
+        }
+      ],
+      "fields": {
+        "time": {
+          "label": "Godzina docelowa",
+          "help": "",
+          "unit": ""
+        },
+        "mode": {
+          "label": "Co chcesz zaplanować?",
+          "help": "",
+          "unit": "",
+          "options": {
+            "wake": "Wstań o tej porze",
+            "sleep": "Połóż się spać o tej porze"
+          }
+        },
+        "latency": {
+          "label": "Czas zasypiania",
+          "help": "",
+          "unit": "min"
+        },
+        "cycles": {
+          "label": "Liczba cykli snu",
+          "help": "",
+          "unit": "cykle"
+        }
+      }
+    },
+    "tire-size-calculator": {
+      "slug": "kalkulator-opon",
+      "title": "Kalkulator rozmiaru opony",
+      "description": "Oblicz zewnętrzną średnicę i obwód na podstawie oznaczenia opony.",
+      "explanation": "Oznaczenie określa szerokość, profil oraz średnicę obręczy. Wynik jest geometrycznym oszacowaniem i nie uwzględnia zużycia ani marki opony.",
+      "example": "Opona 205/55 R16 ma nominalną szerokość 205 mm, profil 55% i obręcz 16 cali.",
+      "formula": "Średnica = 2 × szerokość × profil + średnica obręczy.",
+      "everyday": "Porównaj wymiary dwóch rozmiarów opon przed ich wymianą.",
+      "faqs": [
+        {
+          "q": "Czy rzeczywista średnica będzie identyczna?",
+          "a": "Nie. Rzeczywisty wymiar może się różnić zależnie od modelu i ciśnienia."
+        },
+        {
+          "q": "Czy kalkulator uwzględnia prędkościomierz?",
+          "a": "Pokazuje różnicę wymiarów; nie ocenia wpływu na samochód ani wskazania prędkościomierza."
+        }
+      ],
+      "fields": {
+        "width": {
+          "label": "Szerokość opony",
+          "help": "",
+          "unit": "mm"
+        },
+        "aspect": {
+          "label": "Profil opony",
+          "help": "",
+          "unit": "%"
+        },
+        "rim": {
+          "label": "Średnica obręczy",
+          "help": "",
+          "unit": "cale"
+        }
+      }
+    },
+    "roofing-calculator": {
+      "slug": "kalkulator-powierzchni-dachu",
+      "title": "Kalkulator powierzchni dachu",
+      "description": "Oszacuj powierzchnię połaci na podstawie powierzchni rzutu, nachylenia i zapasu.",
+      "explanation": "Nachylenie zwiększa rzeczywistą powierzchnię dachu względem rzutu poziomego. Zapas uwzględnia docinanie, ale nie złożone kształty.",
+      "example": "Dach o rzucie 100 m² i nachyleniu 30° ma większą powierzchnię niż 100 m².",
+      "formula": "Powierzchnia połaci = powierzchnia rzutu ÷ cos(kąta nachylenia) × (1 + zapas).",
+      "everyday": "Oszacuj ilość pokrycia potrzebnego na prostą połać dachu.",
+      "faqs": [
+        {
+          "q": "Czy wynik obejmuje wszystkie połacie?",
+          "a": "Wprowadź łączną powierzchnię rzutu albo oblicz każdą połać osobno."
+        },
+        {
+          "q": "Czy zapas jest obowiązkowy?",
+          "a": "Nie, ale pomaga uwzględnić docinanie i odpady materiału."
+        }
+      ],
+      "fields": {
+        "area": {
+          "label": "Powierzchnia",
+          "help": "",
+          "unit": "ft²"
+        },
+        "rise": {
+          "label": "Wysokość",
+          "help": "",
+          "unit": "cale na 12-calowy bieg"
+        },
+        "waste": {
+          "label": "Zapas na odpady",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "tile-calculator": {
+      "slug": "kalkulator-plytek",
+      "title": "Kalkulator płytek",
+      "description": "Oblicz liczbę płytek potrzebnych do pokrycia powierzchni z uwzględnieniem zapasu.",
+      "explanation": "Łączna powierzchnia jest dzielona przez powierzchnię jednej płytki. Zapas zwiększa liczbę potrzebnych sztuk.",
+      "example": "Na powierzchnię 10 m² przy płytce 0,25 m² potrzeba co najmniej 40 płytek przed doliczeniem zapasu.",
+      "formula": "Liczba płytek = zaokrąglenie w górę (powierzchnia ÷ powierzchnia płytki × (1 + zapas)).",
+      "everyday": "Zaplanуj zakup płytek podłogowych lub ściennych.",
+      "faqs": [
+        {
+          "q": "Czy wynik zaokrągla liczbę płytek w górę?",
+          "a": "Tak. Płytki kupuje się w całych sztukach."
+        },
+        {
+          "q": "Czy uwzględnia wzór układania?",
+          "a": "Nie. Skomplikowany układ może wymagać większego zapasu."
+        }
+      ],
+      "fields": {
+        "area": {
+          "label": "Powierzchnia",
+          "help": "",
+          "unit": "ft²"
+        },
+        "tileLength": {
+          "label": "Długość płytki",
+          "help": "",
+          "unit": "cale"
+        },
+        "tileWidth": {
+          "label": "Szerokość płytki",
+          "help": "",
+          "unit": "cale"
+        },
+        "waste": {
+          "label": "Zapas na odpady",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "mulch-calculator": {
+      "slug": "kalkulator-sciolki",
+      "title": "Kalkulator ściółki",
+      "description": "Oblicz objętość ściółki na podstawie powierzchni i głębokości warstwy.",
+      "explanation": "Powierzchnia i głębokość warstwy wyznaczają objętość. Wynik można wykorzystać do oszacowania liczby worków lub dostawy.",
+      "example": "Warstwa o głębokości 5 cm na 20 m² wymaga około 1 m³ ściółki.",
+      "formula": "Objętość = powierzchnia × głębokość warstwy.",
+      "everyday": "Oblicz ilość kory lub innej ściółki do grządki.",
+      "faqs": [
+        {
+          "q": "Czy wynik uwzględnia osiadanie?",
+          "a": "Nie. Dodaj zapas, jeśli materiał może osiąść lub powierzchnia jest nierówna."
+        },
+        {
+          "q": "Jaką głębokość wpisać?",
+          "a": "Użyj planowanej grubości warstwy po rozłożeniu."
+        }
+      ],
+      "fields": {
+        "area": {
+          "label": "Powierzchnia",
+          "help": "",
+          "unit": "ft²"
+        },
+        "depth": {
+          "label": "Głębokość warstwy",
+          "help": "",
+          "unit": "cale"
+        }
+      }
+    },
+    "gravel-calculator": {
+      "slug": "kalkulator-zwiru",
+      "title": "Kalkulator żwiru",
+      "description": "Oszacuj objętość i masę warstwy żwiru z powierzchni, głębokości i gęstości nasypowej.",
+      "explanation": "Objętość wynika z powierzchni i głębokości. Masa jest szacowana na podstawie podanej gęstości nasypowej, która zależy od materiału i wilgotności.",
+      "example": "Warstwa 10 cm na powierzchni 10 m² ma objętość 1 m³.",
+      "formula": "Objętość = powierzchnia × głębokość; masa = objętość × gęstość nasypowa.",
+      "everyday": "Oszacuj ilość kruszywa potrzebną na podjazd lub ścieżkę.",
+      "faqs": [
+        {
+          "q": "Czy gęstość żwiru jest stała?",
+          "a": "Nie. Zależy od frakcji, wilgotności i zagęszczenia."
+        },
+        {
+          "q": "Czy wynik uwzględnia zagęszczanie?",
+          "a": "Nie. W razie potrzeby dolicz zapas materiału."
+        }
+      ],
+      "fields": {
+        "area": {
+          "label": "Powierzchnia",
+          "help": "",
+          "unit": "ft²"
+        },
+        "depth": {
+          "label": "Głębokość warstwy",
+          "help": "",
+          "unit": "cale"
+        },
+        "density": {
+          "label": "Gęstość nasypowa",
+          "help": "",
+          "unit": "lb/ft³"
+        }
+      }
+    },
+    "wind-chill-calculator": {
+      "slug": "kalkulator-temperatury-odczuwalnej",
+      "title": "Kalkulator temperatury odczuwalnej",
+      "description": "Oszacuj temperaturę odczuwalną przy niskiej temperaturze i wietrze.",
+      "explanation": "Wzór uwzględnia temperaturę powietrza i prędkość wiatru. Jest przeznaczony do określonych warunków i nie opisuje każdego wpływu pogody.",
+      "example": "Przy tej samej temperaturze silniejszy wiatr zwykle obniża temperaturę odczuwalną.",
+      "formula": "Temperatura odczuwalna = przybliżenie oparte na temperaturze i prędkości wiatru.",
+      "everyday": "Sprawdź, jak wiatr może wpływać na odczuwanie chłodu na zewnątrz.",
+      "faqs": [
+        {
+          "q": "Czy wzór działa w każdych warunkach?",
+          "a": "Nie. Wzór jest przeznaczony dla chłodnej pogody i określonego zakresu prędkości wiatru."
+        },
+        {
+          "q": "Czy to temperatura rzeczywista?",
+          "a": "Nie. To wskaźnik odczuwania chłodu, a nie pomiar temperatury."
+        }
+      ],
+      "fields": {
+        "temperature": {
+          "label": "Temperatura powietrza",
+          "help": "",
+          "unit": "°F"
+        },
+        "wind": {
+          "label": "Prędkość wiatru",
+          "help": "",
+          "unit": "mph"
+        }
+      }
+    },
+    "heat-index-calculator": {
+      "slug": "kalkulator-indeksu-ciepla",
+      "title": "Kalkulator indeksu ciepła",
+      "description": "Oszacuj odczuwalne ciepło na podstawie temperatury powietrza i wilgotności względnej.",
+      "explanation": "Indeks ciepła łączy temperaturę i wilgotność. To przybliżony wskaźnik dla określonych warunków, a nie prognoza zdrowotna.",
+      "example": "Przy wysokiej wilgotności ta sama temperatura może być odczuwana jako wyższa.",
+      "formula": "Indeks ciepła = oszacowanie z temperatury powietrza i wilgotności względnej.",
+      "everyday": "Sprawdź orientacyjny wpływ wilgotności na odczuwanie gorąca.",
+      "faqs": [
+        {
+          "q": "Czy wynik zastępuje ostrzeżenie pogodowe?",
+          "a": "Nie. Kieruj się lokalnymi komunikatami i zaleceniami bezpieczeństwa."
+        },
+        {
+          "q": "Dlaczego wilgotność ma znaczenie?",
+          "a": "Utrudnia parowanie potu, przez co organizm może odczuwać większe obciążenie cieplne."
+        }
+      ],
+      "fields": {
+        "temperature": {
+          "label": "Temperatura powietrza",
+          "help": "",
+          "unit": "°F"
+        },
+        "humidity": {
+          "label": "Wilgotność względna",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "dew-point-calculator": {
+      "slug": "kalkulator-punktu-rosy",
+      "title": "Kalkulator punktu rosy",
+      "description": "Oszacuj punkt rosy z temperatury powietrza i wilgotności względnej.",
+      "explanation": "Punkt rosy to temperatura, przy której para wodna zaczyna się skraplać przy danej zawartości wilgoci. Wynik jest przybliżeniem.",
+      "example": "Gdy powietrze ochładza się do punktu rosy, może pojawić się kondensacja.",
+      "formula": "Punkt rosy = przybliżenie obliczone z temperatury i wilgotności względnej.",
+      "everyday": "Oceń ryzyko kondensacji lub porównaj wilgotność powietrza.",
+      "faqs": [
+        {
+          "q": "Czy punkt rosy może być wyższy od temperatury?",
+          "a": "W typowych warunkach punkt rosy nie przekracza temperatury powietrza."
+        },
+        {
+          "q": "Czy wynik jest prognozą pogody?",
+          "a": "Nie. To obliczenie na podstawie podanych warunków."
+        }
+      ],
+      "fields": {
+        "temperature": {
+          "label": "Temperatura powietrza",
+          "help": "",
+          "unit": "°C"
+        },
+        "humidity": {
+          "label": "Wilgotność względna",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "bandwidth-calculator": {
+      "slug": "kalkulator-czasu-pobierania",
+      "title": "Kalkulator czasu pobierania",
+      "description": "Oszacuj czas transferu pliku przy podanej szybkości połączenia.",
+      "explanation": "Czas zależy od rozmiaru pliku, szybkości łącza i efektywnej przepustowości. Narzut sieci i wahania łącza mogą wydłużyć transfer.",
+      "example": "Plik 1 GB przy stabilnym łączu 100 Mb/s wymaga teoretycznie około 80 sekund.",
+      "formula": "Czas = rozmiar danych w bitach ÷ efektywna szybkość transmisji.",
+      "everyday": "Oszacuj czas wysyłania lub pobierania pliku.",
+      "faqs": [
+        {
+          "q": "Czy transfer zawsze potrwa tyle samo?",
+          "a": "Nie. Rzeczywista szybkość może się zmieniać przez obciążenie sieci i narzut protokołów."
+        },
+        {
+          "q": "Dlaczego liczy się efektywność?",
+          "a": "Część przepustowości może być wykorzystana przez narzut i inne urządzenia."
+        }
+      ],
+      "fields": {
+        "size": {
+          "label": "Rozmiar pliku",
+          "help": "",
+          "unit": "GB"
+        },
+        "rate": {
+          "label": "Szybkość łącza",
+          "help": "",
+          "unit": "Mbit/s"
+        },
+        "efficiency": {
+          "label": "Efektywna przepustowość",
+          "help": "",
+          "unit": "%"
+        }
+      }
+    },
+    "base64-encode-decode": {
+      "slug": "koder-dekoder-base64",
+      "title": "Koder i dekoder Base64",
+      "description": "Koduj lub dekoduj tekst UTF-8 w formacie Base64.",
+      "explanation": "Base64 zamienia bajty tekstu na zapis tekstowy. To kodowanie, a nie szyfrowanie ani ochrona poufnych danych.",
+      "example": "Prosty tekst może po zakodowaniu zawierać znaki A–Z, a–z, cyfry, +, / i =.",
+      "formula": "Base64 koduje grupy bajtów tekstu UTF-8 do znaków zestawu Base64.",
+      "everyday": "Przekształć tekst do Base64 lub sprawdź zakodowaną wartość.",
+      "faqs": [
+        {
+          "q": "Czy Base64 szyfruje tekst?",
+          "a": "Nie. Każdy może go zdekodować; nie używaj go do ochrony sekretów."
+        },
+        {
+          "q": "Czy obsługuje polskie znaki?",
+          "a": "Tak, tekst jest przetwarzany jako UTF-8."
+        }
+      ],
+      "fields": {
+        "text": {
+          "label": "Tekst",
+          "help": "",
+          "unit": ""
+        },
+        "mode": {
+          "label": "Tryb",
+          "help": "",
+          "unit": "",
+          "options": {
+            "encode": "Koduj",
+            "decode": "Dekoduj"
+          }
+        }
+      }
+    },
+    "url-encode-decode": {
+      "slug": "koder-dekoder-url",
+      "title": "Koder i dekoder URL",
+      "description": "Koduj lub dekoduj składnik adresu URL za pomocą kodowania procentowego.",
+      "explanation": "Znaki spoza bezpiecznego zestawu URL są zapisywane jako sekwencje procentowe. Zakres obejmuje składnik URL, a nie pełny parser adresu.",
+      "example": "Spacja w składniku URL może zostać zapisana jako %20.",
+      "formula": "Kodowanie URL zastępuje bajty znaków sekwencjami %HH.",
+      "everyday": "Przygotuj tekst do umieszczenia w parametrze adresu URL lub odczytaj zakodowany składnik.",
+      "faqs": [
+        {
+          "q": "Czy kodowanie URL szyfruje dane?",
+          "a": "Nie. To sposób zapisu znaków, a nie szyfrowanie."
+        },
+        {
+          "q": "Czy spacja zawsze staje się plusem?",
+          "a": "W kodowaniu składnika URL zwykle jest zapisywana jako %20."
+        }
+      ],
+      "fields": {
+        "text": {
+          "label": "Tekst",
+          "help": "",
+          "unit": ""
+        },
+        "mode": {
+          "label": "Tryb",
+          "help": "",
+          "unit": "",
+          "options": {
+            "encode": "Koduj",
+            "decode": "Dekoduj"
+          }
+        }
+      }
+    },
+    "time-duration-calculator": {
+      "slug": "kalkulator-czasu-trwania",
+      "title": "Kalkulator czasu trwania",
+      "description": "Oblicz czas między dwiema godzinami, także przez północ.",
+      "explanation": "Różnica czasu jest liczona w minutach. Jeśli godzina końcowa jest wcześniejsza, kalkulator traktuje ją jako następny dzień.",
+      "example": "Od 22:30 do 01:00 następnego dnia mijają 2 godziny i 30 minut.",
+      "formula": "Czas trwania = godzina końcowa − godzina początkowa, z korektą o północ.",
+      "everyday": "Oblicz długość zmiany, wydarzenia lub podróży.",
+      "faqs": [
+        {
+          "q": "Czy można obliczyć przedział krótszy niż doba?",
+          "a": "Tak. Wpisz godzinę początkową i końcową."
+        },
+        {
+          "q": "Czy uwzględnia datę?",
+          "a": "Nie. Wcześniejsza godzina końcowa oznacza następny dzień."
+        }
+      ],
+      "fields": {
+        "start": {
+          "label": "Początek",
+          "help": "",
+          "unit": ""
+        },
+        "end": {
+          "label": "Koniec",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "day-counter": {
+      "slug": "licznik-dni",
+      "title": "Licznik dni",
+      "description": "Oblicz liczbę dni kalendarzowych między dwiema datami i wybierz, czy wliczać oba końce.",
+      "explanation": "Kalkulator porównuje daty kalendarzowe. Opcja wliczania obu dat dodaje dzień do standardowej różnicy.",
+      "example": "Między 1 a 3 maja upływają 2 dni; licząc oba dni, otrzymujemy 3 dni.",
+      "formula": "Liczba dni = różnica dat, opcjonalnie +1 dla liczenia obu końców.",
+      "everyday": "Policz dni do terminu, wydarzenia lub końca okresu.",
+      "faqs": [
+        {
+          "q": "Czy oba dni są domyślnie wliczane?",
+          "a": "Możesz zdecydować za pomocą opcji wliczania dat krańcowych."
+        },
+        {
+          "q": "Czy kalkulator uwzględnia godziny?",
+          "a": "Nie. Porównuje dni kalendarzowe."
+        }
+      ],
+      "fields": {
+        "start": {
+          "label": "Początek",
+          "help": "",
+          "unit": ""
+        },
+        "end": {
+          "label": "Koniec",
+          "help": "",
+          "unit": ""
+        },
+        "inclusive": {
+          "label": "Wlicz obie daty krańcowe",
+          "help": "",
+          "unit": "",
+          "options": {
+            "no": "Nie",
+            "yes": "Tak"
+          }
+        }
+      }
+    },
+    "day-of-the-week-calculator": {
+      "slug": "kalkulator-dnia-tygodnia",
+      "title": "Kalkulator dnia tygodnia",
+      "description": "Sprawdź, jaki dzień tygodnia przypada na wybraną datę kalendarzową.",
+      "explanation": "Kalkulator wyznacza dzień tygodnia z daty, uwzględniając reguły kalendarza gregoriańskiego.",
+      "example": "1 stycznia 2000 r. przypadał w sobotę.",
+      "formula": "Dzień tygodnia = dzień kalendarzowy wyznaczony dla podanej daty.",
+      "everyday": "Sprawdź dzień tygodnia dla urodzin, rocznicy lub przyszłego terminu.",
+      "faqs": [
+        {
+          "q": "Czy działa dla dat historycznych?",
+          "a": "Wynik stosuje kalendarz gregoriański; historyczne przyjęcie kalendarza różniło się między krajami."
+        },
+        {
+          "q": "Czy godzina wpływa na wynik?",
+          "a": "Nie. Kalkulator używa samej daty."
+        }
+      ],
+      "fields": {
+        "date": {
+          "label": "Data",
+          "help": "",
+          "unit": ""
+        }
+      }
+    },
+    "unit-price-calculator": {
+      "slug": "kalkulator-ceny-jednostkowej",
+      "title": "Kalkulator ceny jednostkowej",
+      "description": "Porównaj dwa opakowania, obliczając cenę za tę samą jednostkę.",
+      "explanation": "Każda cena jest dzielona przez ilość w opakowaniu. Porównanie ma sens tylko przy zgodnych jednostkach i porównywalnych produktach.",
+      "example": "Opakowanie 500 g za 8 zł kosztuje 16 zł/kg.",
+      "formula": "Cena jednostkowa = cena opakowania ÷ ilość.",
+      "everyday": "Sprawdź, które opakowanie oferuje niższą cenę za kilogram, litr lub sztukę.",
+      "faqs": [
+        {
+          "q": "Czy większe opakowanie zawsze jest tańsze?",
+          "a": "Nie. Porównaj wyliczoną cenę jednostkową."
+        },
+        {
+          "q": "Czy jednostki muszą być takie same?",
+          "a": "Tak. Użyj porównywalnych ilości i jednostek dla obu opakowań."
+        }
+      ],
+      "fields": {
+        "costA": {
+          "label": "Cena opakowania A",
+          "help": "",
+          "unit": "waluta"
+        },
+        "sizeA": {
+          "label": "Ilość w opakowaniu A",
+          "help": "",
+          "unit": "jednostki"
+        },
+        "costB": {
+          "label": "Cena opakowania B",
+          "help": "",
+          "unit": "waluta"
+        },
+        "sizeB": {
+          "label": "Ilość w opakowaniu B",
+          "help": "",
+          "unit": "jednostki"
+        }
+      }
+    },
+    "reading-time-calculator": {
+      "slug": "kalkulator-czasu-czytania",
+      "title": "Kalkulator czasu czytania",
+      "description": "Oszacuj czas czytania na podstawie liczby słów i tempa czytania.",
+      "explanation": "Słowa są liczone jako ciągi rozdzielone spacjami. Dostosuj tempo do odbiorców i trudności tekstu; treści techniczne i ilustracje mogą wydłużyć lekturę.",
+      "example": "Tekst liczący 900 słów zajmuje około 4 minut przy tempie 225 słów na minutę.",
+      "formula": "Czas czytania w minutach = liczba słów ÷ tempo czytania.",
+      "everyday": "Dodaj orientacyjny czas czytania do artykułu, newslettera lub dłuższego tekstu.",
+      "faqs": [
+        {
+          "q": "Czy wynik przewiduje moje indywidualne tempo?",
+          "a": "Nie. Kalkulator dzieli liczbę słów przez podane tempo."
+        },
+        {
+          "q": "Czy tekst jest wysyłany na serwer?",
+          "a": "Nie. Liczenie odbywa się lokalnie w przeglądarce; nie umieszczaj w linku wrażliwego tekstu."
+        }
+      ],
+      "fields": {
+        "text": {
+          "label": "Tekst",
+          "help": "",
+          "unit": ""
+        },
+        "speed": {
+          "label": "Tempo czytania",
+          "help": "",
+          "unit": "słów/min"
+        }
+      },
+      "limitations": "To szacunek liczby słów oparty na odstępach. Treści techniczne, ilustracje i nieznany język mogą wydłużyć czytanie."
+    }
+  }
+}

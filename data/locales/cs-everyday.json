@@ -27,7 +27,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "kalkulacka-veku"
   },
   "date-calculator": {
     "title": "Kalkulačka data",
@@ -57,7 +58,8 @@
         "help": "",
         "unit": "dny"
       }
-    }
+    },
+    "slug": "kalkulacka-data"
   },
   "time-calculator": {
     "title": "Kalkulačka času",
@@ -101,7 +103,8 @@
           "subtract": "Odečíst"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-casu"
   },
   "hours-calculator": {
     "title": "Převod hodin",
@@ -131,7 +134,8 @@
         "help": "",
         "unit": "min"
       }
-    }
+    },
+    "slug": "prevod-hodin"
   },
   "gpa-calculator": {
     "title": "Kalkulačka studijního průměru",
@@ -181,7 +185,8 @@
         "help": "",
         "unit": "kredity"
       }
-    }
+    },
+    "slug": "kalkulacka-studijniho-prumeru"
   },
   "grade-calculator": {
     "title": "Kalkulačka známek",
@@ -226,7 +231,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-znamek"
   },
   "height-calculator": {
     "title": "Převodník výšky",
@@ -262,7 +268,8 @@
           "ft": "ft"
         }
       }
-    }
+    },
+    "slug": "prevodnik-vysky"
   },
   "concrete-calculator": {
     "title": "Kalkulačka betonu",
@@ -302,7 +309,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-betonu"
   },
   "ip-subnet-calculator": {
     "title": "Kalkulačka podsítě IPv4",
@@ -332,7 +340,8 @@
         "help": "",
         "unit": "/"
       }
-    }
+    },
+    "slug": "kalkulacka-podsite-ipv4"
   },
   "bra-size-calculator": {
     "title": "Kalkulačka velikosti podprsenky",
@@ -363,7 +372,8 @@
         "unit": "palce"
       }
     },
-    "limitations": "Konvence velikosti se liší; použij průvodce přizpůsobením dané značky."
+    "limitations": "Konvence velikosti se liší; použij průvodce přizpůsobením dané značky.",
+    "slug": "kalkulacka-velikosti-podprsenky"
   },
   "password-generator": {
     "title": "Generátor hesel",
@@ -425,7 +435,8 @@
         }
       }
     },
-    "limitations": "Toto heslo bezpečně zkopírujte a uložte."
+    "limitations": "Toto heslo bezpečně zkopírujte a uložte.",
+    "slug": "generator-hesel"
   },
   "dice-roller": {
     "title": "Hod kostkami",
@@ -455,7 +466,8 @@
         "help": "",
         "unit": "stěny"
       }
-    }
+    },
+    "slug": "hod-kostkami"
   },
   "conversion-calculator": {
     "title": "Převodník jednotek",
@@ -526,7 +538,8 @@
           "mph": "mph"
         }
       }
-    }
+    },
+    "slug": "prevodnik-jednotek"
   },
   "fuel-cost-calculator": {
     "title": "Kalkulačka nákladů na palivo",
@@ -561,7 +574,8 @@
         "help": "",
         "unit": "měna/l"
       }
-    }
+    },
+    "slug": "kalkulacka-nakladu-na-palivo"
   },
   "voltage-drop-calculator": {
     "title": "Kalkulačka úbytku napětí",
@@ -602,7 +616,8 @@
         "unit": "Ω·mm²/m"
       }
     },
-    "limitations": "DC dvouvodičová odhad při zadaném měrném odporu."
+    "limitations": "DC dvouvodičová odhad při zadaném měrném odporu.",
+    "slug": "kalkulacka-ubytku-napeti"
   },
   "btu-calculator": {
     "title": "Kalkulačka výkonu klimatizace",
@@ -633,7 +648,8 @@
         "unit": "BTU/h na ft²"
       }
     },
-    "limitations": "Pouze orientační odhad; přesný výpočet tepelné zátěže budovy je spolehlivější."
+    "limitations": "Pouze orientační odhad; přesný výpočet tepelné zátěže budovy je spolehlivější.",
+    "slug": "kalkulacka-vykonu-klimatizace"
   },
   "square-footage-calculator": {
     "title": "Kalkulačka plochy",
@@ -677,7 +693,8 @@
           "m": "m"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-plochy"
   },
   "time-card-calculator": {
     "title": "Kalkulačka pracovní doby",
@@ -712,7 +729,8 @@
         "help": "",
         "unit": "min"
       }
-    }
+    },
+    "slug": "kalkulacka-pracovni-doby"
   },
   "time-zone-calculator": {
     "title": "Převodník časových pásem",
@@ -752,7 +770,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "prevodnik-casovych-pasem"
   },
   "love-calculator": {
     "title": "Kalkulačka lásky",
@@ -783,7 +802,8 @@
         "unit": ""
       }
     },
-    "limitations": "Pouze zábava; jména neměří kompatibilitu vztahů."
+    "limitations": "Pouze zábava; jména neměří kompatibilitu vztahů.",
+    "slug": "kalkulacka-lasky"
   },
   "gdp-calculator": {
     "title": "Kalkulačka HDP",
@@ -828,7 +848,8 @@
         "help": "",
         "unit": "měnové jednotky"
       }
-    }
+    },
+    "slug": "kalkulacka-hdp"
   },
   "gas-mileage-calculator": {
     "title": "Kalkulačka spotřeby paliva",
@@ -858,7 +879,8 @@
         "help": "",
         "unit": "US gal"
       }
-    }
+    },
+    "slug": "kalkulacka-spotreby-paliva"
   },
   "horsepower-calculator": {
     "title": "Kalkulačka výkonu (hp)",
@@ -888,7 +910,8 @@
         "help": "",
         "unit": "ot/min"
       }
-    }
+    },
+    "slug": "kalkulacka-vykonu-hp"
   },
   "engine-horsepower-calculator": {
     "title": "Kalkulačka výkonu motoru",
@@ -927,7 +950,8 @@
           "Nm": "N·m"
         }
       }
-    }
+    },
+    "slug": "kalkulacka-vykonu-motoru"
   },
   "stair-calculator": {
     "title": "Kalkulačka schodiště",
@@ -957,7 +981,8 @@
         "help": "",
         "unit": "palce"
       }
-    }
+    },
+    "slug": "kalkulacka-schodiste"
   },
   "resistor-calculator": {
     "title": "Kalkulačka rezistoru",
@@ -1063,7 +1088,8 @@
         "help": "",
         "unit": "mA"
       }
-    }
+    },
+    "slug": "kalkulacka-rezistoru"
   },
   "ohms-law-calculator": {
     "title": "Kalkulačka Ohmova zákona",
@@ -1098,7 +1124,8 @@
         "help": "",
         "unit": "Ω"
       }
-    }
+    },
+    "slug": "kalkulacka-ohmova-zakona"
   },
   "electricity-calculator": {
     "title": "Kalkulačka nákladů na elektřinu",
@@ -1133,7 +1160,8 @@
         "help": "",
         "unit": "měna/kWh"
       }
-    }
+    },
+    "slug": "kalkulacka-nakladu-na-elektrinu"
   },
   "shoe-size-conversion": {
     "title": "Převodník velikostí obuvi",
@@ -1170,7 +1198,8 @@
         }
       }
     },
-    "limitations": "Pro výběr správné velikosti použij tabulku výrobce."
+    "limitations": "Pro výběr správné velikosti použij tabulku výrobce.",
+    "slug": "prevodnik-velikosti-obuvi"
   },
   "tip-calculator": {
     "title": "Kalkulačka spropitného",
@@ -1219,7 +1248,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-spropitneho"
   },
   "mileage-calculator": {
     "title": "Kalkulačka ujeté vzdálenosti",
@@ -1249,7 +1279,8 @@
         "help": "",
         "unit": "mi"
       }
-    }
+    },
+    "slug": "kalkulacka-ujete-vzdalenosti"
   },
   "density-calculator": {
     "title": "Kalkulačka hustoty",
@@ -1279,7 +1310,8 @@
         "help": "",
         "unit": "cm³"
       }
-    }
+    },
+    "slug": "kalkulacka-hustoty"
   },
   "mass-calculator": {
     "title": "Kalkulačka hmotnosti",
@@ -1309,7 +1341,8 @@
         "help": "",
         "unit": "l"
       }
-    }
+    },
+    "slug": "kalkulacka-hmotnosti"
   },
   "weight-calculator": {
     "title": "Kalkulačka tíhové síly",
@@ -1339,7 +1372,8 @@
         "help": "",
         "unit": "m/s²"
       }
-    }
+    },
+    "slug": "kalkulacka-tihove-sily"
   },
   "speed-calculator": {
     "title": "Kalkulačka rychlosti",
@@ -1369,7 +1403,8 @@
         "help": "",
         "unit": "h"
       }
-    }
+    },
+    "slug": "kalkulacka-rychlosti"
   },
   "molarity-calculator": {
     "title": "Kalkulačka molarity",
@@ -1399,7 +1434,8 @@
         "help": "",
         "unit": "l"
       }
-    }
+    },
+    "slug": "kalkulacka-molarity"
   },
   "molecular-weight-calculator": {
     "title": "Kalkulačka molární hmotnosti",
@@ -1424,7 +1460,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "kalkulacka-molarni-hmotnosti"
   },
   "roman-numeral-converter": {
     "title": "Převodník římských číslic",
@@ -1458,7 +1495,8 @@
           "roman": "Převést římské číslo na celé"
         }
       }
-    }
+    },
+    "slug": "prevodnik-rimskych-cislic"
   },
   "golf-handicap-calculator": {
     "title": "Kalkulačka golfového handicapu",
@@ -1484,7 +1522,8 @@
         "unit": ""
       }
     },
-    "limitations": "Používá tabulku skóre WHS; vynechává čepice a úpravy výjimečného skóre/výboru."
+    "limitations": "Používá tabulku skóre WHS; vynechává čepice a úpravy výjimečného skóre/výboru.",
+    "slug": "kalkulacka-golfoveho-handicapu"
   },
   "sleep-calculator": {
     "title": "Kalkulačka spánku",
@@ -1529,7 +1568,8 @@
         "unit": "cykly"
       }
     },
-    "limitations": "Přibližné plánování cyklu; individuální potřeby spánku se liší."
+    "limitations": "Přibližné plánování cyklu; individuální potřeby spánku se liší.",
+    "slug": "kalkulacka-spanku"
   },
   "tire-size-calculator": {
     "title": "Kalkulačka rozměru pneumatiky",
@@ -1564,7 +1604,8 @@
         "help": "",
         "unit": "palce"
       }
-    }
+    },
+    "slug": "kalkulacka-rozmeru-pneumatiky"
   },
   "roofing-calculator": {
     "title": "Kalkulačka plochy střechy",
@@ -1599,7 +1640,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-plochy-strechy"
   },
   "tile-calculator": {
     "title": "Kalkulačka dlaždic",
@@ -1639,7 +1681,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-dlazdic"
   },
   "mulch-calculator": {
     "title": "Kalkulačka mulče",
@@ -1669,7 +1712,8 @@
         "help": "",
         "unit": "palce"
       }
-    }
+    },
+    "slug": "kalkulacka-mulce"
   },
   "gravel-calculator": {
     "title": "Kalkulačka štěrku",
@@ -1704,7 +1748,8 @@
         "help": "",
         "unit": "lb/ft³"
       }
-    }
+    },
+    "slug": "kalkulacka-sterku"
   },
   "wind-chill-calculator": {
     "title": "Kalkulačka pocitové teploty při větru",
@@ -1735,7 +1780,8 @@
         "unit": "mph"
       }
     },
-    "limitations": "vzorec NWS; platí předpoklady pro odstín a exponovanou pokožku."
+    "limitations": "vzorec NWS; platí předpoklady pro odstín a exponovanou pokožku.",
+    "slug": "kalkulacka-pocitove-teploty-pri-vetru"
   },
   "heat-index-calculator": {
     "title": "Kalkulačka tepelného indexu",
@@ -1766,7 +1812,8 @@
         "unit": "%"
       }
     },
-    "limitations": "NWS odhad pro stín; použij místní pokyny pro tepelnou bezpečnost."
+    "limitations": "NWS odhad pro stín; použij místní pokyny pro tepelnou bezpečnost.",
+    "slug": "kalkulacka-tepelneho-indexu"
   },
   "dew-point-calculator": {
     "title": "Kalkulačka rosného bodu",
@@ -1796,7 +1843,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-rosneho-bodu"
   },
   "bandwidth-calculator": {
     "title": "Kalkulačka doby přenosu",
@@ -1831,7 +1879,8 @@
         "help": "",
         "unit": "%"
       }
-    }
+    },
+    "slug": "kalkulacka-doby-prenosu"
   },
   "base64-encode-decode": {
     "title": "Kodér a dekodér Base64",
@@ -1865,7 +1914,8 @@
           "decode": "Dekódovat"
         }
       }
-    }
+    },
+    "slug": "koder-a-dekoder-base64"
   },
   "url-encode-decode": {
     "title": "Kodér a dekodér URL",
@@ -1899,7 +1949,8 @@
           "decode": "Dekódovat"
         }
       }
-    }
+    },
+    "slug": "koder-a-dekoder-url"
   },
   "time-duration-calculator": {
     "title": "Kalkulačka časového intervalu",
@@ -1929,7 +1980,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "kalkulacka-casoveho-intervalu"
   },
   "day-counter": {
     "title": "Počítadlo dnů",
@@ -1968,7 +2020,8 @@
           "yes": "Ano"
         }
       }
-    }
+    },
+    "slug": "pocitadlo-dnu"
   },
   "day-of-the-week-calculator": {
     "title": "Kalkulačka dne v týdnu",
@@ -1993,7 +2046,8 @@
         "help": "",
         "unit": ""
       }
-    }
+    },
+    "slug": "kalkulacka-dne-v-tydnu"
   },
   "unit-price-calculator": {
     "title": "Kalkulačka jednotkové ceny",
@@ -2033,7 +2087,8 @@
         "help": "",
         "unit": "jednotky"
       }
-    }
+    },
+    "slug": "kalkulacka-jednotkove-ceny"
   },
   "reading-time-calculator": {
     "title": "Kalkulačka doby čtení",
@@ -2064,6 +2119,7 @@
         "unit": "slov/min"
       }
     },
-    "limitations": "Toto je odhad slov založený na mezerách. Technické materiály, obrázky a neznámý jazyk mohou trvat déle."
+    "limitations": "Toto je odhad slov založený na mezerách. Technické materiály, obrázky a neznámý jazyk mohou trvat déle.",
+    "slug": "kalkulacka-doby-cteni"
   }
 }

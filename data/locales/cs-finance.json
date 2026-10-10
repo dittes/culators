@@ -39,7 +39,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-hypotecni"
     },
     "loan-calculator": {
       "title": "Kalkulačka půjčky",
@@ -78,7 +79,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-pujcky"
     },
     "auto-loan-calculator": {
       "title": "Kalkulačka úvěru na auto",
@@ -117,7 +119,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uveru-na-auto"
     },
     "interest-calculator": {
       "title": "Kalkulačka úroku",
@@ -156,7 +159,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uroku"
     },
     "payment-calculator": {
       "title": "Kalkulačka splátek",
@@ -195,7 +199,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-splatek"
     },
     "retirement-calculator": {
       "title": "Kalkulačka na důchod",
@@ -240,7 +245,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-na-duchod"
     },
     "amortization-calculator": {
       "title": "Kalkulačka amortizace půjčky",
@@ -279,7 +285,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-amortizace-pujcky"
     },
     "investment-calculator": {
       "title": "Investiční kalkulačka",
@@ -324,7 +331,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-investicni"
     },
     "currency-calculator": {
       "title": "Měnová kalkulačka",
@@ -363,7 +371,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-menova"
     },
     "inflation-calculator": {
       "title": "Inflační kalkulačka",
@@ -402,7 +411,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-inflacni"
     },
     "finance-calculator": {
       "title": "Finanční kalkulačka",
@@ -447,7 +457,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-financni"
     },
     "mortgage-payoff-calculator": {
       "title": "Kalkulačka předčasného splacení hypotéky",
@@ -492,7 +503,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-predcasneho-splaceni-hypoteky"
     },
     "tax-calculator": {
       "title": "Kalkulačka daně z příjmu",
@@ -531,7 +543,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dane-z-prijmu"
     },
     "compound-interest-calculator": {
       "title": "Kalkulačka složeného úročení",
@@ -576,7 +589,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-slozeneho-uroceni"
     },
     "salary-calculator": {
       "title": "Kalkulačka mzdy",
@@ -615,7 +629,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-mzdy"
     },
     "401k-calculator": {
       "title": "Kalkulačka 401(k)",
@@ -660,7 +675,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-401-k"
     },
     "interest-rate-calculator": {
       "title": "Kalkulačka výnosu investice",
@@ -699,7 +715,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-vynosu-investice"
     },
     "sales-tax-calculator": {
       "title": "Kalkulačka daně z prodeje",
@@ -732,7 +749,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dane-z-prodeje"
     },
     "house-affordability-calculator": {
       "title": "Kalkulačka dostupnosti bydlení",
@@ -795,7 +813,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dostupnosti-bydleni"
     },
     "savings-calculator": {
       "title": "Kalkulačka úspor",
@@ -840,7 +859,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uspor"
     },
     "rent-calculator": {
       "title": "Kalkulačka rozpočtu na nájem",
@@ -885,7 +905,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-rozpoctu-na-najem"
     },
     "marriage-calculator": {
       "title": "Kalkulačka daně pro manžele",
@@ -924,7 +945,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dane-pro-manzele"
     },
     "estate-tax-calculator": {
       "title": "Kalkulačka dědické daně",
@@ -963,7 +985,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dedicke-dane"
     },
     "pension-calculator": {
       "title": "Kalkulačka výplaty penze",
@@ -1002,7 +1025,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-vyplaty-penze"
     },
     "social-security-calculator": {
       "title": "Kalkulačka dávek Social Security",
@@ -1041,7 +1065,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-davek-social-security"
     },
     "annuity-calculator": {
       "title": "Kalkulačka spoření na anuitu",
@@ -1080,7 +1105,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-sporeni-na-anuitu"
     },
     "annuity-payout-calculator": {
       "title": "Kalkulačka výplaty anuity",
@@ -1119,7 +1145,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-vyplaty-anuity"
     },
     "credit-card-calculator": {
       "title": "Kalkulačka kreditní karty",
@@ -1158,7 +1185,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-kreditni-karty"
     },
     "credit-card-payoff-calculator": {
       "title": "Kalkulačka splacení kreditní karty",
@@ -1197,7 +1225,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-splaceni-kreditni-karty"
     },
     "debt-payoff-calculator": {
       "title": "Kalkulačka splácení dluhu",
@@ -1236,7 +1265,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-splaceni-dluhu"
     },
     "debt-consolidation-calculator": {
       "title": "Kalkulačka konsolidace dluhu",
@@ -1287,7 +1317,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-konsolidace-dluhu"
     },
     "repayment-calculator": {
       "title": "Kalkulačka splátky půjčky",
@@ -1326,7 +1357,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-splatky-pujcky"
     },
     "student-loan-calculator": {
       "title": "Kalkulačka studentské půjčky",
@@ -1365,7 +1397,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-studentske-pujcky"
     },
     "college-cost-calculator": {
       "title": "Kalkulačka nákladů na studium",
@@ -1404,7 +1437,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-nakladu-na-studium"
     },
     "simple-interest-calculator": {
       "title": "Kalkulačka jednoduchého úroku",
@@ -1443,7 +1477,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-jednoducheho-uroku"
     },
     "cd-calculator": {
       "title": "Kalkulačka CD vkladu",
@@ -1482,7 +1517,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-cd-vkladu"
     },
     "bond-calculator": {
       "title": "Kalkulačka dluhopisu",
@@ -1521,7 +1557,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dluhopisu"
     },
     "mutual-fund-calculator": {
       "title": "Kalkulačka podílového fondu",
@@ -1566,7 +1603,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-podiloveho-fondu"
     },
     "roth-ira-calculator": {
       "title": "Kalkulačka Roth IRA",
@@ -1611,7 +1649,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-roth-ira"
     },
     "ira-calculator": {
       "title": "Kalkulačka IRA",
@@ -1656,7 +1695,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-ira"
     },
     "rmd-calculator": {
       "title": "Kalkulačka povinného výběru RMD",
@@ -1689,7 +1729,8 @@
           "unit": "table factor",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-povinneho-vyberu-rmd"
     },
     "vat-calculator": {
       "title": "Kalkulačka DPH",
@@ -1722,7 +1763,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-dph"
     },
     "cash-back-or-low-interest-calculator": {
       "title": "Kalkulačka cashbacku nebo nižší sazby",
@@ -1773,7 +1815,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-cashbacku-nebo-nizsi-sazby"
     },
     "auto-lease-calculator": {
       "title": "Kalkulačka leasingu auta",
@@ -1824,7 +1867,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-leasingu-auta"
     },
     "depreciation-calculator": {
       "title": "Kalkulačka odpisů",
@@ -1869,7 +1913,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-odpisu"
     },
     "average-return-calculator": {
       "title": "Kalkulačka průměrného výnosu",
@@ -1908,7 +1953,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-prumerneho-vynosu"
     },
     "margin-calculator": {
       "title": "Kalkulačka marže",
@@ -1941,7 +1987,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-marze"
     },
     "discount-calculator": {
       "title": "Kalkulačka slevy",
@@ -1974,7 +2021,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-slevy"
     },
     "business-loan-calculator": {
       "title": "Kalkulačka podnikatelského úvěru",
@@ -2013,7 +2061,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-podnikatelskeho-uveru"
     },
     "debt-ratio-calculator": {
       "title": "Kalkulačka poměru dluhu k příjmu",
@@ -2046,7 +2095,8 @@
           "unit": "USD/rok",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-pomeru-dluhu-k-prijmu"
     },
     "real-estate-calculator": {
       "title": "Kalkulačka financování nemovitosti",
@@ -2109,7 +2159,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-financovani-nemovitosti"
     },
     "take-home-pay-calculator": {
       "title": "Kalkulačka čisté mzdy",
@@ -2148,7 +2199,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-ciste-mzdy"
     },
     "personal-loan-calculator": {
       "title": "Kalkulačka osobní půjčky",
@@ -2187,7 +2239,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-osobni-pujcky"
     },
     "boat-loan-calculator": {
       "title": "Kalkulačka úvěru na loď",
@@ -2226,7 +2279,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uveru-na-lod"
     },
     "lease-calculator": {
       "title": "Kalkulačka leasingové splátky",
@@ -2265,7 +2319,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-leasingove-splatky"
     },
     "refinance-calculator": {
       "title": "Kalkulačka refinancování",
@@ -2316,7 +2371,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-refinancovani"
     },
     "budget-calculator": {
       "title": "Kalkulačka měsíčního rozpočtu",
@@ -2361,7 +2417,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-mesicniho-rozpoctu"
     },
     "rental-property-calculator": {
       "title": "Kalkulačka výnosu z pronájmu",
@@ -2412,7 +2469,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-vynosu-z-pronajmu"
     },
     "irr-calculator": {
       "title": "Kalkulačka IRR",
@@ -2457,7 +2515,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-irr"
     },
     "roi-calculator": {
       "title": "Kalkulačka návratnosti investice",
@@ -2496,7 +2555,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-navratnosti-investice"
     },
     "apr-calculator": {
       "title": "Kalkulačka RPSN",
@@ -2541,7 +2601,8 @@
           "unit": "USD",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-rpsn"
     },
     "fha-loan-calculator": {
       "title": "Kalkulačka úvěru FHA",
@@ -2598,7 +2659,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uveru-fha"
     },
     "va-mortgage-calculator": {
       "title": "Kalkulačka hypotéky VA",
@@ -2649,7 +2711,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-hypoteky-va"
     },
     "home-equity-loan-calculator": {
       "title": "Kalkulačka úvěru z vlastního kapitálu domu",
@@ -2688,7 +2751,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uveru-z-vlastniho-kapitalu-domu"
     },
     "heloc-calculator": {
       "title": "Kalkulačka úroku HELOC",
@@ -2727,7 +2791,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-uroku-heloc"
     },
     "down-payment-calculator": {
       "title": "Kalkulačka akontace",
@@ -2772,7 +2837,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-akontace"
     },
     "rent-vs-buy-calculator": {
       "title": "Kalkulačka nájmu nebo koupě",
@@ -2835,7 +2901,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-najmu-nebo-koupe"
     },
     "payback-period-calculator": {
       "title": "Kalkulačka doby návratnosti",
@@ -2880,7 +2947,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-doby-navratnosti"
     },
     "present-value-calculator": {
       "title": "Kalkulačka současné hodnoty",
@@ -2925,7 +2993,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-soucasne-hodnoty"
     },
     "future-value-calculator": {
       "title": "Kalkulačka budoucí hodnoty",
@@ -2964,7 +3033,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-budouci-hodnoty"
     },
     "commission-calculator": {
       "title": "Kalkulačka provize",
@@ -3003,7 +3073,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-provize"
     },
     "mortgage-calculator-uk": {
       "title": "Hypoteční kalkulačka pro Spojené království",
@@ -3042,7 +3113,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-hypotecni-pro-spojene-kralovstvi"
     },
     "canadian-mortgage-calculator": {
       "title": "Kanadská hypoteční kalkulačka",
@@ -3087,7 +3159,8 @@
           "unit": "roky",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-kanadska-hypotecni"
     },
     "mortgage-amortization-calculator": {
       "title": "Kalkulačka amortizace hypotéky",
@@ -3132,7 +3205,8 @@
           "unit": "USD/měsíc",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-amortizace-hypoteky"
     },
     "percent-off-calculator": {
       "title": "Kalkulačka procentní slevy",
@@ -3165,7 +3239,8 @@
           "unit": "%",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-procentni-slevy"
     },
     "break-even-calculator": {
       "title": "Kalkulačka bodu zvratu",
@@ -3204,7 +3279,8 @@
           "unit": "currency",
           "options": {}
         }
-      }
+      },
+      "slug": "kalkulacka-bodu-zvratu"
     }
   }
 }
