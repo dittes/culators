@@ -1,5 +1,0 @@
-{
- "origin":"https://culators.com", "name":"culators", "language":"en",
- "imprint":{"name":"culators.com c/o Andreas Dittes","street":"Bautzener Str. 35","postalCity":"101829 Berlin","email":"culators@dittes.info"},
- "categories":{"finance":{"title":"Finance","description":"Plan the money decisions that matter. Explore loans, savings, investments, taxes and the everyday arithmetic behind a budget.","icon":"$"},"health":{"title":"Health & fitness","description":"Understand the numbers behind nutrition, training and body measurements. Estimates with clear assumptions, not a substitute for personal medical advice.","icon":"♡"},"math":{"title":"Math","description":"Make sense of numbers, shapes and statistics. Get useful answers with the formulas and examples that explain how they work.","icon":"∑"},"everyday":{"title":"Everyday","description":"A little less mental arithmetic. Calculate dates, time, building materials, energy, travel and the practical details of everyday life.","icon":"⌁"}}
-}
