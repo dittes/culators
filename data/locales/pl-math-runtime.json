@@ -1,0 +1,316 @@
+{
+  "language": "pl-PL",
+  "category": "math",
+  "translations": {
+    "2": "2",
+    "4": "4",
+    "6": "6",
+    "7": "7",
+    "8": "8",
+    "10": "10",
+    "Result": "Wynik",
+    "Reduced fraction": "Ułamek skrócony",
+    "Decimal value": "Wartość dziesiętna",
+    "%": "%",
+    "Triangle area": "Pole trójkąta",
+    "square units": "jednostki kwadratowe",
+    "Third side": "Trzeci bok",
+    "Volume": "Objętość",
+    "cubic units": "jednostki sześcienne",
+    "Sample standard deviation": "Odchylenie standardowe z próby",
+    "Mean": "Średnia arytmetyczna",
+    "Variance": "Wariancja",
+    "Population standard deviation": "Odchylenie standardowe populacji",
+    "Each draw uses Web Crypto rejection sampling over the inclusive integer range.": "Każde losowanie korzysta z bezpiecznego próbkowania Web Crypto włącznie z oboma końcami zakresu liczb całkowitych.",
+    "Each draw uses 53 secure random bits; the minimum is included and maximum excluded.": "Każde losowanie używa 53 bezpiecznych bitów losowych; minimum jest włączone, a maksimum wyłączone.",
+    "Next arithmetic term": "Następny wyraz ciągu arytmetycznego",
+    "Common difference": "Różnica ciągu",
+    "Absolute percent error": "Bezwzględny błąd procentowy",
+    "Signed percent error": "Podpisany błąd procentowy",
+    "Power": "Potęga",
+    "Result in base 2": "Wynik w systemie dwójkowym",
+    "Remainder": "Reszta z dzielenia",
+    "Result in base 16": "Wynik w systemie szesnastkowym",
+    "Remaining quantity": "Pozostała ilość",
+    "Fraction remaining": "Pozostała część",
+    "Half-lives elapsed": "Liczba upłyniętych okresów półtrwania",
+    "Roots": "Pierwiastki",
+    "Discriminant": "Wyróżnik trójmianu (delta)",
+    "Root count": "Liczba pierwiastków",
+    "Slope": "Nachylenie prostej",
+    "Line equation": "Równanie prostej",
+    "Check": "Sprawdzenie",
+    "Area": "Pole",
+    "Required sample size": "Wymagana liczebność próby",
+    "responses": "odpowiedzi",
+    "Unrounded estimate": "Wynik przed zaokrągleniem",
+    "z critical value": "Krytyczna wartość z",
+    "Uncorrected estimate": "Wynik bez korekty",
+    "Required whole responses": "Wymagana liczba pełnych odpowiedzi",
+    "Event probability": "Prawdopodobieństwo zdarzenia",
+    "Expected successes": "Oczekiwana liczba sukcesów",
+    "Event": "Zdarzenie",
+    "0 successes": "0 sukcesów",
+    "1 successes": "1 sukces",
+    "2 successes": "2 sukcesy",
+    "3 successes": "3 sukcesy",
+    "4 successes": "4 sukcesy",
+    "5 successes": "5 sukcesów",
+    "Dataset summary": "Podsumowanie zbioru danych",
+    "Median": "Mediana",
+    "Mode": "Dominanta",
+    "Range": "Rozstęp",
+    "Q1": "Q1 (pierwszy kwartyl)",
+    "Q3": "Q3 (trzeci kwartyl)",
+    "Combinations": "Kombinacje",
+    "Permutations": "Permutacje",
+    "Z-score": "Wynik standaryzowany (z-score)",
+    "standard deviations": "odchylenia standardowe",
+    "95% confidence interval": "95-procentowy przedział ufności",
+    "Margin of error": "Margines błędu",
+    "Degrees of freedom": "Liczba stopni swobody",
+    "Approximate t critical value": "Przybliżona krytyczna wartość t",
+    "90% confidence interval": "90-procentowy przedział ufności",
+    "99% confidence interval": "99-procentowy przedział ufności",
+    "Simplified ratio": "Uproszczony stosunek",
+    "First share": "Pierwszy udział",
+    "Second share": "Drugi udział",
+    "First part share": "Udział pierwszej części",
+    "Second part share": "Udział drugiej części",
+    "Straight-line distance": "Odległość w linii prostej",
+    "units": "jednostki",
+    "Δx": "Δx",
+    "Δy": "Δy",
+    "Circle measurements": "Wymiary okręgu",
+    "Diameter": "Średnica",
+    "Circumference": "Obwód",
+    "Total surface area": "Całkowite pole powierzchni",
+    "Missing or derived side": "Brakujący lub wyznaczony bok",
+    "Leg 1": "Przyprostokątna 1",
+    "Leg 2": "Przyprostokątna 2",
+    "Hypotenuse": "Przeciwprostokątna",
+    "Acute angles": "Kąty ostre",
+    "Right-triangle completion": "Uzupełnienie trójkąta prostokątnego",
+    "Side opposite entered angle": "Bok naprzeciw podanego kąta",
+    "Other leg": "Druga przyprostokątna",
+    "Principal real root": "Główny pierwiastek rzeczywisty",
+    "Least common multiple": "Najmniejsza wspólna wielokrotność",
+    "Greatest common factor": "Największy wspólny dzielnik",
+    "Factor pairs": "Pary czynników",
+    "Prime or composite": "Liczba pierwsza lub złożona",
+    "Positive factor count": "Liczba dodatnich dzielników",
+    "Rounded value": "Wartość po zaokrągleniu",
+    "Places": "Miejsca po przecinku",
+    "Product matrix": "Iloczyn macierzy",
+    "Result matrix": "Macierz wynikowa",
+    "Scientific notation": "Zapis naukowy",
+    "Coefficient": "Współczynnik",
+    "Exponent": "Wykładnik",
+    "Exact integer result": "Dokładny wynik całkowity",
+    "Prime factorization": "Rozkład na czynniki pierwsze",
+    "Prime factors with multiplicity": "Czynniki pierwsze z uwzględnieniem krotności",
+    "Common factors": "Wspólne dzielniki",
+    "Integer quotient": "Iloraz całkowity",
+    "Decimal quotient": "Iloraz dziesiętny",
+    "Arithmetic mean": "Średnia arytmetyczna",
+    "Count": "Liczba wartości",
+    "Total": "Suma",
+    "two-tailed p-value": "Wartość p dla testu dwustronnego",
+    "left-tailed p-value": "Wartość p dla testu lewostronnego",
+    "right-tailed p-value": "Wartość p dla testu prawostronnego",
+    "integers": "liczby całkowite",
+    "numbers": "liczby",
+    "The result is outside the supported numeric range.": "Wynik wykracza poza obsługiwany zakres liczbowy.",
+    "Enter an expression of 1 to 200 characters.": "Wpisz wyrażenie o długości od 1 do 200 znaków.",
+    "Expression contains unsupported characters.": "Wyrażenie zawiera nieobsługiwane znaki.",
+    "The expression is too long.": "Wyrażenie jest za długie.",
+    "Expression ends unexpectedly.": "Wyrażenie kończy się nieoczekiwanie.",
+    "Check the expression parentheses.": "Sprawdź nawiasy w wyrażeniu.",
+    "Numeric literal is outside the supported range.": "Wartość liczbowa wykracza poza obsługiwany zakres.",
+    "Use only numbers, parentheses, and +, −, *, /, or %.": "Używaj wyłącznie liczb, nawiasów oraz znaków +, −, *, / lub %.",
+    "Division by zero is undefined.": "Dzielenie przez zero jest niezdefiniowane.",
+    "A secure random generator is unavailable in this environment.": "W tym środowisku bezpieczny generator liczb losowych jest niedostępny.",
+    "The second fraction cannot be zero when dividing.": "Drugi ułamek nie może być zerem przy dzieleniu.",
+    "The base value must not be zero.": "Wartość bazowa nie może wynosić zero.",
+    "The starting value must not be zero for percent change.": "Wartość początkowa nie może wynosić zero przy obliczaniu zmiany procentowej.",
+    "The included angle must be less than 180° to form a triangle.": "Kąt zawarty musi być mniejszy niż 180°, aby można było utworzyć trójkąt.",
+    "Sample standard deviation requires at least two values.": "Obliczenie odchylenia standardowego z próby wymaga co najmniej dwóch wartości.",
+    "Choose integer or decimal mode.": "Wybierz tryb liczb całkowitych lub dziesiętnych.",
+    "Maximum must be greater than or equal to minimum.": "Maksimum musi być większe od minimum lub mu równe.",
+    "Decimal maximum must be greater than minimum.": "Maksimum w trybie dziesiętnym musi być większe od minimum.",
+    "Integer mode requires safe whole-number bounds.": "Tryb liczb całkowitych wymaga bezpiecznych granic będących liczbami całkowitymi.",
+    "Zero cannot be raised to a negative exponent.": "Zera nie można podnosić do ujemnej potęgi.",
+    "A negative base with a non-integer exponent has no real-valued result.": "Ujemna podstawa i niecałkowity wykładnik nie dają wyniku rzeczywistego.",
+    "The second number must not be zero for division.": "Druga liczba nie może wynosić zero przy dzieleniu.",
+    "The two points must be distinct to define a line.": "Punkty muszą być różne, aby wyznaczyć prostą.",
+    "The logarithm base must not equal 1.": "Podstawa logarytmu nie może być równa 1.",
+    "At least one ratio part must be greater than zero.": "Co najmniej jedna część stosunku musi być większa od zera.",
+    "The hypotenuse must be longer than the known leg.": "Przeciwprostokątna musi być dłuższa od znanej przyprostokątnej.",
+    "The acute angle must be greater than 0° and less than 90°.": "Kąt ostry musi być większy od 0° i mniejszy od 90°.",
+    "An even root of a negative number is not real.": "Pierwiastek parzystego stopnia z liczby ujemnej nie jest liczbą rzeczywistą.",
+    "Both values cannot be zero.": "Obie wartości nie mogą jednocześnie wynosić zero.",
+    "Matrix A columns must equal matrix B rows for multiplication.": "Liczba kolumn macierzy A musi być równa liczbie wierszy macierzy B, aby je pomnożyć.",
+    "Addition and subtraction require matrices with identical dimensions.": "Dodawanie i odejmowanie wymagają macierzy o identycznych wymiarach.",
+    "This calculator is not configured.": "Ten kalkulator nie jest skonfigurowany.",
+    "__patterns": [
+      {
+        "pattern": "^(.+) must contain between (.+) and (.+) valid numbers, separated by commas or spaces\\.$",
+        "replacement": "Wprowadź od $2 do $3 prawidłowych liczb oddzielonych przecinkami lub spacjami."
+      },
+      {
+        "pattern": "^(.+) must contain between (.+) and (.+) valid integers, separated by commas or spaces\\.$",
+        "replacement": "Wprowadź od $2 do $3 prawidłowych liczb całkowitych oddzielonych przecinkami lub spacjami."
+      },
+      {
+        "pattern": "^(.+) must contain at least one valid numbers, separated by commas or spaces\\.$",
+        "replacement": "Wprowadź co najmniej jedną prawidłową liczbę oddzieloną przecinkiem lub spacją."
+      },
+      {
+        "pattern": "^(.+) must contain at least one valid integers, separated by commas or spaces\\.$",
+        "replacement": "Wprowadź co najmniej jedną prawidłową liczbę całkowitą oddzieloną przecinkiem lub spacją."
+      },
+      {
+        "pattern": "^(.+) values$",
+        "replacement": "$1 wartości"
+      },
+      {
+        "pattern": "^(.+) real roots$",
+        "replacement": "$1 pierwiastki rzeczywiste"
+      },
+      {
+        "pattern": "^(.+) is required\\.$",
+        "replacement": "Pole $1 jest wymagane."
+      },
+      {
+        "pattern": "^(.+) must be a number from (.+) to (.+)\\.$",
+        "replacement": "Wartość $1 musi być liczbą z zakresu od $2 do $3."
+      },
+      {
+        "pattern": "^(.+) must be an integer from (.+) to (.+)\\.$",
+        "replacement": "Wartość $1 musi być liczbą całkowitą z zakresu od $2 do $3."
+      },
+      {
+        "pattern": "^(.+) must be above (.+) to (.+)\\.$",
+        "replacement": "Wartość $1 musi być większa niż $2 i nie większa niż $3."
+      },
+      {
+        "pattern": "^(.+) must contain (.+) valid integers, separated by commas or spaces\\.$",
+        "replacement": "$1 musi zawierać $2 prawidłowe liczby całkowite oddzielone przecinkami lub spacjami."
+      },
+      {
+        "pattern": "^(.+) must contain (.+) valid numbers, separated by commas or spaces\\.$",
+        "replacement": "$1 musi zawierać $2 prawidłowe liczby oddzielone przecinkami lub spacjami."
+      },
+      {
+        "pattern": "^(.+) must be a whole number written with digits\\.$",
+        "replacement": "$1 musi być liczbą całkowitą zapisaną cyframi."
+      },
+      {
+        "pattern": "^(.+) must be a nonzero integer between (.+) and (.+)\\.$",
+        "replacement": "$1 musi być niezerową liczbą całkowitą z zakresu od $2 do $3."
+      },
+      {
+        "pattern": "^(.+) must be an integer between (.+) and (.+)\\.$",
+        "replacement": "$1 musi być liczbą całkowitą z zakresu od $2 do $3."
+      },
+      {
+        "pattern": "^(.+) must be a whole number with at most 200 digits\\.$",
+        "replacement": "$1 musi być liczbą całkowitą o długości nie większej niż 200 cyfr."
+      },
+      {
+        "pattern": "^(.+) must be a binary integer\\.$",
+        "replacement": "$1 musi być liczbą całkowitą zapisaną w systemie dwójkowym."
+      },
+      {
+        "pattern": "^(.+) must be a hexadecimal integer\\.$",
+        "replacement": "$1 musi być liczbą całkowitą zapisaną w systemie szesnastkowym."
+      },
+      {
+        "pattern": "^(.+) must be followed by parentheses\\.$",
+        "replacement": "Po $1 muszą występować nawiasy."
+      },
+      {
+        "pattern": "^Check the parentheses after (.+)\\.$",
+        "replacement": "Sprawdź nawiasy po funkcji $1."
+      },
+      {
+        "pattern": "^Unsupported function or constant: (.+)\\.$",
+        "replacement": "Nieobsługiwana funkcja lub stała: $1."
+      },
+      {
+        "pattern": "^Unexpected token: (.+)\\.$",
+        "replacement": "Nieoczekiwany element wyrażenia: $1."
+      },
+      {
+        "pattern": "^log base (.+)$",
+        "replacement": "logarytm o podstawie $1"
+      },
+      {
+        "pattern": "^Result in base (.+)$",
+        "replacement": "Wynik w systemie o podstawie $1"
+      },
+      {
+        "pattern": "^Generated (.+) integer values$",
+        "replacement": "Wygenerowano $1 liczb całkowitych"
+      },
+      {
+        "pattern": "^Generated (.+) decimal values$",
+        "replacement": "Wygenerowano $1 liczb dziesiętnych"
+      },
+      {
+        "pattern": "^Generated (.+) integer value$",
+        "replacement": "Wygenerowano $1 liczbę całkowitą"
+      },
+      {
+        "pattern": "^Generated (.+) decimal value$",
+        "replacement": "Wygenerowano $1 liczbę dziesiętną"
+      },
+      {
+        "pattern": "^Draw (.+)$",
+        "replacement": "Losowanie $1"
+      },
+      {
+        "pattern": "^(.+)% of (.+)$",
+        "replacement": "$1% z $2"
+      },
+      {
+        "pattern": "^Choose a valid .+\\.$",
+        "replacement": "Wybierz prawidłową opcję."
+      },
+      {
+        "pattern": "^radius (.+)$",
+        "replacement": "promień $1"
+      },
+      {
+        "pattern": "^(.+) to (.+)$",
+        "replacement": "$1 do $2"
+      }
+    ],
+    "A as a percentage of B": "A jako procent wartości B",
+    "Percent change": "Zmiana procentowa",
+    "Choose a valid option.": "Wybierz prawidłową opcję.",
+    "No mode": "Brak dominanty",
+    "Composite": "Liczba złożona",
+    "Prime": "Liczba pierwsza",
+    "Undefined": "Nieokreślone",
+    "exact": "dokładnie",
+    "at-most": "co najwyżej",
+    "at-least": "co najmniej",
+    "two real roots": "dwa pierwiastki rzeczywiste",
+    "one real root": "jeden pierwiastek rzeczywisty",
+    "one repeated root": "jeden pierwiastek podwójny",
+    "two complex roots": "dwa pierwiastki zespolone",
+    "No real roots": "Brak pierwiastków rzeczywistych",
+    "15% of 200": "15% z 200",
+    "observations": "obserwacje",
+    "Generated 4 integer values": "Wygenerowane 4 liczby całkowite",
+    "Draw 1": "Losowanie 1",
+    "Draw 2": "Losowanie 2",
+    "Draw 3": "Losowanie 3",
+    "Draw 4": "Losowanie 4",
+    "Generated 4 decimal values": "Wygenerowane 4 liczby dziesiętne",
+    "log base 2": "logarytm o podstawie 2",
+    "% probability": "% prawdopodobieństwa",
+    "total units": "jednostek łącznie"
+  }
+}

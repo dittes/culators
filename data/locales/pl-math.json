@@ -1,0 +1,1748 @@
+{
+  "scientific-calculator": {
+    "title": "Kalkulator naukowy",
+    "description": "Kalkulator naukowy oblicza wyrażenia za pomocą nawiasów, potęg, pierwiastków kwadratowych, logarytmów i funkcji trygonometrycznych. Nadaje się do sprawdzania przykładów szkolnych i obliczeń technicznych.",
+    "explanation": "Wprowadź wyrażenie zawierające typowe operatory i obsługiwane funkcje, takie jak sqrt(), sin(), cos(), log() lub ln(). Funkcje trygonometryczne korzystają z radianów, a potęgowanie ma pierwszeństwo przed mnożeniem.",
+    "example": "W przypadku wyrażenia 2*(3+4)^2 najpierw dodaj 3+4=7 w nawiasach, pomnóż 7 przez 49 i wynik pomnóż przez dwa: 98.",
+    "formula": "Wyrażenie jest oceniane zgodnie ze zwykłym priorytetem operatora; Funkcje trygonometryczne działają w radianach.",
+    "limitations": "W obliczeniach używane są liczby zmiennoprzecinkowe, dlatego niektóre wyniki dziesiętne są zaokrąglane.",
+    "everyday": "Podczas odrabiania lekcji możesz sprawdzić dłuższe wyrażenie, na przykład pierwiastek kwadratowy z sumy i późniejsze potęgowanie.",
+    "faqs": [
+      {
+        "q": "Jakie jednostki kątów są używane?",
+        "a": "Sinus, cosinus i tangens oczekują radianów."
+      },
+      {
+        "q": "Czy wyniki dziesiętne są zawsze dokładne?",
+        "a": "Nie. Liczby zmiennoprzecinkowe mogą zaokrąglać bardzo małe, duże lub okresowe wartości."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Wyrażenie matematyczne",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-naukowy"
+  },
+  "fraction-calculator": {
+    "title": "Kalkulator ułamków",
+    "description": "Dodawaj, odejmij, mnóż i dziel dwa ułamki zwykłe i wyświetlaj wynik w podstawowej formie. Notacja dziesiętna pomaga porównać ułamek z miarą lub inną notacją.",
+    "explanation": "Dodawanie i odejmowanie mają wspólny mianownik. Mnożenie działa bezpośrednio z licznikami i mianownikami; dzielenie mnoży się przez odwrotność drugiego ułamka.",
+    "example": "Dla 2/3 + 1/4 wspólnym mianownikiem jest 12: 8/12 + 3/12 = 11/12.",
+    "formula": "Skróć wynik o największy wspólny dzielnik licznika i mianownika.",
+    "limitations": "Mianownik nie może wynosić zero, a drugi ułamek nie może wynosić zero podczas dzielenia.",
+    "everyday": "W przepisie możesz szybko dodać na przykład 2/3 filiżanki i 1/4 filiżanki bez konwersji na liczby dziesiętne.",
+    "faqs": [
+      {
+        "q": "Czy wynik zostanie skrócony?",
+        "a": "Tak, zarówno licznik, jak i mianownik są dzielone przez największy wspólny dzielnik."
+      },
+      {
+        "q": "Czy jest podzielna przez ułamek zera?",
+        "a": "Nie, dzielenie przez zero nie jest zdefiniowane."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwszy czytelnik",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Pierwszy mianownik",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Działanie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Dodatek",
+          "-": "Odejmowanie",
+          "*": "Mnożenie",
+          "/": "Dział"
+        }
+      },
+      "c": {
+        "label": "Drugi czytelnik",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "d": {
+        "label": "Drugi mianownik",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-ulamkow"
+  },
+  "percent-calculator": {
+    "title": "Kalkulator procentowy",
+    "description": "Rozwiążesz trzy typowe problemy procentowe: oblicz procent kwoty, dowiedz się, ile procent jednej wartości stanowi inna wartość lub różnicę między wartością pierwotną a nową.",
+    "explanation": "Wybierz znany związek. Procent liczby to podstawa×procent/100; iloraz to część/podstawa×100; zmiana procentowa wynosi (nowy−oryginał)/|oryginał|×100.",
+    "example": "Cena wzrosła z 80 do 92. Zmiana wynosi (92−80)/80×100 = 15%.",
+    "formula": "Zmiana procentowa wykorzystuje pierwotną wartość jako podstawę i zachowuje znak wzrostu lub spadku.",
+    "limitations": "Nie można określić procentowej zmiany, jeśli pierwotna wartość wynosi zero.",
+    "everyday": "Porównując rabat lub podwyżkę ceny, możesz łatwo sprawdzić, jaką część pierwotnej ceny stanowi dana zmiana.",
+    "faqs": [
+      {
+        "q": "Co oznacza negatywna zmiana?",
+        "a": "Nowa wartość jest niższa niż wartość pierwotna; znak wskazuje kierunek zmian."
+      },
+      {
+        "q": "Dlaczego zmiany nie można obliczyć od zera?",
+        "a": "Zerowa wartość pierwotna nie może być podstawą mianownika."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Typ zadania",
+        "help": "",
+        "unit": "",
+        "options": {
+          "of": "Procent liczby",
+          "what-percent": "Jaki procent stanowi A w B?",
+          "change": "Procentowa zmiana wartości oryginalnej na nową"
+        }
+      },
+      "a": {
+        "label": "Procent lub pierwsza wartość",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Wartość podstawowa lub druga",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-procentowy"
+  },
+  "triangle-calculator": {
+    "title": "Kalkulator trójkąta",
+    "description": "Oblicz pole i trzeci bok trójkąta z dwóch boków oraz kąt między nimi. Kontrola danych wejściowych sprawdza, czy dane mogą tworzyć prawidłowy trójkąt.",
+    "explanation": "Dla boków a, b i kąta zawartego C obowiązuje zawartość=ab·sin(C)/2 i c=√(a²+b²−2ab·cos(C)). Wprowadź kąt w stopniach.",
+    "example": "Boki 5 i 7 o założonym kącie 60° mają pole powierzchni w przybliżeniu 15,16 jednostek kwadratowych, a trzeci bok √39≈6,245.",
+    "formula": "Treść=ab·sin(C)/2; trzeci bok jest określony przez twierdzenie cosinus.",
+    "limitations": "Kąt zawarty musi być większy niż 0° i mniejszy niż 180°; strony muszą używać tych samych jednostek.",
+    "everyday": "Planując przekrój lub sprawdzając zadanie geometryczne, dodajesz zawartość obszaru trójkątnego z normalnych wymiarów.",
+    "faqs": [
+      {
+        "q": "Jaki musi być kąt?",
+        "a": "Musi mieścić się w przedziale od 0° do 180°, w przeciwnym razie trójkąt nie powstanie."
+      },
+      {
+        "q": "Jaką jednostkę ma treść?",
+        "a": "Jest to kwadrat jednostki bocznej, na przykład cm²."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Strona A",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Strona b",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "angle": {
+        "label": "Kąt rozwarty",
+        "help": "",
+        "unit": "stopnie",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-trojkata"
+  },
+  "volume-calculator": {
+    "title": "Kalkulator objętości",
+    "description": "Oblicz objętość sześcianu, prostopadłościanu, walca, kuli, stożka lub trójkątnego pryzmatu. Wybierz bryłę i wprowadź jej wymiary, aby otrzymać wynik w jednostkach sześciennych.",
+    "explanation": "Wykorzystywany jest wzór geometryczny wybranego ciała: np. walec πr²h, kula 4πr³/3 i stożek πr²h/3.",
+    "example": "Walec o promieniu 3 cm i wysokości 8 cm ma objętość π·3²·8≈226,19 cm3.",
+    "formula": "Objętość pryzmatu to objętość podstawy razy długość; objętość stożka stanowi jedną trzecią objętości walca o tej samej podstawie i wysokości.",
+    "limitations": "W przypadku obiektów okrągłych należy wprowadzić promień, a nie średnicę. Wymiary muszą używać tej samej jednostki długości.",
+    "everyday": "Przed zakupem materiału lub planowaniem pojemności sprawdź objętość doniczki, skrzynki lub zbiornika cylindrycznego.",
+    "faqs": [
+      {
+        "q": "Czy wpisano promień lub średnicę?",
+        "a": "Wprowadź promień; otrzymasz ją ze średniej, dzieląc ją przez dwa."
+      },
+      {
+        "q": "Jaka jest podstawa trójkątnego pryzmatu?",
+        "a": "Jest to trójkąt z wieszakami, które w tym modelu są uważane za prostopadłe."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Ciało",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Sześcian",
+          "box": "Blok",
+          "cylinder": "Cylinder",
+          "sphere": "Piłka",
+          "cone": "Stożek",
+          "tri-prism": "Trójkątny pryzmat"
+        }
+      },
+      "a": {
+        "label": "Długość / Promień / Krawędź",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Szerokość / wysokość",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "c": {
+        "label": "Wysokość / osoba trzecia",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-objetosci"
+  },
+  "standard-deviation-calculator": {
+    "title": "Kalkulator odchylenia standardowego",
+    "description": "Zmierz rozproszenie danych liczbowych jako odchylenie standardowe populacji lub próbki. Wynik uzupełni średnią i wariancję, dzięki czemu będzie można zobaczyć środek i zmienność wartości.",
+    "explanation": "Odchylenie populacji dzieli sumę kwadratów odchyleń od średniej przez n. Odchylenie próbki wykorzystuje n-1 jako poprawkę Bessela w celu oszacowania szerszej populacji.",
+    "example": "Dla wartości 2, 4 i 6 średnia wynosi 4; wariancja populacji wynosi około 1,633, a wariancja próbki wynosi 2.",
+    "formula": "Populacja: √(Σ(x−μ)²/n); wybór: √(Σ(x−x̄)²/(n−1)).",
+    "limitations": "Błąd próbkowania wymaga co najmniej dwóch wartości; w przypadku pojedynczej obserwacji nie można określić wariancji próbki.",
+    "everyday": "Porównaj, czy wyniki pomiarów są stabilne, czy też poszczególne próby różnią się znacząco.",
+    "faqs": [
+      {
+        "q": "Kiedy wybrać błąd próbkowania?",
+        "a": "Gdy wprowadzone wartości reprezentują próbkę większej populacji."
+      },
+      {
+        "q": "Dlaczego tryb wyboru wymaga dwóch wartości?",
+        "a": "Przy jednej wartości mianownik n-1 będzie wynosić zero."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Wartości",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "kind": {
+        "label": "Odchylenie standardowe",
+        "help": "",
+        "unit": "",
+        "options": {
+          "sample": "Wybór",
+          "population": "Populacja"
+        }
+      }
+    },
+    "slug": "kalkulator-odchylenia-standardowego"
+  },
+  "random-number-generator": {
+    "title": "Generator liczb losowych",
+    "description": "Wygeneruj partię liczb losowych z wybranego zakresu, np. liczb całkowitych lub wartości dziesiętnych. Liczby całkowite są wybierane równomiernie przy użyciu kryptograficznie bezpiecznego próbkowania odrzucenia.",
+    "explanation": "Tryb pełny uwzględnia obie wartości ekstremalne, a odrzucając niepełne interwały zapobiega zniekształceniom modulo. Tryb dziesiętny uwzględnia minimum, ale wyklucza maksimum.",
+    "example": "Za pomocą zakresu od 1 do 6 i liczby do czterech można uzyskać na przykład liczby 2, 6, 1 i 4.",
+    "formula": "Liczby całkowite wybierane są równomiernie z zamkniętego przedziału; liczby dziesiętne mieszczą się w przedziale od minimum włącznie do maksimum bez niego.",
+    "limitations": "Generator wymaga obsługi Web Crypto. Nie używaj go jako samodzielnego systemu do zarządzania hasłami lub kluczami szyfrowania.",
+    "everyday": "Losuj liczby do gry, losowego wyboru przedmiotów lub prostych scenariuszy testowych.",
+    "faqs": [
+      {
+        "q": "Czy oba limity są uwzględnione w trybie całkowitym?",
+        "a": "Tak. W trybie dziesiętnym maksymalna wartość jest wykluczona."
+      },
+      {
+        "q": "Czy generator nadaje się do haseł lub kluczy szyfrujących?",
+        "a": "Nie, to jest kalkulator ogólny, a nie narzędzie do zarządzania kluczami."
+      }
+    ],
+    "fields": {
+      "min": {
+        "label": "Dolny limit",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "max": {
+        "label": "Górna granica",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "count": {
+        "label": "Liczba wartości",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Rodzaj liczb",
+        "help": "",
+        "unit": "",
+        "options": {
+          "integer": "Liczby całkowite",
+          "decimal": "Liczby dziesiętne"
+        }
+      }
+    },
+    "slug": "kalkulator-generator-liczb-losowych"
+  },
+  "number-sequence-calculator": {
+    "title": "Kalkulator sekwencji liczb",
+    "description": "Sprawdź ciąg pod kątem stałej różnicy arytmetycznej lub stosunku geometrycznego i oblicz następny wyraz. Pokazuje także rozpoznany krok, dzięki czemu można sprawdzić prostą regułę.",
+    "explanation": "W przypadku ciągu arytmetycznego następnym wyrazem jest ostatni + d; u geometryczne ostatnie×r.",
+    "example": "Sekwencja 3, 7, 11 ma różnicę 4, więc następuje 15.",
+    "formula": "Arytmetyka: aₙ₊₁=aₙ+d. Geometryczne: aₙ₊₁=aₙ·r.",
+    "limitations": "Ostateczną listę można kontynuować z wieloma regułami; kalkulator sprawdza jedynie wzór arytmetyczny i geometryczny.",
+    "everyday": "Zweryfikuj kolejnego członka sekwencji w zadaniu domowym lub szukając powtarzającego się kroku w danych.",
+    "faqs": [
+      {
+        "q": "Czy każdą sekwencję można jednoznacznie kontynuować?",
+        "a": "Nie, wiele różnych reguł może opisywać te same wartości."
+      },
+      {
+        "q": "A co jeśli różnice lub proporcje nie są takie same?",
+        "a": "Wynik poinformuje, że żaden z obsługiwanych wzorców nie pasuje."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Członkowie sekwencji",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-sekwencji-liczb"
+  },
+  "percent-error-calculator": {
+    "title": "Kalkulator błędu procentowego",
+    "description": "Porównaj wartość zmierzoną z wartością odniesienia i znajdź bezwzględny błąd procentowy. Znak błędu ze znakiem pokazuje również, czy pomiar wyszedł wyższy, czy niższy.",
+    "explanation": "Bezwzględny błąd procentowy=|zmierzony−odniesienie|/|odniesienie|×100. Wariant ze znakiem pomija wartość bezwzględną w liczniku.",
+    "example": "Pomiar 98 w stosunku do wartości referencyjnej 100 oznacza błąd bezwzględny wynoszący 2%.",
+    "formula": "Błąd bezwzględny=|x−r|/|r|×100; błąd ze znakiem=(x−r)/|r|×100.",
+    "limitations": "Wartość odniesienia nie może wynosić zero, ponieważ zostałaby podzielona.",
+    "everyday": "Oceń dokładność pomiaru laboratoryjnego lub różnicę między szacunkiem a znanym odniesieniem.",
+    "faqs": [
+      {
+        "q": "Co oznacza błąd ze znakiem ujemnym?",
+        "a": "Wartość zmierzona jest niższa od wartości odniesienia."
+      },
+      {
+        "q": "Dlaczego błąd dotyczy odniesienia?",
+        "a": "Wartość referencyjna służy jako podstawa do względnego porównania."
+      }
+    ],
+    "fields": {
+      "observed": {
+        "label": "Zmierzona wartość",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "reference": {
+        "label": "Wartość referencyjna",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-bledu-procentowego"
+  },
+  "exponent-calculator": {
+    "title": "Kalkulator mocy",
+    "description": "Potęguj bazę rzeczywistą do wykładnika rzeczywistego, włączając wykładniki całkowite, ujemne i dozwolone ułamkowe. Niezdefiniowane przypadki w liczbach rzeczywistych są odrzucane.",
+    "explanation": "W przypadku całych wykładników jest to powtarzane mnożenie; wykładnik ujemny oznacza wartość odwrotną. Ujemną podstawę można podnieść do wykładnika będącego liczbą całkowitą.",
+    "example": "2⁻³=1/2³=0,125; 9^(1/2)=3.",
+    "formula": "aᵇ; dla b<0, aᵇ=1/a⁻ᵇ.",
+    "limitations": "Zero do potęgi wartości ujemnej jest nieokreślone; podstawa ujemna z dowolnym wykładnikiem dziesiętnym może nie dać rzeczywistego wyniku.",
+    "everyday": "Oblicz wielokrotne mnożenie lub zweryfikuj potęgę na przykładzie szkolnym bez ręcznej analizy.",
+    "faqs": [
+      {
+        "q": "Co oznacza wykładnik ujemny?",
+        "a": "Wynik jest odwrotnością odpowiedniej mocy dodatniej."
+      },
+      {
+        "q": "Czy liczbę ujemną można podnieść do dowolnego wykładnika dziesiętnego?",
+        "a": "Nie, wynik nie musi być liczbą rzeczywistą."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Podstawa",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "exponent": {
+        "label": "Wykładnik potęgowy",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-mocy"
+  },
+  "binary-calculator": {
+    "title": "Kalkulator binarny",
+    "description": "Dodawaj, odejmowanie, mnożenie i dzielenie dwóch liczb binarnych i wyświetlanie wyniku w systemie o podstawie 2. Zapis dziesiętny ułatwia sprawdzenie obliczeń.",
+    "explanation": "Dane wejściowe zawierają tylko cyfry 0 i 1. Dzielenie zwraca iloraz całkowity i resztę.",
+    "example": "1010₂ + 110₂ = 10000₂, czyli 16₁₀.",
+    "formula": "Arytmetyka jest wykonywana na wartościach całkowitych zapisanych w formacie binarnym.",
+    "limitations": "Wpis musi zawierać tylko 0 i 1; dzielenie zwraca iloraz całkowity.",
+    "everyday": "Sprawdź dodawanie binarne podczas uczenia się systemów liczbowych lub sprawdzania wartości bitów.",
+    "faqs": [
+      {
+        "q": "Jak wyświetlany jest wynik dzielenia?",
+        "a": "Jako iloraz całkowity i resztę, a nie zaokrąglony ułamek dziesiętny."
+      },
+      {
+        "q": "Czy mogę wprowadzić prefiks 0b?",
+        "a": "Wprowadź same cyfry binarne."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Działanie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Dodatek",
+          "-": "Odejmowanie",
+          "*": "Mnożenie",
+          "/": "Dział"
+        }
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-binarny"
+  },
+  "hex-calculator": {
+    "title": "Kalkulator szesnastkowy",
+    "description": "Oblicz za pomocą dwóch liczb szesnastkowych i uzyskaj wynik zarówno w postaci szesnastkowej, jak i dziesiętnej. Kalkulator przydaje się przy pracy z adresami, kolorami czy przy nauce systemów liczbowych.",
+    "explanation": "W zapisie zastosowano cyfry 0–9 i litery A–F. Podczas dzielenia wyświetlany jest iloraz całkowity i reszta.",
+    "example": "A₁₆ + 10₁₆ = 1A₁₆, czyli 26 w systemie dziesiętnym.",
+    "formula": "Operacja jest obliczana na liczbach całkowitych, a wynik jest konwertowany do podstawy 16.",
+    "limitations": "Dane wejściowe muszą być prawidłowymi liczbami całkowitymi w formacie szesnastkowym; przy dzieleniu nie jest wyświetlana reszta dziesiętna.",
+    "everyday": "Oblicz ponownie folder kolorów lub sprawdź wartość szesnastkową adresu.",
+    "faqs": [
+      {
+        "q": "Jak wyświetlany jest wynik dzielenia?",
+        "a": "Zobaczysz iloraz liczby całkowitej i resztę."
+      },
+      {
+        "q": "Czy wielkość liter ma znaczenie?",
+        "a": "Nie, A-F można zapisać w obie strony."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Działanie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Dodatek",
+          "-": "Odejmowanie",
+          "*": "Mnożenie",
+          "/": "Dział"
+        }
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-szesnastkowy"
+  },
+  "half-life-calculator": {
+    "title": "Kalkulator okresu półtrwania",
+    "description": "Oszacuj ilość substancji, która pozostanie po zadanym czasie, biorąc pod uwagę okres półtrwania. Model pokaże pozostałą ilość oraz proporcję w idealnym procesie wykładniczym.",
+    "explanation": "Pozostała kwota = kwota początkowa × (1/2) ^ (czas, który upłynął/połowa czasu). Model działa z dowolnym, nieujemnym czasem.",
+    "example": "Po trzech okresach półtrwania pozostanie 80×(1/2)³=10 mg z 80 mg.",
+    "formula": "M(t)=M₀·(1/2)^(t/T½).",
+    "limitations": "Zakłada się stały okres półtrwania i brak wprowadzania dodatkowej substancji; nie jest to zapowiedź indywidualnych rozstań.",
+    "everyday": "Naucz się rozkładu wykładniczego lub oszacuj ilość resztkową w idealnym modelu.",
+    "faqs": [
+      {
+        "q": "Czy jeden okres półtrwania oznacza, że ​​cała substancja zniknęła?",
+        "a": "Nie, oczekiwana kwota zostanie zmniejszona o połowę."
+      },
+      {
+        "q": "Czy obliczenia uwzględniają środowisko?",
+        "a": "Nie, zakłada stały półokres i system zamknięty."
+      }
+    ],
+    "fields": {
+      "initial": {
+        "label": "Ilość początkowa",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "halfLife": {
+        "label": "Pół etatu",
+        "help": "",
+        "unit": "czas",
+        "options": {}
+      },
+      "elapsed": {
+        "label": "Czas, który upłynął",
+        "help": "",
+        "unit": "czas",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-okresu-poltrwania"
+  },
+  "quadratic-formula-calculator": {
+    "title": "Kalkulator równań kwadratowych",
+    "description": "Rozwiąż równanie ax²+bx+c=0 i pokaż pierwiastki dyskryminacyjne oraz pierwiastki rzeczywiste lub zespolone. Wynik rozróżni dwa pierwiastki, jeden podwójny pierwiastek lub parę złożonych rozwiązań.",
+    "explanation": "Dyskryminator D=b²−4ac. Dla D≥0 obowiązuje x=(-b±√D)/(2a); dla D <0 pierwiastki są złożone.",
+    "example": "Równanie x²−5x+6=0 ma pierwiastki 2 i 3, ponieważ (x−2)(x−3)=0.",
+    "formula": "D=b²−4ac; x=(-b±√D)/(2a).",
+    "limitations": "Współczynnik a nie może wynosić zero; z ujemnym wyróżnikiem korzenie są złożone.",
+    "everyday": "Przejrzyj pierwiastki równania kwadratowego w celu odrobienia pracy domowej lub znalezienia punktów przecięcia z osią x wykresu.",
+    "faqs": [
+      {
+        "q": "Co oznacza dyskryminator zera?",
+        "a": "Równanie ma jeden podwójny pierwiastek rzeczywisty."
+      },
+      {
+        "q": "A co jeśli dyskryminator jest ujemny?",
+        "a": "Nie ma rozwiązania w liczbach rzeczywistych; kalkulator wyświetli złożoną parę."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Współczynnik a",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Współczynnik b",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "c": {
+        "label": "Współczynnik c",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-rownan-kwadratowych"
+  },
+  "slope-calculator": {
+    "title": "Kalkulator dyrektyw",
+    "description": "Oblicz kierownicę i równanie prostej przechodzącej przez dwa punkty. Linię pionową traktuje się oddzielnie, ponieważ jej nachylenie jest nieokreślone.",
+    "explanation": "Kierunek m=(y₂−y₁)/(x₂−x₁). Gdy x₁=x₂, tworzona jest pionowa linia x=x₁.",
+    "example": "Punkty (1,2) i (3,6) wyznaczają kierunek 2 i równanie y=2x.",
+    "formula": "m=Δy/Δx; kształt linii y=mx+b.",
+    "limitations": "Punkty muszą się różnić; w przypadku linii pionowej nachylenia nie można wyrazić liczbą skończoną.",
+    "everyday": "Znajdź nachylenie ścieżki lub równanie linii na podstawie pary znanych współrzędnych.",
+    "faqs": [
+      {
+        "q": "Jakie jest nachylenie linii pionowej?",
+        "a": "Nie jest ona zdefiniowana, ponieważ Δx=0."
+      },
+      {
+        "q": "Czy współrzędne muszą być w tych samych jednostkach?",
+        "a": "Tak, obie osie muszą używać spójnej skali."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-dyrektyw"
+  },
+  "log-calculator": {
+    "title": "Kalkulator logarytmiczny",
+    "description": "Oblicz logarytm dodatniego argumentu, mając dowolną prawidłową podstawę. Relacja sprawdzająca pokaże, że podstawa podniesiona do wyniku zwróci pierwotny argument.",
+    "explanation": "Logarytm x do podstawy b jest wykładnikiem, przez który należy potęgować b, aby otrzymać x. Podstawa musi być dodatnia i nie może wynosić 1.",
+    "example": "log₂(32)=5, ponieważ 2⁵=32.",
+    "formula": "log_b(x)=y wtedy i tylko wtedy, gdy bʸ=x.",
+    "limitations": "Zarówno argument, jak i podstawa muszą być dodatnie, a podstawa nie może wynosić 1.",
+    "everyday": "Rozwiąż logarytmiczną część równania lub sprawdź konwersję między zapisem logarytmicznym i wykładniczym.",
+    "faqs": [
+      {
+        "q": "Czy argument może być zerowy lub ujemny?",
+        "a": "Nie, prawdziwy logarytm wymaga argumentu dodatniego."
+      },
+      {
+        "q": "Dlaczego podstawa nie może wynosić 1?",
+        "a": "Potęgi jedynki nadal wynoszą 1, więc nie określają różnych argumentów."
+      }
+    ],
+    "fields": {
+      "base": {
+        "label": "Podstawa",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "value": {
+        "label": "Pozytywna argumentacja",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-logarytmiczny"
+  },
+  "area-calculator": {
+    "title": "Kalkulator treści",
+    "description": "Oblicz pole prostokąta, trójkąta, koła lub trapezu na podstawie wymaganych wymiarów. Wprowadź długości w tej samej jednostce.",
+    "explanation": "Prostokąt: długość×szerokość; trójkąt: podstawa×wysokość/2; okrąg: πr²; trapez: (a+b)h/2.",
+    "example": "Prostokąt o wymiarach 5×4 cm ma pole 20 cm².",
+    "formula": "Treść zależy od kształtu; na przykład okrąg: S=πr².",
+    "limitations": "W przypadku okręgu wprowadź promień, a nie średnicę. Wszystkie długości muszą mieć tę samą jednostkę.",
+    "everyday": "Oszacuj powierzchnię podłogi, ściany lub łóżka ogrodowego przed obliczeniem potrzebnego materiału.",
+    "faqs": [
+      {
+        "q": "Czy wpisano promień lub średnicę?",
+        "a": "Wprowadź promień."
+      },
+      {
+        "q": "Jaką jednostkę będzie miał wynik?",
+        "a": "Kwadrat jednostki wymiarów, na przykład m²."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Twarz",
+        "help": "",
+        "unit": "",
+        "options": {
+          "rectangle": "Prostokąt",
+          "triangle": "Trójkąt",
+          "circle": "Pierścień",
+          "trapezoid": "Trapez"
+        }
+      },
+      "a": {
+        "label": "Długość / promień / bok równoległy a",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Szerokość / wysokość / bok równoległy b",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "c": {
+        "label": "Strona równoległa c (trapez)",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-tresci"
+  },
+  "sample-size-calculator": {
+    "title": "Kalkulator wielkości próbki",
+    "description": "Oszacuj liczbę odpowiedzi potrzebnych do badania proporcji w oparciu o poziom ufności, błąd, oczekiwaną proporcję i możliwą wielkość populacji. Wynik zaokrągla się w górę do wszystkich respondentów.",
+    "explanation": "Podstawowe oszacowanie to z²p(1−p)/e². Dla populacji skończonej stosuje się poprawkę n/(1+(n−1)/N).",
+    "example": "Przy 95% pewności, 5% błędzie i 50% proporcji daje to około 385 odpowiedzi dla dużej populacji.",
+    "formula": "n₀=z²p(1−p)/e²; skończona poprawka populacji n=n₀/[1+(n₀−1)/N].",
+    "limitations": "Jest to prosta ocena statystyczna próbki; badanie niereprezentatywne lub badanie przeprowadzane metodą samodzielnego wyboru może być stronnicze.",
+    "everyday": "Zaplanuj przybliżoną liczbę odpowiedzi przed wysłaniem kwestionariusza lub ankiety do klienta.",
+    "faqs": [
+      {
+        "q": "Dlaczego liczba jest zaokrąglana w górę?",
+        "a": "Mniejsza liczba nie zapewniłaby określonej dokładności."
+      },
+      {
+        "q": "Co oznacza oczekiwany udział wynoszący 50%?",
+        "a": "Jest to wybór konserwatywny, który zwykle skutkuje największą próbą."
+      }
+    ],
+    "fields": {
+      "confidence": {
+        "label": "Poziom zaufania",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "margin": {
+        "label": "Margines błędu",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "proportion": {
+        "label": "Oczekiwany udział",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "population": {
+        "label": "Wielkość populacji (0 = duża populacja)",
+        "help": "",
+        "unit": "osoby",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-wielkosci-probki"
+  },
+  "probability-calculator": {
+    "title": "Kalkulator prawdopodobieństwa",
+    "description": "Oblicz dwumianowe prawdopodobieństwo dokładnie k, co najwyżej k lub co najmniej k sukcesów w n niezależnych próbach z równym prawdopodobieństwem. Wskaże również oczekiwaną liczbę sukcesów.",
+    "explanation": "Dla X~Bin(n,p), P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ. Tryby skumulowane sumują odpowiednie wyniki od 0 do n.",
+    "example": "W pięciu rzutach uczciwą monetą dokładnie para orłów ma prawdopodobieństwo C(5,2)/2⁵=10/32=31,25%.",
+    "formula": "P(X=k)=C(n,k)pᵏ(1−p)ⁿ⁻ᵏ.",
+    "limitations": "Model zakłada stałą liczbę niezależnych prób i jednakowe prawdopodobieństwo sukcesu w każdej z nich.",
+    "everyday": "Oszacuj szansę na uzyskanie określonej liczby sukcesów, np. poprawnych odpowiedzi w quizie lub orłów w kilku rzutach.",
+    "faqs": [
+      {
+        "q": "Jakie założenia ma model dwumianowy?",
+        "a": "Stała liczba niezależnych prób i stałe prawdopodobieństwo sukcesu."
+      },
+      {
+        "q": "Czy „co najmniej k” obejmuje samo k?",
+        "a": "Tak, sumuje wyniki od do włącznie."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Liczba prób",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "k": {
+        "label": "Liczba sukcesów lub limit",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "p": {
+        "label": "Prawdopodobieństwo sukcesu",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Wydarzenie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "exact": "Dokładnie do",
+          "at-most": "Co najwyżej k",
+          "at-least": "Przynajmniej do"
+        }
+      }
+    },
+    "slug": "kalkulator-prawdopodobienstwa"
+  },
+  "statistics-calculator": {
+    "title": "Kalkulator statystyczny",
+    "description": "Podsumuj listę miar według liczby, średniej, mediany, trybu, zakresu, odchylenia standardowego próbki i kwartyli. Jest to krótki opis danych przed zastosowaniem specjalistycznego testu statystycznego.",
+    "explanation": "Średnia to suma/n; mediana jest środkiem uporządkowanych wartości; rozpiętość=maks.-min. W kwartylach stosuje się medianę dolnej i górnej połowy bez ogólnej mediany dla liczb nieparzystych.",
+    "example": "Dla 1, 2, 2, 5 średnia wynosi 2,5, mediana wynosi 2, tryb wynosi 2, a zakres wynosi 4.",
+    "formula": "Średnia=Σx/n; rozpiętość=max-min; odchylenie wykorzystuje n-1.",
+    "limitations": "Statystyki opisowe nie uwzględniają projektu badania, wag ani niepewności pobierania próbek i same w sobie nie stanowią testu wnioskowania.",
+    "everyday": "Szybko podsumowuj zmierzone czasy, ceny lub wyniki prób i zauważaj powtarzające się wartości.",
+    "faqs": [
+      {
+        "q": "Jak wyświetlić więcej modów?",
+        "a": "Wyświetlone zostaną wszystkie wartości z tą samą najwyższą częstotliwością."
+      },
+      {
+        "q": "Czy kalkulator przeprowadza test statystyczny?",
+        "a": "Nie, opisuje po prostu określony zestaw wartości."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Wartości",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-statystyczny"
+  },
+  "mean-median-mode-range-calculator": {
+    "title": "Kalkulator średniej, mediany, trybu i zakresu",
+    "description": "Uzyskaj cztery znane cechy listy: średnią arytmetyczną, medianę, tryb i zakres. Pomagają szybko opisać rozkład i zauważyć powtórzenia lub wartości odstające.",
+    "explanation": "Średnia to suma podzielona przez liczbę wartości; mediana jest wartością środkową; mode jest najczęstszą wartością; zakres to maksimum minus minimum.",
+    "example": "Dla 2, 3, 3 i 10 średnia wynosi 4,5, mediana wynosi 3, tryb wynosi 3, a zakres wynosi 8.",
+    "formula": "Średnia=Σx/n; rozpiętość=maks.-min.",
+    "limitations": "Wartości odstające mogą znacząco wpływać na średnią; może nie być trybu dla danych niepowtarzających się.",
+    "everyday": "Porównaj typowe wartości i zakresy tygodniowych wydatków lub zmierzonych wyników.",
+    "faqs": [
+      {
+        "q": "A co jeśli najczęstsze wartości powtarzają się równie często?",
+        "a": "Wyświetlą się wszystkie mody."
+      },
+      {
+        "q": "Jak obliczana jest mediana parzystej liczby wartości?",
+        "a": "Jest to średnia z dwóch środkowych wartości po sortowaniu."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Wartości",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-sredniej-mediany-trybu-i-zakresu"
+  },
+  "permutation-and-combination-calculator": {
+    "title": "Kalkulator odmian i kombinacji",
+    "description": "Policz liczbę wybranych r elementów z n różnych elementów i zdecyduj, czy kolejność ma znaczenie. Kombinacje liczą grupy, odmiany rozróżniają ich kolejność.",
+    "explanation": "Kombinacja: n!/[r!(n−r)!]. Wariacja bez powtórzeń: n!/(n−r)!.",
+    "example": "Parę można wybrać spośród pięciu pozycji w 10 kombinacjach; jeśli kolejność ma znaczenie, istnieje 20 odmian.",
+    "formula": "C(n,r)=n!/(r!(n−r)!); P(n,r)=n!/(n−r)!.",
+    "limitations": "Model zakłada selekcję bez powtarzania z różnych elementów.",
+    "everyday": "Oblicz możliwe pary w drużynie lub kolejność finalistów w konkursie.",
+    "faqs": [
+      {
+        "q": "Kiedy kolejność ma znaczenie?",
+        "a": "Kiedy różne pozycje lub rankingi reprezentują inny wynik."
+      },
+      {
+        "q": "Czy mogę wybierać wielokrotnie?",
+        "a": "W obliczeniach tych założono selekcję bez powtórzeń."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Liczba dostępnych elementów n",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "r": {
+        "label": "Liczba wybranych elementów r",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mode": {
+        "label": "Rachunkowość",
+        "help": "",
+        "unit": "",
+        "options": {
+          "combination": "Kombinacja (bez kolejności)",
+          "permutation": "Odmiany (kolejność zależy)"
+        }
+      }
+    },
+    "slug": "kalkulator-odmian-i-kombinacji"
+  },
+  "z-score-calculator": {
+    "title": "Kalkulator wyniku Z",
+    "description": "Porównaj zaobserwowaną wartość ze średnią i odchyleniem standardowym. Wynik z wyraża, o ile odchyleń standardowych wartość różni się od średniej.",
+    "explanation": "Wynik Z=(x−μ)/σ. Wartość dodatnia jest powyżej średniej, wartość ujemna jest poniżej niej.",
+    "example": "Przy średniej wynoszącej 50 i wariancji wynoszącej 5, wartość 60 daje Z-score wynoszący 2.",
+    "formula": "z=(x−μ)/σ.",
+    "limitations": "Interpretacja zakłada, że ​​średnia i odchylenie standardowe mają sens dla zbioru; sam wynik nie określa prawdopodobieństwa wolnego od rozkładu.",
+    "everyday": "Porównaj wynik testu ze średnią klasy lub zmierz ze zwykłą zmiennością.",
+    "faqs": [
+      {
+        "q": "Co oznacza wynik Z wynoszący 2?",
+        "a": "Wartość wynosi dwa odchylenia standardowe powyżej średniej."
+      },
+      {
+        "q": "Czy dane muszą mieć rozkład normalny?",
+        "a": "Obliczenia tego nie robią, ale interpretacja probabilistyczna często zakłada określony rozkład."
+      }
+    ],
+    "fields": {
+      "x": {
+        "label": "Obserwacja x",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "mean": {
+        "label": "Średnica μ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "sd": {
+        "label": "Odchylenie standardowe σ",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-wyniku-z"
+  },
+  "confidence-interval-calculator": {
+    "title": "Kalkulator przedziału ufności",
+    "description": "Oszacuj przedział ufności t dla średniej ze średniej próbki, odchylenia standardowego, wielkości próby i wybranego poziomu. Przedział pokazuje niepewność średniego oszacowania.",
+    "explanation": "Przedział=x̄±t·s/√n, gdzie wartość krytyczna t zależy od poziomu ufności i n-1 stopni swobody.",
+    "example": "Średnia 50, odchylenie standardowe 10, n=25 i poziom 95% dają przybliżony przedział od 45,9 do 54,1.",
+    "formula": "x̄±t₍1−α/2,n−1₎·s/√n.",
+    "limitations": "Jest to przybliżony przedział t dla selekcji; istotna jest reprezentatywność i niezależność obserwacji.",
+    "everyday": "Oszacuj zakres średniego czasu dostawy lub wyniku próbki, zamiast samej średniej punktowej.",
+    "faqs": [
+      {
+        "q": "Czy przedział 95% oznacza 95% szans, że dana średnia mieści się w tym przedziale?",
+        "a": "Niezupełnie; przy wielokrotnym próbkowaniu tak skonstruowane przedziały pokrywałyby prawdziwą średnią w około 95% przypadków."
+      },
+      {
+        "q": "Dlaczego stosuje się rozkład t?",
+        "a": "Uwzględnia oszacowanie odchylenia standardowego próbki."
+      }
+    ],
+    "fields": {
+      "mean": {
+        "label": "Średnia selekcja",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "sd": {
+        "label": "Odchylenie standardowe próbki",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "n": {
+        "label": "Rozmiar wyboru",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "level": {
+        "label": "Poziom zaufania",
+        "help": "",
+        "unit": "",
+        "options": {
+          "90": "90%",
+          "95": "95%",
+          "99": "99%"
+        }
+      }
+    },
+    "slug": "kalkulator-przedzialu-ufnosci"
+  },
+  "ratio-calculator": {
+    "title": "Kalkulator proporcji",
+    "description": "Skróć stosunek do najprostszej postaci i, jeśli to konieczne, podziel całkowitą kwotę przez jej części. W obliczeniach zachowana zostanie relacja między współczynnikiem a odpowiadającymi mu udziałami.",
+    "explanation": "Stosunek a:b jest skracany przez największy wspólny dzielnik. Dzieląc całe T, pierwsza część przypada na T·a/(a+b), a druga część na T·b/(a+b).",
+    "example": "Stosunek 2:3 dzieli całe 20 na 8 i 12.",
+    "formula": "Obcięcie wykorzystuje NSD (a, b); udziały to T·a/(a+b) i T·b/(a+b).",
+    "limitations": "Suma części współczynnika nie może wynosić zero; współczynniki ujemne nie nadają się do normalnego rozkładu wielkości.",
+    "everyday": "Dziel składniki lub budżet według proporcji bez ręcznej konwersji na udziały.",
+    "faqs": [
+      {
+        "q": "Jak skraca się stosunek?",
+        "a": "Obie części są podzielone przez największy wspólny dzielnik."
+      },
+      {
+        "q": "Czy trzeba wpisać całą kwotę?",
+        "a": "Nie, skrócony stosunek można otrzymać bez dzielenia całości."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza część proporcji",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga część proporcji",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "total": {
+        "label": "Razem do podziału",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-proporcji"
+  },
+  "distance-calculator": {
+    "title": "Kalkulator odległości",
+    "description": "Oblicz odległość w linii prostej pomiędzy dwoma punktami w dwóch lub trzech wymiarach. Pokaże również różnice w współrzędnych.",
+    "explanation": "W 2D: d=√((x₂−x₁)²+(y₂−y₁)²). W 3D dodawany jest również kwadrat różnicy współrzędnych z.",
+    "example": "Punkty (1,2) i (4,8) są oddalone od siebie o √45≈6,71 jednostki.",
+    "formula": "d₂D=√(Δx²+Δy²); d₃D=√(Δx²+Δy²+Δz²).",
+    "limitations": "Obliczenia dotyczą bezpośredniej odległości euklidesowej, a nie rzeczywistej trasy drogowej lub powierzchniowej.",
+    "everyday": "Porównaj bezpośrednią odległość współrzędnych lub długość odcinka w geometrii.",
+    "faqs": [
+      {
+        "q": "Czy jest to odległość w drodze?",
+        "a": "Nie, jest to bezpośrednia odległość pomiędzy współrzędnymi."
+      },
+      {
+        "q": "Jakie jednostki są używane?",
+        "a": "Wynik ma tę samą jednostkę co wprowadzone współrzędne."
+      }
+    ],
+    "fields": {
+      "x1": {
+        "label": "x₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y1": {
+        "label": "y₁",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "x2": {
+        "label": "x₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "y2": {
+        "label": "y₂",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-odleglosci"
+  },
+  "circle-calculator": {
+    "title": "Kalkulator koła",
+    "description": "Oblicz promień, średnicę, obwód i powierzchnię koła, jeśli znasz jedną z tych wartości. Pozostałe wymiary bazują bezpośrednio na geometrii okręgu.",
+    "explanation": "d=2r, o=2πr i S=πr². Znając obwód lub zawartość, można modyfikować zależności dla promienia.",
+    "example": "Okrąg o promieniu 5 ma średnicę 10, obwód około 31,42 i powierzchnię 78,54 jednostek kwadratowych.",
+    "formula": "d=2r; o=2πr; S=πr².",
+    "limitations": "Wszystkie długości muszą używać tej samej jednostki; zawartość jest kwadratowa.",
+    "everyday": "Zmierz okrągły stół lub kwietnik i oszacuj jego obwód lub powierzchnię.",
+    "faqs": [
+      {
+        "q": "Jaką jednostkę ma treść?",
+        "a": "Kwadrat jednostki długości."
+      },
+      {
+        "q": "Czy możesz wpisać średnią?",
+        "a": "Tak, kalkulator oblicza z tego promień."
+      }
+    ],
+    "fields": {
+      "given": {
+        "label": "Znany wymiar",
+        "help": "",
+        "unit": "",
+        "options": {
+          "radius": "Promień",
+          "diameter": "Średnica",
+          "circumference": "Okrążenie",
+          "area": "Zawartość"
+        }
+      },
+      "value": {
+        "label": "Wymiar",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-kola"
+  },
+  "surface-area-calculator": {
+    "title": "Kalkulator powierzchni stałej",
+    "description": "Oblicz pole powierzchni sześcianu, prostopadłościanu, kuli, zamkniętego walca, stożka lub czworobocznej piramidy. Użyj wymiarów w tej samej jednostce.",
+    "explanation": "Powierzchnia jest sumą zawartości wszystkich ścian zewnętrznych; formuła uzależniona jest od kształtu ciała i uwzględnia także bazy zamknięte.",
+    "example": "Sześcian o krawędzi 3 ma powierzchnię 6,3²=54 jednostek kwadratowych.",
+    "formula": "Powierzchnia jest sumą zawartości poszczególnych ścian; na przykład kula S=4πr².",
+    "limitations": "Cylinder uważa się za zamknięty, a wymiary muszą mieć tę samą jednostkę długości.",
+    "everyday": "Oszacuj obszar do pomalowania lub owinięcia w przypadku pudełka lub pojemnika.",
+    "faqs": [
+      {
+        "q": "Czy cylinder zamknięty zawiera obie podstawy?",
+        "a": "Tak, góra i dół."
+      },
+      {
+        "q": "Jaką jednostkę ma powierzchnia?",
+        "a": "Kwadrat jednostki wymiarów."
+      }
+    ],
+    "fields": {
+      "shape": {
+        "label": "Ciało",
+        "help": "",
+        "unit": "",
+        "options": {
+          "cube": "Sześcian",
+          "box": "Blok",
+          "sphere": "Piłka",
+          "cylinder": "Zamknięty cylinder",
+          "cone": "Stożek",
+          "pyramid": "Czteroboczna piramida"
+        }
+      },
+      "a": {
+        "label": "Bok / Długość / Promień",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Szerokość / wysokość",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "c": {
+        "label": "Wysokość/bok stożka",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-powierzchni-stalej"
+  },
+  "pythagorean-theorem-calculator": {
+    "title": "Kalkulator twierdzenia Pitagorasa",
+    "description": "Oblicz brakujący bok prawego trójkąta na podstawie dwóch znanych boków. Można wprowadzić oba wisiorki lub przeciwprostokątną i jeden wisior.",
+    "explanation": "Twierdzenie Pitagorasa mówi, że a²+b²=c², gdzie c jest przeciwprostokątną. Oblicz brakujący wisiorek jako √(c²−a²).",
+    "example": "Cięciwy 3 i 4 dają przeciwprostokątną √(3²+4²)=5.",
+    "formula": "a²+b²=c².",
+    "limitations": "Przeciwprostokątna musi być dłuższa niż znana cięciwa; podane długości muszą tworzyć trójkąt prostokątny.",
+    "everyday": "Sprawdź długość drabiny, przekątną pomieszczenia lub bok prostokątnej figury.",
+    "faqs": [
+      {
+        "q": "Jak rozpoznać przeciwprostokątną?",
+        "a": "Jest to najdłuższy bok leżący naprzeciw kąta prostego."
+      },
+      {
+        "q": "Jaką jednostkę ma wynik?",
+        "a": "Takie same jak podane długości."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Znane partie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Obydwa wieszaki",
+          "hypotenuse-leg": "Przeciwprostokątna i jeden zwis"
+        }
+      },
+      "a": {
+        "label": "Pierwsza strona",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga strona",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-twierdzenia-pitagorasa"
+  },
+  "right-triangle-calculator": {
+    "title": "Kalkulator trójkąta prostokątnego",
+    "description": "Uzupełnij trójkąt prostokątny z dwóch przeciwprostokątnych lub z jednej przeciwprostokątnej i przeciwnego kąta ostrego. Wynik obejmuje brakujące kąty i długości.",
+    "explanation": "Suma kątów ostrych wynosi 90°. Boki oblicza się przy użyciu twierdzenia Pitagorasa i relacji sinusa, cosinusa i tangensa.",
+    "example": "W przypadku wieszaków 3 i 4 przeciwprostokątna wynosi 5, a kąty ostre wynoszą w przybliżeniu 36,87° i 53,13°.",
+    "formula": "a²+b²=c²; sin(α)=przeciwieństwo/hipoteza.",
+    "limitations": "Wprowadzony kąt musi mieścić się w przedziale od 0° do 90°, a wymiary muszą odpowiadać trójkątowi prostokątnemu.",
+    "everyday": "Oblicz nieznany kąt lub bok podczas pracy z rampą, dachem lub przykładem szkoły.",
+    "faqs": [
+      {
+        "q": "Jaka jest suma kątów ostrych?",
+        "a": "Zawsze 90°."
+      },
+      {
+        "q": "Czy mam wpisać kąt w stopniach?",
+        "a": "Tak, kąt wejścia jest podawany w stopniach."
+      }
+    ],
+    "fields": {
+      "known": {
+        "label": "Znane wymiary",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legs": "Obydwa wieszaki",
+          "leg-angle": "Jeden wieszak i przeciwny kąt"
+        }
+      },
+      "a": {
+        "label": "Wisiorek A",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      },
+      "b": {
+        "label": "Wieszak b lub kątownik",
+        "help": "",
+        "unit": "jednostki",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-trojkata-prostokatnego"
+  },
+  "root-calculator": {
+    "title": "Kalkulator pierwiastka kwadratowego",
+    "description": "Oblicz rzeczywisty n-ty pierwiastek liczby. W przypadku indeksu nieparzystego dozwolona jest ujemna podstawa; ujemna podstawa pod parzystym pierwiastkiem nie daje rzeczywistego wyniku.",
+    "explanation": "N-ty pierwiastek z x to liczba y, dla której yⁿ=x. Dla ujemnego x n musi być nieparzyste.",
+    "example": "∛(−125)=−5.",
+    "formula": "ⁿ√x=y wtedy i tylko wtedy, gdy yⁿ=x.",
+    "limitations": "Indeks główny musi być dodatnią liczbą całkowitą; parzysty pierwiastek kwadratowy z liczby ujemnej nie jest rzeczywisty.",
+    "everyday": "Podczas modyfikowania formuły sprawdzaj pierwiastek kwadratowy liczby ujemnej lub pierwiastek kwadratowy.",
+    "faqs": [
+      {
+        "q": "Czy liczbę ujemną można podnieść do kwadratu?",
+        "a": "Tak, jeśli indeks jest nieparzysty."
+      },
+      {
+        "q": "Co to jest pierwiastek kwadratowy?",
+        "a": "Wartość nieujemna dla indeksu parzystego."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Pełnomocnictwo",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "index": {
+        "label": "Indeks korzeni",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-pierwiastka-kwadratowego"
+  },
+  "lcm-calculator": {
+    "title": "Najmniej powszechny kalkulator wielokrotny",
+    "description": "Znajdź najmniejszą wspólną wielokrotność dwóch liczb całkowitych. NSN to najmniejsza liczba nieujemna podzielna przez oba dane wejściowe.",
+    "explanation": "NSN(a,b)=|a·b|/NSD(a,b) gdzie NSN(0,b)=0.",
+    "example": "NSN(12,18)=36.",
+    "formula": "NSN(a,b)=|a·b|/NSD(a,b).",
+    "limitations": "Zero ma specjalny wynik: NSN równy zero, a druga liczba to zero.",
+    "everyday": "Znajdź wspólny przedział dla powtarzających się zdarzeń lub wspólny mianownik ułamków.",
+    "faqs": [
+      {
+        "q": "Jaki jest numer NSN dwóch liczb 12 i 18?",
+        "a": "36."
+      },
+      {
+        "q": "A co jeśli jedna liczba to zero?",
+        "a": "Najmniejszą wspólną wielokrotnością jest zero."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-najmniej-powszechny-kalkulator-wielokrotny"
+  },
+  "gcf-calculator": {
+    "title": "Największy wspólny dzielnik kalkulator",
+    "description": "Oblicz największy wspólny dzielnik dwóch liczb całkowitych. Jest to największa dodatnia liczba całkowita, która dzieli oba wejścia bez reszty.",
+    "explanation": "Algorytm euklidesowy wielokrotnie zastępuje parę (a, b) parą (b, a mod b), aż reszta będzie wynosić zero.",
+    "example": "NSD(48,18)=6.",
+    "formula": "NSD(a,b)=NSD(b,a mod b).",
+    "limitations": "NSD(0,0) jest nieokreślone; liczby ujemne są oceniane według wartości bezwzględnej.",
+    "everyday": "Skróć liczby ułamkowe lub dzielniki, aby znaleźć wspólne czynniki.",
+    "faqs": [
+      {
+        "q": "Jakie jest NSD liczb 48 i 18?",
+        "a": "Jest 6."
+      },
+      {
+        "q": "Czy można wprowadzić liczbę ujemną?",
+        "a": "Tak, dodatni wspólny dzielnik nie zmienia znaku."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-najwiekszy-wspolny-dzielnik-kalkulator"
+  },
+  "factor-calculator": {
+    "title": "Kalkulator dzielnika",
+    "description": "Wypisz dodatnie pary dzielników liczby całkowitej dodatniej i określ, czy jest ona liczbą pierwszą, czy złożoną. Każdy podany współczynnik dzieli dane wejściowe bez reszty.",
+    "explanation": "Czynniki są wyszukiwane parami, a sprawdzanie kończy się na pierwiastku kwadratowym z liczby wejściowej. Liczba pierwsza ma tylko parę 1 i samą siebie.",
+    "example": "Liczba 36 ma pary 1×36, 2×18, 3×12, 4×9 i 6×6.",
+    "formula": "Dla każdego dzielnika d z n istnieją pary czynników (d, n/d).",
+    "limitations": "Dane wejściowe muszą być dodatnią liczbą całkowitą; bardzo duże liczby mogą znacznie wydłużyć listę.",
+    "everyday": "Sprawdź dzielnik liczby podczas rozkładania na czynniki lub modyfikowania ułamka.",
+    "faqs": [
+      {
+        "q": "Co to jest liczba pierwsza?",
+        "a": "Dodatnia liczba całkowita większa niż 1, która ma tylko dzielniki 1 i siebie."
+      },
+      {
+        "q": "Dlaczego pary znajdują się tylko do pierwiastka kwadratowego?",
+        "a": "Drugi czynnik jest zatem co najmniej tak duży jak pierwszy."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Dodatnia liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-dzielnika"
+  },
+  "rounding-calculator": {
+    "title": "Kalkulator zaokrągleń",
+    "description": "Zaokrąglali liczbę do wybranej liczby miejsc po przecinku lub do dziesiątek, setek lub innych potęg dziesięciu. Dokładna połowa jest zaokrąglana od zera.",
+    "explanation": "Liczbę 2 miejsc zaokrągla się do setnych; ujemną liczbę miejsc zaokrągla się w lewo od przecinka.",
+    "example": "12,345 w zaokrągleniu do dwóch miejsc po przecinku to 12,35.",
+    "formula": "Wynik zaokrągla się do 10^m; połowy przypadków zaokrągla się w górę od zera.",
+    "limitations": "Zaokrąglanie może zmienić dokładność; oryginalna wartość nie zostanie nadpisana.",
+    "everyday": "Zaokrąglili cenę, pomiar lub wynik do liczby miejsc wymaganych w zleceniu.",
+    "faqs": [
+      {
+        "q": "Jak zaokrąglić do dziesiątek?",
+        "a": "Wprowadź −1 miejsce po przecinku."
+      },
+      {
+        "q": "Jak rozwiązuje się dokładną połowę?",
+        "a": "Od zera, na przykład 2,5 do 3 i od -2,5 do -3."
+      }
+    ],
+    "fields": {
+      "value": {
+        "label": "Wartość",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "places": {
+        "label": "Liczba miejsc po przecinku (od –12 do 12)",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-zaokraglen"
+  },
+  "matrix-calculator": {
+    "title": "Kalkulator macierzowy",
+    "description": "Dodaj, odejmij lub pomnóż małą macierz i wyświetl wyraźny wynik. Sprawdzanie wymiarów odrzuci operacje, które nie są zdefiniowane.",
+    "explanation": "Dodawanie i odejmowanie wymagają tych samych wymiarów; przy mnożeniu liczba kolumn pierwszej macierzy musi odpowiadać liczbie wierszy drugiej macierzy.",
+    "example": "Macierz [[1,2],[3,4]] razy [[2,0],[1,2]] daje [[4,4],[10,8]].",
+    "formula": "Suma według składników; produkt Cᵢⱼ=ΣₖAᵢₖBₖⱼ.",
+    "limitations": "Obsługiwane macierze mają maksymalnie 5 wierszy i 5 kolumn; produkt wymaga zgodnych wymiarów.",
+    "everyday": "Sprawdź iloczyn macierzy z problemu lub małej transformacji współrzędnych.",
+    "faqs": [
+      {
+        "q": "Jak oddzielić wiersze?",
+        "a": "Średnik; wartości w rzędzie oddzielaj przecinkami lub spacjami."
+      },
+      {
+        "q": "Czy orzechy muszą być tej samej wielkości?",
+        "a": "Dodatkowo tak, w przypadku mnożenia wymiary wewnętrzne muszą się zgadzać."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Matryca A",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Matryca B",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Działanie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "add": "Dodatek",
+          "subtract": "Odejmowanie",
+          "multiply": "Mnożenie"
+        }
+      }
+    },
+    "slug": "kalkulator-macierzowy"
+  },
+  "scientific-notation-calculator": {
+    "title": "Kalkulator notacji naukowej",
+    "description": "Konwertuj liczbę dziesiętną na znormalizowaną notację naukową lub odwrotnie. Współczynnik i wykładnik dziesiątek sprawiają, że bardzo duże i bardzo małe wartości są wyraźniejsze.",
+    "explanation": "Notacja naukowa ma postać a×10ⁿ, gdzie wartość bezwzględna a mieści się w przedziale od 1 do 10, z wyłączeniem zera.",
+    "example": "0,00072=7,2×10⁻⁴.",
+    "formula": "x=a×10ⁿ.",
+    "limitations": "Zakres wykładnika jest ograniczony precyzją liczb zmiennoprzecinkowych.",
+    "everyday": "Zapisz rozmiar cząstek lub odległość w jaśniejszej formie do obliczeń.",
+    "faqs": [
+      {
+        "q": "Czy współczynnik musi mieścić się w przedziale od 1 do 10?",
+        "a": "W notacji znormalizowanej tak."
+      },
+      {
+        "q": "Czy można przeliczyć wartość ujemną?",
+        "a": "Tak, znak pozostanie na współczynniku."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Przenosić",
+        "help": "",
+        "unit": "",
+        "options": {
+          "to-sci": "Od notacji dziesiętnej do notacji naukowej",
+          "from-sci": "Od notacji naukowej do dziesiętnej"
+        }
+      },
+      "value": {
+        "label": "Wartość dziesiętna",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "coefficient": {
+        "label": "Współczynnik",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "exponent": {
+        "label": "Potęga dziesięciu",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-notacji-naukowej"
+  },
+  "big-number-calculator": {
+    "title": "Kalkulator dużych liczb",
+    "description": "Dodawanie, odejmowanie, mnożenie i dzielenie bardzo długich liczb całkowitych bez utraty precyzji podczas konwersji na liczby zmiennoprzecinkowe. Wynik pozostaje dokładny w zapisie dziesiętnym.",
+    "explanation": "W obliczeniach zastosowano arytmetykę liczb całkowitych o dowolnej precyzji. Podczas dzielenia wyświetlany jest iloraz całkowity.",
+    "example": "12345678901234567890 + 10 = 12345678901234567900.",
+    "formula": "Operacje są wykonywane dokładnie na liczbach całkowitych, a nie binarnych zmiennoprzecinkowych.",
+    "limitations": "Każdy operand jest ograniczony do 200 cyfr; dzielenie przez zero nie jest możliwe.",
+    "everyday": "Sprawdź poprawność długiego identyfikatora, dużej liczby elementów lub sumy całkowitej bez zaokrąglania.",
+    "faqs": [
+      {
+        "q": "Czy w przypadku bardzo długich liczb precyzja zostanie utracona?",
+        "a": "Nie, liczy się dokładnie jako liczba całkowita."
+      },
+      {
+        "q": "Czy wynik dzielenia jest dziesiętny?",
+        "a": "Wyświetlany jest iloraz całkowity."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "op": {
+        "label": "Działanie",
+        "help": "",
+        "unit": "",
+        "options": {
+          "+": "Dodatek",
+          "-": "Odejmowanie",
+          "*": "Mnożenie",
+          "/": "Dział"
+        }
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-duzych-liczb"
+  },
+  "prime-factorization-calculator": {
+    "title": "Kalkulator faktoryzacji",
+    "description": "Rozłóż dodatnią liczbę całkowitą na potęgi pierwsze i wyświetl każdy czynnik pierwszy, łącznie z krotnością. Unikalna dekompozycja pomoże również w znalezieniu dzielników lub obcięć.",
+    "explanation": "Próby dzielenia przez liczby pierwsze są powtarzane, aż pozostanie 1 lub czynnik pierwszy większy od pierwiastka kwadratowego.",
+    "example": "36=2²×3², czyli czynniki pierwsze liczby 2, 2, 3 i 3.",
+    "formula": "Każda liczba całkowita n>1 ma unikalny rozkład na iloczyn liczb pierwszych.",
+    "limitations": "Dane wejściowe muszą być dodatnią liczbą całkowitą; rozkład na czynniki dużej liczby pierwszej może być wymagający pod względem obliczeniowym.",
+    "everyday": "Znajdź czynniki pierwsze, znajdując NSD, NSN lub upraszczając ułamek.",
+    "faqs": [
+      {
+        "q": "Czy rozkład liczb pierwszych jest wyjątkowy?",
+        "a": "Tak, z wyjątkiem kolejności czynników."
+      },
+      {
+        "q": "Co się stanie, jeśli wpiszesz 1?",
+        "a": "Liczba 1 nie ma czynników pierwszych."
+      }
+    ],
+    "fields": {
+      "n": {
+        "label": "Dodatnia liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-faktoryzacji"
+  },
+  "common-factor-calculator": {
+    "title": "Kalkulator wspólnych dzielników",
+    "description": "Wypisz wszystkie dodatnie wspólne dzielniki dwóch liczb całkowitych i pokaż ich największy wspólny dzielnik. Jest to przydatne, gdy potrzebujesz całej listy, a nie tylko najważniejszego czynnika.",
+    "explanation": "Kalkulator znajduje dzielnik NSD obu wartości bezwzględnych. Para zer nie ma określonego największego wspólnego dzielnika.",
+    "example": "Wspólnymi czynnikami 12 i 18 są 1, 2, 3 i 6; NSD wynosi 6.",
+    "formula": "Wspólne dzielniki(a,b)=dzielniki(NSD(a,b)).",
+    "limitations": "Obie wartości nie mogą jednocześnie wynosić zero; lista jest ograniczona zakresem wejść.",
+    "everyday": "Znajdź wszystkie możliwe identyczne grupy podczas dzielenia materiałów lub przedmiotów na paczki.",
+    "faqs": [
+      {
+        "q": "Czym różni się od kalkulatora NSD?",
+        "a": "Pokazuje wszystkie wspólne dzielniki, a nie tylko największy."
+      },
+      {
+        "q": "Czy można wprowadzać liczby ujemne?",
+        "a": "Tak, przy wyszukiwaniu dzielników używane są ich wartości bezwzględne."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-wspolnych-dzielnikow"
+  },
+  "basic-calculator": {
+    "title": "Podstawowy kalkulator",
+    "description": "Oblicz wyrażenie arytmetyczne za pomocą nawiasów i zwykłej kolejności działań. Bezpieczny parser akceptuje wyłącznie znaki matematyczne i nie wykonuje wprowadzonego kodu.",
+    "explanation": "Potęgowanie i mnożenie mają pierwszeństwo przed dodawaniem i odejmowaniem; nawiasy określają kolejność.",
+    "example": "Za 2*(3+4)² otrzymujesz 98.",
+    "formula": "Wyrażenie jest oceniane zgodnie ze standardowym pierwszeństwem operatorów i nawiasów.",
+    "limitations": "Dozwolone są tylko obsługiwane operatory matematyczne, nawiasy i liczby; dzielenie przez zero jest odrzucane.",
+    "everyday": "Szybko przeglądaj wieloetapowe obliczenia bez konieczności przełączania się pomiędzy poszczególnymi operacjami.",
+    "faqs": [
+      {
+        "q": "Czy mogę używać nawiasów?",
+        "a": "Tak, nawet zagnieżdżone nawiasy."
+      },
+      {
+        "q": "Czy można określić funkcje lub zmienne?",
+        "a": "Podstawowy kalkulator akceptuje tylko dozwolone wyrażenia numeryczne."
+      }
+    ],
+    "fields": {
+      "expression": {
+        "label": "Wyrażenie matematyczne",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-podstawowy-kalkulator"
+  },
+  "long-division-calculator": {
+    "title": "Pisemny kalkulator dzielenia",
+    "description": "Podziel dwie liczby całkowite i wyświetl iloraz całkowity, resztę i iloraz dziesiętny. W przypadku wartości ujemnych reszta następuje po dzieleniu z zaokrągleniem do zera.",
+    "explanation": "Posiada a=bq+r; iloraz q jest obcinany do zera, a reszta r nosi znak liczby podziału.",
+    "example": "17 ÷ 5 daje iloraz 3, resztę 2 i wynik dziesiętny 3,4.",
+    "formula": "a=b·q+r.",
+    "limitations": "Dzielnik nie może wynosić zero; reszta stosuje konwencję obcinania w kierunku zera.",
+    "everyday": "Zapisz podział w pracy domowej lub sprawdź resztę podczas dzielenia elementów.",
+    "faqs": [
+      {
+        "q": "Czy reszta może być ujemna?",
+        "a": "Tak, ujemna liczba podzielona może mieć ten sam znak."
+      },
+      {
+        "q": "Co to jest ułamek dziesiętny?",
+        "a": "Jest to powszechny podział a/b."
+      }
+    ],
+    "fields": {
+      "a": {
+        "label": "Pierwsza liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "b": {
+        "label": "Druga liczba całkowita",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-pisemny-kalkulator-dzielenia"
+  },
+  "average-calculator": {
+    "title": "Przeciętny kalkulator",
+    "description": "Oblicz średnią arytmetyczną listy i wyświetl zarówno liczbę, jak i sumę wartości. Średnia jest odpowiednia, jeśli wszystkie obserwacje mają tę samą wagę.",
+    "explanation": "Średnia=x₁+x₂+…+xₙ podzielona przez n.",
+    "example": "Średnia wartości 4, 7 i 10 wynosi 7.",
+    "formula": "x̄=Σx/n.",
+    "limitations": "Wartość odstająca może znacznie przesunąć średnią; w przypadku danych skośnych należy rozważyć medianę.",
+    "everyday": "Sprawdź średni czas, wynik lub tygodniowe wydatki na podstawie równie ważnych obserwacji.",
+    "faqs": [
+      {
+        "q": "Jak obliczana jest średnia?",
+        "a": "Dodaj wszystkie wartości i podziel przez ich liczbę."
+      },
+      {
+        "q": "Czy średnia to to samo co mediana?",
+        "a": "Nie, mediana to środkowa wartość na uporządkowanej liście."
+      }
+    ],
+    "fields": {
+      "values": {
+        "label": "Wartości",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulator-przecietny-kalkulator"
+  },
+  "p-value-calculator": {
+    "title": "kalkulator wartości p",
+    "description": "Konwertuj statystykę Z na lewą, prawą lub dwustronną wartość p standardowego rozkładu normalnego. Wartość p ma znaczenie tylko w połączeniu z hipotezą, projektem testu i założeniami modelu.",
+    "explanation": "Wartość p to obszar odpowiedniego ogona w standardowym rozkładzie normalnym; test dwustronny liczy oba ogony dla |z|.",
+    "example": "Dla z=1,96 dwustronna wartość p wynosi w przybliżeniu 0,05.",
+    "formula": "p=P(Z≤z), p=P(Z≥z) lub 2·P(Z≥|z|), gdzie Z~N(0,1).",
+    "limitations": "To jest normalny test Z; nie dostosowuje wartości p do innego rozkładu, wielokrotnych testów lub projektu pobierania próbek.",
+    "everyday": "Sprawdź wartość p dla wybranego wcześniej jednostronnego lub dwustronnego testu z.",
+    "faqs": [
+      {
+        "q": "Czy p=0,05 oznacza pięcioprocentowe prawdopodobieństwo, że hipoteza zerowa jest prawdziwa?",
+        "a": "Nie, wartość p to prawdopodobieństwo wystąpienia danych co najmniej tak skrajnych w ramach hipotezy zerowej."
+      },
+      {
+        "q": "Kiedy wybrać test dwustronny?",
+        "a": "Gdy interesuje Cię odchylenie w obie strony."
+      }
+    ],
+    "fields": {
+      "z": {
+        "label": "Ze statystyk",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "tail": {
+        "label": "Hipoteza alternatywna",
+        "help": "",
+        "unit": "",
+        "options": {
+          "left": "Lewa strona",
+          "right": "Prawostronny",
+          "two": "Dwustronne"
+        }
+      }
+    },
+    "slug": "kalkulator-wartosci-p"
+  }
+}

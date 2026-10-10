@@ -1,2 +1,58 @@
 # culators
-Calculators
+
+A framework-free, mobile-first HTML/JS calculator website. 207 working tools: all 204 calculator topics in Calculator.net’s sitemap captured on 10 October 2026, plus unit price, reading time and break-even calculators. Implementations and explanatory copy are original. Tools cover the listed topics; they do not reproduce every mode, jurisdiction or option of the reference website.
+
+## Run
+
+Node 20+ is enough. No install step or runtime CDN is required.
+
+```sh
+npm run build
+npm test
+npm run verify
+npm run dev
+```
+
+Open http://localhost:4173/en/. The domain root redirects to `/en/`. Upload **dist/** to a static host such as Cloudflare Pages or GitHub Pages with a custom domain. The site uses absolute paths and must be hosted at a domain root, not a GitHub repository subpath.
+
+Optional browser audit: start the local server, then run `node tests/browser.mjs`. This audit uses the bundled Playwright runtime and installed Chrome on this Mac; `CULATORS_BASE_URL` and `CULATORS_CHROME_BIN` can override the target and browser.
+
+## Structure
+
+- `calculators/*.mjs`: definitions, topic-specific formulas, validation and original article content.
+- `data/catalogue.json`: reference topic inventory with source URLs.
+- `data/site.json`: origin, category copy and imprint.
+- `scripts/build.mjs`: creates real HTML for calculator/category/legal pages, sitemap, metadata and structured data.
+- `assets/app.mjs`: search, favourites, share links, comparisons and CSV export.
+- `tokens.css` / `assets/site.css`: system-font design and reduced-motion support.
+- `tests/*.test.mjs`: known-answer, boundary and presentation regression tests.
+- `data/editorial/*.json`: practical everyday scenarios woven into calculator articles.
+- `assets/settings.mjs`: currency labels, entered currency pairs and compatible measurement conversions.
+
+## SEO and languages
+
+Every calculator has separate English, German, Czech and Polish pages. URLs use translated calculator names, such as `/de/bmi-rechner/`, `/cz/kalkulacka-bmi/` and `/pl/kalkulator-bmi/`. Czech displays CZ and lives under `/cz/`, while its HTML and hreflang language code remains `cs`. A generated route table connects navigation, search, canonicals, Open Graph URLs, structured data, language counterparts and sitemap entries. Previous URLs remain redirect aliases, preserve shared inputs and stay out of the sitemap. Content and example results are rendered at build time. `sitemap.xml` and `robots.txt` use the origin in `data/site.json`. SEO markup supports crawlability; it does not guarantee ranking or rich results.
+
+For another language, introduce localized tool/article and interface copy, generate it under that language’s folder, and add reciprocal hreflang links for actual translations. Do not publish empty language folders. English, German, Czech and Polish are included. German page content and runtime phrases live in `data/locales/`, while the German generator is `scripts/build-german.mjs`. Additional languages require their own translated catalogue and interface copy.
+
+## Privacy and assumptions
+
+Inputs calculate locally. Favourites store only tool identifiers in localStorage. Scenario comparisons live in page memory. Share links explicitly include inputs in the URL; they can enter browser history and hosting logs. Avoid sharing sensitive inputs. CSV export sanitizes formula-leading text. No external fonts, advertising or analytics scripts are included.
+
+Tax, pension, medical, sizing, material and engineering tools label their assumptions and limits. Many rates and factors are editable and are not live data. Currency is a user-supplied exchange-rate converter; official tax/pension assessments and medical decisions require the applicable rules and professional context.
+
+The imprint uses the supplied address verbatim. **The six-digit postcode `101829` still needs correction by the owner before public launch.** Update `data/site.json` and rebuild.
+
+## Deployment
+
+`.openai/hosting.json` identifies the private Sites preview. Canonicals intentionally target the requested production domain `culators.com`; they should be changed if a different public domain is used. A private preview does not connect or launch that custom domain.
+
+Cloudflare Pages honors `dist/_headers`. Other hosts need equivalent security headers configured separately. The expression calculator uses a bounded parser and works without `unsafe-eval`.
+
+## Workspace interaction checks
+
+With `npm run dev` running, use `node tests/settings-browser.mjs` and `node tests/result-motion.mjs` to verify currency/unit settings, shared settings, language search, result animations and reduced-motion feedback. `npm run verify:locales` checks German, Czech and Polish content coverage and language links. The main browser audit covers 828 calculator routes across all four languages.
+
+The sidebar uses expandable topic groups. Currency settings relabel amounts rather than fetch or apply exchange rates; the Currency Calculator still requires the rate entered by the user. Compatible physical inputs convert between metric and imperial units without changing the formula. Tools with their own unit selector use that selector directly. Formula examples and breakdowns retain their explicitly stated units.
+
+`node tests/routes-browser.mjs` checks legacy redirects, preserved query inputs, translated search URLs, CZ display and all four language counterparts. Localized `slug` fields in `data/locales/` define calculator URLs; `scripts/language-links.mjs` also localizes category/legal routes.

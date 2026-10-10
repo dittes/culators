@@ -1,0 +1,3286 @@
+{
+  "language": "cs-CZ",
+  "category": "finance",
+  "calculators": {
+    "mortgage-calculator": {
+      "title": "Hypoteční kalkulačka",
+      "description": "Odhadni měsíční splátku jistiny a úroku z výše úvěru, sazby a doby splácení. Daň z nemovitosti, pojištění ani poplatky nejsou zahrnuty.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Splátka jistiny a úroku = L × r ÷ (1 − (1 + r)^−n), kde r je měsíční sazba a n počet měsíčních splátek.",
+      "formula": "Splátka jistiny a úroku = L × r ÷ (1 − (1 + r)^−n), kde r je měsíční sazba a n počet měsíčních splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka jistiny a úroku: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při prohlížení domu porovnej nabídky s různou akontací, sazbou a dobou splácení. Hypoteční kalkulačka ti ukáže orientační splátku jistiny a úroku; další náklady přidej podle nabídky banky.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-hypotecni"
+    },
+    "loan-calculator": {
+      "title": "Kalkulačka půjčky",
+      "description": "Spočítej si pravidelnou měsíční splátku a celkové úroky u půjčky s pevnou sazbou a dobou splácení. Poplatky jsou zahrnuty jen tehdy, pokud jsou součástí jistiny.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka úvěru: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Když porovnáváš dvě nabídky půjčky, změň částku a dobu splácení. Uvidíš, zda nižší měsíční splátka neznamená výrazně vyšší celkové úroky.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-pujcky"
+    },
+    "auto-loan-calculator": {
+      "title": "Kalkulačka úvěru na auto",
+      "description": "Odhadni splátku úvěru na auto z financované částky po odečtení akontace či hodnoty protiúčtu. Poplatky prodejce a doplňky zahrň, pokud je financuješ.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Splátka vozidla se vypočítá anuitním vzorcem pro financovanou částku. Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Splátka vozidla se vypočítá anuitním vzorcem pro financovanou částku. Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka úvěru na auto: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "V autosalonu můžeš odděleně porovnat akontaci, protiúčet a dobu úvěru. Kalkulačka úvěru na auto ti pomůže ověřit, co se skrývá za lákavou měsíční splátkou.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uveru-na-auto"
+    },
+    "interest-calculator": {
+      "title": "Kalkulačka úroku",
+      "description": "Projekce ukáže, jak se částka změní při tebou zadané roční sazbě. Úrok se připisuje jednou ročně; aktuální sazby bank se nenačítají.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí částka = jistina × (1 + roční sazba)^počet let; úrok = budoucí částka − jistina.",
+      "formula": "Budoucí částka = jistina × (1 + roční sazba)^počet let; úrok = budoucí částka − jistina.",
+      "example": "Při přednastavených hodnotách vychází budoucí zůstatek: 16 288,95 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Když si odkládáš peníze na pozdější cíl, zadej vlastní úrokovou sazbu a dobu. Kalkulačka ukáže možný vývoj, nikoli aktuální nabídku banky.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uroku"
+    },
+    "payment-calculator": {
+      "title": "Kalkulačka splátek",
+      "description": "Vypočítej pevnou měsíční splátku potřebnou ke splacení dluhu při zadané sazbě a době. Výsledek předpokládá pravidelné měsíční platby.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Splátka = zůstatek × měsíční sazba ÷ (1 − (1 + měsíční sazba)^−počet měsíců).",
+      "formula": "Splátka = zůstatek × měsíční sazba ÷ (1 − (1 + měsíční sazba)^−počet měsíců).",
+      "example": "Při přednastavených hodnotách vychází požadovaná měsíční splátka: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Před přijetím nabídky si ověř, jaká měsíční splátka vychází z částky, sazby a termínu splacení. Změň dobu splácení a porovnej dopad na rozpočet i úroky.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-splatek"
+    },
+    "retirement-calculator": {
+      "title": "Kalkulačka na důchod",
+      "description": "Odhadni budoucí důchodové úspory z aktuálního zůstatku, měsíčních vkladů, výnosu a počtu let.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Konečný zůstatek = složeně úročené současné úspory + složeně úročené pravidelné příspěvky.",
+      "formula": "Konečný zůstatek = složeně úročené současné úspory + složeně úročené pravidelné příspěvky.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný důchodový zůstatek: 777 643,66 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Při plánování důchodu porovnej různé výše měsíčních vkladů a délku spoření. Výsledek závisí na zadaném výnosu a není zárukou skutečného zhodnocení.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální důchodové úspory",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční příspěvek",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let do důchodu",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-na-duchod"
+    },
+    "amortization-calculator": {
+      "title": "Kalkulačka amortizace půjčky",
+      "description": "Vypočítej splátku úvěru a rozlož její první splátku na úrok a splacenou jistinu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Úrok za období = počáteční zůstatek × periodická sazba; splacená jistina = splátka − úrok.",
+      "formula": "Úrok za období = počáteční zůstatek × periodická sazba; splacená jistina = splátka − úrok.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka úvěru: 1 498,88 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při kontrole splátkového kalendáře se podívej, jakou část první splátky tvoří úrok a kolik se odečte z jistiny. Další splátky se mění podle zůstatku dluhu.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-amortizace-pujcky"
+    },
+    "investment-calculator": {
+      "title": "Investiční kalkulačka",
+      "description": "Odhadni budoucí hodnotu počáteční investice a pravidelných měsíčních vkladů při zadaném ročním výnosu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "formula": "Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná hodnota investice: 264 122,49 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "U investičního plánu změň počáteční vklad, měsíční částku a předpokládaný výnos. Porovnej scénáře; projekce není zárukou výkonnosti fondu ani trhu.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční vklad",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba investování",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-investicni"
+    },
+    "currency-calculator": {
+      "title": "Měnová kalkulačka",
+      "description": "Přepočítej částku zadaným kurzem a případně odečti procentní poplatek za směnu. Kurz se nezískává online.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Čistá převedená částka = zdrojová částka × zadaný směnný kurz × (1 − sazba poplatku).",
+      "formula": "Čistá převedená částka = zdrojová částka × zadaný směnný kurz × (1 − sazba poplatku).",
+      "example": "Při přednastavených hodnotách vychází čistá převedená částka: 1 080 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Před zahraniční platbou zadej kurz poskytovatele a poplatek za směnu. Získáš orientační čistou částku a snadněji porovnáš různé nabídky převodu.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka k převodu",
+          "help": "",
+          "unit": "měnové jednotky",
+          "options": {}
+        },
+        "rate": {
+          "label": "Směnný kurz (cílová měna za 1 jednotku zdrojové měny)",
+          "help": "",
+          "unit": "cílová / zdrojová měna",
+          "options": {}
+        },
+        "fee": {
+          "label": "Poplatek za převod",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-menova"
+    },
+    "inflation-calculator": {
+      "title": "Inflační kalkulačka",
+      "description": "Odhadni budoucí cenu při tebou zadané roční inflaci. Nejde o aktuální prognózu inflace.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Budoucí nominální cena = současná cena × (1 + předpokládaná inflace)^počet let.",
+      "formula": "Budoucí nominální cena = současná cena × (1 + předpokládaná inflace)^počet let.",
+      "example": "Při přednastavených hodnotách vychází budoucí cena při předpokládané inflaci: 16 288,95 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Plánuješ větší nákup za několik let? Zadej vlastní předpoklad růstu cen a období, abys odhadl budoucí náklady. Nejde o živou inflační prognózu.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-inflacni"
+    },
+    "finance-calculator": {
+      "title": "Finanční kalkulačka",
+      "description": "Porovnej současnou hodnotu počáteční investice a pravidelných budoucích peněžních toků po jejich diskontování.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: ČSH = −počáteční náklady + Σ [roční peněžní tok ÷ (1 + diskontní sazba)^rok].",
+      "formula": "ČSH = −počáteční náklady + Σ [roční peněžní tok ÷ (1 + diskontní sazba)^rok].",
+      "example": "Při přednastavených hodnotách vychází čistá současná hodnota: -18,22 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "U projektu s pravidelným ročním příjmem změň diskontní sazbu a dobu. Finanční kalkulačka ti pomůže porovnat budoucí platby s jejich dnešní hodnotou.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční náklad / investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "annual": {
+          "label": "Roční peněžní přínos nebo tok",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "rate": {
+          "label": "Diskontní sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-financni"
+    },
+    "mortgage-payoff-calculator": {
+      "title": "Kalkulačka předčasného splacení hypotéky",
+      "description": "Porovnej běžné splácení hypotéky s pravidelnou dodatečnou splátkou jistiny a odhadni úsporu úroků.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Každý měsíc: úrok = zůstatek × měsíční sazba; nový zůstatek = zůstatek + úrok − splátka − dodatečná splátka.",
+      "formula": "Každý měsíc: úrok = zůstatek × měsíční sazba; nový zůstatek = zůstatek + úrok − splátka − dodatečná splátka.",
+      "example": "Při přednastavených hodnotách vychází počet měsíců do splacení hypotéky: 54 měsíců.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Máš v rozpočtu prostor pro mimořádnou splátku? Zadej její měsíční výši a porovnej, o kolik dříve můžeš hypotéku splatit a kolik úroků ušetříš.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Financovaná částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "extra": {
+          "label": "Dodatečná měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-predcasneho-splaceni-hypoteky"
+    },
+    "tax-calculator": {
+      "title": "Kalkulačka daně z příjmu",
+      "description": "Odhadni daň z příjmu po odečtení zadané slevy či odpočtu při uživatelsky zadané efektivní sazbě. Nejde o výpočet podle aktuálních daňových pásem.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním. Vzorec: Odhadovaná daň = max(0, příjem − odpočet) × předpokládaná efektivní sazba.",
+      "formula": "Odhadovaná daň = max(0, příjem − odpočet) × předpokládaná efektivní sazba.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná daň z příjmu: 18 000 USD.",
+      "limitations": "Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním.",
+      "everyday": "Pro orientační roční rozpočet změň příjem, odpočet a předpokládanou efektivní sazbu. Výsledek je scénář, nikoli daňové přiznání pro konkrétní stát či rok.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Roční příjem / zdanitelný majetek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "deduction": {
+          "label": "Odpočet nebo osvobození",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná efektivní daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dane-z-prijmu"
+    },
+    "compound-interest-calculator": {
+      "title": "Kalkulačka složeného úročení",
+      "description": "Projekce kombinuje počáteční vklad a pravidelné měsíční příspěvky, které se zhodnocují složeným úrokem.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "formula": "Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný zůstatek se složeným úročením: 264 122,49 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "U pravidelného spoření změň počáteční částku a měsíční vklad. Uvidíš, jak se na výsledku podílí nové vklady a složené úročení.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční vklad",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba investování",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-slozeneho-uroceni"
+    },
+    "salary-calculator": {
+      "title": "Kalkulačka mzdy",
+      "description": "Odhadni roční čistý příjem z hrubé mzdy, odpočtu a zadané efektivní daňové sazby. Nezahrnuje konkrétní mzdové srážky.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním. Vzorec: Odhadovaný čistý roční příjem = hrubá mzda − daň z příjmu po odečtení odpočtu.",
+      "formula": "Odhadovaný čistý roční příjem = hrubá mzda − daň z příjmu po odečtení odpočtu.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná čistá mzda: 72 000 USD.",
+      "limitations": "Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním.",
+      "everyday": "Při porovnávání pracovních nabídek si zadej roční mzdu a orientační odpočet i sazbu. Skutečná čistá výplata závisí také na odvodech a místních pravidlech.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Roční příjem / zdanitelný majetek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "deduction": {
+          "label": "Odpočet nebo osvobození",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná efektivní daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-mzdy"
+    },
+    "401k-calculator": {
+      "title": "Kalkulačka 401(k)",
+      "description": "Projekce odhaduje zůstatek účtu 401(k) při zadaném aktuálním zůstatku, měsíčních příspěvcích a výnosu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Projekce úročí současný zůstatek i každý měsíční vklad zadanou sazbou.",
+      "formula": "Projekce úročí současný zůstatek i každý měsíční vklad zadanou sazbou.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný zůstatek 401(k): 777 643,66 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Zvažuješ zvýšit příspěvek do zaměstnaneckého plánu? Porovnej různé měsíční vklady a započítej také příspěvek zaměstnavatele. Limity a pravidla plánu ověř samostatně.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální důchodové úspory",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční příspěvek",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let do důchodu",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-401-k"
+    },
+    "interest-rate-calculator": {
+      "title": "Kalkulačka výnosu investice",
+      "description": "Vypočítej složenou roční míru růstu mezi počáteční a konečnou hodnotou za zadanou dobu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Anualizovaná sazba = (konečná hodnota ÷ počáteční hodnota)^(1 ÷ počet let) − 1.",
+      "formula": "Anualizovaná sazba = (konečná hodnota ÷ počáteční hodnota)^(1 ÷ počet let) − 1.",
+      "example": "Při přednastavených hodnotách vychází anualizovaná složená sazba: 9,86 %.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Znáš pořizovací i dnešní hodnotu investice? Zadej je spolu s dobou držení a zjisti anualizovaný složený výnos. Výpočet neukazuje vývoj v jednotlivých letech.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "final": {
+          "label": "Konečná hodnota",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba držení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-vynosu-investice"
+    },
+    "sales-tax-calculator": {
+      "title": "Kalkulačka daně z prodeje",
+      "description": "Přičti k ceně před zdaněním zadanou sazbu daně z prodeje a zobraz částku daně i celkovou cenu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním. Vzorec: Daň = cena × sazba; celkem = cena + daň.",
+      "formula": "Daň = cena × sazba; celkem = cena + daň.",
+      "example": "Při přednastavených hodnotách vychází cena včetně daně z prodeje: 108,25 USD.",
+      "limitations": "Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním.",
+      "everyday": "Při nákupu zadej cenu před zdaněním a místní sazbu. Kalkulačka oddělí daň od celkové částky; správnou sazbu pro místo nákupu ověř zvlášť.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Cena bez daně",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dane-z-prodeje"
+    },
+    "house-affordability-calculator": {
+      "title": "Kalkulačka dostupnosti bydlení",
+      "description": "Odhadni cenový strop domu podle hrubého příjmu, dalších dluhů, akontace, sazby a zadaného limitu poměru dluhu k příjmu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Dostupná splátka jistiny a úroku = max(0, příjem × zadaný limit dluhu − ostatní měsíční dluhy); cena = dostupný úvěr + akontace.",
+      "formula": "Dostupná splátka jistiny a úroku = max(0, příjem × zadaný limit dluhu − ostatní měsíční dluhy); cena = dostupný úvěr + akontace.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná dostupná cena domu: 537 009,02 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Než začneš hledat dům, změň příjem, stávající dluhy a vlastní vklad. Odhad kupní ceny doplň o daně, pojištění a další náklady konkrétní nabídky.",
+      "faqs": [
+        {
+          "q": "Je výsledek úplným rozpočtem na bydlení?",
+          "a": "Ne. Zahrnuje pouze zadané položky. Daně, pojištění, údržbu, poplatky a další výdaje přidej podle své situace."
+        },
+        {
+          "q": "Mohu si změnit předpoklady?",
+          "a": "Ano. Změň vstupy podle nabídky nebo rozpočtu, který chceš porovnat; výsledek je citlivý na zadané hodnoty."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Cena domu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Hypoteční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba hypotéky",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "income": {
+          "label": "Hrubý měsíční příjem",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "debt": {
+          "label": "Další měsíční dluhy",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "dti": {
+          "label": "Maximální podíl nákladů na bydlení a dluhů na hrubém příjmu",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dostupnosti-bydleni"
+    },
+    "savings-calculator": {
+      "title": "Kalkulačka úspor",
+      "description": "Odhadni budoucí zůstatek úspor z počáteční částky, měsíčních vkladů a předpokládaného výnosu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Konečné úspory = složeně úročený počáteční vklad + budoucí hodnota měsíčních příspěvků.",
+      "formula": "Konečné úspory = složeně úročený počáteční vklad + budoucí hodnota měsíčních příspěvků.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný zůstatek úspor: 264 122,49 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Buduješ rezervu na stěhování nebo nenadálé výdaje? Zadej současné úspory, měsíční vklad a dobu spoření a porovnej několik variant.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční vklad",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba investování",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uspor"
+    },
+    "rent-calculator": {
+      "title": "Kalkulačka rozpočtu na nájem",
+      "description": "Vypočítej částku, která zbude na nájem po odečtení fixních výdajů, běžné spotřeby a cílových úspor od čistého příjmu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Prostor na nájem = max(0, čistý příjem − fixní výdaje − proměnlivé výdaje − cíl spoření).",
+      "formula": "Prostor na nájem = max(0, čistý příjem − fixní výdaje − proměnlivé výdaje − cíl spoření).",
+      "example": "Při přednastavených hodnotách vychází měsíční prostor na nájem: 1 200 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Před podpisem nájemní smlouvy odečti pravidelné účty, běžné výdaje a plánované úspory od příjmu. Zbývající částka ti poslouží jako orientační limit nájemného.",
+      "faqs": [
+        {
+          "q": "Je výsledek úplným rozpočtem na bydlení?",
+          "a": "Ne. Zahrnuje pouze zadané položky. Daně, pojištění, údržbu, poplatky a další výdaje přidej podle své situace."
+        },
+        {
+          "q": "Mohu si změnit předpoklady?",
+          "a": "Ano. Změň vstupy podle nabídky nebo rozpočtu, který chceš porovnat; výsledek je citlivý na zadané hodnoty."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Čistý měsíční příjem",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "fixed": {
+          "label": "Pevné měsíční výdaje",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "variable": {
+          "label": "Proměnlivé měsíční výdaje",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "savings": {
+          "label": "Cíl měsíčního spoření",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-rozpoctu-na-najem"
+    },
+    "marriage-calculator": {
+      "title": "Kalkulačka daně pro manžele",
+      "description": "Porovnej společný příjem dvou osob po uplatnění jedné předpokládané efektivní daňové sazby. Nezohledňuje status společného přiznání.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Společný odhad = (příjem 1 + příjem 2) × (1 − předpokládaná efektivní sazba).",
+      "formula": "Společný odhad = (příjem 1 + příjem 2) × (1 − předpokládaná efektivní sazba).",
+      "example": "Při přednastavených hodnotách vychází orientační společný čistý příjem: 117 000 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při plánování společného rozpočtu můžeš zkusit různé kombinace příjmů a efektivní sazby. Skutečná daň závisí na způsobu podání a pravidlech daného roku.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Tvůj roční příjem",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "other": {
+          "label": "Příjem partnera či partnerky / manžela či manželky",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná společná efektivní daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dane-pro-manzele"
+    },
+    "estate-tax-calculator": {
+      "title": "Kalkulačka dědické daně",
+      "description": "Odhadni daň z hodnoty majetku nad zadanou výjimku či nezdanitelnou část při pevné předpokládané sazbě.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním. Vzorec: Odhadovaná dědická daň = max(0, hodnota majetku − předpokládané osvobození) × zadaná sazba.",
+      "formula": "Odhadovaná dědická daň = max(0, hodnota majetku − předpokládané osvobození) × zadaná sazba.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná dědická daň: 18 000 USD.",
+      "limitations": "Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním.",
+      "everyday": "Pro hrubý odhad dědické daně zadej hodnotu majetku, výjimku a sazbu. Hranice i odpočty se liší podle místa a roku; ověř aktuální pravidla.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Roční příjem / zdanitelný majetek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "deduction": {
+          "label": "Odpočet nebo osvobození",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná efektivní daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dedicke-dane"
+    },
+    "pension-calculator": {
+      "title": "Kalkulačka výplaty penze",
+      "description": "Odhadni pevnou měsíční výplatu z penzijního zůstatku při zadaném výnosu a konečné době výplaty. Nejde o nabídku doživotní anuity.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Měsíční výplata = současná hodnota anuity vypočtená z měsíčního výnosu a počtu splátek.",
+      "formula": "Měsíční výplata = současná hodnota anuity vypočtená z měsíčního výnosu a počtu splátek.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční výplata penze: 605,98 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Pokud porovnáváš zůstatek penzijního účtu s plánovaným obdobím čerpání, změň dobu a výnos. Výpočet ukazuje pevnou výplatu po zvolenou dobu, nikoli doživotní rentu pojišťovny.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Vklad do anuity",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba výplaty",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-vyplaty-penze"
+    },
+    "social-security-calculator": {
+      "title": "Kalkulačka dávek Social Security",
+      "description": "Odhadni souhrn dávek Social Security z měsíčního nároku, délky pobírání a předpokládané roční valorizace COLA.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Použij odhad ze svého SSA výpisu. COLA je předpoklad; nárok, daně ani úpravy dávek se nepočítají. Vzorec: Celkové dávky = součet měsíčních dávek × 12 za jednotlivé roky, navýšený o zadanou roční valorizaci COLA.",
+      "formula": "Celkové dávky = součet měsíčních dávek × 12 za jednotlivé roky, navýšený o zadanou roční valorizaci COLA.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný součet dávek social security: 583 136,88 USD.",
+      "limitations": "Použij odhad ze svého SSA výpisu. COLA je předpoklad; nárok, daně ani úpravy dávek se nepočítají.",
+      "everyday": "Zadej měsíční dávku ze svého odhadu SSA a uprav dobu pobírání i předpokládanou valorizaci COLA. Kalkulačka odhaduje součet plateb, neurčuje tvůj individuální nárok.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "benefit": {
+          "label": "Odhadovaná měsíční dávka SSA",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let pobírání dávek",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná roční valorizace COLA",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-davek-social-security"
+    },
+    "annuity-calculator": {
+      "title": "Kalkulačka spoření na anuitu",
+      "description": "Vypočítej potřebný měsíční vklad k dosažení cílového zůstatku anuity při zadané sazbě a době spoření.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Měsíční vklad = cílová budoucí hodnota ÷ (((1 + r)^n − 1) ÷ r).",
+      "formula": "Měsíční vklad = cílová budoucí hodnota ÷ (((1 + r)^n − 1) ÷ r).",
+      "example": "Při přednastavených hodnotách vychází potřebný měsíční vklad do anuity: 679,12 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Chceš vytvořit cílový zůstatek pro budoucí rentu? Změň cílovou částku a dobu spoření a zjisti potřebný pravidelný vklad.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Cílový budoucí zůstatek anuity",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná roční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba spoření",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-sporeni-na-anuitu"
+    },
+    "annuity-payout-calculator": {
+      "title": "Kalkulačka výplaty anuity",
+      "description": "Přepočítej zůstatek anuity na pevné měsíční výběry po zvolenou konečnou dobu. Doživotní výplatu neoceňuje.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční výplata anuity: 605,98 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Pokud chceš rozdělit existující anuitní zůstatek do pravidelných výběrů, porovnej různé délky čerpání. Doživotní výplata vyžaduje konkrétní nabídku pojišťovny.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Dostupný zůstatek anuity",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná roční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba výplaty",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-vyplaty-anuity"
+    },
+    "credit-card-calculator": {
+      "title": "Kalkulačka kreditní karty",
+      "description": "Odhadni dobu splacení zůstatku kreditní karty při pevné měsíční splátce a neměnné sazbě, bez dalších nákupů.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Měsíční změna zůstatku = zůstatek + úrok (APR ÷ 12) − pevná splátka.",
+      "formula": "Měsíční změna zůstatku = zůstatek + úrok (APR ÷ 12) − pevná splátka.",
+      "example": "Při přednastavených hodnotách vychází počet měsíců do splacení karty: 32 měsíců.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Když splátka kreditní karty snižuje zůstatek jen pomalu, vyzkoušej vyšší měsíční platbu. Odhad předpokládá, že už nepřidáváš nové nákupy a sazba se nemění.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úrok / APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "payment": {
+          "label": "Měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-kreditni-karty"
+    },
+    "credit-card-payoff-calculator": {
+      "title": "Kalkulačka splacení kreditní karty",
+      "description": "Vypočítej dobu a úroky potřebné ke splacení zůstatku při pevné sazbě a splátce bez dalších nákupů.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Výpočet opakuje měsíční úrok a splátku, dokud není zůstatek splacen.",
+      "formula": "Výpočet opakuje měsíční úrok a splátku, dokud není zůstatek splacen.",
+      "example": "Při přednastavených hodnotách vychází počet měsíců do splacení karty: 32 měsíců.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Chceš si stanovit cíl pro splacení kreditní karty? Porovnej měsíční splátky a sleduj, jak se mění doba splacení i úroky.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úrok / APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "payment": {
+          "label": "Měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-splaceni-kreditni-karty"
+    },
+    "debt-payoff-calculator": {
+      "title": "Kalkulačka splácení dluhu",
+      "description": "Odhadni dobu splacení jednoho dluhu při pevné měsíční splátce a zadané sazbě.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Zůstatek po měsíci = zůstatek × (1 + APR ÷ 12) − splátka.",
+      "formula": "Zůstatek po měsíci = zůstatek × (1 + APR ÷ 12) − splátka.",
+      "example": "Při přednastavených hodnotách vychází počet měsíců do splacení dluhu: 32 měsíců.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "U jednoho dluhu porovnej dosažitelnou měsíční splátku s rychlejším plánem. Máš-li více závazků, zvaž všechny zůstatky společně.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úrok / APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "payment": {
+          "label": "Měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-splaceni-dluhu"
+    },
+    "debt-consolidation-calculator": {
+      "title": "Kalkulačka konsolidace dluhu",
+      "description": "Porovnej celkové náklady současného dluhu a nové konsolidační nabídky včetně poplatku při stejné době splácení.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Náklady nabídky = anuitní splátky ze zůstatku navýšeného o poplatek; porovnávají se se splátkami při původní sazbě za stejný počet měsíců.",
+      "formula": "Náklady nabídky = anuitní splátky ze zůstatku navýšeného o poplatek; porovnávají se se splátkami při původní sazbě za stejný počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází rozdíl nákladů po konsolidaci: -2 850,08 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při konsolidaci porovnej původní a novou sazbu, poplatek a stejný počet měsíců splácení. Nižší měsíční splátka sama o sobě nemusí znamenat nižší celkové náklady.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Zůstatek dluhu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "oldRate": {
+          "label": "Současná APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "newRate": {
+          "label": "Nová APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "months": {
+          "label": "Doba do splacení",
+          "help": "",
+          "unit": "měsíce",
+          "options": {}
+        },
+        "fee": {
+          "label": "Poplatek za převod či sjednání",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-konsolidace-dluhu"
+    },
+    "repayment-calculator": {
+      "title": "Kalkulačka splátky půjčky",
+      "description": "Vypočítej měsíční splátku nutnou k úplnému splacení půjčky s pevnou sazbou ve zvoleném termínu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází potřebná měsíční splátka: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Před podpisem smlouvy si spočítej splátku pro požadovaný termín splacení. Kratší doba obvykle znamená vyšší měsíční zátěž, ale méně zaplacených úroků.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-splatky-pujcky"
+    },
+    "student-loan-calculator": {
+      "title": "Kalkulačka studentské půjčky",
+      "description": "Odhadni standardní splátku studentské půjčky s pevnou sazbou a dobou splácení. Nezahrnuje příjmové programy ani odpuštění dluhu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Splátka se vypočítá standardním anuitním vzorcem pro úvěr s pevnou sazbou.",
+      "formula": "Splátka se vypočítá standardním anuitním vzorcem pro úvěr s pevnou sazbou.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka studentské půjčky: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při plánování rozpočtu po škole si spočítej standardní splátku. Příjmově podmíněné programy, odklad nebo odpuštění je nutné posoudit samostatně.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-studentske-pujcky"
+    },
+    "college-cost-calculator": {
+      "title": "Kalkulačka nákladů na studium",
+      "description": "Odhadni budoucí roční náklady na studium při zadaném současném nákladu, růstu cen a období.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Budoucí roční náklady = současné roční náklady × (1 + předpokládaný růst)^počet let.",
+      "formula": "Budoucí roční náklady = současné roční náklady × (1 + předpokládaný růst)^počet let.",
+      "example": "Při přednastavených hodnotách vychází odhadované roční náklady na studium: 16 288,95 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Spoříš na školné v budoucích letech? Zadej dnešní roční náklady a předpokládaný růst. Ubytování, stipendia a školní poplatky zahrň do širšího plánu zvlášť.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-nakladu-na-studium"
+    },
+    "simple-interest-calculator": {
+      "title": "Kalkulačka jednoduchého úroku",
+      "description": "Vypočítej úrok pouze z původní jistiny bez úročení již připsaných úroků.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Úrok = jistina × roční sazba × počet let; konečný zůstatek = jistina + úrok.",
+      "formula": "Úrok = jistina × roční sazba × počet let; konečný zůstatek = jistina + úrok.",
+      "example": "Při přednastavených hodnotách vychází zůstatek po jednoduchém úročení: 15 000 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "U krátkodobé půjčky nebo vkladu bez složeného úročení porovnej úrok počítaný pouze z původní částky.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-jednoducheho-uroku"
+    },
+    "cd-calculator": {
+      "title": "Kalkulačka CD vkladu",
+      "description": "Odhadni konečný zůstatek amerického certifikátu o vkladu (CD) podle zadané sazby a doby.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Hodnota při splatnosti = vklad × (1 + roční sazba)^doba.",
+      "formula": "Hodnota při splatnosti = vklad × (1 + roční sazba)^doba.",
+      "example": "Při přednastavených hodnotách vychází hodnota cd při splatnosti: 16 288,95 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Pokud ti americká banka nabídla CD s pevnou sazbou, zadej vklad a dobu do splatnosti. Ověř skutečný interval připisování úroků a podmínky předčasného výběru.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-cd-vkladu"
+    },
+    "bond-calculator": {
+      "title": "Kalkulačka dluhopisu",
+      "description": "Odhadni budoucí hodnotu dluhopisové investice při předpokládaném ročním výnosu. Nezahrnuje kupony ani změny tržní ceny.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = částka dluhopisu × (1 + předpokládaný roční výnos)^počet let.",
+      "formula": "Budoucí hodnota = částka dluhopisu × (1 + předpokládaný roční výnos)^počet let.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná hodnota dluhopisu: 16 288,95 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Pro zjednodušenou projekci změň částku, výnos a horizont. Kalkulačka neoceňuje kuponové platby ani pohyby tržní ceny dluhopisu.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dluhopisu"
+    },
+    "mutual-fund-calculator": {
+      "title": "Kalkulačka podílového fondu",
+      "description": "Odhadni budoucí hodnotu počáteční investice a pravidelných vkladů do fondu při zadaném výnosu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "formula": "Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná hodnota podílového fondu: 264 122,49 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "U pravidelného investování do fondu porovnej různé vklady a výnosové scénáře. Skutečné výnosy kolísají a mohou být sníženy o poplatky.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční vklad",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba investování",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-podiloveho-fondu"
+    },
+    "roth-ira-calculator": {
+      "title": "Kalkulačka Roth IRA",
+      "description": "Odhadni růst účtu Roth IRA z aktuálního zůstatku, vkladů a předpokládaného výnosu. Neověřuje limity ani daňový režim.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Projekce zhodnocuje zůstatek účtu i příspěvky zadaným výnosem.",
+      "formula": "Projekce zhodnocuje zůstatek účtu i příspěvky zadaným výnosem.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný zůstatek roth ira: 777 643,66 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Při plánování příspěvků do Roth IRA změň měsíční vklad a dobu investování. Nárok, limity příspěvků a podmínky výběru ověř pro svou situaci.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální důchodové úspory",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční příspěvek",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let do důchodu",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-roth-ira"
+    },
+    "ira-calculator": {
+      "title": "Kalkulačka IRA",
+      "description": "Odhadni budoucí zůstatek účtu IRA při zadaných měsíčních příspěvcích a výnosu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "formula": "Budoucí hodnota = počáteční zůstatek × (1 + r)^n + měsíční vklad × (((1 + r)^n − 1) ÷ r), kde r je měsíční sazba a n počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný zůstatek ira: 777 643,66 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Projekci IRA můžeš upravit podle aktuálního zůstatku a pravidelných příspěvků. Daňový režim závisí na typu účtu a osobní situaci.",
+      "faqs": [
+        {
+          "q": "Je odhadovaný výnos zaručený?",
+          "a": "Ne. Jde o tebou zadaný předpoklad; skutečné investiční výnosy se mohou lišit a mohou být sníženy o poplatky či daně."
+        },
+        {
+          "q": "Zohledňuje výpočet limity a pravidla účtu?",
+          "a": "Ne vždy. Daňové zacházení, limity příspěvků, nárok na dávky či podmínky výplaty si ověř pro daný účet a rok."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální důchodové úspory",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "contribution": {
+          "label": "Měsíční příspěvek",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaný roční výnos",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let do důchodu",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-ira"
+    },
+    "rmd-calculator": {
+      "title": "Kalkulačka povinného výběru RMD",
+      "description": "Odhadni minimální povinný výběr RMD jako zůstatek účtu k závěru předchozího roku dělený příslušným faktorem.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Zadej faktor z oficiální tabulky pro správný daňový rok a situaci příjemce. Vzorec: Povinný minimální výběr = zůstatek k závěru předchozího roku ÷ příslušný faktor výběru.",
+      "formula": "Povinný minimální výběr = zůstatek k závěru předchozího roku ÷ příslušný faktor výběru.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný povinný výběr: 7 843,14 USD.",
+      "limitations": "Zadej faktor z oficiální tabulky pro správný daňový rok a situaci příjemce.",
+      "everyday": "Pro odhad RMD zadej zůstatek k 31. prosinci a faktor z oficiální tabulky pro správný daňový rok a situaci příjemce.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Zůstatek účtu k 31. prosinci předchozího roku",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "divisor": {
+          "label": "Příslušný dělitel pro výběr",
+          "help": "",
+          "unit": "table factor",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-povinneho-vyberu-rmd"
+    },
+    "vat-calculator": {
+      "title": "Kalkulačka DPH",
+      "description": "Přičti k čisté ceně zadanou sazbu DPH nebo zjisti daňovou část a hrubou cenu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: DPH = cena bez daně × sazba; cena s DPH = cena bez daně × (1 + sazba).",
+      "formula": "DPH = cena bez daně × sazba; cena s DPH = cena bez daně × (1 + sazba).",
+      "example": "Při přednastavených hodnotách vychází cena včetně dph: 108,25 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "U faktury nebo nákupu zadej cenu bez daně a sazbu DPH. Ověř, která sazba platí pro dané zboží, místo a typ transakce.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Cena bez daně",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-dph"
+    },
+    "cash-back-or-low-interest-calculator": {
+      "title": "Kalkulačka cashbacku nebo nižší sazby",
+      "description": "Porovnej peněžní cashback s úsporou úroků při nižší sazbě financování za stejné období splácení.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Porovnej bonus s rozdílem úroků vypočtených anuitně při obou sazbách APR.",
+      "formula": "Porovnej bonus s rozdílem úroků vypočtených anuitně při obou sazbách APR.",
+      "example": "Při přednastavených hodnotách vychází čistá výhoda nabídky s nižší sazbou: 181,33 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Prodejce auta může nabídnout cashback nebo nižší úrok. Zadej obě varianty na stejné částce a době a zahrň případný poplatek.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Financovaná částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "oldRate": {
+          "label": "APR s bonusem",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "newRate": {
+          "label": "APR u nabídky s nižší sazbou",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "months": {
+          "label": "Doba úvěru",
+          "help": "",
+          "unit": "měsíce",
+          "options": {}
+        },
+        "fee": {
+          "label": "Hotovostní bonus u nabídky s vyšší sazbou",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-cashbacku-nebo-nizsi-sazby"
+    },
+    "auto-lease-calculator": {
+      "title": "Kalkulačka leasingu auta",
+      "description": "Odhadni měsíční leasingovou splátku z ceny vozidla, zůstatkové hodnoty, počáteční platby, sazby a doby.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Orientační splátka používá anuitní vzorec na čistou financovanou částku.",
+      "formula": "Orientační splátka používá anuitní vzorec na čistou financovanou částku.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční leasingová splátka: 441,67 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "U nabídky leasingu změň zůstatkovou hodnotu, počáteční platbu a dobu. Porovnej výsledek s konkrétními poplatky, limitem kilometrů a podmínkami vrácení.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Dohodnutá cena vozidla",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "residual": {
+          "label": "Odhadovaná zůstatková hodnota",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Platba při podpisu smlouvy",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba financování leasingu",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba leasingu",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-leasingu-auta"
+    },
+    "depreciation-calculator": {
+      "title": "Kalkulačka odpisů",
+      "description": "Vypočítej lineární roční odpis a účetní zůstatkovou hodnotu podle pořizovací a zůstatkové ceny a životnosti. Daňové odpisy mohou být jiné.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Roční odpis = (pořizovací cena − zůstatková hodnota) ÷ doba použitelnosti.",
+      "formula": "Roční odpis = (pořizovací cena − zůstatková hodnota) ÷ doba použitelnosti.",
+      "example": "Při přednastavených hodnotách vychází účetní hodnota ve zvoleném roce: 19 200 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Pro jednoduchý účetní přehled zařízení zadej pořizovací cenu, zůstatkovou hodnotu a dobu použitelnosti. Daňové odpisy se mohou řídit jinými pravidly.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "cost": {
+          "label": "Pořizovací cena majetku",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "salvage": {
+          "label": "Zůstatková hodnota",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba použitelnosti / držení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "year": {
+          "label": "Kontrolovaný rok",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-odpisu"
+    },
+    "average-return-calculator": {
+      "title": "Kalkulačka průměrného výnosu",
+      "description": "Vypočítej anualizovaný složený výnos mezi počáteční a konečnou hodnotou. Nejde o aritmetický průměr ročních výnosů.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: CAGR = (konečná hodnota ÷ počáteční hodnota)^(1 ÷ počet let) − 1.",
+      "formula": "CAGR = (konečná hodnota ÷ počáteční hodnota)^(1 ÷ počet let) − 1.",
+      "example": "Při přednastavených hodnotách vychází anualizovaný složený výnos: 9,86 %.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Znáš nákupní a dnešní hodnotu investice? Zadej dobu držení a porovnej anualizovaný složený výnos. Výpočet neukazuje jednotlivé roční výkyvy.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "final": {
+          "label": "Konečná hodnota",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba držení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-prumerneho-vynosu"
+    },
+    "margin-calculator": {
+      "title": "Kalkulačka marže",
+      "description": "Vypočítej hrubou marži jako podíl zisku z prodejní ceny po odečtení nákladů. Marže a přirážka mají jiný základ.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Hrubá marže = (prodejní cena − náklady) ÷ prodejní cena.",
+      "formula": "Hrubá marže = (prodejní cena − náklady) ÷ prodejní cena.",
+      "example": "Při přednastavených hodnotách vychází hrubá marže: 40 %.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při stanovení ceny produktu porovnej prodejní cenu s jednotkovými náklady. Hrubá marže vyjadřuje, jaká část tržby zůstane po přímých nákladech.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "cost": {
+          "label": "Náklady",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "price": {
+          "label": "Prodejní cena",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-marze"
+    },
+    "discount-calculator": {
+      "title": "Kalkulačka slevy",
+      "description": "Uplatni procentní slevu na původní cenu a zobraz částku úspory i cenu po slevě.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Cena po slevě = původní cena × (1 − sazba slevy).",
+      "formula": "Cena po slevě = původní cena × (1 − sazba slevy).",
+      "example": "Při přednastavených hodnotách vychází cena po slevě: 90 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při sezonním výprodeji zadej původní cenu a výši slevy. Uvidíš skutečnou úsporu a cenu před případným připočtením daně.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Původní cena",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Sleva",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-slevy"
+    },
+    "business-loan-calculator": {
+      "title": "Kalkulačka podnikatelského úvěru",
+      "description": "Odhadni pevnou měsíční splátku a celkové úroky podnikatelského úvěru při zadané jistině, sazbě a době.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka podnikatelského úvěru: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při financování vybavení nebo provozu porovnej splátku s měsíčním cash flow. Poplatky, proměnlivou sazbu či závěrečnou splátku zvaž zvlášť.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-podnikatelskeho-uveru"
+    },
+    "debt-ratio-calculator": {
+      "title": "Kalkulačka poměru dluhu k příjmu",
+      "description": "Vypočítej poměr ročních splátek dluhu k hrubému ročnímu příjmu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Poměr dluhu k příjmu = roční splátky dluhů ÷ hrubý roční příjem.",
+      "formula": "Poměr dluhu k příjmu = roční splátky dluhů ÷ hrubý roční příjem.",
+      "example": "Při přednastavených hodnotách vychází poměr dluhu k příjmu: 30 %.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při žádosti o úvěr může věřitel porovnávat závazky s příjmem. Zadej částky za stejné období a ověř, které dluhy se započítávají.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Hrubý roční příjem",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "debt": {
+          "label": "Roční splátky dluhů",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-pomeru-dluhu-k-prijmu"
+    },
+    "real-estate-calculator": {
+      "title": "Kalkulačka financování nemovitosti",
+      "description": "Odhadni splátku hypotéky a podíl splátek na hrubém příjmu podle ceny, akontace, sazby a dalších dluhů.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním. Vzorec: Úvěr = cena − akontace; měsíční splátka se řídí anuitním vzorcem s pevnou sazbou.",
+      "formula": "Úvěr = cena − akontace; měsíční splátka se řídí anuitním vzorcem s pevnou sazbou.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční splátka jistiny a úroku: 1 918,56 USD.",
+      "limitations": "Sazba a odpočet jsou uživatelské předpoklady. V mnoha zemích je daň progresivní; tento výpočet s pevnou sazbou není daňovým přiznáním.",
+      "everyday": "Při posuzování koupě změň cenu, vlastní vklad, příjem a další dluhy. Daň, pojištění a údržbu připočti k odhadované splátce zvlášť.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Cena domu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Hypoteční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba hypotéky",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "income": {
+          "label": "Hrubý měsíční příjem",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "debt": {
+          "label": "Další měsíční dluhy",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "dti": {
+          "label": "Maximální podíl nákladů na bydlení a dluhů na hrubém příjmu",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-financovani-nemovitosti"
+    },
+    "take-home-pay-calculator": {
+      "title": "Kalkulačka čisté mzdy",
+      "description": "Odhadni čistý roční příjem po zadaném odpočtu a efektivní daňové sazbě. Konkrétní mzdové odvody se nepočítají.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Odhad čistého příjmu = příjem − max(0, příjem − odpočet) × sazba.",
+      "formula": "Odhad čistého příjmu = příjem − max(0, příjem − odpočet) × sazba.",
+      "example": "Při přednastavených hodnotách vychází odhadovaný čistý roční příjem: 72 000 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při plánování ročního rozpočtu změň příjem, odpočet a efektivní sazbu. Skutečná čistá mzda závisí také na odvodech, benefitech a místních pravidlech.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Roční příjem / zdanitelný majetek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "deduction": {
+          "label": "Odpočet nebo osvobození",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Předpokládaná efektivní daňová sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-ciste-mzdy"
+    },
+    "personal-loan-calculator": {
+      "title": "Kalkulačka osobní půjčky",
+      "description": "Vypočítej pravidelnou splátku a celkové úroky osobní půjčky s pevnou sazbou a dobou splácení.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka osobní půjčky: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Pokud financuješ větší výdaj osobní půjčkou, porovnej různé doby splácení. Poplatky přidej, pokud nejsou už zahrnuty v jistině.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-osobni-pujcky"
+    },
+    "boat-loan-calculator": {
+      "title": "Kalkulačka úvěru na loď",
+      "description": "Odhadni splátku úvěru na loď z financované částky, roční sazby a doby splácení.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka úvěru na loď: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při porovnávání financování lodi změň akontaci, sazbu a dobu. Příslušenství či přepravu zahrň do úvěru, pokud je budeš financovat.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uveru-na-lod"
+    },
+    "lease-calculator": {
+      "title": "Kalkulačka leasingové splátky",
+      "description": "Odhadni pravidelnou splátku zůstatku financování při pevné sazbě a době. Nezohledňuje zůstatkovou hodnotu ani podmínky automobilového leasingu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Zjednodušený odhad používá plně amortizační splátkový kalendář.",
+      "formula": "Zjednodušený odhad používá plně amortizační splátkový kalendář.",
+      "example": "Při přednastavených hodnotách vychází měsíční ekvivalentní leasingová splátka: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Chceš porovnat pravidelnou splátku s nabídkou leasingu? Uprav částku, sazbu a dobu, ale nájezd kilometrů, zůstatkovou hodnotu a poplatky posuzuj zvlášť.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-leasingove-splatky"
+    },
+    "refinance-calculator": {
+      "title": "Kalkulačka refinancování",
+      "description": "Porovnej současné splácení se sazbou při refinancování a započítej náklady přidané k nové jistině.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Nová splátka amortizuje zůstatek navýšený o poplatky při nové sazbě APR; porovnávají se celkové úroky a poplatky za zvolený počet měsíců.",
+      "formula": "Nová splátka amortizuje zůstatek navýšený o poplatky při nové sazbě APR; porovnávají se celkové úroky a poplatky za zvolený počet měsíců.",
+      "example": "Při přednastavených hodnotách vychází rozdíl nákladů po refinancování: -35 353,86 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při refinancování porovnej zbývající splátky s novou nabídkou včetně nákladů. Obě varianty sleduj za stejné období, aby se nezkreslila úspora.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Zbývající zůstatek úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "oldRate": {
+          "label": "Současná APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "newRate": {
+          "label": "APR po refinancování",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "months": {
+          "label": "Doba porovnání",
+          "help": "",
+          "unit": "měsíce",
+          "options": {}
+        },
+        "fee": {
+          "label": "Náklady na uzavření přičtené k úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-refinancovani"
+    },
+    "budget-calculator": {
+      "title": "Kalkulačka měsíčního rozpočtu",
+      "description": "Odečti fixní výdaje, proměnlivou spotřebu a plánované úspory od čistého měsíčního příjmu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Zbývající rozpočet = příjem − fixní náklady − proměnlivé výdaje − plánované úspory.",
+      "formula": "Zbývající rozpočet = příjem − fixní náklady − proměnlivé výdaje − plánované úspory.",
+      "example": "Při přednastavených hodnotách vychází zbývající měsíční rozpočet: 1 200 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Před přijetím nové pravidelné platby zadej příjem, účty, běžné výdaje a cíl spoření. Zbývající částka ukáže prostor v měsíčním rozpočtu.",
+      "faqs": [
+        {
+          "q": "Je výsledek úplným rozpočtem na bydlení?",
+          "a": "Ne. Zahrnuje pouze zadané položky. Daně, pojištění, údržbu, poplatky a další výdaje přidej podle své situace."
+        },
+        {
+          "q": "Mohu si změnit předpoklady?",
+          "a": "Ano. Změň vstupy podle nabídky nebo rozpočtu, který chceš porovnat; výsledek je citlivý na zadané hodnoty."
+        }
+      ],
+      "fields": {
+        "income": {
+          "label": "Čistý měsíční příjem",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "fixed": {
+          "label": "Pevné měsíční výdaje",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "variable": {
+          "label": "Proměnlivé měsíční výdaje",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "savings": {
+          "label": "Cíl měsíčního spoření",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-mesicniho-rozpoctu"
+    },
+    "rental-property-calculator": {
+      "title": "Kalkulačka výnosu z pronájmu",
+      "description": "Odhadni efektivní nájem po započtení neobsazenosti, provozní cash flow, hrubý výnos a návratnost hotovosti. Nezahrnuje úvěr ani daň.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Nezahrnuje financování, daň z příjmu ani rezervu na kapitálové výdaje. Vzorec: Efektivní nájem = měsíční nájem × 12 × (1 − neobsazenost); provozní cash flow = efektivní nájem − roční provozní náklady.",
+      "formula": "Efektivní nájem = měsíční nájem × 12 × (1 − neobsazenost); provozní cash flow = efektivní nájem − roční provozní náklady.",
+      "example": "Při přednastavených hodnotách vychází roční čistý provozní peněžní tok: 19 360 USD.",
+      "limitations": "Nezahrnuje financování, daň z příjmu ani rezervu na kapitálové výdaje.",
+      "everyday": "Před koupí pronajímané nemovitosti odečti od nájmu neobsazenost a provozní náklady. Výsledek ukáže provozní cash flow před splátkami úvěru a daní.",
+      "faqs": [
+        {
+          "q": "Je výsledek úplným rozpočtem na bydlení?",
+          "a": "Ne. Zahrnuje pouze zadané položky. Daně, pojištění, údržbu, poplatky a další výdaje přidej podle své situace."
+        },
+        {
+          "q": "Mohu si změnit předpoklady?",
+          "a": "Ano. Změň vstupy podle nabídky nebo rozpočtu, který chceš porovnat; výsledek je citlivý na zadané hodnoty."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Kupní cena nemovitosti",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rent": {
+          "label": "Měsíční nájemné",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "vacancy": {
+          "label": "Rezerva na neobsazenost",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "expenses": {
+          "label": "Roční provozní náklady",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "down": {
+          "label": "Vložené peníze / akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-vynosu-z-pronajmu"
+    },
+    "irr-calculator": {
+      "title": "Kalkulačka IRR",
+      "description": "Odhadni vnitřní výnosové procento při jednorázové počáteční investici a stejných kladných ročních peněžních tocích.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Odhad předpokládá jeden počáteční výdaj a stejné kladné roční peněžní toky. Pro nepravidelné toky použij úplnou řadu datovaných plateb. Vzorec: IRR je sazba r, při které −počáteční investice + Σ [roční peněžní tok ÷ (1 + r)^rok] = 0.",
+      "formula": "IRR je sazba r, při které −počáteční investice + Σ [roční peněžní tok ÷ (1 + r)^rok] = 0.",
+      "example": "Při přednastavených hodnotách vychází odhadované vnitřní výnosové procento: 7,93 %.",
+      "limitations": "Odhad předpokládá jeden počáteční výdaj a stejné kladné roční peněžní toky. Pro nepravidelné toky použij úplnou řadu datovaných plateb.",
+      "everyday": "U projektu s počáteční investicí a pravidelnými ročními příjmy můžeš odhadnout IRR. Pro nepravidelné nebo datované toky použij plnohodnotný model cash flow.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční náklad / investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "annual": {
+          "label": "Roční peněžní přínos nebo tok",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "rate": {
+          "label": "Diskontní sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-irr"
+    },
+    "roi-calculator": {
+      "title": "Kalkulačka návratnosti investice",
+      "description": "Vypočítej celkový výnos vůči počáteční investici bez zohlednění načasování průběžných toků.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: ROI = (konečná hodnota − počáteční investice) ÷ počáteční investice.",
+      "formula": "ROI = (konečná hodnota − počáteční investice) ÷ počáteční investice.",
+      "example": "Při přednastavených hodnotách vychází celková návratnost investice: 60 %.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Po dokončení projektu porovnej počáteční vklad s konečnou hodnotou. ROI ukazuje celkový výnos, nikoli roční zhodnocení.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "final": {
+          "label": "Konečná hodnota",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba držení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-navratnosti-investice"
+    },
+    "apr-calculator": {
+      "title": "Kalkulačka RPSN",
+      "description": "Odhadni nominální APR/RPSN půjčky s pevnými splátkami po započtení počátečního poplatku. Právní výpočet se může lišit.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Odhad APR z peněžních toků předpokládá, že poplatek zaplatíš při sjednání a poté hradíš stejné měsíční splátky. Právní pravidla APR mohou zahrnovat jiné poplatky i zaokrouhlení. Vzorec: Čistý výnos = Σ [splátka ÷ (1 + měsíční APR)^pořadí splátky]; nominální APR = měsíční APR × 12.",
+      "formula": "Čistý výnos = Σ [splátka ÷ (1 + měsíční APR)^pořadí splátky]; nominální APR = měsíční APR × 12.",
+      "example": "Při přednastavených hodnotách vychází nominální apr včetně poplatků: 12,12 %.",
+      "limitations": "Odhad APR z peněžních toků předpokládá, že poplatek zaplatíš při sjednání a poté hradíš stejné měsíční splátky. Právní pravidla APR mohou zahrnovat jiné poplatky i zaokrouhlení.",
+      "everyday": "U úvěru s poplatkem může samotná úroková sazba podhodnotit cenu. Zadej poplatek a porovnej odhadovaný APR s údajem uvedeným poskytovatelem.",
+      "faqs": [
+        {
+          "q": "Co výsledek předpokládá?",
+          "a": "Výsledek vychází ze vstupů a zjednodušení popsaných u tohoto nástroje. Nepředstavuje nabídku ani záruku skutečného výsledku."
+        },
+        {
+          "q": "Mohu porovnat jiné scénáře?",
+          "a": "Ano. Změň vždy jednu či více hodnot a porovnej, jak se odhad změní. Ověř si, že vstupy odpovídají situaci, kterou řešíš."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Jistina úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Úroková sazba úvěru",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "fees": {
+          "label": "Počáteční poplatky věřitele",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-rpsn"
+    },
+    "fha-loan-calculator": {
+      "title": "Kalkulačka úvěru FHA",
+      "description": "Odhadni splátku úvěru FHA včetně tebou nastaveného počátečního a ročního pojištění hypotéky. Výchozí pojistné sazby jsou nulové.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazby pojištění můžeš nastavit; výchozí hodnota je nula. Nezahrnuje daně, úschovu ani ověření nároku na program FHA. Vzorec: Základní úvěr = cena − akontace; přičti zadané počáteční pojištění k jistině a roční pojištění vyděl 12. Měsíční splátka jistiny a úroku se vypočítá anuitně.",
+      "formula": "Základní úvěr = cena − akontace; přičti zadané počáteční pojištění k jistině a roční pojištění vyděl 12. Měsíční splátka jistiny a úroku se vypočítá anuitně.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční splátka fha: 1 708,72 USD.",
+      "limitations": "Sazby pojištění můžeš nastavit; výchozí hodnota je nula. Nezahrnuje daně, úschovu ani ověření nároku na program FHA.",
+      "everyday": "Při koupi domu s FHA úvěrem uprav cenu, akontaci a předpoklady pojištění. Použij aktuální hodnoty z nabídky; nárok a pojistné závisí na podmínkách úvěru.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Cena domu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Úroková sazba úvěru",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba úvěru",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "upfrontInsurance": {
+          "label": "Předpokládaná sazba počátečního pojištění",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "annualInsurance": {
+          "label": "Předpokládaná sazba ročního pojištění",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uveru-fha"
+    },
+    "va-mortgage-calculator": {
+      "title": "Kalkulačka hypotéky VA",
+      "description": "Odhadni splátku hypotéky VA po přičtení nastavitelného poplatku za financování VA. Výchozí sazba poplatku je nulová.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Sazbu poplatku za financování můžeš nastavit; výchozí hodnota je nula. Ověř příslušný poplatek i případné osvobození u věřitele. Vzorec: Financovaný zůstatek = cena − akontace + zadaný poplatek za financování; splátka se vypočítá anuitním vzorcem.",
+      "formula": "Financovaný zůstatek = cena − akontace + zadaný poplatek za financování; splátka se vypočítá anuitním vzorcem.",
+      "example": "Při přednastavených hodnotách vychází odhadovaná měsíční splátka va: 1 978,52 USD.",
+      "limitations": "Sazbu poplatku za financování můžeš nastavit; výchozí hodnota je nula. Ověř příslušný poplatek i případné osvobození u věřitele.",
+      "everyday": "Při zvažování VA financování zadej poplatek za financování z nabídky nebo otestuj jinou hodnotu. Nárok a případné osvobození ověř podle své situace.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Cena domu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Úroková sazba úvěru",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba úvěru",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "fundingFee": {
+          "label": "Předpokládaná sazba financovaného poplatku VA",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-hypoteky-va"
+    },
+    "home-equity-loan-calculator": {
+      "title": "Kalkulačka úvěru z vlastního kapitálu domu",
+      "description": "Vypočítej pevnou splátku úvěru z vlastního kapitálu domu podle jistiny, sazby a doby. Nezahrnuje náklady na uzavření.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka úvěru z vlastního kapitálu domu: 1 498,88 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při porovnání úvěru z vlastního kapitálu domu s jiným financováním změň jistinu, sazbu a dobu. Kalkulačka neurčuje, kolik vlastního kapitálu můžeš čerpat.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Výše úvěru",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uveru-z-vlastniho-kapitalu-domu"
+    },
+    "heloc-calculator": {
+      "title": "Kalkulačka úroku HELOC",
+      "description": "Odhadni měsíční úrokovou platbu bez splácení jistiny u revolvingové úvěrové linky HELOC.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční úrok bez jistiny = zůstatek × roční sazba ÷ 12.",
+      "formula": "Měsíční úrok bez jistiny = zůstatek × roční sazba ÷ 12.",
+      "example": "Při přednastavených hodnotách vychází měsíční úrok heloc bez splácení jistiny: 150 USD.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Zadej aktuální zůstatek HELOC a sazbu pro orientační měsíční úrok. Proměnlivá sazba i pozdější splácení jistiny mohou částku změnit.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "balance": {
+          "label": "Aktuální zůstatek",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úrok / APR",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "payment": {
+          "label": "Měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-uroku-heloc"
+    },
+    "down-payment-calculator": {
+      "title": "Kalkulačka akontace",
+      "description": "Vypočítej podíl akontace na kupní ceně a zbývající částku k financování.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Podíl akontace = vlastní vklad ÷ kupní cena; financovaná částka = cena − akontace.",
+      "formula": "Podíl akontace = vlastní vklad ÷ kupní cena; financovaná částka = cena − akontace.",
+      "example": "Při přednastavených hodnotách vychází podíl akontace na ceně: 20 %.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Před koupí domu zjisti, jakou část ceny pokryje tvůj vlastní vklad a kolik bude třeba financovat. Náklady na uzavření smlouvy přidej zvlášť.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Kupní cena",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba úvěru",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-akontace"
+    },
+    "rent-vs-buy-calculator": {
+      "title": "Kalkulačka nájmu nebo koupě",
+      "description": "Porovnej souhrnné nájemné s odhadovaným vlastním kapitálem po zvoleném období podle růstu cen a nájmů.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Souhrnné nájemné roste každý rok; vlastní kapitál = budoucí hodnota domu − zbývající zůstatek hypotéky.",
+      "formula": "Souhrnné nájemné roste každý rok; vlastní kapitál = budoucí hodnota domu − zbývající zůstatek hypotéky.",
+      "example": "Při přednastavených hodnotách vychází zjednodušená finanční výhoda koupě: 334 650,85 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Pokud se můžeš za pár let stěhovat, porovnej růst nájmu s odhadovaným vlastním kapitálem za stejné období. Daně, údržbu i pořizovací náklady zvaž zvlášť.",
+      "faqs": [
+        {
+          "q": "Je výsledek úplným rozpočtem na bydlení?",
+          "a": "Ne. Zahrnuje pouze zadané položky. Daně, pojištění, údržbu, poplatky a další výdaje přidej podle své situace."
+        },
+        {
+          "q": "Mohu si změnit předpoklady?",
+          "a": "Ano. Změň vstupy podle nabídky nebo rozpočtu, který chceš porovnat; výsledek je citlivý na zadané hodnoty."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Kupní cena domu",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rent": {
+          "label": "Měsíční nájemné",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Hypoteční sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Počet let porovnání",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "growth": {
+          "label": "Roční růst ceny domu",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "rentGrowth": {
+          "label": "Roční růst nájemného",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-najmu-nebo-koupe"
+    },
+    "payback-period-calculator": {
+      "title": "Kalkulačka doby návratnosti",
+      "description": "Odhadni jednoduchou dobu návratnosti investice při stejném ročním peněžním přínosu; časová hodnota peněz se nezohledňuje.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Jednoduchá doba návratnosti = počáteční náklady ÷ roční peněžní přínos.",
+      "formula": "Jednoduchá doba návratnosti = počáteční náklady ÷ roční peněžní přínos.",
+      "example": "Při přednastavených hodnotách vychází jednoduchá doba návratnosti: 4 roky.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "U vybavení s předvídatelnými ročními úsporami zjisti, za jak dlouho se vrátí počáteční náklad. Tento jednoduchý výpočet nezohledňuje diskontování ani kolísání přínosů.",
+      "faqs": [
+        {
+          "q": "Používá kalkulačka aktuální daňová pravidla?",
+          "a": "Ne. Sazby a odpočty jsou tvoje předpoklady. Výpočet nenahrazuje daňové přiznání ani pravidla konkrétního místa a roku."
+        },
+        {
+          "q": "Co mám zadat jako daňovou sazbu?",
+          "a": "Zadej efektivní sazbu, kterou chceš použít pro orientační scénář. Nejde o sazbu ověřenou podle aktuální legislativy."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční náklad / investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "annual": {
+          "label": "Roční peněžní přínos nebo tok",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "rate": {
+          "label": "Diskontní sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-doby-navratnosti"
+    },
+    "present-value-calculator": {
+      "title": "Kalkulačka současné hodnoty",
+      "description": "Převeď budoucí částku či pravidelné platby na současnou hodnotu při zadané diskontní sazbě.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Současná hodnota = budoucí částka ÷ (1 + diskontní sazba)^počet let.",
+      "formula": "Současná hodnota = budoucí částka ÷ (1 + diskontní sazba)^počet let.",
+      "example": "Při přednastavených hodnotách vychází současná hodnota k dnešnímu dni: 6 805,83 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Pokud můžeš dostávat budoucí pravidelné platby nebo jednorázovou částku dnes, porovnej jejich současnou hodnotu. Zkus různé diskontní sazby.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "initial": {
+          "label": "Počáteční náklad / investice",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "annual": {
+          "label": "Roční peněžní přínos nebo tok",
+          "help": "",
+          "unit": "USD/rok",
+          "options": {}
+        },
+        "rate": {
+          "label": "Diskontní sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-soucasne-hodnoty"
+    },
+    "future-value-calculator": {
+      "title": "Kalkulačka budoucí hodnoty",
+      "description": "Odhadni budoucí hodnotu dnešní částky při zadaném ročním výnosu a době.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť. Vzorec: Budoucí hodnota = současná částka × (1 + roční sazba)^počet let.",
+      "formula": "Budoucí hodnota = současná částka × (1 + roční sazba)^počet let.",
+      "example": "Při přednastavených hodnotách vychází budoucí hodnota: 16 288,95 USD.",
+      "limitations": "Výnos je předpoklad, nikoli záruka; výsledek je před daněmi, poplatky a inflací, pokud nejsou zadané zvlášť.",
+      "everyday": "Pro dlouhodobý finanční cíl promítni dnešní částku do budoucnosti. Změň sazbu a horizont; výsledek je matematický scénář, nikoli tržní prognóza.",
+      "faqs": [
+        {
+          "q": "Jsou použité sazby aktuální tržní údaje?",
+          "a": "Ne. Sazby a výnosy zadáváš sám/sama; kalkulačka nečerpá živá tržní data."
+        },
+        {
+          "q": "Zohledňuje výsledek poplatky a daně?",
+          "a": "Pouze pokud pro ně existuje samostatné pole nebo jsou součástí zadané částky. Jinak je musíš započítat zvlášť."
+        }
+      ],
+      "fields": {
+        "amount": {
+          "label": "Částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční sazba / změna",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Období",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-budouci-hodnoty"
+    },
+    "commission-calculator": {
+      "title": "Kalkulačka provize",
+      "description": "Vypočítej celkovou provizi z prodeje a část připadající na tvůj podíl.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Tvoje provize = prodejní cena × sazba provize × tvůj podíl.",
+      "formula": "Tvoje provize = prodejní cena × sazba provize × tvůj podíl.",
+      "example": "Při přednastavených hodnotách vychází výše tvé provize: 12 500 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Před rozdělením provize zadej částku prodeje, sazbu a svůj podíl. Výsledek je před zdaněním a případnými srážkami makléře či platformy.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "sale": {
+          "label": "Prodejní částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Sazba provize",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "split": {
+          "label": "Tvůj podíl na provizi",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-provize"
+    },
+    "mortgage-calculator-uk": {
+      "title": "Hypoteční kalkulačka pro Spojené království",
+      "description": "Odhadni měsíční splátku jistiny a úroku z hypotečního zůstatku, roční sazby a doby v britském scénáři. Ověř metodiku poskytovatele.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "formula": "Měsíční splátka = P × r ÷ (1 − (1 + r)^−n), kde P je jistina, r měsíční sazba a n počet splátek.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka: 1 169,18 GBP.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Při hledání bydlení ve Spojeném království změň zůstatek hypotéky, sazbu a dobu. Výsledek ověř podle nabídky věřitele a jeho způsobu výpočtu.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Zůstatek hypotéky",
+          "help": "",
+          "unit": "GBP",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba hypotéky",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-hypotecni-pro-spojene-kralovstvi"
+    },
+    "canadian-mortgage-calculator": {
+      "title": "Kanadská hypoteční kalkulačka",
+      "description": "Vypočítej splátku kanadské hypotéky po převodu nominální sazby se pololetním úročením na ekvivalentní měsíční sazbu.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Používá převod nominální sazby s pololetním úročením na ekvivalentní měsíční sazbu. Podmínky věřitele a pojištění hypotéky mohou nabídku změnit. Vzorec: Ekvivalentní měsíční sazba = (1 + nominální roční sazba ÷ 2)^(2/12) − 1; úvěr se splácí anuitně touto měsíční sazbou.",
+      "formula": "Ekvivalentní měsíční sazba = (1 + nominální roční sazba ÷ 2)^(2/12) − 1; úvěr se splácí anuitně touto měsíční sazbou.",
+      "example": "Při přednastavených hodnotách vychází měsíční splátka hypotéky: 1 861,14 CAD.",
+      "limitations": "Používá převod nominální sazby s pololetním úročením na ekvivalentní měsíční sazbu. Podmínky věřitele a pojištění hypotéky mohou nabídku změnit.",
+      "everyday": "Při porovnávání kanadských hypoték zadej cenu, akontaci a nominální sazbu. Převod předpokládá pololetní úročení; ověř způsob výpočtu konkrétní banky.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Cena domu",
+          "help": "",
+          "unit": "CAD",
+          "options": {}
+        },
+        "down": {
+          "label": "Akontace",
+          "help": "",
+          "unit": "CAD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Nominální roční sazba hypotéky",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba amortizace",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-kanadska-hypotecni"
+    },
+    "mortgage-amortization-calculator": {
+      "title": "Kalkulačka amortizace hypotéky",
+      "description": "Odhadni splátku a dobu splacení hypotéky při pravidelné dodatečné splátce jistiny.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy. Vzorec: Vývoj zůstatku zohledňuje měsíční úrok, plánovanou splátku a dodatečnou jistinu až do splacení.",
+      "formula": "Vývoj zůstatku zohledňuje měsíční úrok, plánovanou splátku a dodatečnou jistinu až do splacení.",
+      "example": "Při přednastavených hodnotách vychází počet měsíců do splacení hypotéky: 54 měsíců.",
+      "limitations": "Předpokládá pevnou sazbu a pravidelné měsíční splátky; poplatky a pojištění nejsou zahrnuty, pokud nejsou uvedeny jako vstupy.",
+      "everyday": "Pokud chceš každý měsíc splácet něco navíc, porovnej nový termín splacení a úroky s běžným plánem. Ověř u věřitele, jak připisuje mimořádné splátky.",
+      "faqs": [
+        {
+          "q": "Zahrnuje výsledek všechny náklady na financování?",
+          "a": "Ne. Zahrnuje jen položky výslovně uvedené ve formuláři. Daně, pojištění a poplatky přidej zvlášť, pokud nejsou samostatnými vstupy."
+        },
+        {
+          "q": "Co udělá delší doba splácení?",
+          "a": "Obvykle sníží měsíční splátku, ale může zvýšit součet zaplacených úroků. Porovnej obě hodnoty a zohledni podmínky konkrétní nabídky."
+        }
+      ],
+      "fields": {
+        "principal": {
+          "label": "Financovaná částka",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Roční úroková sazba",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        },
+        "years": {
+          "label": "Doba splácení",
+          "help": "",
+          "unit": "roky",
+          "options": {}
+        },
+        "extra": {
+          "label": "Dodatečná měsíční splátka",
+          "help": "",
+          "unit": "USD/měsíc",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-amortizace-hypoteky"
+    },
+    "percent-off-calculator": {
+      "title": "Kalkulačka procentní slevy",
+      "description": "Vypočítej částku slevy a cenu po odečtení procentní slevy z původní ceny.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují. Vzorec: Úspora = původní cena × procento slevy; konečná cena = původní cena − úspora.",
+      "formula": "Úspora = původní cena × procento slevy; konečná cena = původní cena − úspora.",
+      "example": "Při přednastavených hodnotách vychází cena po procentní slevě: 90 USD.",
+      "limitations": "Výsledek je orientační a závisí na zadaných předpokladech. Položky, které nejsou uvedeny jako vstupy, se do výpočtu nezahrnují.",
+      "everyday": "Při nákupu zadej cenovku a procentní slevu. Uvidíš ušetřenou částku a cenu před případnou další daní.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "price": {
+          "label": "Původní cena",
+          "help": "",
+          "unit": "USD",
+          "options": {}
+        },
+        "rate": {
+          "label": "Sleva",
+          "help": "",
+          "unit": "%",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-procentni-slevy"
+    },
+    "break-even-calculator": {
+      "title": "Kalkulačka bodu zvratu",
+      "description": "Vypočítej počet kusů potřebných k pokrytí fixních nákladů podle prodejní ceny a variabilních nákladů na kus. Výsledek zaokrouhluje nahoru.",
+      "explanation": "Výpočet vychází z uvedeného vzorce a předpokladů tohoto nástroje. Změň vstupy a porovnej jejich vliv na výsledek. Předpokládá neměnnou prodejní cenu a variabilní náklady. Veškeré zboží se prodá; daně a financování zahrň do nákladů, pokud jsou relevantní. Vzorec: Počet kusů v bodě zvratu = fixní náklady ÷ (prodejní cena − variabilní náklad na kus), zaokrouhleno nahoru.",
+      "formula": "Počet kusů v bodě zvratu = fixní náklady ÷ (prodejní cena − variabilní náklad na kus), zaokrouhleno nahoru.",
+      "example": "Při přednastavených hodnotách vychází počet prodejů potřebných k bodu zvratu: 500 kusů.",
+      "limitations": "Předpokládá neměnnou prodejní cenu a variabilní náklady. Veškeré zboží se prodá; daně a financování zahrň do nákladů, pokud jsou relevantní.",
+      "everyday": "Před uvedením produktu na trh porovnej fixní náklady s příspěvkem z jednoho prodeje. Změň cenu či variabilní náklad a zjisti potřebný počet prodejů k dosažení bodu zvratu.",
+      "faqs": [
+        {
+          "q": "Jsou sazby a ceny ověřené online?",
+          "a": "Ne. Zadej cenu, sazbu nebo kurz z nabídky, kterou posuzuješ, a správnost místních pravidel ověř samostatně."
+        },
+        {
+          "q": "Jak mohu výsledek využít?",
+          "a": "Porovnej výsledek při různých cenách či sazbách. Nezapomeň přidat náklady, které kalkulačka nemá jako samostatný vstup."
+        }
+      ],
+      "fields": {
+        "fixed": {
+          "label": "Fixní náklady",
+          "help": "",
+          "unit": "currency",
+          "options": {}
+        },
+        "price": {
+          "label": "Prodejní cena / kus",
+          "help": "",
+          "unit": "currency",
+          "options": {}
+        },
+        "variable": {
+          "label": "Variabilní náklad / kus",
+          "help": "",
+          "unit": "currency",
+          "options": {}
+        }
+      },
+      "slug": "kalkulacka-bodu-zvratu"
+    }
+  }
+}

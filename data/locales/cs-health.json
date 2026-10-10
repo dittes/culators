@@ -1,0 +1,1307 @@
+{
+  "bmi-calculator": {
+    "title": "BMI kalkulačka",
+    "description": "Vypočítej index tělesné hmotnosti z hmotnosti a výšky a zobraz běžnou kategorii pro dospělé i odpovídající hmotnostní rozmezí. BMI je screeningový ukazatel, nikoli přímé měření tělesného tuku.",
+    "explanation": "BMI=hmotnost v kg/výška v metrech². Kategorie odpovídají hranicím pro dospělé; u osob mladších 20 let se používají percentily podle věku a pohlaví.",
+    "example": "Při 70 kg a výšce 1,75 m je BMI 70/1,75²≈22,9.",
+    "formula": "BMI=hmotnost(kg)/výška(m)².",
+    "limitations": "BMI neurčuje diagnózu ani složení těla; u dětí a dospívajících vyžaduje jiný výklad.",
+    "everyday": "Před preventivní prohlídkou si můžeš připravit orientační BMI pro rozhovor se zdravotníkem.",
+    "faqs": [
+      {
+        "q": "Je BMI diagnóza?",
+        "a": "Ne, jde o screeningový ukazatel, který se posuzuje s dalšími informacemi."
+      },
+      {
+        "q": "Lze vzorec použít u dítěte?",
+        "a": "Děti a dospívající potřebují percentily podle věku a pohlaví."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-bmi"
+  },
+  "calorie-calculator": {
+    "title": "Kalkulačka kalorií",
+    "description": "Odhadni udržovací energetický příjem z klidového výdeje a úrovně aktivity a přidej vlastní cílovou úpravu. Výsledek je plánovací odhad, nikoli předpis jídelníčku.",
+    "explanation": "Klidový výdej se odhaduje rovnicí Mifflin–St Jeor a násobí faktorem aktivity. Zadaná úprava se přičte k odhadované údržbě.",
+    "example": "Při odhadu údržby 2 000 kcal a úpravě −300 kcal vyjde ilustrační cíl 1 700 kcal denně.",
+    "formula": "Denní odhad=Mifflin–St Jeor klidový výdej×faktor aktivity+zadaná úprava.",
+    "limitations": "Rovnice je populační odhad, ne měření metabolismu. Výrazná nebo zdravotně omezená změna příjmu patří k odborné konzultaci.",
+    "everyday": "Při plánování jídelníčku můžeš srovnat odhad údržby s vlastním cílem, bez předstírání přesného měření.",
+    "faqs": [
+      {
+        "q": "Je výsledek lékařským doporučením?",
+        "a": "Ne, jde o obecný odhad energetické potřeby."
+      },
+      {
+        "q": "Je bazální výdej totéž co celkový výdej?",
+        "a": "Ne, aktivita a trávení celkovou potřebu zvyšují."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženský koeficient",
+          "male": "Mužský koeficient"
+        }
+      },
+      "activity": {
+        "label": "Úroveň aktivity",
+        "help": "",
+        "unit": "",
+        "options": {
+          "sedentary": "Sedavá (1,20)",
+          "light": "Lehká (1,375)",
+          "moderate": "Střední (1,55)",
+          "very": "Velmi aktivní (1,725)",
+          "extra": "Mimořádně aktivní (1,90)"
+        }
+      },
+      "adjustment": {
+        "label": "Denní úprava cíle",
+        "help": "",
+        "unit": "kcal",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-kalorii"
+  },
+  "body-fat-calculator": {
+    "title": "Kalkulačka tělesného tuku",
+    "description": "Odhadni procento tělesného tuku u dospělých z BMI, věku a koeficientu Deurenbergovy rovnice. Protože vychází nepřímo z výšky a hmotnosti, může se od individuálního měření výrazně lišit.",
+    "explanation": "Rovnice odhaduje tělesný tuk z BMI, věku a koeficientu podle pohlaví. Uváděná populační standardní chyba je přibližně 4,1 procentního bodu.",
+    "example": "U dospělého s BMI 24,2 a věkem 35 let vychází jen orientační populační odhad; skutečná hodnota se může lišit.",
+    "formula": "Tělesný tuk %=1,20×BMI+0,23×věk−10,8×koeficient pohlaví−5,4.",
+    "limitations": "Rovnice není určena dětem a dospívajícím a neposkytuje přesné individuální měření.",
+    "everyday": "Pro obecný přehled můžeš porovnat nepřímý odhad s jinými měřeními, ale nebrat jej jako diagnózu.",
+    "faqs": [
+      {
+        "q": "Je to přímé měření?",
+        "a": "Ne, rovnice odhaduje tuk z BMI a věku."
+      },
+      {
+        "q": "Je vhodná pro děti?",
+        "a": "Ne, nebyla pro děti ani dospívající vytvořena."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženský koeficient",
+          "male": "Mužský koeficient"
+        }
+      }
+    },
+    "slug": "kalkulacka-telesneho-tuku"
+  },
+  "bmr-calculator": {
+    "title": "Kalkulačka bazálního metabolismu",
+    "description": "Odhadni klidový energetický výdej podle věku, výšky, hmotnosti a rovnice Mifflin–St Jeor. Bazální výdej zahrnuje energii v klidu, nikoli celý denní výdej.",
+    "explanation": "Rovnice Mifflin–St Jeor používá hmotnost W v kg, výšku H v cm a věk A. Pro různé koeficienty se používá odlišný člen pohlaví.",
+    "example": "Při 70 kg, 170 cm a věku 35 let vychází ženský koeficient přibližně 1 402,5 kcal za den.",
+    "formula": "Mužský koeficient: 10W+6,25H−5A+5; ženský: 10W+6,25H−5A−161.",
+    "limitations": "Jde o rovnici, nikoli měření metabolismu; individuální výdej může být odlišný.",
+    "everyday": "Získej výchozí klidový odhad před porovnáním s celkovým výdejem nebo aktivitou.",
+    "faqs": [
+      {
+        "q": "Je bazální výdej stejný jako celkový denní výdej?",
+        "a": "Ne, pohyb a trávení spotřebu zvyšují."
+      },
+      {
+        "q": "Dokáže rovnice změřit metabolismus?",
+        "a": "Ne, jde o odhad; měření vyžaduje nepřímou kalorimetrii."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženský koeficient",
+          "male": "Mužský koeficient"
+        }
+      }
+    },
+    "slug": "kalkulacka-bazalniho-metabolismu"
+  },
+  "macro-calculator": {
+    "title": "Kalkulačka makroživin",
+    "description": "Převeď denní kalorický cíl na gramy bílkovin, sacharidů a tuků podle zvolených podílů. Kalkulačka ověří, že podíly dohromady tvoří 100 %.",
+    "explanation": "Bílkoviny a sacharidy mají přibližně 4 kcal/g, tuk 9 kcal/g. Gramy získáš vydělením energie přidělené makroživině její energetickou hodnotou na gram.",
+    "example": "Při 2 000 kcal a rozdělení 30 % bílkovin, 40 % sacharidů a 30 % tuků vychází 150 g, 200 g a přibližně 66,7 g.",
+    "formula": "Bílkoviny/sacharidy: kcal/4; tuk: kcal/9.",
+    "limitations": "Výpočet neurčuje zdravotně vhodné rozdělení; potřeby se liší podle zdraví, aktivity a doporučení odborníka.",
+    "everyday": "Porovnej různé podíly makroživin při stejném denním kalorickém cíli.",
+    "faqs": [
+      {
+        "q": "Proč musí podíly dát dohromady 100 %?",
+        "a": "Představují úplné rozdělení cílových kalorií."
+      },
+      {
+        "q": "Určuje kalkulačka vhodný jídelníček?",
+        "a": "Ne, jen převádí tebou zvolený poměr na gramy."
+      }
+    ],
+    "fields": {
+      "calories": {
+        "label": "Denní kalorický cíl",
+        "help": "",
+        "unit": "kcal",
+        "options": {}
+      },
+      "protein": {
+        "label": "Podíl bílkovin",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "carbs": {
+        "label": "Podíl sacharidů",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      },
+      "fat": {
+        "label": "Podíl tuků",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-makrozivin"
+  },
+  "ideal-weight-calculator": {
+    "title": "Kalkulačka ideální hmotnosti",
+    "description": "Porovnej čtyři historické rovnice pro odhad hmotnosti podle výšky a jejich průměr. Rozptyl mezi rovnicemi je užitečnější než považovat jediný výsledek za osobní cíl.",
+    "explanation": "Rovnice Devine, Robinson, Miller a Hamwi používají výšku nad 5 stop a různé historické koeficienty.",
+    "example": "U dospělého vysokého 173 cm se odhady mohou lišit o několik kilogramů; průměr je pouze orientační.",
+    "formula": "Průměr ze čtyř výškových rovnic Devine, Robinson, Miller a Hamwi.",
+    "limitations": "Jde o historické populační odhady, které nezohledňují složení těla ani individuální zdravotní stav.",
+    "everyday": "Při běžném hledání orientačního rozmezí můžeš porovnat více rovnic místo spoléhání na jedinou hodnotu.",
+    "faqs": [
+      {
+        "q": "Je výsledek předpisem zdravé hmotnosti?",
+        "a": "Ne, tyto rovnice nejsou individuálním cílem."
+      },
+      {
+        "q": "Zohledňují rovnice svalovou hmotu?",
+        "a": "Ne, vycházejí hlavně z výšky."
+      }
+    ],
+    "fields": {
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženské koeficienty",
+          "male": "Mužské koeficienty"
+        }
+      }
+    },
+    "slug": "kalkulacka-idealni-hmotnosti"
+  },
+  "pregnancy-calculator": {
+    "title": "Těhotenská kalkulačka",
+    "description": "Odhadni termín porodu a délku těhotenství od prvního dne poslední menstruace; můžeš upravit obvyklou délku cyklu. Datování je orientační a často se potvrzuje ultrazvukem.",
+    "explanation": "Předpokládaný termín=poslední menstruace+280 dní+(délka cyklu−28 dní). Těhotenské stáří se počítá od prvního dne poslední menstruace.",
+    "example": "Při poslední menstruaci 1. ledna a 28denním cyklu vychází odhad termínu přibližně na 8. října.",
+    "formula": "Termín=první den poslední menstruace+280 dní+úprava délky cyklu.",
+    "limitations": "Kalendářní odhad neurčuje přesný den porodu; zdravotník může datování upravit podle ultrazvuku a anamnézy.",
+    "everyday": "Pro první kalendářní orientaci si můžeš spočítat odhad termínu a týdne těhotenství před konzultací v poradně.",
+    "faqs": [
+      {
+        "q": "Je termín porodu jistý?",
+        "a": "Ne, může být upraven podle ultrazvuku a zdravotní dokumentace."
+      },
+      {
+        "q": "Předpovídá přesný den narození?",
+        "a": "Ne, jde o orientační datum pro sledování těhotenství."
+      }
+    ],
+    "fields": {
+      "lmp": {
+        "label": "První den poslední menstruace",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "cycle": {
+        "label": "Obvyklá délka cyklu",
+        "help": "",
+        "unit": "dny",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-tehotenska"
+  },
+  "pregnancy-weight-gain-calculator": {
+    "title": "Kalkulačka přírůstku hmotnosti v těhotenství",
+    "description": "Porovnej dosavadní přírůstek s publikovaným celkovým rozmezím pro jednočetné nebo dvojčetné těhotenství podle BMI před otěhotněním. Individuální cíl patří do péče porodníka či porodní asistentky.",
+    "explanation": "Rozmezí vychází z doporučení IOM zveřejněných CDC a závisí na BMI před těhotenstvím a počtu plodů. Jednoduché zobrazení průběhu není klinický model pro jednotlivé trimestry.",
+    "example": "U jednočetného těhotenství a předtěhotenského BMI 22 se uvádí celkový přírůstek přibližně 11,3–15,9 kg.",
+    "formula": "Vybere populační celkové rozmezí podle BMI před těhotenstvím a typu těhotenství.",
+    "limitations": "Jde o populační doporučení, nikoli individuální cíl; těhotenství s více než dvěma plody vyžaduje odborné posouzení.",
+    "everyday": "Při návštěvě poradny můžeš porovnat dosavadní přírůstek s referenčním rozmezím jako podklad pro rozhovor.",
+    "faqs": [
+      {
+        "q": "Je to osobní zdravotní cíl?",
+        "a": "Ne, individuální doporučení stanoví těhotenská péče."
+      },
+      {
+        "q": "Platí rozmezí pro trojčata?",
+        "a": "Ne, zde se počítá pouze s jedním nebo dvěma plody."
+      }
+    ],
+    "fields": {
+      "height": {
+        "label": "Výška před těhotenstvím",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "preweight": {
+        "label": "Hmotnost před těhotenstvím",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "gain": {
+        "label": "Dosavadní přírůstek hmotnosti",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "week": {
+        "label": "Týden těhotenství",
+        "help": "",
+        "unit": "týdny",
+        "options": {}
+      },
+      "multiples": {
+        "label": "Typ těhotenství",
+        "help": "",
+        "unit": "",
+        "options": {
+          "singleton": "Jedno dítě",
+          "twins": "Dvojčata"
+        }
+      }
+    },
+    "slug": "kalkulacka-prirustku-hmotnosti-v-tehotenstvi"
+  },
+  "pregnancy-conception-calculator": {
+    "title": "Kalkulačka početí v těhotenství",
+    "description": "Odhadni datum početí podle termínu porodu nebo poslední menstruace a obvyklé délky cyklu. Kalendářní odhad je nejistý, protože ovulace se může posouvat.",
+    "explanation": "Početí se obvykle odhaduje 266 dní před termínem porodu nebo přibližně 14 dní po začátku 28denního cyklu.",
+    "example": "Termín 8. října odpovídá orientačnímu odhadu početí kolem 15. ledna.",
+    "formula": "Početí≈termín porodu−266 dní; případně poslední menstruace+délka cyklu−14 dní.",
+    "limitations": "Kalkulačka neurčí přesný den ovulace ani oplodnění a není vhodná pro právní nebo otcovské určení.",
+    "everyday": "Při zpětném plánování těhotenství můžeš získat hrubý kalendářní odhad, který je třeba chápat s rezervou.",
+    "faqs": [
+      {
+        "q": "Lze určit přesný den početí?",
+        "a": "Ne, ovulace i oplodnění se mohou časově lišit."
+      },
+      {
+        "q": "Je vhodná pro právní určení otcovství?",
+        "a": "Ne, kalendářní výpočet není dostatečně přesný."
+      }
+    ],
+    "fields": {
+      "method": {
+        "label": "Známé datum",
+        "help": "",
+        "unit": "",
+        "options": {
+          "due": "Odhadovaný termín porodu",
+          "lmp": "Poslední menstruace"
+        }
+      },
+      "date": {
+        "label": "Termín porodu nebo poslední menstruace",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "cycle": {
+        "label": "Obvyklá délka cyklu",
+        "help": "",
+        "unit": "dny",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-poceti-v-tehotenstvi"
+  },
+  "due-date-calculator": {
+    "title": "Kalkulačka termínu porodu",
+    "description": "Odhadni termín porodu podle poslední menstruace, data početí nebo transferu pětidenního embrya při IVF. Zvolená metoda datování je důležitá a zdravotník ji může upravit podle ultrazvuku.",
+    "explanation": "Od poslední menstruace se přičítá 280 dní, od početí 266 dní a od transferu pětidenního embrya 261 dní.",
+    "example": "Transfer pětidenního embrya 1. března odpovídá odhadovanému termínu o 261 dní později.",
+    "formula": "Termín: poslední menstruace+280 dní; početí+266 dní; transfer pětidenního embrya+261 dní.",
+    "limitations": "Výsledek je kalendářní odhad; řiď se datováním potvrzeným těhotenskou péčí.",
+    "everyday": "Před první kontrolou si můžeš připravit přibližné datum podle dostupné informace o cyklu nebo IVF.",
+    "faqs": [
+      {
+        "q": "Které datum je rozhodující?",
+        "a": "Použij datování určené zdravotníkem, které zohledňuje ultrazvuk a léčbu."
+      },
+      {
+        "q": "Znamená termín, že porod začne právě tehdy?",
+        "a": "Ne, jde o orientační bod těhotenství."
+      }
+    ],
+    "fields": {
+      "method": {
+        "label": "Metoda datování",
+        "help": "",
+        "unit": "",
+        "options": {
+          "lmp": "Poslední menstruace",
+          "conception": "Datum početí",
+          "ivf": "Transfer pětidenního embrya"
+        }
+      },
+      "date": {
+        "label": "Zvolené datum",
+        "help": "",
+        "unit": "",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-terminu-porodu"
+  },
+  "pace-calculator": {
+    "title": "Kalkulačka tempa běhu",
+    "description": "Převeď vzdálenost a čas na tempo na kilometr nebo míli a průměrnou rychlost. Pro srovnatelné výsledky zadávej dobu skutečného pohybu.",
+    "explanation": "Tempo=čas/vzdálenost; rychlost=vzdálenost/čas. Jedna míle je 1,609344 km.",
+    "example": "Pět kilometrů za 25 minut znamená tempo 5:00 min/km a rychlost 12 km/h.",
+    "formula": "Tempo=čas÷vzdálenost; rychlost=vzdálenost÷čas.",
+    "limitations": "Zastávky se započítají, pokud jsou zahrnuté v zadaném čase. Jde o průměr, nikoli okamžitou rychlost.",
+    "everyday": "Před běžeckým závodem si přepočítej tempo na míli nebo kilometr a porovnej tréninky.",
+    "faqs": [
+      {
+        "q": "Započítávají se přestávky?",
+        "a": "Ano, pokud jsou součástí zadaného času."
+      },
+      {
+        "q": "Lze zadat hodiny, minuty a sekundy?",
+        "a": "Ano, vyplň příslušná pole celkovým časem."
+      }
+    ],
+    "fields": {
+      "distance": {
+        "label": "Vzdálenost",
+        "help": "",
+        "unit": "km",
+        "options": {}
+      },
+      "unit": {
+        "label": "Jednotka vzdálenosti",
+        "help": "",
+        "unit": "",
+        "options": {
+          "km": "Kilometry",
+          "mi": "Míle"
+        }
+      },
+      "hours": {
+        "label": "Hodiny",
+        "help": "",
+        "unit": "h",
+        "options": {}
+      },
+      "minutes": {
+        "label": "Minuty",
+        "help": "",
+        "unit": "min",
+        "options": {}
+      },
+      "seconds": {
+        "label": "Sekundy",
+        "help": "",
+        "unit": "s",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-tempa-behu"
+  },
+  "army-body-fat-calculator": {
+    "title": "Kalkulačka Army poměru pasu a výšky",
+    "description": "Vypočítej poměr obvodu pasu k výšce a porovnej jej s publikovanou screeningovou hranicí Army 0,55. Výpočet neodhaduje procento tělesného tuku ani nenahrazuje oficiální posouzení.",
+    "explanation": "Poměr=obvod pasu u pupku/výška. Jednotky musí být shodné; hranice 0,55 je uvedená screeningová hodnota.",
+    "example": "Při obvodu pasu 36 palců a výšce 70 palců je poměr přibližně 0,514.",
+    "formula": "Poměr pas/výška=obvod pasu÷výška.",
+    "limitations": "Hodnota není procento tělesného tuku, diagnóza ani oficiální Army výsledek; závisí na správném měření.",
+    "everyday": "Při kondičním přehledu můžeš srovnat obvod pasu s výškou, aniž bys výsledek zaměňoval za diagnózu.",
+    "faqs": [
+      {
+        "q": "Je výsledek procento tuku?",
+        "a": "Ne, jde o poměr pasu k výšce."
+      },
+      {
+        "q": "Nahrazuje oficiální Army měření?",
+        "a": "Ne, pouze orientačně srovnává poměr s hranicí."
+      }
+    ],
+    "fields": {
+      "waist": {
+        "label": "Obvod břicha v úrovni pupku",
+        "help": "",
+        "unit": "palce",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "palce",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-army-pomeru-pasu-a-vysky"
+  },
+  "carbohydrate-calculator": {
+    "title": "Kalkulačka sacharidů",
+    "description": "Převeď zvolený podíl denních kalorií na gramy sacharidů a porovnej jej s obecným referenčním rozmezím pro dospělé. Nejde o individuální léčebné doporučení.",
+    "explanation": "Sacharidy poskytují přibližně 4 kcal na gram. Gramy=kalorie×podíl/100/4.",
+    "example": "Při cíli 2 000 kcal a podílu 50 % vychází 250 g sacharidů.",
+    "formula": "Gramy sacharidů=denní kalorie×procentní podíl/100/4.",
+    "limitations": "Referenční rozmezí je populační; u zdravotních omezení nebo diabetu se řiď odborným doporučením.",
+    "everyday": "Přepočítej jídelní plán z kalorického podílu na gramy pro orientační kontrolu etikety.",
+    "faqs": [
+      {
+        "q": "Jaký je obecný referenční podíl?",
+        "a": "Pro dospělé se běžně uvádí 45–65 % energie."
+      },
+      {
+        "q": "Je to léčebný cíl?",
+        "a": "Ne, individuální výživu konzultuj s kvalifikovaným odborníkem."
+      }
+    ],
+    "fields": {
+      "calories": {
+        "label": "Denní kalorický cíl",
+        "help": "",
+        "unit": "kcal",
+        "options": {}
+      },
+      "percent": {
+        "label": "Kalorie ze sacharidů",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-sacharidu"
+  },
+  "lean-body-mass-calculator": {
+    "title": "Kalkulačka beztukové hmoty",
+    "description": "Odhadni beztukovou tělesnou hmotu z hmotnosti a zadaného procenta tuku. Beztuková hmota zahrnuje vodu, kosti i orgány, nejen svaly.",
+    "explanation": "Beztuková hmota=hmotnost×(1−podíl tuku). Odhad tuku je vstupní hodnota, nikoli výsledek měření této kalkulačky.",
+    "example": "Při 80 kg a odhadovaném tuku 20 % vychází beztuková hmota 64 kg.",
+    "formula": "Beztuková hmota=hmotnost×(1−procento tuku/100).",
+    "limitations": "Přesnost závisí na správnosti zadaného procenta tuku; nejde o měření svalové hmoty.",
+    "everyday": "Porovnej orientační rozložení hmotnosti při sledování tréninku nebo změn tělesného složení.",
+    "faqs": [
+      {
+        "q": "Zahrnuje beztuková hmota kosti a vodu?",
+        "a": "Ano, zahrnuje vše kromě odhadované tukové hmoty."
+      },
+      {
+        "q": "Je to totéž co svalová hmota?",
+        "a": "Ne, svaly jsou pouze jednou částí beztukové hmoty."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "bodyfat": {
+        "label": "Odhadovaný tělesný tuk",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-beztukove-hmoty"
+  },
+  "healthy-weight-calculator": {
+    "title": "Kalkulačka rozmezí hmotnosti podle BMI",
+    "description": "Zjisti hmotnostní rozmezí, které při zadané výšce odpovídá BMI 18,5 až 24,9. Jde o screeningový referenční interval pro dospělé, ne osobní cíl.",
+    "explanation": "Dolní a horní hranice se vypočítají jako BMI×výška v metrech². Výsledek používá běžné rozmezí BMI pro dospělé.",
+    "example": "Při výšce 170 cm odpovídá BMI 18,5–24,9 přibližně 53,5–72,0 kg.",
+    "formula": "Hmotnost=BMI×výška(m)²; hranice BMI jsou 18,5 a 24,9.",
+    "limitations": "BMI nezohledňuje svalovou hmotu, věk ani zdravotní stav a není diagnózou.",
+    "everyday": "Získej rychlé referenční rozmezí pro dospělého a prober jeho význam se zdravotníkem, pokud tě výsledek znepokojuje.",
+    "faqs": [
+      {
+        "q": "Je to předepsaná cílová hmotnost?",
+        "a": "Ne, jde o populační screeningové rozmezí."
+      },
+      {
+        "q": "Platí rozsah pro děti?",
+        "a": "Ne, u dětí se BMI vykládá podle věku a pohlaví."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-rozmezi-hmotnosti-podle-bmi"
+  },
+  "calories-burned-calculator": {
+    "title": "Kalkulačka spálených kalorií",
+    "description": "Odhadni energetický výdej aktivity z hmotnosti, délky a hodnoty MET. MET jsou průměrné hodnoty; skutečný výdej závisí na intenzitě a člověku.",
+    "explanation": "Hrubý výdej≈MET×3,5×hmotnost(kg)/200×minuty. Hrubý údaj zahrnuje i energii, kterou by tělo spotřebovalo v klidu během aktivity.",
+    "example": "Člověk s hmotností 70 kg při 30 minutách chůze o intenzitě 3,5 MET vydá přibližně 129 kcal.",
+    "formula": "Hrubé kcal≈MET×3,5×hmotnost(kg)/200×minuty.",
+    "limitations": "Jde o populační odhad; neodečítá klidový výdej a skutečná spotřeba se může lišit.",
+    "everyday": "Porovnej přibližný výdej při procházce, jízdě na kole nebo cvičení, aniž bys ho považoval za přesné měření.",
+    "faqs": [
+      {
+        "q": "Zahrnuje výsledek energii v klidu?",
+        "a": "Ano, jde o hrubý výdej během celé aktivity."
+      },
+      {
+        "q": "Jsou MET hodnoty přesné pro každého?",
+        "a": "Ne, jde o průměrné odhady závislé na intenzitě."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "activity": {
+        "label": "Aktivita (MET)",
+        "help": "",
+        "unit": "",
+        "options": {
+          "walking": "Chůze, střední tempo (3,5 MET)",
+          "cycling": "Rekreační jízda na kole (4 MET)",
+          "running": "Běh, 6 mph (9,8 MET)",
+          "weights": "Silový trénink (3,5 MET)",
+          "yoga": "Hatha jóga (2,3 MET)",
+          "swimming": "Plavání, střední tempo (5,8 MET)"
+        }
+      },
+      "minutes": {
+        "label": "Doba trvání",
+        "help": "",
+        "unit": "minuty",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-spalenych-kalorii"
+  },
+  "one-rep-max-calculator": {
+    "title": "Kalkulačka maxima na jedno opakování",
+    "description": "Odhadni maximální zátěž pro jedno opakování z váhy, kterou zvládneš vícekrát. Zobrazí srovnatelný odhad podle rovnic Epley a Brzycki.",
+    "explanation": "Epley: zátěž×(1+opakování/30). Brzycki: zátěž×36/(37−opakování). Jde o predikce z výkonu s nižší zátěží.",
+    "example": "Při 100 kg a 5 opakováních vychází Epleyho odhad přibližně 116,7 kg.",
+    "formula": "Epley=kg×(1+n/30); Brzycki=kg×36/(37−n).",
+    "limitations": "Nejde o skutečně otestované maximum ani bezpečnostní doporučení; rovnice jsou méně spolehlivé při mnoha opakováních.",
+    "everyday": "Před plánováním tréninkových procent si orientačně odhadni maximum bez pokusu o nebezpečný maximální zdvih.",
+    "faqs": [
+      {
+        "q": "Proč se odhady liší?",
+        "a": "Rovnice používají různé aproximace vztahu mezi zátěží a opakováními."
+      },
+      {
+        "q": "Je bezpečné maximum opravdu zkusit?",
+        "a": "Odhad není bezpečnostní doporučení; trénuj s odpovídajícím dohledem."
+      }
+    ],
+    "fields": {
+      "load": {
+        "label": "Zvedaná hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "reps": {
+        "label": "Dokončená opakování",
+        "help": "",
+        "unit": "opakování",
+        "options": {}
+      },
+      "formula": {
+        "label": "Odhadový vzorec",
+        "help": "",
+        "unit": "",
+        "options": {
+          "epley": "Epley",
+          "brzycki": "Brzycki"
+        }
+      }
+    },
+    "slug": "kalkulacka-maxima-na-jedno-opakovani"
+  },
+  "target-heart-rate-calculator": {
+    "title": "Kalkulačka cílové tepové frekvence",
+    "description": "Odhadni maximální tep podle věku a orientační zónu pro středně intenzivní nebo intenzivní aktivitu pomocí vzorce 220−věk. Jde o široký populační odhad.",
+    "explanation": "Odhad maxima je 220−věk. Střední zóna používá 50–70 % a intenzivní 70–85 % odhadovaného maxima.",
+    "example": "Ve věku 40 let vychází odhad maxima 180 tepů/min a střední zóna přibližně 90–126 tepů/min.",
+    "formula": "Maximální tep≈220−věk; zóna je zvolený podíl maxima.",
+    "limitations": "Léky, srdeční onemocnění a individuální kondice mohou bezpečnou intenzitu výrazně změnit.",
+    "everyday": "Při plánování běhu si můžeš zobrazit obecný věkový odhad zóny a přizpůsobit trénink odbornému doporučení.",
+    "faqs": [
+      {
+        "q": "Je vzorec přesný pro každého?",
+        "a": "Ne, jde o široký populační odhad."
+      },
+      {
+        "q": "Mohu podle něj určit bezpečný trénink při onemocnění?",
+        "a": "Ne, vhodnou zátěž konzultuj s lékařem."
+      }
+    ],
+    "fields": {
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "zone": {
+        "label": "Cílová zóna",
+        "help": "",
+        "unit": "",
+        "options": {
+          "moderate": "Střední (50–70 %)",
+          "vigorous": "Intenzivní (70–85 %)"
+        }
+      }
+    },
+    "slug": "kalkulacka-cilove-tepove-frekvence"
+  },
+  "protein-calculator": {
+    "title": "Kalkulačka bílkovin",
+    "description": "Odhadni denní množství bílkovin vynásobením tělesné hmotnosti zvoleným cílem v gramech na kilogram. Cíl můžeš upravit podle situace a odborného doporučení.",
+    "explanation": "Denní bílkoviny=hmotnost×zvolený faktor g/kg/den. Výsledek se mění přímo úměrně zadanému faktoru.",
+    "example": "Při hmotnosti 70 kg a cíli 1,2 g/kg vychází 84 g bílkovin za den.",
+    "formula": "Bílkoviny(g/den)=hmotnost(kg)×cílové g/kg/den.",
+    "limitations": "Potřeba se liší podle zdraví, věku a aktivity; zvolené číslo není individuálním doporučením.",
+    "everyday": "Přepočítej zvolený bílkovinný cíl na denní gramy pro plánování jídel nebo kontrolu příjmu.",
+    "faqs": [
+      {
+        "q": "Jaký faktor je správný?",
+        "a": "Záleží na zdraví, aktivitě a dalších okolnostech."
+      },
+      {
+        "q": "Je výsledek lékařské doporučení?",
+        "a": "Ne, při zdravotních potížích si cíl ověř s odborníkem."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "target": {
+        "label": "Cíl příjmu bílkovin",
+        "help": "",
+        "unit": "g/kg/den",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-bilkovin"
+  },
+  "fat-intake-calculator": {
+    "title": "Kalkulačka příjmu tuků",
+    "description": "Převeď zvolený podíl denních kalorií na gramy tuku a odpovídající energii. Výpočet se týká celkového tuku a nerozlišuje druhy mastných kyselin.",
+    "explanation": "Tuk poskytuje přibližně 9 kcal na gram. Gramy=kalorie×podíl/100/9.",
+    "example": "Při 2 000 kcal a podílu 30 % vychází přibližně 66,7 g tuku.",
+    "formula": "Gramy tuku=kalorie×procentní podíl/100/9.",
+    "limitations": "Kalkulačka nerozlišuje nasycené, nenasycené ani jiné typy tuků a neurčuje vhodný jídelníček.",
+    "everyday": "Převeď kalorický podíl na gramy pro orientační kontrolu jídelního plánu.",
+    "faqs": [
+      {
+        "q": "Jak se tuk převádí na kalorie?",
+        "a": "Jeden gram tuku představuje přibližně 9 kcal."
+      },
+      {
+        "q": "Rozlišuje kalkulačka typy tuků?",
+        "a": "Ne, počítá celkový tuk."
+      }
+    ],
+    "fields": {
+      "calories": {
+        "label": "Denní kalorický cíl",
+        "help": "",
+        "unit": "kcal",
+        "options": {}
+      },
+      "percent": {
+        "label": "Kalorie z tuků",
+        "help": "",
+        "unit": "%",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-prijmu-tuku"
+  },
+  "tdee-calculator": {
+    "title": "Kalkulačka celkového denního výdeje",
+    "description": "Odhadni celkový denní energetický výdej vynásobením klidového výdeje Mifflin–St Jeor faktorem aktivity. Jednotlivé předpoklady zůstávají přehledné.",
+    "explanation": "TDEE≈klidový výdej podle Mifflin–St Jeor×faktor aktivity. Faktor zahrnuje běžnou úroveň pohybu.",
+    "example": "Při klidovém odhadu 1 426,5 kcal a lehké aktivitě 1,375 vychází přibližně 1 961 kcal/den.",
+    "formula": "TDEE≈Mifflin–St Jeor klidový výdej×faktor aktivity.",
+    "limitations": "Jde o přibližný výpočet; pokud je cvičení zahrnuto ve faktoru aktivity, nepřičítej jeho kalorie znovu.",
+    "everyday": "Při plánování denního příjmu si můžeš porovnat klidový výdej s odhadem celkové potřeby.",
+    "faqs": [
+      {
+        "q": "Je TDEE přesně změřené?",
+        "a": "Ne, jde o rovnici a faktor aktivity."
+      },
+      {
+        "q": "Mám přičíst kalorie ze cvičení?",
+        "a": "Ne, pokud už odpovídající aktivitu zahrnuje zvolený faktor."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženský koeficient",
+          "male": "Mužský koeficient"
+        }
+      },
+      "activity": {
+        "label": "Úroveň aktivity",
+        "help": "",
+        "unit": "",
+        "options": {
+          "sedentary": "Sedavá (1,20)",
+          "light": "Lehká (1,375)",
+          "moderate": "Střední (1,55)",
+          "very": "Velmi aktivní (1,725)",
+          "extra": "Mimořádně aktivní (1,90)"
+        }
+      }
+    },
+    "slug": "kalkulacka-celkoveho-denniho-vydeje"
+  },
+  "ovulation-calculator": {
+    "title": "Kalkulačka ovulace",
+    "description": "Odhadni datum ovulace a možné plodné období z prvního dne poslední menstruace a obvyklé délky cyklu. Kalendář nepotvrzuje skutečnou ovulaci.",
+    "explanation": "Ovulace se orientačně odhaduje 14 dní před další menstruací; plodné okno modeluje pět dní před ní a jeden den po ní.",
+    "example": "Při 28denním cyklu začínajícím 1. ledna vychází ovulace přibližně na 15. ledna.",
+    "formula": "Ovulace≈začátek cyklu+délka cyklu−14 dní.",
+    "limitations": "Nepravidelné cykly výrazně snižují přesnost; výpočet není antikoncepce ani potvrzení plodnosti.",
+    "everyday": "Pro orientační plánování cyklu si můžeš zobrazit kalendářní okno, ale nespoléhej na něj jako na ochranu před těhotenstvím.",
+    "faqs": [
+      {
+        "q": "Potvrzuje kalkulačka ovulaci?",
+        "a": "Ne, pouze počítá kalendářní odhad."
+      },
+      {
+        "q": "Je vhodná jako antikoncepce?",
+        "a": "Ne, kalendářní metodu nelze tímto výpočtem bezpečně nahradit."
+      }
+    ],
+    "fields": {
+      "lmp": {
+        "label": "První den poslední menstruace",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "cycle": {
+        "label": "Obvyklá délka cyklu",
+        "help": "",
+        "unit": "dny",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-ovulace"
+  },
+  "conception-calculator": {
+    "title": "Kalkulačka početí",
+    "description": "Odhadni možné období početí z poslední menstruace a obvyklé délky cyklu. Kalendářní výpočet nedokáže určit přesný den oplodnění.",
+    "explanation": "Ovulace se odhaduje přibližně 14 dní před další menstruací; možné plodné okno sahá zhruba od pěti dní před ovulací do jednoho dne po ní.",
+    "example": "Při 28denním cyklu od 1. ledna vychází odhad ovulace kolem 15. ledna.",
+    "formula": "Odhad ovulace≈poslední menstruace+délka cyklu−14 dní.",
+    "limitations": "Cyklus se může měnit a skutečný den početí nelze z kalendáře spolehlivě určit.",
+    "everyday": "Při zpětném plánování můžeš získat orientační plodné okno pro rozhovor s odborníkem.",
+    "faqs": [
+      {
+        "q": "Určí kalkulačka přesný den početí?",
+        "a": "Ne, ovulace a oplodnění se mohou lišit."
+      },
+      {
+        "q": "Lze výsledek použít pro určení otcovství?",
+        "a": "Ne, použij klinické testování a odpovídající záznamy."
+      }
+    ],
+    "fields": {
+      "lmp": {
+        "label": "První den poslední menstruace",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "cycle": {
+        "label": "Obvyklá délka cyklu",
+        "help": "",
+        "unit": "dny",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-poceti"
+  },
+  "period-calculator": {
+    "title": "Kalkulačka menstruačního cyklu",
+    "description": "Odhadni další menstruaci, přibližnou ovulaci a možné plodné období z poslední menstruace a průměrné délky cyklu. Výpočet není antikoncepce ani diagnóza.",
+    "explanation": "Další menstruace se odhaduje přičtením délky cyklu; ovulace přibližně 14 dní před ní a plodné okno pět dní před až jeden den po ní.",
+    "example": "Při začátku cyklu 1. ledna a délce 28 dní vychází další menstruace přibližně na 29. ledna.",
+    "formula": "Další menstruace=začátek poslední menstruace+průměrná délka cyklu.",
+    "limitations": "Nepravidelné cykly a zdravotní okolnosti mohou odhad výrazně změnit; neslouží k diagnostice ani antikoncepci.",
+    "everyday": "Naplánuj si kalendářní připomínku očekávané menstruace a zaznamenej odhadované plodné okno.",
+    "faqs": [
+      {
+        "q": "Je to metoda antikoncepce?",
+        "a": "Ne, kalendářní odhad není spolehlivou ochranou před těhotenstvím."
+      },
+      {
+        "q": "Kdy vyhledat zdravotníka?",
+        "a": "Při znepokojivých příznacích nebo výrazných změnách cyklu."
+      }
+    ],
+    "fields": {
+      "lmp": {
+        "label": "První den poslední menstruace",
+        "help": "",
+        "unit": "",
+        "options": {}
+      },
+      "cycle": {
+        "label": "Obvyklá délka cyklu",
+        "help": "",
+        "unit": "dny",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-menstruacniho-cyklu"
+  },
+  "gfr-calculator": {
+    "title": "Kalkulačka eGFR",
+    "description": "Odhadni glomerulární filtraci dospělého pomocí rovnice CKD-EPI 2021 založené na kreatininu a bez koeficientu rasy. Výsledek je odhad, který se hodnotí spolu s dalšími nálezy.",
+    "explanation": "Rovnice používá sérový kreatinin, věk a koeficient pohlaví. Výsledek je normalizován na povrch těla 1,73 m².",
+    "example": "Při kreatininu 1 mg/dL a věku 50 let vyjde orientační eGFR podle zvoleného koeficientu.",
+    "formula": "CKD-EPI 2021: eGFR=142×min(Scr/κ,1)^α×max(Scr/κ,1)^−1,200×0,9938^věk×koeficient.",
+    "limitations": "eGFR sama neurčuje diagnózu; klasifikace onemocnění ledvin zohledňuje trvání a další testy, například albumin v moči.",
+    "everyday": "Před návštěvou lékaře si můžeš ověřit, jaký orientační odhad vychází z hodnoty kreatininu.",
+    "faqs": [
+      {
+        "q": "Nahrazuje eGFR diagnózu onemocnění ledvin?",
+        "a": "Ne, lékař ji posuzuje spolu s dalšími testy a časovým vývojem."
+      },
+      {
+        "q": "Proč jsou koeficienty různé?",
+        "a": "Publikovaná rovnice používá odlišné koeficienty; interpretaci svěř zdravotníkovi."
+      }
+    ],
+    "fields": {
+      "age": {
+        "label": "Věk",
+        "help": "",
+        "unit": "roky",
+        "options": {}
+      },
+      "creatinine": {
+        "label": "Sérový kreatinin",
+        "help": "",
+        "unit": "mg/dl",
+        "options": {}
+      },
+      "unit": {
+        "label": "Jednotka kreatininu",
+        "help": "",
+        "unit": "",
+        "options": {
+          "mg": "mg/dl",
+          "umol": "µmol/l"
+        }
+      },
+      "sex": {
+        "label": "Pohlavní koeficient rovnice",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Ženský koeficient",
+          "male": "Mužský koeficient"
+        }
+      }
+    },
+    "slug": "kalkulacka-egfr"
+  },
+  "body-type-calculator": {
+    "title": "Kalkulačka proporcí postavy",
+    "description": "Porovnej obvod hrudníku, pasu a boků podle jednoduchých pravidel pro orientační popis střihu oblečení. Výsledek popisuje proporce, nikoli zdraví ani osobnost.",
+    "explanation": "Rozhodnutí vychází z rozdílu hrudník–boky a poměru pasu k většímu z těchto obvodů. Malé toleranční pásmo určuje vyváženou, hruškovitou či rovnější siluetu.",
+    "example": "Pokud jsou boky výrazně širší než hrudník, jednoduché pravidlo může označit střih jako hruškovitý.",
+    "formula": "Popis proporcí z poměrů obvodu hrudníku, pasu a boků.",
+    "limitations": "Jde o jednoduchou heuristiku pro oblečení; značky a střihy používají odlišné velikostní systémy.",
+    "everyday": "Při výběru střihu můžeš porovnat míry a hledat kategorii, která je užitečná pro orientaci v oblečení.",
+    "faqs": [
+      {
+        "q": "Vypovídá tvar těla o zdraví?",
+        "a": "Ne, jde pouze o popis vnějších měr."
+      },
+      {
+        "q": "Zaručuje výsledek správnou velikost oblečení?",
+        "a": "Ne, velikosti a střihy se mezi značkami liší."
+      }
+    ],
+    "fields": {
+      "bust": {
+        "label": "Obvod hrudníku",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "waist": {
+        "label": "Obvod pasu",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      },
+      "hip": {
+        "label": "Obvod boků",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-proporci-postavy"
+  },
+  "body-surface-area-calculator": {
+    "title": "Kalkulačka povrchu těla",
+    "description": "Odhadni povrch těla z výšky a hmotnosti pomocí Mostellerovy rovnice. Tento údaj se používá v některých klinických výpočtech, nikoli jako samostatný pokyn k dávkování.",
+    "explanation": "Výška v centimetrech krát hmotnost v kilogramech se vydělí 3 600 a odmocní.",
+    "example": "Při výšce 170 cm a hmotnosti 70 kg vychází povrch přibližně 1,81 m².",
+    "formula": "Povrch těla=√(výška(cm)×hmotnost(kg)/3600).",
+    "limitations": "Nedávkuj podle výsledku léky; řiď se výslovným pokynem zdravotníka a ověřenou metodou.",
+    "everyday": "Pokud potřebuješ znát orientační povrch těla pro rozhovor o klinickém výpočtu, zadej výšku a hmotnost.",
+    "faqs": [
+      {
+        "q": "Je možné podle toho určit dávku léku?",
+        "a": "Ne, dávkování musí vycházet z pokynu zdravotníka."
+      },
+      {
+        "q": "Jaký vzorec se používá?",
+        "a": "Mostellerův vzorec."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-povrchu-tela"
+  },
+  "bac-calculator": {
+    "title": "Kalkulačka alkoholu v krvi",
+    "description": "Vypočítej hrubý Widmarkův odhad koncentrace alkoholu podle množství nápojů, hmotnosti, distribučního faktoru a času. Nejistota je vysoká; výsledek nikdy nepoužívej k rozhodnutí o řízení.",
+    "explanation": "Model převádí standardní nápoje na gramy etanolu, odhaduje rozložení podle hmotnosti a odečítá průměrné odbourávání v čase.",
+    "example": "Dva standardní nápoje u dospělého o hmotnosti 70 kg mohou podle předpokladů dát pouze orientační hodnotu.",
+    "formula": "Widmarkův odhad≈etanol/(r×hmotnost)×100−0,015×hodiny.",
+    "limitations": "Vstřebávání a odbourávání se výrazně liší; model nezaručuje skutečnou koncentraci ani bezpečnost. Nikdy podle něj neřiď.",
+    "everyday": "Při plánování bezpečného návratu domů nespoléhej na výpočet; zvol střízlivou dopravu.",
+    "faqs": [
+      {
+        "q": "Mohu podle čísla určit, zda můžu řídit?",
+        "a": "Ne, nikdy k tomu výsledek nepoužívej."
+      },
+      {
+        "q": "Je to laboratorní měření?",
+        "a": "Ne, jde o nejistý vzdělávací odhad."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Tělesná hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "drinks": {
+        "label": "Standardní nápoje",
+        "help": "",
+        "unit": "nápoje",
+        "options": {}
+      },
+      "hours": {
+        "label": "Hodiny od začátku pití",
+        "help": "",
+        "unit": "h",
+        "options": {}
+      },
+      "sex": {
+        "label": "Distribuční koeficient",
+        "help": "",
+        "unit": "",
+        "options": {
+          "female": "Typický ženský odhad (r=0,55)",
+          "male": "Typický mužský odhad (r=0,68)"
+        }
+      }
+    },
+    "slug": "kalkulacka-alkoholu-v-krvi"
+  },
+  "anorexic-bmi-calculator": {
+    "title": "Kalkulačka BMI při nízké hmotnosti",
+    "description": "Vypočítej BMI a porovnej ho s běžnými hranicemi pro dospělé včetně velmi nízké hodnoty pod 16. BMI nemůže diagnostikovat anorexii ani jinou poruchu příjmu potravy.",
+    "explanation": "BMI=hmotnost/výška². Nízká hodnota je pouze screeningový signál; diagnózu stanovuje zdravotník podle širšího posouzení.",
+    "example": "Při 45 kg a výšce 170 cm je BMI přibližně 15,6, což vyžaduje citlivý zdravotní kontext, ne samodiagnózu.",
+    "formula": "BMI=hmotnost(kg)/výška(m)²; BMI samo nestačí k diagnóze poruchy příjmu potravy.",
+    "limitations": "Poruchy příjmu potravy se mohou objevit při různých tělesných velikostech. Při obavách kontaktuj odborníka; akutní potíže řeš rychle.",
+    "everyday": "Pokud tě nízké BMI znepokojuje, využij výsledek jen jako podnět k bezpečnému rozhovoru s odborníkem.",
+    "faqs": [
+      {
+        "q": "Dokazuje nízké BMI anorexii?",
+        "a": "Ne, diagnóza vyžaduje odborné posouzení a porucha může vzniknout při různých hmotnostech."
+      },
+      {
+        "q": "Co dělat, když mě výsledek znepokojuje?",
+        "a": "Obrať se na kvalifikovaného zdravotníka; akutní příznaky řeš bez odkladu."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-bmi-pri-nizke-hmotnosti"
+  },
+  "weight-watchers-points-calculator": {
+    "title": "Kalkulačka historických WW bodů",
+    "description": "Odhadni jednu porci historickým klasickým vzorcem nebo sleduj vlastní denní bodový rozpočet. Potravinový odhad používá kalorie, celkový tuk a vlákninu z etikety; neodpovídá současnému programu WeightWatchers.",
+    "explanation": "Historický vzorec z patentu USA 6 040 531 je kalorie/50+tuk(g)/12−vláknina(g)/5, zaokrouhlený na nejbližší půl bodu. Nejde o současný proprietární systém Points.",
+    "example": "Porce s 270 kcal, 14 g tuku a 4 g vlákniny vychází 5,77, tedy přibližně 6 historických bodů.",
+    "formula": "Historický odhad=max(0, zaokrouhli na 0,5(kalorie/50+tuk/12−vláknina/5)); režim rozpočtu=limit−zapsané body.",
+    "limitations": "Historický vzorec nereprodukuje současné body WeightWatchers. Rozpočtový režim pouze odečítá tebou zadané hodnoty.",
+    "everyday": "Při čtení staršího receptu si můžeš orientačně přepočítat historické body, nebo vést vlastní jednoduchý rozpočet.",
+    "faqs": [
+      {
+        "q": "Odpovídá to aktuální aplikaci WeightWatchers?",
+        "a": "Ne, používá se historický vzorec, ne současný systém."
+      },
+      {
+        "q": "Lze sledovat vlastní denní limit?",
+        "a": "Ano, zvol rozpočtový režim a zadej limit i dosud zapsané body."
+      }
+    ],
+    "fields": {
+      "mode": {
+        "label": "Režim výpočtu",
+        "help": "",
+        "unit": "",
+        "options": {
+          "legacy-food": "Historický klasický odhad potraviny",
+          "budget": "Sledovat zadaný denní rozpočet"
+        }
+      },
+      "calories": {
+        "label": "Kalorie na porci",
+        "help": "",
+        "unit": "kcal",
+        "options": {}
+      },
+      "fat": {
+        "label": "Celkový tuk na porci",
+        "help": "",
+        "unit": "g",
+        "options": {}
+      },
+      "fiber": {
+        "label": "Vláknina na porci",
+        "help": "",
+        "unit": "g",
+        "options": {}
+      },
+      "allowance": {
+        "label": "Denní bodový rozpočet",
+        "help": "",
+        "unit": "body",
+        "options": {}
+      },
+      "used": {
+        "label": "Zapsané body",
+        "help": "",
+        "unit": "body",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-historickych-ww-bodu"
+  },
+  "overweight-calculator": {
+    "title": "Kalkulačka BMI a hranice 25",
+    "description": "Porovnej BMI dospělého se screeningovou hranicí 25 a odhadni hmotnost odpovídající této hodnotě při zadané výšce. Výsledek nehodnotí složení těla ani zdravotní stav.",
+    "explanation": "BMI=hmotnost/výška²; hmotnost na hranici BMI 25 je 25×výška(m)². Rozdíl se zobrazuje jen nad touto referenční hodnotou.",
+    "example": "Při výšce 170 cm odpovídá BMI 25 hmotnosti 72,25 kg.",
+    "formula": "BMI=hmotnost(kg)/výška(m)²; referenční hmotnost=25×výška(m)².",
+    "limitations": "Hranice je screeningové srovnání pro dospělé, ne zdravotní hranice ani diagnóza; u dětí se používají percentily.",
+    "everyday": "Při orientačním hodnocení hmotnosti můžeš porovnat BMI s hranicí a probrat kontext s odborníkem.",
+    "faqs": [
+      {
+        "q": "Znamená BMI nad 25 automaticky špatné zdraví?",
+        "a": "Ne, BMI je jeden screeningový údaj a musí se vykládat v kontextu."
+      },
+      {
+        "q": "Platí stejná hranice pro děti?",
+        "a": "Ne, děti a dospívající používají percentily podle věku a pohlaví."
+      }
+    ],
+    "fields": {
+      "weight": {
+        "label": "Hmotnost",
+        "help": "",
+        "unit": "kg",
+        "options": {}
+      },
+      "height": {
+        "label": "Výška",
+        "help": "",
+        "unit": "cm",
+        "options": {}
+      }
+    },
+    "slug": "kalkulacka-bmi-a-hranice-25"
+  }
+}
