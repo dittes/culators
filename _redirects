@@ -5,6 +5,7 @@
 /de/everyday/ /de/alltag/ 301
 /de/imprint/ /de/impressum/ 301
 /de/privacy/ /de/datenschutz/ 301
+/de/calculator/ /de/taschenrechner/ 301
 /de/mortgage-calculator/ /de/hypotheken-rechner/ 301
 /de/loan-calculator/ /de/kredit-rechner/ 301
 /de/auto-loan-calculator/ /de/autokredit-rechner/ 301
@@ -228,6 +229,9 @@
 /cs/privacy/ /cz/soukromi/ 301
 /cz/privacy/ /cz/soukromi/ 301
 /cs/soukromi/ /cz/soukromi/ 301
+/cs/calculator/ /cz/kalkulacka/ 301
+/cz/calculator/ /cz/kalkulacka/ 301
+/cs/kalkulacka/ /cz/kalkulacka/ 301
 /cs/ /cz/ 301
 /cs/mortgage-calculator/ /cz/kalkulacka-hypotecni/ 301
 /cz/mortgage-calculator/ /cz/kalkulacka-hypotecni/ 301
@@ -856,6 +860,7 @@
 /pl/everyday/ /pl/codziennosc/ 301
 /pl/imprint/ /pl/informacje-prawne/ 301
 /pl/privacy/ /pl/prywatnosc/ 301
+/pl/calculator/ /pl/kalkulator/ 301
 /pl/mortgage-calculator/ /pl/kalkulator-kredytu-hipotecznego/ 301
 /pl/loan-calculator/ /pl/kalkulator-kredytu/ 301
 /pl/auto-loan-calculator/ /pl/kalkulator-kredytu-samochodowego/ 301
